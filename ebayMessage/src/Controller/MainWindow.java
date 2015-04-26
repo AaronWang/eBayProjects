@@ -2,20 +2,17 @@ package Controller;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import java.awt.BorderLayout;
-import javax.swing.JList;
-import javax.swing.JTable;
-import javax.swing.JTabbedPane;
 import javax.swing.AbstractListModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.JScrollPane;
-import javax.swing.JPanel;
-import javax.swing.JComboBox;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JToggleButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JSlider;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class MainWindow {
 
