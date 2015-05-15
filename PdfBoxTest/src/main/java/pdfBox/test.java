@@ -35,8 +35,8 @@ public class test {
 		// cursor and drawing the text "Hello World"
 		contentStream.beginText();
 		contentStream.setFont(font, 12);
-		contentStream.moveTextPositionByAmount(200, 700);
-		contentStream.setTextRotation(90, 100,100);
+//		contentStream.moveTextPositionByAmount(200, 700);
+		contentStream.setTextRotation(-90*Math.PI/180, 200,700);//弧度 角度 转化
 		contentStream.drawString("Hello World");
 	
 		contentStream.endText();
