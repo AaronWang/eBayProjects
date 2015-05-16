@@ -1,0 +1,4 @@
+  private PictureService pictureService;
+  private String[] pictureFiles = null;
+  private boolean autoSetItemUUID = false;
+  

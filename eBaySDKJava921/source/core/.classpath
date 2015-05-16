@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding=".svn/|com/.svn/|com/ebay/.svn/|com/ebay/sdk/.svn/|com/ebay/sdk/logging/.svn/|com/ebay/sdk/util/.svn/|com/ebay/sdk/xmlapi/.svn/|com/ebay/soap/.svn/" kind="src" path="src"/>
+	<classpathentry excluding=".svn/" kind="src" path="eBayWSDL"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/activation.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/FastInfoset.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/http.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxb-api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxb-impl.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxb-xjc.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxws-api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxws-rt.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jaxws-tools.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jsr173_api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jsr181-api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/jsr250-api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/mimepull.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/resolver.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/saaj-api.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/saaj-impl.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/sjsxp.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/stax-ex.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/jaxws-ri-2.1.4/streambuffer.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/apache/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/apache/log4j-1.2.8.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/apache/xalan.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/apache/serializer.jar"/>
+	<classpathentry kind="var" path="JavaSDK/externalLib/apache/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.5.0_15"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

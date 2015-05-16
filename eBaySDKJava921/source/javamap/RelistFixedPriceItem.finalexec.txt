@@ -1,0 +1,5 @@
+    if( this.itemToBeRelisted.getListingDetails() == null )
+      this.itemToBeRelisted.setListingDetails(new ListingDetailsType());
+    this.itemToBeRelisted.getListingDetails().setRelistedItemID(origItemID);
+
+    this.itemToBeRelisted.setItemID(resp.getItemID());

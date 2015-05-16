@@ -1,0 +1,7 @@
+  /**
+   * Backward compatible function - sets shipping service using a shipping service code type value.
+   * @param shippingService ShippingServiceCodeType
+   */
+  public void setShippingService(com.ebay.soap.eBLBaseComponents.ShippingServiceCodeType shippingService) {
+      this.shippingService = (shippingService == null? null: shippingService.value());
+  }

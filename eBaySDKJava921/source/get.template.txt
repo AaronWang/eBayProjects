@@ -1,0 +1,10 @@
+
+  /**
+   * Gets the %Callname%RequestType.%paramname%.
+   * @return %Paramtype%
+   */
+  public %Paramtype% get%Paramname%()
+  {
+    return this.%paramname%;
+  }
+

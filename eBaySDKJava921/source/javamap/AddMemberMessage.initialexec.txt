@@ -1,0 +1,4 @@
+    if( this.memberMessage == null )
+      throw new SdkException("MemberMessage property is not set.");
+    if( this.itemID == null && this.memberMessage.getMessageType() != MessageTypeCodeType.ContactEbayMember)
+      throw new SdkException("ItemID property is not set.");

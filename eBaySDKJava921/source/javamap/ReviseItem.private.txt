@@ -1,0 +1,2 @@
+  private TimeFilter listingDuration = null;
+  private PictureService pictureService;

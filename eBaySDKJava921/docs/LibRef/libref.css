@@ -1,0 +1,37 @@
+/* Javadoc style sheet */
+
+/* Define colors, fonts and other style attributes here to override the defaults */
+
+/* Page background color */
+body { background-color: #FFFFFF; font-size: 10pt; font-family: Verdana, Arial, Helvetica, sans-serif }
+
+/* Table colors */
+.TableHeadingColor     { background: #ffc58a; } /* Light API Orange */
+.TableSubHeadingColor  { background: #ffe9ca; } /* Lighter Orange */
+.TableRowColor         { background: #FFFFFF; } /* White */
+
+/* Font used in left-hand frame lists */
+.FrameTitleFont   { font-size: 10pts; font-family: Verdana, Arial, Helvetica, sans-serif }
+.FrameHeadingFont { font-size: 10pts; font-family: Verdana, Arial, Helvetica, sans-serif }
+.FrameItemFont    { font-size: 10pts; font-family: Verdana, Arial, Helvetica, sans-serif }
+
+/* Example of smaller, sans-serif font in frames */
+/* .FrameItemFont  { font-size: 10pt; font-family: Helvetica, Arial, sans-serif } */
+
+/* Navigation bar fonts and colors */
+.NavBarCell1    { background-color:#ffe9ca;}/* Lighter orange */
+.NavBarCell1Rev { background-color:#e68300;}/* Dark API orange */
+.NavBarFont1    { font-family: Verdana, Arial, Helvetica, sans-serif; color:#000000;}
+.NavBarFont1Rev { font-family: Verdana, Arial, Helvetica, sans-serif; color:#FFFFFF;}
+
+.NavBarCell2    { font-family: Verdana, Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
+.NavBarCell3    { font-family: Verdana, Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
+
+/* Additional custom styles */
+p {
+    
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color:#000000;
+  font-size:10pt;
+  font-weight : normal;
+} 

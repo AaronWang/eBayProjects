@@ -1,0 +1,7 @@
+    item.setItemID(resp.getItemID());
+    if( item.getListingDetails() == null )
+      item.setListingDetails(new ListingDetailsType());
+    if( resp.getStartTime() != null )
+      item.getListingDetails().setStartTime(resp.getStartTime());
+    if( resp.getEndTime() != null )
+      item.getListingDetails().setEndTime(resp.getEndTime());

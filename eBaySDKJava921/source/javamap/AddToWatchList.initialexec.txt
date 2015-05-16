@@ -1,0 +1,2 @@
+    if( this.itemIDs == null || this.itemIDs.length == 0 )
+      throw new SdkException("Please specify one or more item IDs in ItemIDs property.");

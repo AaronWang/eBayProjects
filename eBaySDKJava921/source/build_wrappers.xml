@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!-- ===================================================================
+<description>
+This ANT script will build new wrappers and replace the old wrappers with the new ones.
+Please make sure you have the correct version of eBaySvc.wsdl file.
+You can obtain the latest version from http://developer.ebay.com/webservices/latest/ebaySvc.wsdl
+You can also specify the version you need: http://developer.ebay.com/webservices/596/ebaySvc.wsdl
+
+Usage:
+	Run this script from [JAVASDK_DIR]\source directory.
+	- download or copy eBaySvc.wsdl into [JAVASDK_DIR]\wsdl directory
+	
+	- to only build new wrappers:
+	
+		ant BuildNewWrappers
+		
+	- to remove old wrappers:
+	
+		ant RemoveOldWrappers
+		
+	- to build from scratch and replace old wrappers with new ones:
+	
+		ant CopyNewWrappers
+		
+</description>
+==================================================================== -->
+<project default="copyNewWrappers">
+	<property environment="env"/>
+	<property name="apiCalls.dir" value=".\apiCalls\src\com\ebay\sdk\call"/>
+	<target name="printHeader">
+		<echo message="***********************************************"/>
+		<echo message="Building wrappers for ebay Java SDK"/>
+		<echo message="***********************************************"/>
+	</target>
+	<target name="buildNewWrappers" depends="printHeader">
+		<echo message="*************************************"/>
+		<echo message="Step 1: Generating Java wrappers..."/>
+		<echo message="*************************************"/>
+		<exec executable="perl">
+			<arg value="javagen.pl"/>
+			<arg value="wsdl\eBaySvc.wsdl"/>
+		</exec>
+	</target>
+	<target name="removeOldWrappers" depends="buildNewWrappers">
+		<echo message="*************************************"/>
+		<echo message="Step 2: Removing wrappers from the previous release..."/>
+		<echo message="*************************************"/>
+		<delete>
+			<fileset dir="${apiCalls.dir}" 
+				includes="*.java" 
+				excludes="CategoryEventListener.java"/>
+		</delete>
+	</target>
+	<target name="copyNewWrappers" depends="removeOldWrappers">
+		<fileset id="apicalls" dir="JavaCall"/>
+		<echo message="*************************************"/>
+		<echo message="Step 3: Copying new Java wrappers..."/>
+		<echo message="*************************************"/>
+		<copy todir="${apiCalls.dir}">
+			<fileset refid="apicalls"/>
+		</copy>
+		<!-- This is an extraneous file, delete it -->
+		<delete file="${apiCalls.dir}\BotBlockCall.java"/>
+		<!-- This is not a SOAP call yet, remove the wrapper for now -->
+		<delete file="${apiCalls.dir}\UploadSiteHostedPicturesCall.java"/>
+		
+		<!-- clean up -->
+		<delete dir="JavaCall"/>
+	</target>
+</project>

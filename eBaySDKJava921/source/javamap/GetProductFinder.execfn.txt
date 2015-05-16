@@ -1,0 +1,37 @@
+  /**
+   * Retrieves data that you use to construct valid "product finder" queries
+   * (queries against multiple attributes) against catalog products or listed items.
+   * The attributes describe search criteria (e.g., Manufacturer), as appropriate for the category.
+   * Use the results in combination with GetProductFinderXSL to render the Product Finder
+   * in a graphical user interface.
+   * GetProductFinder does not conduct the actual product or listing search.
+   * It only returns data about what you can search on. Use the data as input to
+   * GetProductSearchResults to conduct the actual search for product information
+   * or as input to GetSearchResults to conduct the search for listed items.
+   * To retrieve single-attribute search criteria (querying against a single attribute, like UPC),
+   * use GetProductSearchPage instead (only applicable for catalog searches).
+   * See the eBay Web Services Guide for an overview of Pre-filled Item Information and details about
+   * searching for catalog products and for information about searching for listed items.
+   * 
+   * <br>
+   * @throws ApiException, SdkException, Exception
+   * @return The String object.
+   */
+  public String getProductFinder()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetProductFinderRequestType req;
+    req = new GetProductFinderRequestType();
+    req.setDetailLevel(this.getDetailLevel());
+    if (this.attributeSystemVersion != null)
+      req.setAttributeSystemVersion(this.attributeSystemVersion);
+    if (this.productFinderIDs != null)
+      req.setProductFinderID(this.productFinderIDs);
+
+    GetProductFinderResponseType resp = (GetProductFinderResponseType) execute(req);
+
+    this.returnedAttributeSystemVersion = resp.getAttributeSystemVersion();
+    this.productFinderData = resp.getProductFinderData();
+    
+    return this.productFinderData;
+  }

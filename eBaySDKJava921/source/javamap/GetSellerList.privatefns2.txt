@@ -1,0 +1,73 @@
+/**
+   * Get entire item list of the seller. Properties EndDate and Pagination
+   * will be ignored. Patination related return fields (paginationResult,
+   * hasMoreItems) will be ignored.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return ItemType[]
+   */
+  public com.ebay.soap.eBLBaseComponents.ItemType[] getEntireSellerList()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetSellerListRequestType req = new GetSellerListRequestType();
+
+    setRequest(req);
+      req.setDetailLevel(this.getDetailLevel());
+      if (this.userID != null)
+        req.setUserID(this.userID);
+      if (this.endTimeFilter != null)
+      {
+        req.setEndTimeFrom(this.endTimeFilter.getTimeFrom());
+        req.setEndTimeTo(this.endTimeFilter.getTimeTo());
+      }
+      if (this.sort != 0)
+        req.setSort(new Integer(this.sort));
+      if (this.startTimeFilter != null)
+      {
+        req.setStartTimeFrom(this.startTimeFilter.getTimeFrom());
+        req.setStartTimeTo(this.startTimeFilter.getTimeTo());
+      }
+      if (this.granularityLevel != null)
+        req.setGranularityLevel(this.granularityLevel);
+      if (this.sKUArray != null)
+        req.setSKUArray(this.sKUArray);
+      if (this.includeWatchCount != null)
+        req.setIncludeWatchCount(this.includeWatchCount);
+
+    int pageNum = 1;
+    PaginationType pgn = new PaginationType();
+    pgn.setEntriesPerPage(new Integer(100));
+    pgn.setPageNumber(new Integer(pageNum++));
+
+    req.setPagination(pgn);
+
+    ArrayList items = new ArrayList();
+
+    while(true)
+    {
+      GetSellerListResponseType resp = (GetSellerListResponseType)this.execute(req);
+      ItemType tm[] = resp.getItemArray().getItem();
+      if (tm != null) {
+        for(int i = 0; i < tm.length; i ++)
+          items.add(tm[i]);
+      }
+      if( resp.isHasMoreItems() == null || !resp.isHasMoreItems().booleanValue() )
+        break;
+      this.seller = resp.getSeller();
+      this.returnedItemCountActual = resp.getReturnedItemCountActual() != null ? resp.getReturnedItemCountActual().intValue()
+          : 0;
+
+      // Increment page number.
+      pgn.setPageNumber(new Integer(pageNum++));
+    }
+
+    // Build results.
+    this.returnedItems = new ItemType[items.size()];
+    for(int i = 0; i < returnedItems.length; i ++)
+    {
+      returnedItems[i] = (ItemType)items.get(i);
+    }
+    return returnedItems;
+  }
+

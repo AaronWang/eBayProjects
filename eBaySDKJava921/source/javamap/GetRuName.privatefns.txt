@@ -1,0 +1,8 @@
+  /**
+   * For backward compatibility with old wrappers.  Use getRuName() instead.
+   */
+  public String GetRuName()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+     return getRuName();
+  }

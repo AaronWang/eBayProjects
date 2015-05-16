@@ -1,0 +1,30 @@
+   /**
+    * Get the default Style XSL.
+    * @throws IOException
+    * @return String
+    */
+   public static String getDefaultStyleXsl() throws java.io.IOException
+  {
+    java.io.InputStream strm = GetAttributesCSCall.class.getResourceAsStream("Attributes_Style.xsl");
+    return eBayUtil.convertInputStreamToString(strm);
+  }
+  /**
+   * The style XSL that will be used to patch the returned xml. By default
+   * this property is empty string, meaning to use the default style XSL built into SDK.
+   * Set to null to disable the XSL pathcing for the returned XML.
+   * @param styleXsl String
+   */
+  public void setStyleXsl(String styleXsl) {
+    this.styleXsl = styleXsl;
+  }
+
+  /**
+   * Gets the style XSL for patching the returned the CS Xml.
+   * @return String
+   */
+  public String getStyleXsl() {
+    return styleXsl;
+  }
+
+
+

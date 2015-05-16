@@ -1,0 +1,501 @@
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AdditionalCompatibilityEnabledDefinitionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressAttributeCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressAttributeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosureType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CancelDetailType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CancelInitiatorCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CancelReasonCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CancelStatusCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.EANEnabledDefinitionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.InquiryStatusCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ISBNEnabledDefinitionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ListingRecommendationsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ListingRecommendationType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.LogisticsPlanCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MessageMediaType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MetadataType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentHoldReasonCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentInformationCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentInformationType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentInstructionCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentsInformationCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentsInformationType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentTransactionCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentTransactionStatusCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentTransactionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupDetailsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupDropOffEnabledDefinitionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupMethodCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupOptionsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PickupStatusCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PictureURLsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ProductDetailsType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RecommendationType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RefundInformationType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RefundSourceTypeCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RefundTransactionInfoType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReturnStatusCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingEstimatedDeliveryInfoType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideListType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingTrackingEventCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxIdentifierAttributeCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxIdentifierAttributeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxIdentifierCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxIdentifierType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionReferenceCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionReferenceType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UPCEnabledDefinitionType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserIdentityCodeType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserIdentityType Class
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VariationProductListingDetailsType Class
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddressType Method _getAddressAttribute()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BuyerType Method _getBuyerTaxIdentifier()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Method _getBuyerTaxIdentifier()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Method _getCancelDetail()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method _getMessageMedia()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageType Method _getMessageMedia()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method _getMessageMedia()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method _getShippingPackageInfo()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createAdditionalCompatibilityEnabledDefinitionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createAddressAttributeType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createBuyerPackageEnclosuresType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createBuyerPackageEnclosureType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createCancelDetailType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createDispatchCutoffTimePreferencesType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createEANEnabledDefinitionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createExtendedPictureDetailsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createISBNEnabledDefinitionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createListingRecommendationsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createListingRecommendationType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createMessageMediaType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createMetadataType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentInformationCodeType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentInformationType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentsInformationCodeType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentsInformationType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentTransactionCodeType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPaymentTransactionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPickupDetailsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPickupDropOffEnabledDefinitionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPickupInStoreDetailsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPickupMethodSelectedType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPickupOptionsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createPictureURLsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createProductDetailsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createRecommendationType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createRefundInformationType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createRefundTransactionInfoType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createShippingEstimatedDeliveryInfoType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createShippingPackageInfoType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createShippingServiceCostOverrideListType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createShippingServiceCostOverrideType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createTaxIdentifierAttributeType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createTaxIdentifierType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createTransactionReferenceType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createUPCEnabledDefinitionType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createUserIdentityType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ObjectFactory Method createVariationProductListingDetailsType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method getAdditionalCompatibilityEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressType Method getAddressAttribute(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressType Method getAddressAttribute()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddressType Method getAddressAttributeLength()
+MISSING @SINCE TAG: com.ebay.sdk.call.SendInvoiceCall Method getAdjustmentAmount()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType Method getAdjustmentAmount()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getBuyerPackageEnclosures()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getBuyerPackageEnclosures()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerType Method getBuyerTaxIdentifier(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerType Method getBuyerTaxIdentifier()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getBuyerTaxIdentifier(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getBuyerTaxIdentifier()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BuyerType Method getBuyerTaxIdentifierLength()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Method getBuyerTaxIdentifierLength()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelDetail(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelDetail()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelDetailLength()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelReason()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelReasonDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getCancelStatus()
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method getDispatchCutoffTimePreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method getDispatchCutoffTimePreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method getDispatchCutoffTimePreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method getEANEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method getEANEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method getEANEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ListingDetailsType Method getEndingReason()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getExtendedOrderID()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getExtendedOrderID()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PictureDetailsType Method getExtendedPictureDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType Method getExtendedPictureDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ExternalTransactionType Method getExternalTransactionStatus()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserDefinedListType Method getFavoriteSearcheCount()
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method getGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method getInquiryStatus()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getInventoryReservationID()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method getISBNEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method getISBNEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method getISBNEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method getListingNPContactName()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method getListingNPEmail()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RelistItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReviseItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType Method getListingRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method getLogisticPlanType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getLogisticsPlanType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getLogisticsPlanType()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method getMessageMedia(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method getMessageMedia()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageType Method getMessageMedia(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageType Method getMessageMedia()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method getMessageMedia(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method getMessageMedia()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method getMessageMediaLength()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageType Method getMessageMediaLength()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method getMessageMediaLength()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getMonetaryDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getMonetaryDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SellerDiscountsType Method getOriginalShippingService()
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method getOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method getOverrideGSPserviceWithIntlService()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType Method getPaymentHoldReason()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CheckoutStatusType Method getPaymentInstrument()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method getPaymentInstrument()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getPickupDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getPickupDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method getPickupDropOffEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType Method getPickUpInStoreDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method getPickupInStoreDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getPickupMethodSelected()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getPickupMethodSelected()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType Method getProductDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SellingStatusType Method getQuantitySoldByPickupInStore()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getReturnedDispatchCutoffTimePreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getReturnedGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.AddFixedPriceItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.AddItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.RelistFixedPriceItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.RelistItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.ReviseFixedPriceItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.ReviseItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.VerifyAddFixedPriceItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.VerifyAddItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.VerifyRelistItemCall Method getReturnedListingRecommendations()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getReturnedOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getReturnedOverrideGSPServiceWithIntlServicePreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getReturnedPickupDropoffSellerPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetItemShippingCall Method getReturnedPickUpInStoreDetails()
+MISSING @SINCE TAG: com.ebay.sdk.call.GeteBayDetailsCall Method getReturnedProductDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method getReturnStatus()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getSellerEIASToken()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getSellerUserID()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method getShippingAddress()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method getShippingConvenienceCharge()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method getShippingConvenienceCharge()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method getShippingPackageInfo(int)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method getShippingPackageInfo()
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method getShippingPackageInfoLength()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method getShippingServiceCostOverrideList()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType Method getShippingServiceCutOffTime()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method getShippingServiceCutOffTime()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getShowDispatchCutoffTimePreferences()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getShowGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getShowOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getShowOverrideGSPServiceWithIntlServicePreference()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method getShowPickupDropoffPreferences()
+MISSING @SINCE TAG: com.ebay.sdk.call.GetOrdersCall Method getSortingOrder()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetOrdersRequestType Method getSortingOrder()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.StorefrontType Method getStoreCategory2Name()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.StorefrontType Method getStoreCategoryName()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxDetailsType Method getTaxCode()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method getUPCEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method getUPCEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method getUPCEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method getUserFirstName()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method getUserLastName()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VariationType Method getVariationProductListingDetails()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method isAdditionalCompatibilityEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method isAdditionalCompatibilityEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isAvailableForPickupDropOff()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isEBayNowAvailable()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isEBayNowEligible()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isEligibleForPickupDropOff()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReturnPolicyType Method isExtendedHolidayReturns()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method isGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method isGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isIgnoreQuantity()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferType Method isImmediatePayEligible()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyeBaySelectionType Method isIncludeFavoriteSearcheCount()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isIncludeRecommendations()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method isListingNPEmailNotifPref()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method isLiveAuction()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferDetailsType Method isNewBestOffer()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferType Method isNewBestOffer()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method isOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method isOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method isOverrideGSPserviceWithIntlService()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method isOverrideGSPServiceWithIntlServicePreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method isPickupDropOffEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method isPickupDropOffEnabled()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method isPickupDropoffSellerPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method isShowDispatchCutoffTimePreferences()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method isShowGlobalShippingProgramListingPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method isShowOutOfStockControlPreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method isShowOverrideGSPServiceWithIntlServicePreference()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method isShowPickupDropoffPreferences()
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method setAdditionalCompatibilityEnabled(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method setAdditionalCompatibilityEnabled(com.ebay.soap.eBLBaseComponents.AdditionalCompatibilityEnabledDefinitionType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method setAdditionalCompatibilityEnabled(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressType Method setAddressAttribute(int, com.ebay.soap.eBLBaseComponents.AddressAttributeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddressType Method setAddressAttribute(com.ebay.soap.eBLBaseComponents.AddressAttributeType[])
+MISSING @SINCE TAG: com.ebay.sdk.call.SendInvoiceCall Method setAdjustmentAmount(com.ebay.soap.eBLBaseComponents.AmountType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType Method setAdjustmentAmount(com.ebay.soap.eBLBaseComponents.AmountType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setAvailableForPickupDropOff(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setBuyerPackageEnclosures(com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setBuyerPackageEnclosures(com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerType Method setBuyerTaxIdentifier(int, com.ebay.soap.eBLBaseComponents.TaxIdentifierType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BuyerType Method setBuyerTaxIdentifier(com.ebay.soap.eBLBaseComponents.TaxIdentifierType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setBuyerTaxIdentifier(int, com.ebay.soap.eBLBaseComponents.TaxIdentifierType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setBuyerTaxIdentifier(com.ebay.soap.eBLBaseComponents.TaxIdentifierType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setCancelDetail(int, com.ebay.soap.eBLBaseComponents.CancelDetailType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setCancelDetail(com.ebay.soap.eBLBaseComponents.CancelDetailType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setCancelReason(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setCancelReasonDetails(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setCancelStatus(com.ebay.soap.eBLBaseComponents.CancelStatusCodeType)
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method setDispatchCutoffTimePreference(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method setDispatchCutoffTimePreference(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method setDispatchCutoffTimePreference(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method setEANEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method setEANEnabled(com.ebay.soap.eBLBaseComponents.EANEnabledDefinitionType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method setEANEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setEBayNowAvailable(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setEBayNowEligible(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setEligibleForPickupDropOff(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ListingDetailsType Method setEndingReason(com.ebay.soap.eBLBaseComponents.EndReasonCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReturnPolicyType Method setExtendedHolidayReturns(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setExtendedOrderID(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setExtendedOrderID(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PictureDetailsType Method setExtendedPictureDetails(com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType Method setExtendedPictureDetails(com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ExternalTransactionType Method setExternalTransactionStatus(com.ebay.soap.eBLBaseComponents.PaymentTransactionStatusCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserDefinedListType Method setFavoriteSearcheCount(java.lang.Integer)
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method setGlobalShippingProgramListingPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method setGlobalShippingProgramListingPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method setGlobalShippingProgramListingPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setIgnoreQuantity(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferType Method setImmediatePayEligible(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyeBaySelectionType Method setIncludeFavoriteSearcheCount(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setIncludeRecommendations(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method setInquiryStatus(com.ebay.soap.eBLBaseComponents.InquiryStatusCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setInventoryReservationID(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method setISBNEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method setISBNEnabled(com.ebay.soap.eBLBaseComponents.ISBNEnabledDefinitionType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method setISBNEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method setListingNPContactName(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method setListingNPEmail(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CharityInfoType Method setListingNPEmailNotifPref(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.AddItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.RelistItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ReviseItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType Method setListingRecommendations(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setLiveAuction(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method setLogisticPlanType(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setLogisticsPlanType(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setLogisticsPlanType(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method setMessageMedia(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Method setMessageMedia(com.ebay.soap.eBLBaseComponents.MessageMediaType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageType Method setMessageMedia(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MemberMessageType Method setMessageMedia(com.ebay.soap.eBLBaseComponents.MessageMediaType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method setMessageMedia(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Method setMessageMedia(com.ebay.soap.eBLBaseComponents.MessageMediaType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setMonetaryDetails(com.ebay.soap.eBLBaseComponents.PaymentsInformationType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setMonetaryDetails(com.ebay.soap.eBLBaseComponents.PaymentsInformationType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferDetailsType Method setNewBestOffer(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.BestOfferType Method setNewBestOffer(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SellerDiscountsType Method setOriginalShippingService(java.lang.String)
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method setOutOfStockControlPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method setOutOfStockControlPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method setOutOfStockControlPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.SetUserPreferencesCall Method setOverrideGSPserviceWithIntlService(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Method setOverrideGSPserviceWithIntlService(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method setOverrideGSPServiceWithIntlServicePreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType Method setPaymentHoldReason(com.ebay.soap.eBLBaseComponents.PaymentHoldReasonCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CheckoutStatusType Method setPaymentInstrument(com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method setPaymentInstrument(com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setPickupDetails(com.ebay.soap.eBLBaseComponents.PickupDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setPickupDetails(com.ebay.soap.eBLBaseComponents.PickupDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method setPickupDropOffEnabled(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method setPickupDropOffEnabled(com.ebay.soap.eBLBaseComponents.PickupDropOffEnabledDefinitionType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method setPickupDropOffEnabled(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Method setPickupDropoffSellerPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType Method setPickUpInStoreDetails(com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setPickupInStoreDetails(com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setPickupMethodSelected(com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setPickupMethodSelected(com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType Method setProductDetails(com.ebay.soap.eBLBaseComponents.ProductDetailsType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SellingStatusType Method setQuantitySoldByPickupInStore(java.lang.Integer)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionStatusType Method setReturnStatus(com.ebay.soap.eBLBaseComponents.ReturnStatusCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setSellerEIASToken(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setSellerUserID(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method setShippingAddress(com.ebay.soap.eBLBaseComponents.AddressType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.OrderType Method setShippingConvenienceCharge(com.ebay.soap.eBLBaseComponents.AmountType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TransactionType Method setShippingConvenienceCharge(com.ebay.soap.eBLBaseComponents.AmountType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method setShippingPackageInfo(int, com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method setShippingPackageInfo(com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType[])
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ItemType Method setShippingServiceCostOverrideList(com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideListType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType Method setShippingServiceCutOffTime(java.util.Calendar)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Method setShippingServiceCutOffTime(java.util.Calendar)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method setShowDispatchCutoffTimePreferences(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method setShowDispatchCutoffTimePreferences(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method setShowGlobalShippingProgramListingPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method setShowGlobalShippingProgramListingPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method setShowOutOfStockControlPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method setShowOutOfStockControlPreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method setShowOverrideGSPServiceWithIntlServicePreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method setShowOverrideGSPServiceWithIntlServicePreference(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetUserPreferencesCall Method setShowPickupDropoffPreferences(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Method setShowPickupDropoffPreferences(java.lang.Boolean)
+MISSING @SINCE TAG: com.ebay.sdk.call.GetOrdersCall Method setSortingOrder(com.ebay.soap.eBLBaseComponents.SortOrderCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.GetOrdersRequestType Method setSortingOrder(com.ebay.soap.eBLBaseComponents.SortOrderCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.StorefrontType Method setStoreCategory2Name(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.StorefrontType Method setStoreCategoryName(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.TaxDetailsType Method setTaxCode(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Method setUPCEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Method setUPCEnabled(com.ebay.soap.eBLBaseComponents.UPCEnabledDefinitionType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Method setUPCEnabled(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method setUserFirstName(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.UserType Method setUserLastName(java.lang.String)
+MISSING @SINCE TAG: com.ebay.soap.eBLBaseComponents.VariationType Method setVariationProductListingDetails(com.ebay.soap.eBLBaseComponents.VariationProductListingDetailsType)
+NO DOC BLOCK: com.ebay.sdk.pictureservice.PictureService Method uploadSiteHostedPictures(com.ebay.soap.eBLBaseComponents.UploadSiteHostedPicturesRequestType)
+NO DOC BLOCK: com.ebay.sdk.pictureservice.eps.eBayPictureServiceXMLCall Method uploadSiteHostedPictures(com.ebay.soap.eBLBaseComponents.UploadSiteHostedPicturesRequestType)
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Field additionalCompatibilityEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Field additionalCompatibilityEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Field additionalCompatibilityEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddressType Field addressAttribute
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType Field adjustmentAmount
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field availableForPickupDropOff
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field buyerPackageEnclosures
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field buyerPackageEnclosures
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BuyerType Field buyerTaxIdentifier
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field buyerTaxIdentifier
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field cancelDetail
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field cancelReason
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field cancelReasonDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field cancelStatus
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Field dispatchCutoffTimePreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Field dispatchCutoffTimePreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Field eanEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Field eanEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Field eanEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field eBayNowAvailable
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field eBayNowEligible
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field eligibleForPickupDropOff
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ListingDetailsType Field endingReason
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ReturnPolicyType Field extendedHolidayReturns
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field extendedOrderID
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field extendedOrderID
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.PictureDetailsType Field extendedPictureDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType Field extendedPictureDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ExternalTransactionType Field externalTransactionStatus
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.UserDefinedListType Field favoriteSearcheCount
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Field globalShippingProgramListingPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Field globalShippingProgramListingPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field ignoreQuantity
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BestOfferType Field immediatePayEligible
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MyeBaySelectionType Field includeFavoriteSearcheCount
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field includeRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionStatusType Field inquiryStatus
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field inventoryReservationID
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Field isbnEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Field isbnEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Field isbnEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CharityInfoType Field listingNPContactName
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CharityInfoType Field listingNPEmail
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CharityInfoType Field listingNPEmailNotifPref
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.AddItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.RelistItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ReviseItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType Field listingRecommendations
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field liveAuction
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Field logisticPlanType
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field logisticsPlanType
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field logisticsPlanType
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType Field messageMedia
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MemberMessageType Field messageMedia
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.MyMessagesMessageType Field messageMedia
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field monetaryDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field monetaryDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BestOfferDetailsType Field newBestOffer
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.BestOfferType Field newBestOffer
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SellerDiscountsType Field originalShippingService
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Field outOfStockControlPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Field outOfStockControlPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType Field overrideGSPserviceWithIntlService
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Field overrideGSPServiceWithIntlServicePreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType Field paymentHoldReason
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CheckoutStatusType Field paymentInstrument
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionStatusType Field paymentInstrument
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field pickupDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field pickupDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Field pickupDropOffEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Field pickupDropOffEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Field pickupDropOffEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType Field pickupDropoffSellerPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType Field pickUpInStoreDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field pickupInStoreDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field pickupMethodSelected
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field pickupMethodSelected
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType Field productDetails
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SellingStatusType Field quantitySoldByPickupInStore
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionStatusType Field returnStatus
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field sellerEIASToken
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field sellerUserID
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.UserType Field shippingAddress
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.OrderType Field shippingConvenienceCharge
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TransactionType Field shippingConvenienceCharge
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Field shippingPackageInfo
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ItemType Field shippingServiceCostOverrideList
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType Field shippingServiceCutOffTime
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType Field shippingServiceCutOffTime
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Field showDispatchCutoffTimePreferences
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Field showGlobalShippingProgramListingPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Field showOutOfStockControlPreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Field showOverrideGSPServiceWithIntlServicePreference
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType Field showPickupDropoffPreferences
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.GetOrdersRequestType Field sortingOrder
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.StorefrontType Field storeCategory2Name
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.StorefrontType Field storeCategoryName
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.TaxDetailsType Field taxCode
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.CategoryFeatureType Field upcEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType Field upcEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.SiteDefaultsType Field upcEnabled
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.UserType Field userFirstName
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.UserType Field userLastName
+NO DOC BLOCK: com.ebay.soap.eBLBaseComponents.VariationType Field variationProductListingDetails

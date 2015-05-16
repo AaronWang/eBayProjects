@@ -1,0 +1,38 @@
+  /**
+   * Executing the API call.
+   * @param itemID eBay itemID that uniquely identifies the item.
+   * @throws ApiException
+   * @return The ItemType object if the call succeeded.
+   */
+  public ItemType getItem(String itemID)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+
+    GetItemRequestType req = new GetItemRequestType();
+    req.setItemID(itemID);
+    req.setDetailLevel(this.getDetailLevel());
+    if (this.includeWatchCount != null)
+      req.setIncludeWatchCount(this.includeWatchCount);
+    if (this.includeCrossPromotion != null)
+      req.setIncludeCrossPromotion(this.includeCrossPromotion);
+    if (this.includeItemSpecifics != null)
+      req.setIncludeItemSpecifics(this.includeItemSpecifics);
+    if (this.includeTaxTable != null)
+      req.setIncludeTaxTable(this.includeTaxTable);
+    if (this.sKU != null)
+      req.setSKU(this.sKU);
+    if (this.variationSKU != null)
+      req.setVariationSKU(this.variationSKU);
+    if (this.variationSpecifics != null)
+      req.setVariationSpecifics(this.variationSpecifics);
+    if (this.transactionID != null)
+      req.setTransactionID(this.transactionID);
+    if (this.includeItemCompatibilityList != null)
+      req.setIncludeItemCompatibilityList(this.includeItemCompatibilityList);
+
+    GetItemResponseType resp = (GetItemResponseType) execute(req);
+
+    this.returnedItem = resp.getItem();
+    
+    return this.getReturnedItem();
+  }

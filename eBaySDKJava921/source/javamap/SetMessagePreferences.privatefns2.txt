@@ -1,0 +1,7 @@
+  /**
+   * Gets the SetMessagePreferencesResponseType.response.
+   * @return SetMessagePreferencesResponseType
+   */
+  public SetMessagePreferencesResponseType getResponse() {
+	return response;
+  }

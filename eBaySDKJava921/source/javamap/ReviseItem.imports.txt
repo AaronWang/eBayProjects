@@ -1,0 +1,2 @@
+import com.ebay.sdk.pictureservice.*;
+import com.ebay.sdk.pictureservice.eps.*;

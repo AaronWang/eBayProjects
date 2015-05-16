@@ -1,0 +1,4 @@
+    if( this.recipientBidderUserID == null )
+      throw new SdkException("RecipientBidderUserID property is not set.");
+    if( this.itemID == null )
+      throw new SdkException("ItemID should be set to the original item ID that you want to make an offer for.");

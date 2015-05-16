@@ -1,0 +1,5 @@
+    Calendar startTime = resp.getStartTime();
+    if (null != startTime)
+    {
+    	listingDuration = new TimeFilter(startTime, resp.getEndTime());
+    }

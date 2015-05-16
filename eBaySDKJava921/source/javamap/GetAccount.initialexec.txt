@@ -1,0 +1,13 @@
+    if( this.viewType == null )
+      throw new SdkException("ViewType property is not set.");
+
+    if( this.viewType.equals(AccountHistorySelectionCodeType.BETWEEN_SPECIFIED_DATES) )
+    {
+      if( this.viewPeriod == null )
+        throw new SdkException("GetAccountCall.ViewPeriod is not set.");
+    }
+    else if( this.viewType.equals(AccountHistorySelectionCodeType.SPECIFIED_INVOICE) )
+    {
+      if( this.invoiceDate == null )
+        throw new SdkException("GetAccountCall.InvoiceDate is not set.");
+    }

@@ -1,0 +1,52 @@
+  /**
+   * Retrieves transaction information for the user for which the call is made (and
+   * not for any other user), where a transaction is the information about the sale
+   * of one or more items by one buyer from a single listing. (To retrieve
+   * transactions for another seller's listing, use GetItemTransactions.)
+   * 
+   * <br>
+   * @throws ApiException
+   * @return The TransactionType[] object.
+   */
+  public TransactionType[] getSellerTransactions()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetSellerTransactionsRequestType req;
+    req = new GetSellerTransactionsRequestType();
+
+    if( this.modifiedTimeFilter == null )
+      throw new SdkException("ModifiedTimeFilter property is not set.");
+
+    req.setDetailLevel(this.getDetailLevel());
+    if (this.modifiedTimeFilter != null)
+    {
+      req.setModTimeFrom(this.modifiedTimeFilter.getTimeFrom());
+      req.setModTimeTo(this.modifiedTimeFilter.getTimeTo());
+    }
+    if (this.pagination != null)
+      req.setPagination(this.pagination);
+    if (this.includeFinalValueFee != null)
+      req.setIncludeFinalValueFee(this.includeFinalValueFee);
+    if (this.includeContainingOrder != null)
+      req.setIncludeContainingOrder(this.includeContainingOrder);
+    if (this.sKUArray != null)
+      req.setSKUArray(this.sKUArray);
+    if (this.platform != null)
+      req.setPlatform(this.platform);
+    if (this.inventoryTrackingMethod != null)
+      req.setInventoryTrackingMethod(this.inventoryTrackingMethod);
+    if(this.includeCodiceFiscale !=null)
+      req.setIncludeCodiceFiscale(this.includeCodiceFiscale);
+
+    GetSellerTransactionsResponseType resp = (GetSellerTransactionsResponseType) execute(req);
+
+    this.paginationResult = resp.getPaginationResult();
+    this.hasMoreTransactions = (resp.isHasMoreTransactions() == null? false: resp.isHasMoreTransactions().booleanValue());
+    this.returnedTransactionsPerPage = resp.getTransactionsPerPage();
+    this.returnedPageNumber = resp.getPageNumber();
+    this.returnedTransactionCountActual = (resp.getReturnedTransactionCountActual() == null? 0: resp.getReturnedTransactionCountActual().intValue());
+    this.seller = resp.getSeller();
+    this.returnedTransactions = (resp.getTransactionArray() == null? null: resp.getTransactionArray().getTransaction());
+    this.payPalPreferred = (resp.isPayPalPreferred() == null? false: resp.isPayPalPreferred().booleanValue());
+    return this.getReturnedTransactions();
+  }

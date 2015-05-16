@@ -1,0 +1,20 @@
+  /**
+   * Executes the SOAP API. GetProductFamilyMembersCall.ProductSearch will
+   * be ignored.
+   * @param productSearch ProductSearchType[]
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return ProductSearchResultType[]
+   */
+  public ProductSearchResultType[] getProductFamilyMembers(ProductSearchType[] productSearch)
+    throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetProductFamilyMembersRequestType req = new GetProductFamilyMembersRequestType();
+    req.setProductSearch(productSearch);
+
+    GetProductFamilyMembersResponseType resp = (GetProductFamilyMembersResponseType)this.execute(req);
+    this.returnedProductSearchResults = resp.getProductSearchResult();
+    this.returnedDataElementSets = resp.getDataElementSets();
+    return this.returnedProductSearchResults;
+  }

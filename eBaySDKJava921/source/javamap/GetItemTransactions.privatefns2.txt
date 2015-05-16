@@ -1,0 +1,55 @@
+  /**
+   * Execute the API call. GetItemTransactionsCall.ItemID and
+   * GetItemTransactionsCall.ModifiedTimeFilter will be ignored.
+   * @param itemID String Unique ID of item that you are retrieving transactions for.
+   * @param modifiedTimeFilter TimeFilter Range of transactions that you are retrieving.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getItemTransactions(String itemID, TimeFilter modifiedTimeFilter)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetItemTransactionsRequestType req = new GetItemTransactionsRequestType();
+
+    req.setItemID(itemID);
+    req.setModTimeFrom(modifiedTimeFilter.getTimeFrom());
+	req.setModTimeTo(modifiedTimeFilter.getTimeTo());
+	if (null != includeContainingOrder)
+		req.setIncludeContainingOrder(includeContainingOrder);
+	if (null != includeFinalValueFee)
+		req.setIncludeFinalValueFee(includeFinalValueFee);
+
+    if( this.pagination != null )
+      req.setPagination(this.pagination);
+
+    if( this.transactionID != null && this.transactionID.length() > 0 )
+      req.setTransactionID(this.transactionID);
+
+    // Call eBay
+    GetItemTransactionsResponseType resp = (GetItemTransactionsResponseType)this.execute(req);
+
+    this.returnedTransactions = resp.getTransactionArray() == null ? null :
+        resp.getTransactionArray().getTransaction();
+    this.paginationResult = resp.getPaginationResult();
+    this.item = resp.getItem();
+
+    if( resp.isHasMoreTransactions() != null )
+      this.hasMoreTransactions = resp.isHasMoreTransactions().booleanValue();
+	if( resp.isPayPalPreferred() != null )
+	  this.payPalPreferred = resp.isPayPalPreferred().booleanValue();
+    if( resp.getReturnedTransactionCountActual() != null )
+      this.returnedTransactionCountActual = resp.getReturnedTransactionCountActual().intValue();
+
+    // Save EntriesPerPage and PageNumber back to the input PaginationType.
+    if( this.pagination == null )
+      this.pagination = new PaginationType();
+    if( resp.getTransactionsPerPage() != null )
+      this.pagination.setEntriesPerPage(resp.getTransactionsPerPage());
+    if( resp.getPageNumber() != null )
+      this.pagination.setPageNumber(resp.getPageNumber());
+
+    return this.returnedTransactions;
+  }
+

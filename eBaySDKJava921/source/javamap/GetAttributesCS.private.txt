@@ -1,0 +1,41 @@
+
+  static final String XmlDeclaration = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+  static final String eBay_Start = "<eBay>";
+  static final String eBay_End = "</eBay>";
+
+  private String styleXsl = "";
+
+  /**
+   * Name of the XSL Overrides node.
+   */
+  public static final String OverridesName = "API.XSL.Overrides";
+
+  /**
+   * Name of the XSL GlobalSettings node.
+   */
+  public static final String GlobalSettingsName = "GlobalSettings";
+
+  /**
+   * XPath of AttributeSet node.
+   */
+  public static final String SELECT_AS = "//Attributes/AttributeSet[@id=\"{0}\"]";
+
+  /**
+   * XPath of CharacteristicsSet node.
+   */
+  public static final String SELECT_CS = "//Characteristics/CharacteristicsSet[@id=\"{0}\"]";
+
+  /**
+   * XPath of overrides node.
+   */
+  public static final String SELECT_OVERRIDES = "//" + OverridesName;
+
+  /**
+   * XPath of version node.
+   */
+  public static final String SELECT_VERSION = "//Version";
+
+  /**
+   * XPath of GlobalSettings node.
+   */
+  public static final String SELECT_GLOBALSETTINGS = "//" + GlobalSettingsName;

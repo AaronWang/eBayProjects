@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ <display-name>itemSpecificsDemo</display-name>
+ <context-param>
+	<description><![CDATA[Token is used for both API server and EPS server.]]></description>
+    <param-name>ApiToken</param-name>
+    <param-value></param-value>
+  </context-param>
+
+  <context-param>
+      <description>URL of eBay SOAP API server</description>
+    <param-name>ApiServerURL</param-name>
+    <param-value>
+	     https://api.sandbox.ebay.com/wsapi 
+	     <!-- for production, use https://api.ebay.com/wsapi -->
+    </param-value>
+  </context-param>
+
+  <context-param>
+    <description>URL of eBay EPS server for image hosting</description>
+    <param-name>EpsServerURL</param-name>
+    <param-value>
+      https://api.sandbox.ebay.com/ws/api.dll
+      <!-- for production, use https://api.ebay.com/ws/api.dll -->
+    </param-value>
+  </context-param>
+
+  <context-param>
+    <description>
+      <![CDATA[Template of URL for viewing item. http://cgi.sandbox.ebay.com/ws/eBayISAPI.dll?ViewItem&item={0}]]>
+    </description>
+    <param-name>ViewItemUrl</param-name>
+    <param-value>
+      <![CDATA[http://cgi.sandbox.ebay.com/ws/eBayISAPI.dll?ViewItem&item={0}]]>
+    </param-value>
+  </context-param>
+
+  <context-param>
+    <description>true - enable Xml and exception logging. false - disable logging.</description>
+    <param-name>EnableLogging</param-name>
+    <param-value>true</param-value>
+  </context-param>
+	
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		SiteServlet</display-name>
+		<servlet-name>SiteServlet</servlet-name>
+		<servlet-class>com.ebay.sample.itemSpecificsDemo.servlet.SiteServlet</servlet-class>
+	</servlet>
+    <servlet-mapping>
+	  	<servlet-name>SiteServlet</servlet-name>
+	  	<url-pattern>/SiteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		CategoryListServlet</display-name>
+		<servlet-name>CategoryListServlet</servlet-name>
+		<servlet-class>com.ebay.sample.itemSpecificsDemo.servlet.CategoryListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		ItemSpecificsServlet</display-name>
+		<servlet-name>ItemSpecificsServlet</servlet-name>
+		<servlet-class>com.ebay.sample.itemSpecificsDemo.servlet.ItemSpecificsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		AttributesInfoServlet</display-name>
+		<servlet-name>AttributesInfoServlet</servlet-name>
+		<servlet-class>com.ebay.sample.itemSpecificsDemo.servlet.AttributesInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		ReturnPolicyServlet</display-name>
+		<servlet-name>ReturnPolicyServlet</servlet-name>
+		<servlet-class>
+		com.ebay.sample.itemSpecificsDemo.servlet.ReturnPolicyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		AddItemServlet</display-name>
+		<servlet-name>AddItemServlet</servlet-name>
+		<servlet-class>com.ebay.sample.itemSpecificsDemo.servlet.AddItemServlet</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+	  	<servlet-name>CategoryListServlet</servlet-name>
+	  	<url-pattern>/CategoryListServlet</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>ItemSpecificsServlet</servlet-name>
+	  	<url-pattern>/ItemSpecificsServlet</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>AttributesInfoServlet</servlet-name>
+	  	<url-pattern>/AttributesInfoServlet</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>ReturnPolicyServlet</servlet-name>
+	  	<url-pattern>/ReturnPolicyServlet</url-pattern>
+	  </servlet-mapping>
+	  <servlet-mapping>
+	  	<servlet-name>AddItemServlet</servlet-name>
+	  	<url-pattern>/AddItemServlet</url-pattern>
+	  </servlet-mapping>
+	  
+	  <error-page>
+	    <exception-type>java.lang.Exception</exception-type>
+	    <location>/errorPage.jsp</location>
+	  </error-page>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

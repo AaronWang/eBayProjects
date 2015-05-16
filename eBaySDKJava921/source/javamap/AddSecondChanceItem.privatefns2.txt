@@ -1,0 +1,38 @@
+  /**
+   * Executes VerifyAddSecondChanceItem API. This call is used to evaluate
+   * listing fees without actually making the second chance offer.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return FeesType
+   */
+  public void verifyAddSecondChanceItem() throws com.ebay.sdk.ApiException,
+     com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    VerifyAddSecondChanceItemRequestType req = new VerifyAddSecondChanceItemRequestType();
+
+    if( this.recipientBidderUserID == null )
+      throw new SdkException("RecipientBidderUserID is not set.");
+    req.setRecipientBidderUserID(this.recipientBidderUserID);
+
+    if( this.itemID == null )
+      throw new SdkException("ItemID should be set to the original item ID that you want to make offer for.");
+    req.setItemID(this.itemID);
+
+    if (null != this.sellerMessage)
+    {
+    	req.setSellerMessage(this.sellerMessage);
+    }
+
+    if( this.buyItNowPrice != null )
+      req.setBuyItNowPrice(this.buyItNowPrice);
+      
+    if( this.duration != null )
+      req.setDuration(this.duration);
+
+    // Executes the API.
+    VerifyAddSecondChanceItemResponseType resp = (VerifyAddSecondChanceItemResponseType)this.execute(req);
+    
+  }
+
+

@@ -1,0 +1,2 @@
+    if( xSLFile != null )
+      GetAttributesXSLCall.decodeXSLData(xSLFile);

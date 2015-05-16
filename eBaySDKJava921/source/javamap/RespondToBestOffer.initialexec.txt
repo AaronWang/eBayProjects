@@ -1,0 +1,6 @@
+    if( this.itemID == null )
+      throw new Exception("ItemID property is not set.");
+    if( this.bestOfferAction == null )
+      throw new Exception("BestOfferAction property is not set.");
+    if( this.bestOfferIDs == null || this.bestOfferIDs.length == 0 )
+      throw new Exception("Please specify one or more BestOfferIDs.");

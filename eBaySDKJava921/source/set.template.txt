@@ -1,0 +1,8 @@
+  /**
+   * Sets the %Callname%RequestType.%paramname%.
+   * @param %paramname% %Paramtype%
+   */
+  public void set%Paramname%(%Paramtype% %paramname%)
+  {
+    this.%paramname% = %paramname%;
+  }

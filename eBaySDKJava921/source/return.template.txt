@@ -1,0 +1,11 @@
+
+  /**
+   * Valid after executing the API.
+   * Gets the returned %Callname%ResponseType.%paramname%.
+   * %Returndoc%
+   * @return %Paramtype%
+   */
+  public %Paramtype% get%Paramname%()
+  {
+    return this.%paramname%;
+  }

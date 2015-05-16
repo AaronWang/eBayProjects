@@ -1,0 +1,34 @@
+
+  /**
+   * No longer supported - do not use.
+   */
+  public void setMinimumReservePrice(java.lang.Double minimumReservePrice) {
+      this.minimumReservePrice = minimumReservePrice;
+  }
+
+
+
+  private static String stringFromSiteCodeType(SiteCodeType site)
+  {
+    return new Integer(SiteIDUtil.toNumericalID(categorySiteID)).toString();
+  }
+
+  /**
+   * Backward compatible function - use setParentCategories instead.
+   * @param parentCategories String[]
+   */
+  public void setParentCategory(String[] parentCategories) {
+    this.parentCategories = parentCategories;
+  }
+
+  /**
+   * Gets the GetCategoriesResponseType.
+   * @return GetCategoriesResponseType
+   */ 
+  public GetCategoriesResponseType getResponse() {
+	return response;
+  }
+
+
+
+  

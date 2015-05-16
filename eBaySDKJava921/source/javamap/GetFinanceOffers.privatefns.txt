@@ -1,0 +1,8 @@
+  /**
+   * Backward compatible function - do not use
+   * @param id String
+   */
+  public void setFianceOfferId(String id)
+  {
+    this.financeOfferId = id;
+  }

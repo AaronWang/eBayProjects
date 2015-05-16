@@ -1,0 +1,35 @@
+  /**
+   * Executes the API call. The picture files that you provided will not be
+   * uploaded and some dummy urls will be used instead.
+   * @param item ItemType
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return FeesType The estimated fees information.
+   */
+  public FeesType verifyAddItem(ItemType item)
+    throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    VerifyAddItemRequestType request = new VerifyAddItemRequestType();
+    request.setItem(item);
+
+   if( this.pictureFiles != null )
+    {
+      if( item.getPictureDetails() == null )
+      {
+    	  PictureDetailsType pictureDetails = new PictureDetailsType();
+    	  pictureDetails.setPhotoDisplay(PhotoDisplayCodeType.NONE);
+          item.setPictureDetails(pictureDetails);
+      }
+      
+      // Save urls back to item object.
+      String[] uris = new String[pictureFiles.length];
+      for(int i = 0; i < pictureFiles.length; i ++) {
+           uris[i] = IMG_URL_FORMAT + (new Integer(i)).toString() + JPG_EXT;
+      }
+      item.getPictureDetails().setPictureURL(uris);
+    }
+    
+    VerifyAddItemResponseType resp = (VerifyAddItemResponseType)execute(request);
+    return resp.getFees();
+  }

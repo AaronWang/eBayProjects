@@ -1,0 +1,102 @@
+  /**
+   * Extract CS xml by list of CSId from combined CS Xml document.
+   * @param allCSXml Document The CS Xml document that contains multiple CS Xml.
+   * @param csIds int[] List of CSIDs that you want to get Xml for. Set to null to return xml for all CS.
+   * @param copyOverrides bool Copy Overrides node or not.
+   * @param fromPath String Xpath of the node from where to copy all nodes.
+   * @param outputXml Document The output Xml to copy selected nodes to. null means to
+   * @throws TransformerException
+   * @throws ParserConfigurationException
+   * @throws SAXException
+   * @throws IOException
+   * @throws SdkException
+   * @return Document The new generated Xml document that contains the specified CS Xml.
+   */
+  public static Document extractMultiCSFromXml(Document allCSXml, int[] csIds, boolean copyOverrides, String fromPath, Document outputXml)
+      throws TransformerException, ParserConfigurationException, SAXException, IOException, SdkException
+  {
+	  Document retXml = null;
+	  if( csIds == null || csIds.length == 0 ) {
+		  // Ingore outputXml.
+		  retXml = allCSXml;
+	  } else {
+		  if(outputXml == null) {
+			  // Create empty doc
+			  retXml = XmlUtil.createDom(XmlDeclaration + "\n" + eBay_Start + "\n" + eBay_End);
+		  } else {
+			  retXml = outputXml;
+		  }
+
+		  //Node node = retXml.CreateXmlDeclaration("1.0", System.Text.Encoding.Unicode.BodyName, null);
+		  //retXml.AppendChild(node);
+
+		  Node eBayNode = XmlUtil.getChildByName(retXml, "eBay");
+		  Node asNode = XmlUtil.getChildByName(eBayNode, "Attributes");
+		  if( asNode == null ) {
+			  asNode = XmlUtil.appendChildNode(retXml, eBayNode, "Attributes");
+		  }
+		  Node csNode = XmlUtil.getChildByName(eBayNode, "Characteristics");
+		  if( csNode == null ) {
+			  csNode = XmlUtil.appendChildNode(retXml, eBayNode, "Characteristics");
+		  }
+
+		  // Copy verNode
+		  Node verNode = XPathUtil.selectSingleNode(fromPath + SELECT_VERSION,
+                                                allCSXml);
+		  if (verNode != null) {
+			  Node oldNode = XmlUtil.getChildByName(eBayNode, "Version");
+			  if( oldNode == null ) {
+				  eBayNode.appendChild(retXml.importNode(verNode, true));
+			  }
+		  }
+
+		  Node fromNode;
+		  String xp;
+
+		  for(int i = 0; i < csIds.length; i++ ) {
+			  int csId = csIds[i];
+
+			  // Copy Attributes/AttributeSet
+			  xp = MessageFormat.format(fromPath + SELECT_AS, new Object[] {String.valueOf(csId)});
+			  fromNode = XPathUtil.selectSingleNode(xp, allCSXml);
+			  if( fromNode == null ) {
+		                  String expMsg = "extractMultiCSFromXml: Unable to find source Attributes node the given CSId: " + csId + ".\r\n";
+		                  expMsg += "There is error in the attributes meta-data, please check if the category is \r\n";
+		                  expMsg += "item specifics enabled(using GetCategoryFeatures) and use eBay item specifics related API instead.\r\n";
+		                  expMsg += "You may also contact eBay and report the error.";
+				  throw new SdkException(expMsg);
+			  }
+			  asNode.appendChild(retXml.importNode(fromNode, true));
+
+			  // Copy Characteristics/CharacteristicsSet
+			  xp = MessageFormat.format(fromPath + SELECT_CS, new Object[] {String.valueOf(csId)} );
+			  fromNode = XPathUtil.selectSingleNode(xp, allCSXml);
+			  if( fromNode == null ) {
+				  throw new SdkException("extractMultiCSFromXml: Unable to find source Characteristics node the given CSId: " + csId);
+			  }
+			  csNode.appendChild(retXml.importNode(fromNode, true));
+		  }
+
+		  // Copy eBay//API.XSL.Overrides
+		  if( copyOverrides ) {
+			  fromNode = XPathUtil.selectSingleNode(fromPath + SELECT_OVERRIDES, allCSXml);
+			  if( fromNode != null ) {
+				  Node oldNode = XmlUtil.getChildByName(eBayNode, OverridesName);
+				  if( oldNode == null ) {
+					  eBayNode.appendChild(retXml.importNode(fromNode, true));
+				  }
+			  }
+
+			  // Copy GlobalSettings
+			  fromNode = XPathUtil.selectSingleNode(fromPath + SELECT_GLOBALSETTINGS, allCSXml);
+			  if( fromNode != null ) {
+				  Node oldNode = XmlUtil.getChildByName(eBayNode, GlobalSettingsName);
+				  if( oldNode == null ) {
+					  eBayNode.appendChild(retXml.importNode(fromNode, true));
+				  }
+			  }
+		  }
+	  }
+
+	  return retXml;
+  }

@@ -1,0 +1,7 @@
+    // Save EntriesPerPage and PageNumber back to the input PaginationType.
+    if( this.pagination == null )
+      this.pagination = new PaginationType();
+    if( resp.getItemsPerPage() != null )
+      this.pagination.setEntriesPerPage(resp.getItemsPerPage());
+    if( resp.getPageNumber() != null )
+      this.pagination.setPageNumber(resp.getPageNumber());

@@ -1,0 +1,8 @@
+  
+  /**
+   * Gets the GetCategory2CSResponseType.
+   * @return GetCategory2CSResponseType
+   */ 
+  public GetCategory2CSResponseType getResponse() {
+	return response;
+  }

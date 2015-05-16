@@ -1,0 +1,64 @@
+  /**
+   * Gets the PictureService object that will be used to upload picture files
+   * specified in setPictureFiles().
+   * @return The PictureService instance.
+   */
+  public PictureService getPictureService() {
+    return pictureService;
+  }
+
+  /**
+   * Set the PictureService object that will be used to upload picture files
+   * specified in setPictureFiles().
+   * @param pictureService the PictureService object.
+   */
+  public void setPictureService(PictureService pictureService) {
+    this.pictureService = pictureService;
+  }
+
+  /**
+   * Gets list of picture files for the item.
+   * @return String[]
+   */
+  public String[] getPictureFiles() {
+    return pictureFiles;
+  }
+
+  /**
+   * Sets list of picture files for the item. Before listing
+   * the item, the attached picture service object (setPictureService())
+   * to upload these picture files then set the picture property of the
+   * item object.
+   * @param pictureFiles String[]
+   */
+  public void setPictureFiles(String[] pictureFiles) {
+    this.pictureFiles = pictureFiles;
+  }
+
+  /**
+   * Reset the UUID property of eBay item object.
+   * @param item The ItemType object whose UUID property will be reset.
+   */
+  public static void resetItemUUID(ItemType item) {
+    item.setUUID(newUUID());
+  }
+
+  /**
+   * Returns AutoSetItemUUID property.
+   * @return true means if UUID property of item (item.getUUID()) is null,
+   * the call object will automatically generate an UUID and
+   * fills it to the item object (item.setUUID()).
+   */
+  public boolean getAutoSetItemUUID() {
+    return autoSetItemUUID;
+  }
+
+  /**
+   * Sets AutoSetItemUUID property. true means if UUID property of item is null,
+   * the call object will automatically generate an UUID and fills it
+   * to the item object (item.setUUID()).
+   * @param autoSetItemUUID boolean
+   */
+  public void setAutoSetItemUUID(boolean autoSetItemUUID) {
+    this.autoSetItemUUID = autoSetItemUUID;
+  }

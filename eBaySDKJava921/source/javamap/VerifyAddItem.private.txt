@@ -1,0 +1,4 @@
+  private final String IMG_URL_FORMAT = "http://i0.ebayimg.ebay.com/i0/00/";
+  private final String JPG_EXT = ".jpg";
+
+  private String[] pictureFiles = null;

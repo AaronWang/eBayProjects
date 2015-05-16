@@ -1,0 +1,25 @@
+  /**
+   *
+   * Sets the GetMyeBayRequestType.biddingSort.
+   * @param biddingSort ItemSortTypeCodeType
+   */
+  public void setActiveSort(ItemSortTypeCodeType biddingSort) {
+    this.biddingSort = biddingSort;
+  }
+
+
+  /**
+   * @return total items in the active, watch, lost, and won lists.
+   */
+  public int totalItems() {
+    int total = 0;
+    if( this.returnedBiddingList != null )
+      total += this.returnedBiddingList.length;
+     if( this.returnedWatchList != null )
+      total += this.returnedWatchList.length;
+     if( this.returnedLostItemList != null )
+      total += this.returnedLostItemList.length;
+     if( this.returnedWonItemList != null )
+      total += this.returnedWonItemList.length;
+     return total;
+  }

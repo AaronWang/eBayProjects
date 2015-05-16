@@ -1,0 +1,17 @@
+  /**
+%Calldoc%
+   * <br>
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return The %Returntype% object.
+   */
+  public %Returntype% %callname%()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    %Callname%RequestType req;
+%Paraminit%
+    %Callname%ResponseType resp = (%Callname%ResponseType) execute(req);
+
+%Returncode%
+  }

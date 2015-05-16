@@ -1,0 +1,88 @@
+  /**
+   * Call eBay API to downloads all categories in asynchronized mode to reduce
+   * consumption of system resource.
+   * Usually if you use GetCategoriesCall.getCategories()
+   * to retrieve all categories it will require large amount of memory.
+   * This static method devides all categories into small
+   * groups then call GetCategories for each group.
+   *
+   * @param apiContext ApiContext
+   * @param siteID SiteCodeType The eBay site associated with the categories.
+   * @param levelLimit int Used to download parent categories to start from.
+   * These parent categories will be devided into groups with the size of groupSize.
+   * CatCategories API will be called for each group then all results will be cominbed together.
+   * @param detailLevel DetailLevelCodeType The detail level to use to download categories.
+   * @param groupSize int Size of parent category group.
+   * @param listener CategoryEventListener Listener to receive downloaded categories.
+   * @throws Exception
+   * @return int Total number of categories received.
+   */
+  public static int getAllCategories(ApiContext apiContext, SiteCodeType siteID, int levelLimit, DetailLevelCodeType detailLevel, int groupSize, CategoryEventListener listener)
+      throws Exception
+  {
+     GetCategoriesCall api = new GetCategoriesCall(apiContext);
+    api.setSite(siteID);
+    api.setDetailLevel(new DetailLevelCodeType[] {detailLevel});
+    api.setLevelLimit(levelLimit);
+    api.setCategorySiteID(siteID);
+    api.setViewAllNodes(true);
+    
+    // Download root categories then devide them into groups for downloading.
+    CategoryType[] rootCats = api.getCategories();
+    
+    //remove top level categories to the tail of the array
+    int tail=rootCats.length-1;
+    int length=0;
+    for(length = 0;length <= tail;){
+    	if(rootCats[length].getCategoryLevel()==levelLimit&&(rootCats[length].isLeafCategory()==null||rootCats[length].isLeafCategory()==false)){
+    		length++;
+    		continue;
+    	}
+    	CategoryType temp = rootCats[length];
+    	rootCats[length] = rootCats[tail];
+    	rootCats[tail] = temp;
+    	tail--;
+    }
+    //send top categories
+    int topLength = rootCats.length-length;
+    CategoryType[] topCategories = new CategoryType[topLength];
+    for(int i = length;i < rootCats.length;i++){
+    	topCategories[i-length] = rootCats[length];
+    }
+    listener.receivedCategories(siteID, topCategories, api.returnedCategoryVersion);
+    
+    int totalDownloaded = topLength;
+
+    for(int fromId = 0; fromId < length; ) {
+      api = new GetCategoriesCall(apiContext);
+      api.setSite(siteID);
+      api.setDetailLevel(new DetailLevelCodeType[] {detailLevel});
+      api.setViewAllNodes(true);
+      api.setCategorySiteID(siteID);
+
+      int toId = fromId + groupSize - 1;
+      if( toId >= length ) {
+        toId = length - 1;
+      }
+      int num = toId - fromId + 1;
+      String[] parentIdList = new String[num];
+      for(int n = 0; n < num; n++ ) {
+        parentIdList[n] = rootCats[fromId + n].getCategoryID();
+      }
+      api.setParentCategory(parentIdList);
+
+      CategoryType cats[] = api.getCategories();
+      if( cats != null && cats.length > 0 ) {
+        totalDownloaded += cats.length;
+        listener.receivedCategories(siteID, cats, api.returnedCategoryVersion);
+      }
+
+      if( toId >= rootCats.length - 1 ) {
+        break;
+      }
+
+      fromId = toId + 1;
+    }
+
+    return totalDownloaded;
+  }

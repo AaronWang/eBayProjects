@@ -1,0 +1,6 @@
+	if( this.XSLFile != null ) {
+		decodeXSLData(this.XSLFile);
+	}
+
+	response = resp;
+

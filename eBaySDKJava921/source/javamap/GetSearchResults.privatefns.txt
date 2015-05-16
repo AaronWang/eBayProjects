@@ -1,0 +1,10 @@
+	/**
+	 * After executing the API, indicates whether there are more items matching
+	 * the search criteria than were returned by the current call to GetSearchResults.
+	 * @return boolean
+	 */
+	public boolean isHasMoreItems() {
+		return hasMoreItems;
+	}
+
+

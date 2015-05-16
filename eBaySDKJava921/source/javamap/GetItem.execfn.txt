@@ -1,0 +1,43 @@
+  /**
+   * Returns item data (title, description, price information, seller information, and so on)
+   * for the specified item ID.
+   * 
+   * <br>
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return The ItemType object.
+   */
+  public ItemType getItem()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetItemRequestType req;
+    req = new GetItemRequestType();
+    req.setDetailLevel(this.getDetailLevel());
+    if (this.itemID != null)
+      req.setItemID(this.itemID);
+    if (this.includeWatchCount != null)
+      req.setIncludeWatchCount(this.includeWatchCount);
+    if (this.includeCrossPromotion != null)
+      req.setIncludeCrossPromotion(this.includeCrossPromotion);
+    if (this.includeItemSpecifics != null)
+      req.setIncludeItemSpecifics(this.includeItemSpecifics);
+    if (this.includeTaxTable != null)
+      req.setIncludeTaxTable(this.includeTaxTable);
+    if (this.sKU != null)
+      req.setSKU(this.sKU);
+    if (this.variationSKU != null)
+      req.setVariationSKU(this.variationSKU);
+    if (this.variationSpecifics != null)
+      req.setVariationSpecifics(this.variationSpecifics);
+    if (this.transactionID != null)
+      req.setTransactionID(this.transactionID);
+    if (this.includeItemCompatibilityList != null)
+      req.setIncludeItemCompatibilityList(this.includeItemCompatibilityList);
+
+    GetItemResponseType resp = (GetItemResponseType) execute(req);
+
+    this.returnedItem = resp.getItem();
+    
+    return this.getReturnedItem();
+  }

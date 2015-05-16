@@ -1,0 +1,20 @@
+  /**
+   * For backward compatibility.  Use getReturnedCategoryType instead.
+   * After executing the API, returns category object. Category.getSubCategories()
+   * will contain list of sub categories.
+   * @return Category
+   */
+  public Category getReturnedCategory() {
+    if( this.returnedCategoryType != null )
+    {
+      Category returnedCategory = new Category(this.returnedCategoryType);
+      if( this.returnedSubCategories != null )
+      {
+        for(int i = 0; i < this.returnedSubCategories.length; i++ )
+          returnedCategory.addSubCategory(new Category(this.returnedSubCategories[i]));
+      }
+      return returnedCategory;
+    }
+    else
+      return null;
+  }

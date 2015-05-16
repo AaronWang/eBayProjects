@@ -1,0 +1,1115 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<title>eBay SDK for Java Readme</title>
+
+<style type="text/css">
+/* Default style for links */
+a {text-decoration:none}
+a:active  { color: #0000CC}
+a:hover   { color: #CC0033}
+a:link    { color: #3366CC}
+a:visited { color: #9999CC}
+/* Other Styles */
+body { background-color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
+table { width : 35%; border : none; empty-cells : show; }
+table.note { border: .5px #408080; }
+th { font-size: 24px; background-color: #FFA500; vertical-align : top; text-align : left; padding: 4px 4px 4px 4px; }
+th.clear, td.clear { background-color: #FFFFFF; }
+td.future { color: Gray; }
+td.current { font-weight: bold; background-color: #90EE90; }
+td.date { white-space: nowrap; }
+td.note { color: #006800; background-color: #E6F8D6; padding: 4px 4px 4px 4px;}
+td.version { font-weight: bold; white-space: nowrap; }
+td, div.CellBody { font-size: 14px; background-color: #EFEFEF; vertical-align : top; padding: 0px 4px 0px 4px;}
+h1.title { color: #666666; font-size: 36px }
+h1 { color: #006800; font-size: 24px }
+h2 { color: #666666; font-size: 20px }
+h3 { color: #006800; font-size: 16px }
+h4 { color: #666666; font-size: 14px }
+p.Ref {	margin-top: -5px; }
+pre.Obsolete, p.Obsolete, span.Obsolete, b.Obsolete { color: #FF69B4; }
+pre.Deprecated, p.Deprecated, span.Deprecated, b.Deprecated { color: Red; }
+b.Con {color: #005977}
+b.ListRunIn { color: #006800 }
+code, pre, div.Pre {color: #633d00; font-family: Courier New, Courier, mono; }
+div.Table {text-align: left}
+div.TableTitle, div.RefHeading { font-weight: bold; }
+span.NoteLabel, b.NoteLabel { color: #006800; font-weight: bold; }
+div.Note { color: #006800; }
+</style>
+</head>
+
+<body>
+
+<nosearch>
+<!-- BEGIN WEBSIDESTORY CODE v3.0.0 (pro-no10)-->
+<!-- COPYRIGHT 1997-2003 WEBSIDESTORY, INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479 B1. Privacy notice at: http://websidestory.com/privacy -->
+<script language="javascript">
+var _pn="PUT+PAGE+NAME+HERE"; //page name(s)
+var _mlc="Documentation"; //multi-level content category
+var _cp="null"; //campaign
+var _acct="WR57061898MF01EN3"; //account number(s)
+var _pndef="title"; //default page name
+var _ctdef="full"; //default content category
+var _prc=""; //commerce price
+var _oid=""; //commerce order
+var _dlf=""; //download filter
+var _elf=""; //exit link filter
+var _epg=""; //event page identifier
+var _mn="wp180"; //machine name
+var _gn="phg.hitbox.com"; //gateway name
+</script><script language="javascript1.1" defer
+src="http://stats.hitbox.com/js/hbp-11up.js"></script><script
+language="javascript">if(navigator.appName!='netscape'&&navigator.
+appVersion.toString().charAt(0)!='3')document.write("<\!"+"--");//"</script><noscript>
+<img src="http://phg.hitbox.com/HG?hc=wp180&cd=1&hv=6&ce=u&hb=WR57061898MF01EN3&n=PUT+PAGE+NAME+HERE&vcon=CONTENT+CATEGORY" border='0' width='1' height='1' />
+</noscript><!--//-->
+
+<!-- END WEBSIDESTORY CODE  -->
+</nosearch>
+
+<a name="top"></a>
+<!-- ################################# -->
+<h1 class="title">eBay SDK for Java (JAX-WS) Readme</h1>
+
+<p><b>Please note</b> the following important information:
+	<ul>
+		<li>This is the Readme for the JAX-WS eBay SDK for Java.</li>
+
+		<li><b>Support for the Axis 1.1 eBay SDK for Java has been discontinued.</b>
+
+		<li><b>Before using a version of the SDK</b>, please read the most recent version of this Readme file, available at
+		the <a href="http://developer.ebay.com/developercenter/java/" target="_blank">Java Developer Center</a>.</li>
+
+		<li>Upgrades to an SDK version should always be done in a test environment.</li>
+
+		<li>Testing for the SDK includes testing with IBM JDK<b>Some
+		components may be incompatible with IBM JDK</b></li>
+
+		<li>Point releases contain bug fixes, updates to wrapper classes, and minor functionality updates, and must pass regression testing. Full releases tend to contain more significant functionality changes, and are fully tested before release.</li>
+
+		<li>You can download SDK releases from the <a href="http://developer.ebay.com/community/featured_projects/?name=eBay+SDK+for+Java" target="_blank">eBay SDK for Java download page</a>.</li>
+
+		<li>For Trading API versions released after your current version, please read the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">Trading API Release Notes</a> (which contain tables showing schema changes that occur every two weeks).</li>
+
+	    <li>The eBay SDK for Java <b>supports JDK5, JDK6 and JDK7</b> 
+	    </li><br>
+	</ul>
+	</p>
+
+<table cellspacing="2">
+<tr>
+    <th>Contents</th>
+</tr>
+<tr>
+    <td class="version"><a href="#ReleaseInformation">Release Information for the eBay SDK for Java</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#InstallationInstructions">Installation Instructions</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#GeneralInformation">General Information for the eBay SDK for Java</a></td>
+</tr>
+</table>
+
+<a name=ReleaseInformation></a>
+<h2>Release Information for the eBay SDK for Java</h2>
+
+<p><b>Important:</b> Changes to the Trading API affect the SDK. For example, in schema version 499,
+deprecated objects in the schema were deleted, creating backward incompatibility.
+See the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+Trading API Release Notes</a> for ongoing updates to the schema (including occasional removals of schema elements).
+Please also see <a href="http://developer.ebay.com/DevZone/XML/docs/HowTo/eBayWS/eBaySchemaVersioning.html"
+target="_blank">Versioning Strategy</a> and <a href="http://developer.ebay.com/DevZone/XML/docs/Reference/ebay/deprObjects.html"
+target="_blank">Deprecated Objects</a>.
+</p>
+
+<table cellspacing="2">
+<tr>
+    <td class="version"><a href="#921">SDK Version 921 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#917">SDK Version 917 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#897">SDK Version 897 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#883">SDK Version 883 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#871">SDK Version 871 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#861">SDK Version 861 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#849">SDK Version 849 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#837">SDK Version 837 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#825">SDK Version 825 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#817">SDK Version 817 for Java</a></td>
+</tr>
+
+<tr>
+    <td class="version"><a href="#805">SDK Version 805 for Java</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#797">SDK Version 797 for Java</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#791">SDK Version 791 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#787">SDK Version 787 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#779">SDK Version 779 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#775">SDK Version 775 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#771">SDK Version 771 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#747">SDK Version 747 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#735">SDK Version 735 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#715">SDK Version 715 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#705">SDK Version 705 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#687">SDK Version 687 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#673">SDK Version 673 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#639">SDK Version 661 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#639">SDK Version 639 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#631">SDK Version 631 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#603">SDK Version 623 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#615">SDK Version 615 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#603">SDK Version 603 for Java Point Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#595">SDK Version 595 for Java Full Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#581">SDK Version 581 for Java Beta Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#575">SDK Version 575 for Java Beta Release</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#561">SDK Version 561 and Subsequent Point Releases</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#prev">Previous SDK Releases</a></td>
+</tr>
+</table>
+
+
+<!-- ################################# -->
+<a name=921></a>
+<h3>SDK Version 921</h3>
+<p>This release is compatible with eBay's 921 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=917></a>
+<h3>SDK Version 917</h3>
+<p>This release is compatible with eBay's 917 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=897></a>
+<h3>SDK Version 897</h3>
+<p>This release is compatible with eBay's 897 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=883></a>
+<h3>SDK Version 883</h3>
+<p>This release is compatible with eBay's 883 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=871></a>
+<h3>SDK Version 871</h3>
+<p>This release is compatible with eBay's 871 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=861></a>
+<h3>SDK Version 861</h3>
+<p>This release is compatible with eBay's 861 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=849></a>
+<h3>SDK Version 849</h3>
+<p>This release is compatible with eBay's 849 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=837></a>
+<h3>SDK Version 837</h3>
+<p>This release is compatible with eBay's 837 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=825></a>
+<h3>SDK Version 825</h3>
+<p>This release is compatible with eBay's 825 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=817></a>
+<h3>SDK Version 817</h3>
+<p>This release is compatible with eBay's 817 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=805></a>
+<h3>SDK Version 805</h3>
+<p>This release is compatible with eBay's 805 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=797></a>
+<h3>SDK Version 797</h3>
+<p>This release is compatible with eBay's 797 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=791></a>
+<h3>SDK Version 791 for Point Release</h3>
+<p>This release is compatible with eBay's 791 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=787></a>
+<h3>SDK Version 787 for Point Release</h3>
+<p>This release is compatible with eBay's 787 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=779></a>
+<h3>SDK Version 779 for Point Release</h3>
+<p>This release is compatible with eBay's 779 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+<a name=775></a>
+<h3>SDK Version 775 for Point Release</h3>
+<p>This release is compatible with eBay's 775 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new elements and features.</p>
+
+   
+<a name=771></a>
+<h3>SDK Version 771 for Full Release</h3>
+<p>This release is compatible with eBay's 771 Trading WSDL, Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new calls and elements.</p>
+
+   <h4>New ItemSpecificsDemo sample using Item specifics and Seller Profile</h4>
+	<p>AttributesDemo samples has been replaced with ItemSpecificsDemo sample illustrating the usage of Item specifics instead of
+   ID-Based Attributes. ID-based attribute will be deprecated soon. Seller Profile have been used to display the new way for specifying payment, shipping, and return Policy Values.</p>
+
+   <h4>AddItem series samples illustrating usage of Seller Profile</h4>
+	<p>consoleAddItem, consoleAddItemDirect, consoleAddFixedPriceItem samples have been illustrated with new seller Profile
+   Objects to Specify Payment, Shipping, and Return Policy Values.</p>
+<a name=747></a>
+<h3>SDK Version 747 for Full Release</h3>
+<p>This release is compatible with eBay's 747 Trading WSDL, and supports the following new features.</p>
+  <h4>New LocalPickup Flag for GetMyEbayBuying and GetMyEbaySelling Calls</h4>
+  	<p>The LocalPickup flag indicates whether the buyer has selected local pickup as the shipping option or the seller has made local pickup available as a shipping option.</p>
+  <h4>New SoldAsBin Flag in GetItem</h4>
+    <p>New SoldAsBin flag in GetItem call indicates when an auction listing has ended before the stated auction end time due to a buyer using the Buy It Now option to purchase the item.</p>
+  <h4>New Charity Refund Request Preference</h4>
+    <p>New AutoOptDonationRefund flag in SetUserPreferences call allows a seller to request that eBay automatically request eBay Giving Works donation refunds after Unpaid Item cases are opened and closed through the Unpaid Item Assistant mechanism without payment. This preference is only applicable to charity listings.</p>
+  <h4>Coming Soon: Motors Subtitle and Deposit Fields Replacing Attributes</h4>
+	<p>eBay has added three new fields (SellerProvidedTitle, DepositAmount, and DepositType) to AddItem and related calls. These fields will soon replace the US and Canada eBay Motors Subtitle attribute (10246), and the US eBay Motors deposit amount and type attributes (10733 and 10734). The attributes will continue to work for a period of time to give developers time to migrate to the new fields. Keep an eye on these release notes for information about when the new fields will be functional.</p>
+  <h4>Two New Member Message Types Added for Classified Ad Listings</h4>
+   <p>ClassifiedsContactSeller and ClassifiedsBestOffer added as new message types. ClassifiedsContactSeller indicates that an inquiry has been sent to the seller regarding the corresponding classified ad listing. ClassifiedsBestOffer indicates that a best offer has been made on the seller's corresponding classified ad listing.</p>
+  <h4>New Payment Status Value Added</h4>
+    <p>A new value of "Paid" can now be returned in GetOrders (and other order retrieval calls) when checkout is complete and order has been paid for by the buyer. This value is returned in the CheckoutStatus.eBayPaymentStatus field. This value may also be returned in the MyeBaySelling and MyeBayBuying calls.</p>
+  <h4>New Dispute Explanation Added</h4>
+  	<p>A new dispute explanation was added and available to use through the AddDispute call. The value is "SellerRanOutOfStock", and this value can be used by the seller when cancelling an order due to an item being out of stock.</p>
+  <h4>GetOrders Now Retrieves Seller's Item and Shipping Discounts</h4>
+  	<p>Information on one or more item or shipping discounts can now be retrieved using GetOrders and other order retrieval calls.</p>
+  <h4>Product Identifier Features Now Returned in GetCategoryFeautures</h4>
+  	<p>Call GetCategoryFeatures to see if a site or category supports the ability to pass in Brand/MPN, EAN, ISBN, or UPC values in an Add/Revise/Relist call.</p>
+  <h4>Other New Features and Changed Functionality</h4>
+   <p>Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new calls and elements since the previous Java SDK release</p>
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<a name=735></a>
+<h3>SDK Version 735 for Java Point Release</h3>
+
+ <p>This release is compatible with eBay's 735 Trading WSDL, and supports the following new features.
+
+ <h4> Strike-Through Pricing and Minimum Advertised Price Now Available </h4>
+   <p>Sellers can specify discount pricing values for an item to give the item either a Strike-Through Pricing (STP) or Minimum Advertised Price (MAP) display treatment. This feature is available to qualified sellers (and their associated developers) who participate in the Discount Pricing program. Once qualified, sellers can apply Discount Pricing to both MSKU and Non-MSKU items. STP is available on the US, UK, and DE sites while MAP is available only on the US site. For more information, see: <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/index.htm?context=eBay_XML_API&topic=DiscountPricing">Displaying Discount Pricing Information to Buyers.</a></p>
+
+ <h4> Return Policy, Handling Time, and Item Condition Now Required for eBay Motors Parts & Accessories Listings</h4>
+     See details at:  <a href="http://pages.ebay.com/sellerinformation/news/motorspaupdate.html">http://pages.ebay.com/sellerinformation/news/motorspaupdate.html</a> </p>
+ <h4>Other New Features and Changed Functionality</h4>
+   <p>Please refer to the <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new calls and elements since the previous Java SDK release</p>
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<a name=715></a>
+<h3>SDK Version 715 for Java Point Release</h3>
+
+<p>This release is compatible with eBay's 715 Trading WSDL, and has the following features.
+<h4>Replacement of Deprecated Search Functionality</h4>
+<p>The search calls GetSearchResults and GetCategoryListings are now deprecated in the Trading API (see Trading API Release Notes for details).
+   This point release replaces the deprecated functionality by supplying a Finding Kit that shows how to use equivalent calls in the Finding API. The Finding Kit includes a Finding API proxy, samples, and tutorials. You can download the Finding Kit here:
+  <a href="http://developer.ebay.com/DevZone/codebase/javasdk-jaxb/FindingKitJava_1.0.zip">http://developer.ebay.com/DevZone/codebase/javasdk-jaxb/FindingKitJava_1.0.zip.</a> </p>
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<a name=705></a>
+<h3>SDK Version 705 for Java Point Release</h3>
+
+<p>This release is compatible with eBay's 705 Trading WSDL, and contains no new features.
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<a name=687></a>
+<h3>SDK Version 687 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 687 Trading WSDL, and supports the following new features.
+
+		<h4>Improved Logging</h4>
+
+		<p>Commons logging is replaced with SLF4J (Simple Logging Facade for Java) for better logging support.
+		A <a href="#Logging">Notes About Logging</a> section is added in the readme.</p>
+
+
+		<h4>Reorganized Package</h4>
+
+		<p>The JavaSDK package is re-organized so that its files and folders are in more readily expected locations, as follows.
+		<ul>
+		<li>externalLib is now in the lib folder</li>
+		<li>All documents are moved from the root folder to the docs folder</li>
+		<li>The wsdl folder is moved from the root folder to the source folder</li>
+		<li>Build-related files are now in a new build folder</li>
+		</ul>
+		</p>
+
+
+		<h4>Source Jar Available</h4>
+
+		<p>A source jar is now provided in the lib/srcjar folder, for source debugging.</p>
+
+
+		<h4>New and Improved Samples and Tutorials</h4>
+
+		<p>The consoleAddItem sample has been enhanced. It now demonstrates how to set item specifics.</p>
+		<p>A consoleAddFixedPriceItem sample is added. It demonstrates how to set item variations.</p>
+
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+
+<!-- ################################# -->
+
+
+<a name=673></a>
+<h3>SDK Version 673 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 673 Trading WSDL, and contains support for the following new features.
+
+		<h4>New Calls and Fields</h4>
+
+		<p>This SDK now supports the ConditionID setting on AddItem and related calls. See the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/AddItem.html#Request.Item.ConditionID">
+		Trading Call Reference</a> to learn about Item.ConditionID.
+        </p>
+
+		<h4>New Samples and Tutorials</h4>
+
+		<p>Two new Java console samples, suitable for getting started using the SDK, are added to the SDK with this release.
+		They are called helloWorld and consoleAddItem, and they are accompanied by tutorials.</p>
+
+        <h4>Maven Now Supported</h4>
+
+	    <p>A Maven pom.xml file is provided in the helloWorld and consoleAddItem samples; refer to
+		readme_maven.txt in the sample folder for instructions for building and running these samples
+		with Maven. Also included: a pom.xml file for building ebaysdkcore.jar with Maven. Refer to
+		{SDK Root}/build/maven_build/readme.txt for build instructions.
+        </p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<!-- ################################# -->
+
+
+
+<a name=661></a>
+<h3>SDK Version 661 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 661 Trading WSDL, and contains support for the following new features.
+
+		<h4>New Calls and Fields</h4>
+
+		<p>The VerifyRelistItem and ExtendSiteHostedPictures calls, as well as a new VerifyOnly
+		field for the ReviseItem call have been introduced in this release. Please refer to the
+		 <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">
+		 Trading API Release Notes</a> for a detailed list of the new calls and elements.
+        </p>
+
+		<h4>Updated apiCallDemo Sample</h4>
+
+		<p>A new UploadPictures sample has been added in the apiCallsDemo. This sample shows how to
+		use the eBay Picture Service (EPS) to upload pictures.</p>
+
+        <h4>Log4j Dependency Removed</h4>
+
+	    <p>Per your request, we removed the Apache log4j dependency and used Apache commons logging instead in the JavaSDK core
+	    library. However, you can still see how to configure Apache log4j in the SDK samples.
+        </p>
+
+        <h4>Updated Readme for attributesDemo Sample</h4>
+
+		<p>The readme for the attributesDemo sample has been updated to reflect the latest changes to the sample.
+        </p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<!-- ################################# -->
+
+
+<a name=639></a>
+<h3>SDK Version 639 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 639 Trading WSDL, and contains support for the following new features.
+
+		<h4>Simplified Java attributesDemo Sample</h4>
+
+		<p>The Java attributesDemo sample has been simplified.
+           This sample simulates a simple sell your item(SYI) flow, it shows how to use eBay API/SDK to:
+        <ul>
+        <li>Handle item attributes/specifics.</li>
+        <li>Handle eBay meta-data such as listing type/duration, payment methods, shipping service, etc.</li>
+        <li>Cache eBay meta-data on local driver.</li>
+        </ul>
+        </p>
+        <p>For detailed architecture and call flow of the sample, please refer to the readme in the sample folder.
+        </p>
+
+		<h4>Setting Up JavaSDK in Eclipse</h4>
+
+		<p>The eclipse project files for JavaSDK have been updated, all absolute
+		references (library, source, jdk) have been changed to relative references, now all
+		projects can be imported into eclipse environment without additional reference updates.
+        </p>
+
+        <p>For instructions about how to setup JavaSDK in Eclipse, please refer to the
+        DevEnvReadme in SDK root folder.</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<!-- ################################# -->
+
+<a name=631></a>
+<h3>SDK Version 631 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 631 Trading WSDL, and contains support for the following new features.
+
+		<h4>New Helper Class for HTTP Proxy Settings</h4>
+
+		<p>A new class, <b class="con">SdkProxySelector.java</b>, is included in this release for those who access
+		the eBay API using a proxy server and want to configure the proxy settings programmatically. For examples
+		of usage, please refer to the <b class="con">apiCallsDemo</b> sample.</p>
+
+		<h4>New DetailsDownloader Helper Class</h4>
+
+		<p>The new <b class="con">DetailsDownloader.java</b>, helper class shows you how to cache eBay details locally.</p>
+
+		<h4>Most Calls Can Be Made with Tokens Only</h4>
+
+		<p>With the exception of, <b class="con">GetTokenStatus, RevokeToken, GetSessionID,</b> and
+		<b class="con">FetchToken</b>, all Java SDK API calls can now be made with an eBay API developer token
+		(instead of full eBay API developer credentials.)</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<!-- ################################# -->
+
+<a name=623></a>
+<h3>SDK Version 623 for Java Point Release</h3>
+
+<p>This release is compatible with eBay's 623 Trading WSDL, and there are no new features.
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+
+<!-- ################################# -->
+
+
+<a name=615></a>
+<h3>SDK Version 615 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 615 Trading WSDL, and contains support for the following new features.
+
+		<h4>Support for the AddFixedPriceItem Family of Calls</h4>
+
+		<p>Four new classes, <b class="con">AddFixedPriceItem.java, ReviseFixedPriceItem.java, RelistFixedPriceItem.java</b>
+		and <b class="con">AddFixedPriceItem.java</b>, have been added in this release. These classes can be used as single calls
+		within a Java method, or they can be used within data files in
+		the <a href="http://developer.ebay.com/DevZone/large-merchant-services/Concepts/LMS_APIGuide.html">Large Merchant
+		Services solution</a>.</p>
+<br>
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+
+<!-- ################################# -->
+
+<a name=603></a>
+<h3>SDK Version 603 for Java Point Release</h3>
+
+<p>This release is compatible with eBay's 603 Trading WSDL, and contains support for the following new features.
+
+		<h4>New Helper Classes</h4>
+
+		<p>Two new helper classes, <b class="con">CategoriesDownloader.java</b> and <b class="con">FeaturesDownloader.java</b>, have been added in this
+		release. The <b class="con">CategoriesDownloader.java</b> class caches eBay Category information to a local disk. The
+		<b class="con">FeaturesDownloader.java</b> class caches the eBay Category Feature information to a local disk. Using these
+		classes, you can access category information without repeatedly making <b class="con">GetCategory</b> and
+		<b class="con">GetCategoryFeatures</b> requests.</p>
+
+		<h4>Updated AttributesDemo Samples to Cache Meta-data</h4>
+
+		<p>The <b class="con">AttributesDemo</b> sample has been updated to take advantage of the new helper classes, so that you can
+		see how to cache the eBay categories and features in a local repository.</p>
+
+        <h4>eBayAccount Class Returned</h4>
+
+        <p>The <b class="con">eBayAccount</b> class was removed as part of a code clean-up in Release 595. It has been
+        added back into the code for this release. It is also available as a downloadable patch for Release 595.</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+
+<a name=595></a>
+<h3>SDK Version 595 for Java Full Release</h3>
+
+<p>This release is compatible with eBay's 595 Trading WSDL, and contains support for the following new features.
+
+		<h4>Migrating from Axis 1.1 to JAX-WS</h4>
+
+		<p>In this release, the eBay SDK for Java has been migrated from Axis 1.1
+		to JAX-WS for use with production code. We recommend that you upgrade your production
+		applications from the Axis version of the eBay SDK for Java to the JAX-WS version.
+		For more information, please see <a href="http://developer.ebay.com/DevZone/javasdk-jaxb/docs/MigrationGuide_JAX-WS.htm" target="_blank">
+		Migrating to the JAX-WS eBay SDK for Java</a>.</p>
+
+		<h4>UploadSiteHostedPicture</h4>
+
+		<p>Since the classes in the eBay Picture Service (EPS) have been replaced by the <b class="con">UploadSiteHostedPictures</b>
+		Trading API (XML) call, the Java SDK now supports the <b class="con">UploadSiteHostedPictures</b> call. Because this is
+		a Trading API call, you will need to provide an <a href="http://developer.ebay.com/quickstartguide/Default.aspx"> eBay
+		developer authorization token</a> (that you obtain with your application keys) when making this call.<p>
+		<p>
+		The <b class="con">UploadSiteHostedPictures</b> call is the only call in the Trading API that doesn't support SOAP. Therefore,
+		you need to use the following (XML) endpoints (Gateway URLs):
+		<ul>
+		<li>For the Sandbox, use: https://api.sandbox.ebay.com/ws/api.dll</li>
+		<li>For Production, use: https://api.ebay.com/ws/api.dll</li>
+		</ul>
+		In addition, it is important that you use these endpoints for both the production and sandbox environments. The addresses for
+		both environments must be consistent because you will need to update the authorization token in your ApiContext class before
+		switching from one platform to the other (Trading API (XML) and SDK servers use different authorization keys.)</p>
+		<p>
+		You can still use the EPS libraries with this release, but they will eventually be discontinued, so we recommend that you
+		migrate to the newer call as soon as you can.
+		The <b class="con">UploadSiteHostedPictures</b> call enables you to upload files in image formats such as JPG by
+		including a binary attachment after the XML input, as part of the request. The call returns <b class="con">SiteHostedPictureDetails.FullURL</b>,
+		which must be stored by your application (for associating the picture using the <b class="con">Item.PictureDetails.PictureURL</b> field
+		of <b class="con">AddItem</b>, <b class="con">ReviseItem</b>, or <b class="con">RelistItem</b>).</p>
+		<p>For more information, please see the following:
+		<ul>
+		<li><a href="../Reference/eBay/UploadSiteHostedPictures.html">UploadSiteHostedPictures</a> in the Input/Output Reference</li>
+		<li><a href="https://ebay.custhelp.com/cgi-bin/ebay.cfg/php/enduser/std_adp.php?p_faqid=1050">Sample UploadSiteHostedPictures Call</a> in the Knowledge Base </li>
+		</ul>
+		</p>
+
+		<h4>Selling Manager Pro (SMP) calls are supported in this release.</h4>
+
+		<h4>Support for ProPay</h4>
+
+		<p>This release also includes support for the ProPay payment method. ProPay is a third party application that allows small
+		businesses to accept credit cards. For more information about ProPay, see www.ProPay.com. For more information about
+		accepted eBay payment methods, see <a href="http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/types/BuyerPaymentMethodCodeType.html">BuyerPaymentMethodCodeType</a> in
+		the Trading Call Reference.</p>
+
+        <h4>Updates to SDK Samples</h4>
+
+        <p>An updated JSP attributeDemo sample includes return policy information that is integrated
+		with the rest of the Item details, instead of being posted on a separate page. It also includes
+		a dynamic lookup feature for Shipping Service, Payment Methods, Listing Type, and Listing Duration.
+		This sample demonstrates the usage of eBay Custom Item Specifics with the Trading API
+		GetCategoryFeatures and GetCategorySpecifics calls.</p>
+
+		<p>Some SDK samples have been updated based on recent API features. Please note
+		that for Return Policy and for the requirement to specify shipping,
+		some samples contain hard-coded fields. Therefore, if you want to change the
+		target site used in the sample, you must integrate <code>GetCategoryFeaturesCall</code>
+		and <code>GeteBayDetailsCall</code> into the sample. For important information, see the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html"
+		target="_blank">Trading API Release Notes</a> and the eBay Trading Web Services section
+		of the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer
+		Documentation Center</a>.</p>
+
+		<h4>Documentation of Recent API Features</h4>
+
+		<p>For important information about the latest API features,
+		<b>including new requirements for listings</b>, please see the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html"
+		target="_blank">Trading API Release Notes</a> and the eBay Trading Web Services section
+		of the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer
+		Documentation Center</a>.</p>
+
+		<h4>Removal of Legacy XML Classes</h4>
+
+		<p>As of this release, all legacy XML classes and calls have been removed. The new
+		<b class="con">UploadSiteHostedPictures</b> call is the only remaining XML call.</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=581></a>
+<h3>SDK Version 581 for Java Beta Release</h3>
+
+		<h4>Migrating from Axis 1.1 to JAX-WS</h4>
+		<p>In this second Beta release, the eBay SDK for Java has been migrated from Axis 1.1
+		to JAX-WS. For more information, please see <a href="http://developer.ebay.com/DevZone/javasdk-jaxb/docs/MigrationGuide_JAX-WS.htm" target="_blank">Migrating to the JAX-WS eBay SDK for Java (Beta Release)</a>.</p>
+
+		<h4>Documentation of Recent API Features Available</h4>
+		<p>For important information about the latest API features,
+		<b>including new requirements for listings</b>, please see the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html"
+		target="_blank">Trading API Release Notes</a> and the eBay Trading Web Services section
+		of the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer
+		Documentation Center</a>.</p>
+
+        <h4>Recent API Feature Updates</h4>
+		<p>The eBay SDK for Java contains updated wrapper classes, updated test cases, and other
+		updates that facilitate your use of recent API features. Changes include
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html#577-NF">updates to user token retrieval</a> and <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html#579-AN">deprecation of eBay Express</a>. </p>
+
+        <h4>Updates to SDK Samples</h4>
+		<p>Some SDK samples are updated based on recent API features. Please note
+		that for Return Policy and for the requirement to specify shipping,
+		some samples contain hard-coded fields. Therefore, if you want to change the
+		target site used in the sample, you must integrate <code>GetCategoryFeaturesCall</code>
+		and <code>GeteBayDetailsCall</code> into the sample. For important information, see the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html"
+		target="_blank">Trading API Release Notes</a> and the eBay Trading Web Services section
+		of the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer
+		Documentation Center</a>.</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=575></a>
+<h3>SDK Version 575 for Java Beta Release</h3>
+
+		<h4>Migration from Axis 1.1 to JAX-WS</h4>
+		<p>In this release, the eBay SDK for Java has been migrated from Axis 1.1
+		to JAX-WS. This migration includes changes to the SDK core classes, wrapper classes, samples, and test cases.
+		Stubs and datatypes are now generated with the wsimport tool under the JAX-WS standard, and this process
+		is automated as before by using Ant (the name of the buildfile is build.xml).
+		For more information, please see <a href="http://developer.ebay.com/DevZone/javasdk-jaxb/docs/MigrationGuide_JAX-WS.htm" target="_blank">Migrating to the JAX-WS eBay SDK for Java</a>. </p>
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=561></a>
+<h3>SDK Version 561 and Subsequent Point Releases</h3>
+
+		<h4>SDK Version 561 Was Based on Axis 1-1</h4>
+		<p>SDK version 561, and earlier SDK versions, were based on Axis 1-1.</p>
+
+		<h4>Handling of Unrecognized Data Values</h4>
+		<p>A new StubModifier tool is used to handle unrecognized enum values received
+		in a SOAP response. The tool post-processes the stubs generated by Apache Axis WSDL2Java.
+		The tool contains the <b>StubModifier</b> class, located in <i>...\source\Tools\StubModifier\src\tools\webservices\wsdl\stubutil\StubModifier.java</i>.</p>
+
+		<h4>User Authentication Improvements</h4>
+		<p>The eBay SDK for Java includes the user-authentication improvements released
+		with Trading API version 557. For information about these improvements,
+		see <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html#557-nf">the Release Notes for version 557 of the Trading API</a> and see <a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/index.htm?context=eBay_XML_API&topic=AuthNAuth">Authentication and Authorization</a>.</p>
+
+		<p>The SDK changes include 3 new wrapper classes
+		(GetSessionIDCall, GetTokenStatusCall, and RevokeTokenCall) and new FetchTokenCall functionality.
+		Please use the new FetchTokenCall functionality in your application. The apiCallsDemo and signinRedirect samples
+		are updated with the new FetchTokenCall functionality. Additionally, the apiCallsDemo is
+		updated to show uses of GetTokenStatusCall and RevokeTokenCall.
+		</p>
+
+		<h4>Documentation of Recent API Features Available</h4>
+		<p>For information about the latest API features, please see the
+		<a href="http://developer.ebay.com/DevZone/XML/docs/WebHelp/ReleaseNotes.html" target="_blank">Trading API Release Notes</a> and the eBay Trading Web Services section of the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer Documentation Center</a>. </p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=prev></a>
+<h3>Previous Java SDK Releases</h3>
+<p>For information about previous versions, see the <a href="http://developer.ebay.com/DevZone/JavaSDK/docs/readme.htm" target="_blank">Axis 1.1 Java SDK Readme</a>.</p>
+
+<hr>
+<a href="#top"><span class="Small c1"></span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=InstallationInstructions></a>
+<h2>Installation Instructions</h2>
+<p>Please note that upgrades to an SDK should always be done in a test environment and fully tested before used in production.</p>
+	<ol>
+
+		<li>Download the zip file for the version of the eBay SDK for Java that you are using. </li><br><br>
+
+		<li>Note the location of the zip file you downloaded, but before extracting the file, create the following folder: C:\eBayJavaSDK.</li><br><br>
+
+		<li>Within C:\eBayJavaSDK, create an "SDKInstallDir" folder
+		to contain the SDK files. You could name that folder according to the Trading API version of
+		the SDK you are installing. For example, for the SDK for Trading API version 575, you
+		could name the folder <i>eBayJavaSDK575</i>.</li><br><br>
+
+		<li>Go the location of the zip file you downloaded (noted in step 3), and extract the zip file
+		into the SDKInstallDir folder you created in step 4.</li><br><br>
+
+		<li>To build the SDK, see <a href="#BuildInformation">Building the SDK</a>.(If you're using an Integrated
+		Development Environment (IDE), you do not need to build the SDK, you just need to set the
+		paths to point to the correct libraries and files.
+		See C:\eBayJavaSDK\SDKInstallDir\docs\DevEnvReadme.htm for more information for configuring an IDE)</li>
+	</ol>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=GeneralInformation></a>
+<h2>General Information for the eBay SDK for Java</h2>
+
+<table cellspacing="2">
+
+<tr>
+    <td class="version"><a href="#DevelopmentRequirements">Development Requirements</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#PostInstall">Post-Installation Configuration</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#Links">SDK-Related Links</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#BuildInformation">Building the SDK</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#Documentation">Documentation</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#KnownIssues">Known Issues</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#IncludedInSDKInstaller">Included in the eBay SDK for Java</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#WSDLLocations">WSDL Locations</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#WSDLUpdates">WSDL Updates</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#ClientEnvironments">Supported Client Environments</a></td>
+</tr>
+<tr>
+    <td class="version"><a href="#Logging">Notes About Logging</a></td>
+</tr>
+</table>
+
+
+<a name=DevelopmentRequirements></a>
+<h3><b>Development Requirements</b></h3>
+	<ul>
+		<li>Java SE 5 (JDK5), Java SE 6 (JDK6) or Java SE 7 (JDK7)</li>
+		<li>Apache ANT -- Download from <a href="http://ant.apache.org/">http://ant.apache.org/</a>; Ant version 1.6.x or higher is required for all JDKs used with this release.</li>
+		<li>JAX-WS RI (Reference Implementation) 2.1.4 -- The version downloaded to SDKInstallDir (the installation directory)
+		at ..\SDKInstallDir\lib\externalLib\ is the standard (non-customized) version available at the official
+		JAX-WS RI website. You must compile the beta release with this version of the JAX-WS RI. See
+		<a href="#InstallationInstructions">Installation Instructions</a> for more information about the installation
+		directory.</li>
+		<li>For more information on supported client environments, please see <a href="#ClientEnvironments">Supported Client Environments</a>.</li>
+		<li>It is recommended that you use the latest <a href="http://www.eclipse.org/downloads/" target="_blank">Eclipse</a> integrated development environment (IDE) for the migration,
+		although you can use any IDE for this release that supports the client environments above. Project files for Eclipse
+		are provided in the installation directory. Please see ..\SDKInstallDir\docs\DevEnvReadme.htm for
+		instructions on using these included project files with Eclipse after installing the JAXB release.</li>
+		<li>(optional) Jakarta Tomcat 5.5, if you wish to build the Java Server Pages (JSP) samples.</li>
+	</ul>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=PostInstall></a>
+<h3>Post-Installation Configuration</h3>
+	<b>Note:</b>
+	<ul>
+	   <li>
+	   Update and run setenv.bat(int ..\SDKInstallDir\build\)is necessary only if you want to build the SDK source or run SDK samples from the command line
+	   (in a command window).
+	   </li>
+	</ul>
+	Modify and run the ..\SDKInstallDir\build\setenv.bat file as follows:
+	<ol>
+	   <li>After upgrading to <a href="http://ant.apache.org/" target="_blank">Apache Ant 1.6.x, or higher</a>, modify the ..\SDKInstallDir\build\setenv.bat file by adding the bin directory of your ANT installation to the PATH environment variable.</li>
+
+	   <li>Modify the ..\SDKInstallDir\build\setenv.bat file so that the JAVA_HOME environmental variable is set to either the JDK 1.5.x or JDK 1.6.x directory.</li>
+	   <li>(Optional) If you have installed Jakarta Tomcat, set the TOMCAT_HOME environment variable in ..\SDKInstallDir\build\setenv.bat to the Jakarta Tomcat location. This step is required
+		only if you wish to run the included JSP samples using Tomcat.</li>
+	   <li>Make sure to run ..\SDKInstallDir\build\setenv.bat from a command window.</li>
+	</ol>
+	<br>
+	If you are using the Fedora 8 operating system, install the following patches in order to use the Swing/AWT-based
+	samples in the SDK:
+	<ol>
+	  <li><a href="http://download.fedora.redhat.com/pub/fedora/linux/updates/8/i386/libxcb-1.0-4.fc8.i386.rpm">http://download.fedora.redhat.com/pub/fedora/linux/updates/8/i386/libxcb-1.0-4.fc8.i386.rpm</a></li>
+	  <li><a href="http://download.fedora.redhat.com/pub/fedora/linux/updates/8/i386/libxcb-devel-1.0-4.fc8.i386.rpm">http://download.fedora.redhat.com/pub/fedora/linux/updates/8/i386/libxcb-devel-1.0-4.fc8.i386.rpm</a></li>
+	</ol>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=Links></a>
+<h3>SDK-Related Links</h3>
+	<ul>
+		<li><a href="http://developer.ebay.com/support/docs/" target="_blank">Documentation (including the API Release Notes, which contain tables showing API schema changes)</a></li>
+		<li><a href="http://developer.ebay.com/DevZone/support/KnowledgeBase.asp" target="_blank">Knowledge Base</a></li>
+		<li><a href="http://developer.ebay.com/developercenter/java/" target="_blank">Java Developer Center</a></li>
+		<li><a href="http://developer.ebay.com/community/forums" target="_blank">System Announcements and Forums</a></li>
+		<li><a href="http://dev-forums.ebay.com/forum.jspa?forumID=1002" target="_blank">Java SDK Forum</a></li>
+	</ul>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=BuildInformation></a>
+<h3>Building the SDK</h3>
+	<p>In this section, you will use an ANT project file, <tt>build.xml</tt>, to do the following:</p>
+	<ul>
+		<li>Generate source code from an eBay WSDL.</li>
+		<li>Compile SDK source code.</li>
+		<li>Create .jar files (such as ebaysdkcore.jar and ebaycalls.jar) for SDK libraries.</li>
+	</ul>
+    <p><b>Note:</b></p>
+        <ul>
+        <li>
+        Building SDK is necessary only for advanced users who have added customization to the SDK source or need to synchronize the source with a new version of eBay Web Services Definition Language(WSDL).
+	    </li>
+        </ul>
+
+
+	<p>To build the SDK, use the following steps:</p>
+
+	<ol>
+		<li>
+		Review and follow all the steps in the <a href="#InstallationInstructions">Installation Instructions</a>
+		</li>
+        <br><br>
+
+		<li>
+		In a command window, change the directory to the SDKInstallDir described in the <a href="#InstallationInstructions">Installation Instructions</a>
+		</li>
+		<br><br>
+
+		<li>
+		In SDKInstallDir, follow the instructions in <a href="#PostInstall">Post-Installation Configuration</a> to change 'JAVA_HOME' in the 'setenv.bat' file according to your local JDK installation, then run 'setenv.bat' in command line.
+		</li>
+	    <br><br>
+
+		<li>
+		In the same command window, in SDKInstallDir/build, run the following command: <tt>ant build</tt>,
+		<br>(for a list of available ant tasks, run: <tt>ant help)</tt>
+		</li>
+		<br><br>
+
+		<li>
+		When a new WSDL is available, advanced users can use it to update the SDK:
+		<ol type="a">
+		<li>Read the Trading API Release Notes. The Release Notes contain changes for Trading API versions released after your current version. The Release Notes are located at the <a href="http://developer.ebay.com/support/docs/" target="_blank">Developer Documentation Center</a>.</li><br><br>
+		<li>Download the new WSDL(see <a href="#WSDLLocations">WSDL Locations</a>) you want to use to SDKInstallDir\source\wsdl folder.</li><br><br>
+		<li>At a command prompt, from ...\SDKInstallDir\build, run the following command:<br>
+		<tt>ant build</tt></li><br><br>
+		</ol>
+		</li>
+	</ol>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+
+<a name=Documentation></a>
+<h3>Documentation</h3>
+	<ul>
+	<li>For the Trading Web Services API Guide, the Trading API Release Notes, and other API documentation
+	(such as the Input/Output Reference and information about API versions), please see the
+	<a href="http://developer.ebay.com/developercenter/java/" target="_blank">Java Developer Center</a>.
+	</li>
+	<li>For the Library Reference (javadoc), which includes documentation for the classes in the SDK, please see the following folder: ...\SDKInstallDir\docs\LibRef. </li>
+	<li>SDK-related items containing sample code are available in the <a href="http://developer.ebay.com/DevZone/support/KnowledgeBase.asp" target="_blank">Knowledge Base</a>, e.g. <a href="https://ebay.custhelp.com/cgi-bin/ebay.cfg/php/enduser/std_adp.php?p_faqid=723" target="_blank">Uploading local pictures using Java SDK</a>.</li>
+	</ul>
+
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=KnownIssues></a>
+<h3><b>Known Issues</b></h3>
+    <ul>
+	<li>If your eBay SDK for Java application uses GetCategoriesCall to retrieve categories, make sure you set aside a large amount of memory for the Java virtual machine. If the application incurs Out of Memory errors, you should increase the amount of memory dedicated to the JVM.</li>
+    <li>Since the wsimport tool cannot generate 'RecipientRelationCodeType' as a Java Enum type from the eBay WSDL, use Java 'String' type instead whenever a 'RecipientRelationCodeType' is expected.</li>
+    </ul>
+
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=IncludedInSDKInstaller></a>
+<h3><b>Included in the eBay SDK for Java</b></h3>
+<ul>
+  <li><b><a href="../lib/">lib</a></b>: jar files for eBay SDK for Java:
+  <br>- ebaysdkcore.jar: the core library
+  <br>- ebaycalls.jar: the API wrapper library
+  <br>- eps.jar: the eBay Picture Service library
+  <br>- attributes.jar: the eBay Attributes API library
+  <br>- helper.jar: the helper library used in the SDK
+  </li>
+  <li><b><a href="../lib/srcjar">srcjar</a></b>: source jar files for eBay SDK for Java.</li>
+  <li><b><a href="../lib/externalLib/">externalLib</a></b>: JAX-WS RI and other 3rd party library files. You must compile the SDK with version 2.1.4 of Sun JAX-WS RI.</li>
+  <li><b>documentation</b>: <a href="../docs/LibRef/index.html">Library
+    Reference (javadoc)</a>. <b>Note:</b> Also see the documentation at the following location: <a href="http://developer.ebay.com/help/docs/">http://developer.ebay.com/help/docs/</a>.</li>
+  <li><b><a href="../tutorials">tutorials</a></b>: tutorials for eBay SDK for Java.</li>
+  <li><b><a href="../build">build</a></b>: build files for eBay SDK for Java.</li>
+  <li><b><a href="../samples/">samples</a></b>: samples for the eBay SDK for Java. See the <a href="../samples/readme.htm">samples readme</a>&nbsp;for
+    details.</li>
+  <li><b><a href="../source/">source</a></b>: source code of the eBay SDK for Java.
+
+  	<br>- <a href="../source/core/">source/core</a> contains the source code
+    for ebaysdkcore.jar
+    <br>- <a href="../source/apiCalls/">source/apiCalls</a>: source code for
+    ebaycalls.jar
+    <br>- <a href="../source/attributesLib/">source/attributesLib</a>: source code for
+    attributes.jar
+    <br>- <a href="../source/helper/">source/helper</a>: source code for helper.jar
+    <br>- <a href="../source/SanityTest/">source/SanityTest</a>: source code for Sanity Test Framework
+    </li>
+</ul>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=WSDLLocations></a>
+<h3><b>WSDL Locations</b></h3>
+	<p>The WSDL is located at http://developer.ebay.com/webservices/<i>Version</i>/ebaySvc.wsdl.
+	<p><i>Version</i> in the URL means <i>latest</i> or it means <i>a numerical version</i> of a WSDL release (see the top of the particular WSDL file).
+	<p>In the case of <i>Version</i> meaning <i>latest</i>, the WSDL is the latest released version (http://developer.ebay.com/webservices/latest/ebaySvc.wsdl). If <i>Version</i> in the URL means <i>a numerical version</i> of the WSDL, <i>Version</i> is a number (for example,  http://developer.ebay.com/webservices/445/ebaySvc.wsdl).
+	<p>Hypothetically, if the latest release of the WSDL were 449, you would find that WSDL version at both http://developer.ebay.com/webservices/latest/ebaySvc.wsdl and at http://developer.ebay.com/webservices/449/ebaySvc.wsdl.</p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=WSDLUpdates></a>
+<h3><b>WSDL Updates</b></h3>
+	<ul>
+		<li>Each version of the eBay SDK for Java is based on a specific WSDL version of the eBay Trading API. eBay updates its WSDL file regularly. Advanced users can use more recent fields and calls by updating the code stubs in their SDK with a more recent WSDL file than the one delivered with the SDK. </li>
+		<li>Please note that WSDL updates should always be done in a test environment because WSDL updates can prevent you from using some of the wrapper classes delivered with the SDK. If you update your SDK with a WSDL that contains updated input fields for requests (that is, updated request types), you will need to manually update the affected wrapper classes or use the affected request objects directly, without wrappers. </li>
+		<li>To update the code stubs in your SDK with a more recent WSDL file, please see related instructions in <a href="#BuildInformation">Building the SDK</a>.</li>
+	</ul>
+
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<a name=ClientEnvironments></a>
+<h3><b>Supported Client Environments</b></h3>
+	<p>eBay has tested the eBay SDK for Java using the following client environments:
+	<ul>
+		<li>Sun JAX-WS RI 2.1.4</li>
+		<li>Java SE 5, Java SE 6 and Java SE 7 on:
+			<ul><li>Windows 7</li>				
+			</ul>
+		</li>
+	</ul>
+	<p><b>Note:</b> You can use any integrated development environment (IDE) with the eBay SDK for Java, as long as it supports the above environments. </p>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<a name=Logging></a>
+<h3><b>Notes About Logging</b></h3>
+        <p>Starting with SDK version 687, the eBay SDK uses the Simple Logging Facade for Java (SLF4J), a simple facade for
+        various logging frameworks, e.g. log4j, java.uitl.logging (also referred to as JDK 1.4 logging). <br><br>By default, eBay SDK uses log4j as the underlying
+        logging framework. To let log4j work properly, you need to configure log4j beforehand. For example, you can
+        configure log4j in the log4j.properties file and put this file in the classpath of your application (for a sample log4j.properties file, please refer
+        to the SDK sample consoleAddItem, in {SDKRoot}\samples\consoleAddItem\src\main\resources).<br><br>
+        If you want to switch to another logging framework such as java.util.logging, you need to remove slf4j-log4j12-1.6.1.jar and log4j-1.2.16.jar from your
+        classpath, then add slf4j-jdk14-1.6.1.jar (in {SDKRoot}\lib\externalLib\optional\slf4j-1.6.1) in your classpath. For details about how to configure
+        java.util.logging, please refer to Java SDK documentation.<br><br>
+        For more details about SLF4J, please refer to <a href="http://www.slf4j.org/index.html">its official site</a>.<br><br>
+        SDK logging can be further configured by setting ApiContext instance accordingly, for example, if you want to
+        disable SOAP payload logging (by default, it is enabled), just call setLogSOAPMessages (false) on the ApiLogging instance (property of ApiContext).
+		For more settings of ApiLogging, please refer to SDK library reference.<br>
+
+<hr>
+<a href="#top"><span class="Small c1">Back to top</span></a>
+<!-- ################################# -->
+<!-- ################################# -->
+
+<hr>
+<p>&copy; 2005&ndash;2010 eBay Inc. All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+  /**
+   * Get all seller transactions in specified date range.
+   * It handles pagination internally and ignores the Pagination property.
+   *
+   * @param modifiedTimeFilter TimeFilter
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getEntireSellerTransactions(TimeFilter modifiedTimeFilter)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetSellerTransactionsRequestType req = new GetSellerTransactionsRequestType();
+
+    // Modified time filter is mandatory.
+    req.setModTimeFrom(modifiedTimeFilter.getTimeFrom());
+    req.setModTimeTo(modifiedTimeFilter.getTimeTo());
+
+    int pageNum = 1;
+    PaginationType pgn = new PaginationType();
+    pgn.setEntriesPerPage(new Integer(100));
+    pgn.setPageNumber(new Integer(pageNum++));
+
+    req.setPagination(pgn);
+    
+    if (this.includeFinalValueFee != null)
+        req.setIncludeFinalValueFee(this.includeFinalValueFee);
+    if (this.includeContainingOrder != null)
+        req.setIncludeContainingOrder(this.includeContainingOrder);
+    if (this.sKUArray != null)
+        req.setSKUArray(this.sKUArray);
+    if (this.platform != null)
+        req.setPlatform(this.platform);
+    if (this.inventoryTrackingMethod != null)
+        req.setInventoryTrackingMethod(this.inventoryTrackingMethod);
+     if(this.includeCodiceFiscale !=null)
+        req.setIncludeCodiceFiscale(this.includeCodiceFiscale);
+
+    ArrayList transList = new ArrayList();
+
+    while(true)
+    {
+      GetSellerTransactionsResponseType resp = (GetSellerTransactionsResponseType)this.execute(req);
+      TransactionArrayType tarray = resp.getTransactionArray();
+      TransactionType[] tm = (tarray == null) ? null : tarray.getTransaction();
+      if( tm != null )
+      {
+        for (int i = 0; i < tm.length; i++)
+          transList.add(tm[i]);
+      }
+
+      if( resp.getReturnedTransactionCountActual() != null )
+        this.returnedTransactionCountActual = resp.getReturnedTransactionCountActual().intValue();
+      if( !resp.isHasMoreTransactions().booleanValue() )
+        break;
+
+      pgn.setPageNumber(new Integer(pageNum++));
+    }
+
+    // Build results.
+    this.returnedTransactions = new TransactionType[transList.size()];
+    for(int i = 0; i < this.returnedTransactions.length; i ++)
+    {
+      this.returnedTransactions[i] = (TransactionType)transList.get(i);
+    }
+    return this.returnedTransactions;
+  }

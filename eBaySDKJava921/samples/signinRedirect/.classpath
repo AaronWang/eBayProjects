@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v5.5">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/activation.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/FastInfoset.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/http.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxws-rt.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jaxws-tools.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jsr173_api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jsr181-api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/jsr250-api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/mimepull.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/resolver.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/saaj-api.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/saaj-impl.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/serializer.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/sjsxp.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/stax-ex.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/streambuffer.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/xalan.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/ebaycalls.jar"/>
+	<classpathentry kind="lib" path="/JavaSDK/lib/ebaysdkcore.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_06">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

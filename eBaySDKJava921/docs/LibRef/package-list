@@ -1,0 +1,13 @@
+com.ebay.sdk
+com.ebay.sdk.attributes
+com.ebay.sdk.attributes.model
+com.ebay.sdk.call
+com.ebay.sdk.handler
+com.ebay.sdk.helper
+com.ebay.sdk.helper.cache
+com.ebay.sdk.helper.ui
+com.ebay.sdk.model
+com.ebay.sdk.pictureservice
+com.ebay.sdk.pictureservice.eps
+com.ebay.sdk.util
+com.ebay.soap.eBLBaseComponents

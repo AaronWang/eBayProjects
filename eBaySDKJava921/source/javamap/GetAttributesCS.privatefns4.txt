@@ -1,0 +1,24 @@
+  /**
+   * Extract CS xml by CSId from combined CS Xml document.
+   * @param allCSXml Document The CS Xml document that contains multiple CS Xml.
+   * @param csId int Id of the CS that you want to get Xml for. Set to null to return xml for all CS.
+   * @param copyOverrides boolean Copy Overrides node or not.
+   * @param fromPath String Xpath of the node from where to copy all nodes.
+   * @param outputXml Document The output Xml to copy selected nodes to. null means to
+   * create a new Document object.
+   * @throws TransformerException
+   * @throws ParserConfigurationException
+   * @throws SAXException
+   * @throws IOException
+   * @throws SdkException
+   * @return Document The new generated Xml document that contains the specified CS Xml.
+   */
+  public static Document extractCSFromXml(Document allCSXml, int csId, boolean copyOverrides, String fromPath, Document outputXml)
+      throws TransformerException, ParserConfigurationException, SAXException, IOException, SdkException
+  {
+      int[] csIds = null;
+      if( csId != 0 ) {
+        csIds = new int[] {csId};
+      }
+      return extractMultiCSFromXml(allCSXml, csIds, copyOverrides, fromPath, outputXml);
+  }

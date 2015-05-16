@@ -1,0 +1,18 @@
+ /*
+  * Helper function to do base64 decode of the returned file data.
+  */
+  public static void decodeXSLData(XSLFileType[] files) throws Exception {
+  	String returnedContent = null;
+    for (int i = 0; i < files.length; i++) {
+      returnedContent = files[i].getFileContent();
+      if (returnedContent != null) {
+    	  byte[] decodeOut = Base64.decode(returnedContent.toCharArray());
+    	  String xsl = eBayUtil.convertInputStreamToString(new ByteArrayInputStream(decodeOut));
+    	  files[i].setFileContent(xsl);
+      }
+    }
+  }
+ 
+  public GetAttributesXSLResponseType getResponse() {
+	return response;
+  }

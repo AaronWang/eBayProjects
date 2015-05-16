@@ -1,0 +1,37 @@
+  /**
+
+   * Executes the API call. After relisting the item, the original ItemID will
+   * be saved in ItemType.ListingDetails.RelistItemID. ItemType.ItemID will
+   * contain the new ItemID of the new item.
+   * @param item ItemType ItemID property identifies the item that will
+   * be relisted. Optionally the folowing properties of item object can be set:
+   * StartPrice, BuyItNowPrice, Description, Title, Duration.
+   * @param modifiedFields Specifies fields that have been deleted or modifled.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return FeesType
+   *
+   */
+/*  public FeesType relistFixedPriceItem(ItemType item, ModifiedFieldType[] modifiedFields)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    RelistFixedPriceItemRequestType request = new RelistFixedPriceItemRequestType();
+    request.setItem(item);
+    request.setModifiedFields(modifiedFields);
+
+    ItemIDType origItemID = item.getItemID();
+
+    RelistFixedPriceItemResponseType resp = (RelistFixedPriceItemResponseType)this.execute(request);
+
+    // Save item ID.
+    if( item.getListingDetails() == null )
+      item.setListingDetails(new ListingDetailsType());
+    item.getListingDetails().setRelistedItemID(origItemID);
+
+    item.setItemID(resp.getItemID());
+
+    this.listingFees = resp.getFees();
+    return this.listingFees;
+  }
+  */

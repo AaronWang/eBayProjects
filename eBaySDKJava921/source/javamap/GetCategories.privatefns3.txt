@@ -1,0 +1,9 @@
+  /**
+   *
+   * @param strList String[]
+   * @return ItemIDType[]
+   */
+  public static String stringFromSiteCodeType(SiteCodeType categorySiteID)
+  {
+	return new Integer(SiteIDUtil.toNumericalID(categorySiteID)).toString();
+  }

@@ -1,0 +1,20 @@
+
+  /**
+   * Gets list of picture files for the item.
+   * @return String[]
+   */
+  public String[] getPictureFiles() {
+    return this.pictureFiles;
+  }
+
+  /**
+   * Sets list of picture files for the item. Before listing
+   * the item, the attached picture service object (setPictureService())
+   * to upload these picture files then set the picture property of the
+   * item object.
+   * @param pictureFiles String[]
+   */
+  public void setPictureFiles(String[] pictureFiles) {
+    this.pictureFiles = pictureFiles;
+  }
+

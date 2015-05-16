@@ -1,0 +1,105 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<html>
+<head>
+<STYLE TYPE="text/css">BODY { font-size: 11pt; font-family: arial; }</STYLE>
+<title>Readme for the Java itemSpecificsDemo Sample</title>
+<style type="text/css">
+table { width : 65%; border : none; empty-cells : show; }
+table.note { border: .5px #408080; }
+table.nav { margin-left : -4%; }
+.navbarUniv { width:95%; margin:0; border-collapse:collapse; margin-bottom:15px; }
+.navlinkUniv { color:#999999; margin:0 10px; }
+td.navbarUniv { background:white; }
+th, .heading, th.heading { font-size: 12px; background-color: #CCCC99; vertical-align : top; text-align : left; padding: 4px 4px 4px 4px; }
+th.clear, td.clear { background-color: #FFFFFF; }
+td.future { color: Gray; }
+td.current { font-weight: bold; background-color: #FFFF66; }
+td.date { white-space: nowrap; }
+td.note { color: #880000; background-color: #E6F8D6; padding: 4px 4px 4px 4px;}
+td.version { font-weight: bold; white-space: nowrap; }
+td, div.CellBody { font-size: 12px; background-color: #EFEFEF; vertical-align : top; padding: 0px 4px 0px 4px;}
+div.Table {text-align: left}
+div.TableTitle, div.RefHeading { font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<h2>Readme for the Java itemSpecificsDemo Sample</h2>
+
+<p>
+This sample simulates a simple sell your item(SYI) flow, it shows how to use eBay APIs to:
+<ul>
+<li>handle custom item specifics,
+<li>handle eBay meta-data like listing type/duration, payment methods, shipping service, etc.
+<li>cache eBay meta-data on local drives(see Helper Library for detail).
+</ul>
+
+<p>
+<h3><font color=red>Note:</font><br></h3>
+1. The ant build file is for Tomcat 5.5, JDK 1.5/1.6, please update and run setenv.bat(in SDK build folder) first to set JAVA_HOME, TOMCAT_HOME and ANT_HOME.<br>
+2. The eclipse project file is for Eclipse(3.3.2) IDE for Java EE Developers, Dynamic Web Module 2.3, Tomcat 5.5, JDK 1.5/1.6<br>
+3. Please update Api token and server address in web.xml before you run this sample.<br>
+4. If memory issues occur in your webserver, please refer to your webserver documentation for how to increase the Java heap size
+(for example, for Tomcat 5.5, you may update JAVA_OPTS in catalina.bat to include : '-Xms256m -Xmx512m' ).<br>
+5. The sample is for demo purpose, there will be meta-data synchronization delay when you run the sample, for progress information,
+please check the log(for example, in Tomcat console).
+
+<p>
+<h3>Perparation for Building the Sample</h3>
+<ol>
+ <li>Shut down Apache Tomcat
+ <li>Delete previous versions of the following directory: %TOMCAT_HOME%\webapps\ItemSpecificsDemo.
+ <li>Delete %TOMCAT_HOME%\webapps\ItemSpecificsDemo.war
+ <li>Delete the contents of %TOMCAT_HOME%\work
+</ol>
+
+<p>
+<h3>Build the Sample and Copy the WAR File</h3>
+<ol>
+ <li>Update Api token and server address in \samples\itemSpecificsDemo\WebContent\WEB-INF\web.xml
+ <li>In Command Line, change directory to \samples\itemSpecificsDemo, Run: ant, If the project is built successfully, a WAR file will be generated.
+ <li>Copy the resulting WAR file(\samples\itemSpecificsDemo\ItemSpecificsDemo.war) to %TOMCAT_HOME%\webapps\ItemSpecificsDemo.war.
+</ol>
+
+<p>
+<h3>Start Tomcat and Run the Sample to List an Item</h3>
+<ol>
+  <li>Start Apache Tomcat.</li>
+  <li>Confirm that the following folder is created: %TOMCAT_HOME%\webapps\ItemSpecificsDemo.</li>
+  <li>Use the following address in your browser: http://localhost:8080/ItemSpecificsDemo/index.html.</li>
+  <li>Choose the Canada site (as a test), optionally specify a category ID, and click Continue.</li>
+  <li>Confirm that the category and attribute data was saved under %TOMCAT_HOME% or a subdirectory of %TOMCAT_HOME% (unless you already have a current version of the data). </li>
+  <li>On the categoryList.jsp page, a list of categories are displayed. You can select
+  one primary category for your item, just as a seller does when the seller lists an item. Select one 
+  category and click Continue.</li>
+  <li>On the itemSpecifics.jsp page, item specifics are displayed that correspond to the
+  category you selected. Select item specifics and click Continue. </li>
+  <li>On the returnPolicy.jsp page, provide a valid Return Policy Profile ID or Return Policy Profile name.</li>
+  <li>On the addItem.jsp page, alter other options as desired, and provide a valid Shipping Policy Profile ID/name, or both, and Payment Policy Profile ID/name, or both, click List Item to eBay.</li>
+</ol>
+
+<p>
+<h3>API Calls Used:</h3>
+<ul>
+ <li><b>GetCategories</b>, for category list.
+ <li><b>GeteBayDetails</b>, for meta-data like return policy, shipping service, ship to location.
+ <li><b>GeteCategoryFeatures</b>, for meta-data like return policy enabled, item specifics enabled, listing type, listing duration, payment methods.
+ <li><b>GetCategorySpecifics</b>, for item specifics
+ <li><b>AddItem</b>, for listing to eBay
+</ul>
+
+
+
+<p>
+<h3>Attributes Demo Architecture</h3>
+<img src="img/arch.jpg" height="550" width="1100"/>
+
+<p>
+<p>
+<h3>Attributes Demo Page/Call Flow</h3>
+<img src="img/flow.jpg" height="550" width="1100"/>
+
+</body>
+</html>
+

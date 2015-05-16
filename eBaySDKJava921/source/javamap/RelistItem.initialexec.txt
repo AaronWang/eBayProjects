@@ -1,0 +1,4 @@
+    if( this.itemToBeRelisted == null )
+      throw new SdkException("ItemToBeRelisted property is not set.");
+    String origItemID = this.itemToBeRelisted.getItemID();
+    req.setItem(this.itemToBeRelisted);

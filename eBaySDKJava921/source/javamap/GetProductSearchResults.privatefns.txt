@@ -1,0 +1,17 @@
+  /**
+   * (For backward compatibility) Executes the GetProductSearchResults API, passing ProductSearchType[].
+   * @param productSearch ProductSearchType[]
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return ProductSearchResultType[]
+   */
+  public ProductSearchResultType[] getProductSearchResults(ProductSearchType[] productSearch)
+    throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetProductSearchResultsRequestType req = new GetProductSearchResultsRequestType();
+    req.setProductSearch(productSearch);
+
+    GetProductSearchResultsResponseType resp = (GetProductSearchResultsResponseType)this.execute(req);
+    return resp.getProductSearchResult();
+  }

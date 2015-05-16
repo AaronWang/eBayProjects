@@ -1,0 +1,17 @@
+  /**
+   * Gets the returned pagination result within the PaginatedTransactionArrayType.
+   * @return PaginationResultType
+   */
+  public PaginationResultType getReturnedPaginationResult() {
+    PaginatedTransactionArrayType ary = this.returnedItemsAwaitingFeedback;
+    return (ary == null? null: ary.getPaginationResult());
+  }
+
+  /**
+   * Gets the returned transaction array within the PaginatedTransactionArrayType.
+   * @return TransactionType[]
+   */
+  public TransactionType[] getReturnedTransaction() {
+    PaginatedTransactionArrayType ary = this.returnedItemsAwaitingFeedback;
+    return (ary == null || ary.getTransactionArray() == null) ? null : ary.getTransactionArray().getTransaction();
+  }

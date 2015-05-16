@@ -1,0 +1,48 @@
+  /**
+   * Sets time filter for transactions to be returned.
+   * @param timeFilter TimeFilter
+   */
+  public void setTimeFilter(TimeFilter timeFilter) {
+    this.modifiedTimeFilter = timeFilter;
+  }
+  /**
+   *
+   * @return TimeFilter
+   */
+  public TimeFilter getTimeFilter() {
+    return this.modifiedTimeFilter;
+  }
+
+  /**
+   * Executes the API. GetSellerTransactionsCall.TimeFilter will be ignored.
+   * @param modifiedTimeFilter TimeFilter
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getSellerTransactions(TimeFilter modifiedTimeFilter)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+     this.modifiedTimeFilter = modifiedTimeFilter;
+     return getSellerTransactions();
+  }
+
+
+  /**
+   * Get all seller transactions in specified date range.
+   * It handles pagination internally and ignores the Pagination property.
+   * GetSellerTransactionsCall.TimeFilter will be ignored.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getEntireSellerTransactions()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    if( this.modifiedTimeFilter == null )
+      throw new SdkException("TimeFilter is not set.");
+    return getEntireSellerTransactions(this.modifiedTimeFilter);
+  }
+

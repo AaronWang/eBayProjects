@@ -1,0 +1,16 @@
+   if( this.pictureFiles != null )
+    {
+      if( item.getPictureDetails() == null )
+      {
+    	  PictureDetailsType pictureDetails = new PictureDetailsType();
+    	  pictureDetails.setPhotoDisplay(PhotoDisplayCodeType.NONE);
+          item.setPictureDetails(pictureDetails);
+      }
+      
+      // Save urls back to item object.
+      String[] uris = new String[pictureFiles.length];
+      for(int i = 0; i < pictureFiles.length; i ++) {
+           uris[i] = IMG_URL_FORMAT + (new Integer(i)).toString() + JPG_EXT;
+      }
+      item.getPictureDetails().setPictureURL(uris);
+    }

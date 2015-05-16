@@ -1,0 +1,8 @@
+  /**
+   * 
+   * @return the listing duration.
+   */
+  public TimeFilter getListingDuration() {
+  	return listingDuration;
+  }
+

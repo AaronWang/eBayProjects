@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding=".svn/|com/.svn/|com/ebay/.svn/|com/ebay/sdk/.svn/|com/ebay/sdk/call/.svn/|com/ebay/sdk/model/.svn/|com/ebay/sdk/xmlapi/.svn/" kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SDKCore"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.5.0_15"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

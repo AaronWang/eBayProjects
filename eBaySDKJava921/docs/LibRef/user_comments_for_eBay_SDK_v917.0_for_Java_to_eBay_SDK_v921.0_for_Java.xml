@@ -1,0 +1,3463 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="eBay_SDK_v917.0_for_Java_to_eBay_SDK_v921.0_for_Java"
+  jdversion="1.1.0">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="com.ebay.sdk.call"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.AddFixedPriceItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.AddFixedPriceItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.AddItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.AddItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetItemShippingCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetItemShippingCall.getReturnedPickUpInStoreDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetOrdersCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetOrdersCall.getSortingOrder_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetOrdersCall.setSortingOrder_added(com.ebay.soap.eBLBaseComponents.SortOrderCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getReturnedDispatchCutoffTimePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getReturnedGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getReturnedOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getReturnedOverrideGSPServiceWithIntlServicePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getReturnedPickupDropoffSellerPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getShowDispatchCutoffTimePreferences_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getShowGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getShowOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getShowOverrideGSPServiceWithIntlServicePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.getShowPickupDropoffPreferences_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.setShowDispatchCutoffTimePreferences_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.setShowGlobalShippingProgramListingPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.setShowOutOfStockControlPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.setShowOverrideGSPServiceWithIntlServicePreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GetUserPreferencesCall.setShowPickupDropoffPreferences_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GeteBayDetailsCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.GeteBayDetailsCall.getReturnedProductDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.RelistFixedPriceItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.RelistFixedPriceItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.RelistItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.RelistItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.ReviseFixedPriceItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.ReviseFixedPriceItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.ReviseItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.ReviseItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SendInvoiceCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SendInvoiceCall.getAdjustmentAmount_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SendInvoiceCall.setAdjustmentAmount_added(com.ebay.soap.eBLBaseComponents.AmountType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.getDispatchCutoffTimePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.getGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.getOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.getOverrideGSPserviceWithIntlService_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.setDispatchCutoffTimePreference_added(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.setGlobalShippingProgramListingPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.setOutOfStockControlPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.SetUserPreferencesCall.setOverrideGSPserviceWithIntlService_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyAddFixedPriceItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyAddFixedPriceItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyAddItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyAddItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyRelistItemCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.call.VerifyRelistItemCall.getReturnedListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.PictureService"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.PictureService.uploadPicture_changed(com.ebay.soap.eBLBaseComponents.PhotoDisplayCodeType, com.ebay.sdk.pictureservice.PictureInfo)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.PictureService.uploadSiteHostedPictures_added(com.ebay.soap.eBLBaseComponents.UploadSiteHostedPicturesRequestType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.eps"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.eps.eBayPictureServiceXMLCall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.eps.eBayPictureServiceXMLCall.uploadPicture_changed(com.ebay.soap.eBLBaseComponents.PhotoDisplayCodeType, com.ebay.sdk.pictureservice.PictureInfo)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.sdk.pictureservice.eps.eBayPictureServiceXMLCall.uploadSiteHostedPictures_added(com.ebay.soap.eBLBaseComponents.UploadSiteHostedPicturesRequestType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddFixedPriceItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseContainerType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AdditionalCompatibilityEnabledDefinitionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressAttributeCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressAttributeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType._getAddressAttribute_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.addressAttribute"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.getAddressAttributeLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.getAddressAttribute_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.getAddressAttribute_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.setAddressAttribute_added(com.ebay.soap.eBLBaseComponents.AddressAttributeType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.AddressType.setAddressAttribute_added(int, com.ebay.soap.eBLBaseComponents.AddressAttributeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferDetailsType.isNewBestOffer_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferDetailsType.newBestOffer"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferDetailsType.setNewBestOffer_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.immediatePayEligible"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.isImmediatePayEligible_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.isNewBestOffer_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.newBestOffer"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.setImmediatePayEligible_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BestOfferType.setNewBestOffer_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosureType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType._getBuyerTaxIdentifier_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.buyerTaxIdentifier"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.getBuyerTaxIdentifierLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.getBuyerTaxIdentifier_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.getBuyerTaxIdentifier_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.setBuyerTaxIdentifier_added(com.ebay.soap.eBLBaseComponents.TaxIdentifierType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.BuyerType.setBuyerTaxIdentifier_added(int, com.ebay.soap.eBLBaseComponents.TaxIdentifierType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CancelDetailType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CancelInitiatorCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CancelReasonCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CancelStatusCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.additionalCompatibilityEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.eanEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.getEANEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.getISBNEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.getUPCEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.isAdditionalCompatibilityEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.isPickupDropOffEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.isbnEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.pickupDropOffEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.setAdditionalCompatibilityEnabled_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.setEANEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.setISBNEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.setPickupDropOffEnabled_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.setUPCEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CategoryFeatureType.upcEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.getListingNPContactName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.getListingNPEmail_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.isListingNPEmailNotifPref_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.listingNPContactName"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.listingNPEmail"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.listingNPEmailNotifPref"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.setListingNPContactName_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.setListingNPEmailNotifPref_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CharityInfoType.setListingNPEmail_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CheckoutStatusType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CheckoutStatusType.getPaymentInstrument_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CheckoutStatusType.paymentInstrument"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.CheckoutStatusType.setPaymentInstrument_added(com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.EANEnabledDefinitionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ExternalTransactionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ExternalTransactionType.externalTransactionStatus"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ExternalTransactionType.getExternalTransactionStatus_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ExternalTransactionType.setExternalTransactionStatus_added(com.ebay.soap.eBLBaseComponents.PaymentTransactionStatusCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.additionalCompatibilityEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.eanEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.getAdditionalCompatibilityEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.getEANEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.getISBNEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.getPickupDropOffEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.getUPCEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.isbnEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.pickupDropOffEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.setAdditionalCompatibilityEnabled_added(com.ebay.soap.eBLBaseComponents.AdditionalCompatibilityEnabledDefinitionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.setEANEnabled_added(com.ebay.soap.eBLBaseComponents.EANEnabledDefinitionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.setISBNEnabled_added(com.ebay.soap.eBLBaseComponents.ISBNEnabledDefinitionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.setPickupDropOffEnabled_added(com.ebay.soap.eBLBaseComponents.PickupDropOffEnabledDefinitionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.setUPCEnabled_added(com.ebay.soap.eBLBaseComponents.UPCEnabledDefinitionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.FeatureDefinitionsType.upcEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType.getPickUpInStoreDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType.pickUpInStoreDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetItemShippingResponseType.setPickUpInStoreDetails_added(com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetOrdersRequestType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetOrdersRequestType.getSortingOrder_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetOrdersRequestType.setSortingOrder_added(com.ebay.soap.eBLBaseComponents.SortOrderCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetOrdersRequestType.sortingOrder"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.isShowDispatchCutoffTimePreferences_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.isShowGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.isShowOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.isShowOverrideGSPServiceWithIntlServicePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.isShowPickupDropoffPreferences_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.setShowDispatchCutoffTimePreferences_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.setShowGlobalShippingProgramListingPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.setShowOutOfStockControlPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.setShowOverrideGSPServiceWithIntlServicePreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.setShowPickupDropoffPreferences_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.showDispatchCutoffTimePreferences"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.showGlobalShippingProgramListingPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.showOutOfStockControlPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.showOverrideGSPServiceWithIntlServicePreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesRequestType.showPickupDropoffPreferences"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.dispatchCutoffTimePreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.getDispatchCutoffTimePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.globalShippingProgramListingPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.isGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.isOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.isOverrideGSPServiceWithIntlServicePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.isPickupDropoffSellerPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.outOfStockControlPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.overrideGSPServiceWithIntlServicePreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.pickupDropoffSellerPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.setDispatchCutoffTimePreference_added(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.setGlobalShippingProgramListingPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.setOutOfStockControlPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.setOverrideGSPServiceWithIntlServicePreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GetUserPreferencesResponseType.setPickupDropoffSellerPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType.getProductDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType.productDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.GeteBayDetailsResponseType.setProductDetails_added(com.ebay.soap.eBLBaseComponents.ProductDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ISBNEnabledDefinitionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.InquiryStatusCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType.getShippingServiceCutOffTime_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType.setShippingServiceCutOffTime_added(java.util.Calendar)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.InternationalShippingServiceOptionsType.shippingServiceCutOffTime"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.availableForPickupDropOff"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.eBayNowAvailable"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.eBayNowEligible"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.eligibleForPickupDropOff"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.getPickupInStoreDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.getShippingServiceCostOverrideList_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.ignoreQuantity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.includeRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isAvailableForPickupDropOff_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isEBayNowAvailable_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isEBayNowEligible_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isEligibleForPickupDropOff_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isIgnoreQuantity_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isIncludeRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.isLiveAuction_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.liveAuction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.pickupInStoreDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setAvailableForPickupDropOff_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setEBayNowAvailable_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setEBayNowEligible_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setEligibleForPickupDropOff_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setIgnoreQuantity_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setIncludeRecommendations_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setLiveAuction_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setPickupInStoreDetails_added(com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.setShippingServiceCostOverrideList_added(com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideListType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ItemType.shippingServiceCostOverrideList"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingDetailsType.endingReason"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingDetailsType.getEndingReason_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingDetailsType.setEndingReason_added(com.ebay.soap.eBLBaseComponents.EndReasonCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingRecommendationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ListingRecommendationsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.LogisticsPlanCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType._getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.getMessageMediaLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.getMessageMedia_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.messageMedia"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.setMessageMedia_added(com.ebay.soap.eBLBaseComponents.MessageMediaType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageExchangeType.setMessageMedia_added(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType._getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.getMessageMediaLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.getMessageMedia_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.messageMedia"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.setMessageMedia_added(com.ebay.soap.eBLBaseComponents.MessageMediaType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MemberMessageType.setMessageMedia_added(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MessageMediaType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MetadataType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType._getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.getMessageMediaLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.getMessageMedia_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.getMessageMedia_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.messageMedia"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.setMessageMedia_added(com.ebay.soap.eBLBaseComponents.MessageMediaType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyMessagesMessageType.setMessageMedia_added(int, com.ebay.soap.eBLBaseComponents.MessageMediaType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyeBaySelectionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyeBaySelectionType.includeFavoriteSearcheCount"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyeBaySelectionType.isIncludeFavoriteSearcheCount_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.MyeBaySelectionType.setIncludeFavoriteSearcheCount_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createAdditionalCompatibilityEnabledDefinitionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createAddressAttributeType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createBuyerPackageEnclosureType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createBuyerPackageEnclosuresType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createCancelDetailType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createDispatchCutoffTimePreferencesType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createEANEnabledDefinitionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createExtendedPictureDetailsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createISBNEnabledDefinitionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createListingRecommendationType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createListingRecommendationsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createMessageMediaType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createMetadataType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentInformationCodeType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentInformationType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentTransactionCodeType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentTransactionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentsInformationCodeType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPaymentsInformationType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPickupDetailsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPickupDropOffEnabledDefinitionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPickupInStoreDetailsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPickupMethodSelectedType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPickupOptionsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createPictureURLsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createProductDetailsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createRecommendationType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createRefundInformationType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createRefundTransactionInfoType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createShippingEstimatedDeliveryInfoType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createShippingPackageInfoType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createShippingServiceCostOverrideListType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createShippingServiceCostOverrideType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createTaxIdentifierAttributeType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createTaxIdentifierType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createTransactionReferenceType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createUPCEnabledDefinitionType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createUserIdentityType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ObjectFactory.createVariationProductListingDetailsType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType._getBuyerTaxIdentifier_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType._getCancelDetail_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.buyerPackageEnclosures"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.buyerTaxIdentifier"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.cancelDetail"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.cancelReason"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.cancelReasonDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.cancelStatus"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.extendedOrderID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getBuyerPackageEnclosures_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getBuyerTaxIdentifierLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getBuyerTaxIdentifier_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getBuyerTaxIdentifier_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelDetailLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelDetail_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelDetail_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelReasonDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelReason_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getCancelStatus_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getExtendedOrderID_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getLogisticsPlanType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getMonetaryDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getPickupDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getPickupMethodSelected_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getSellerEIASToken_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getSellerUserID_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.getShippingConvenienceCharge_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.logisticsPlanType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.monetaryDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.pickupDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.pickupMethodSelected"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.sellerEIASToken"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.sellerUserID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setBuyerPackageEnclosures_added(com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setBuyerTaxIdentifier_added(com.ebay.soap.eBLBaseComponents.TaxIdentifierType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setBuyerTaxIdentifier_added(int, com.ebay.soap.eBLBaseComponents.TaxIdentifierType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setCancelDetail_added(com.ebay.soap.eBLBaseComponents.CancelDetailType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setCancelDetail_added(int, com.ebay.soap.eBLBaseComponents.CancelDetailType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setCancelReasonDetails_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setCancelReason_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setCancelStatus_added(com.ebay.soap.eBLBaseComponents.CancelStatusCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setExtendedOrderID_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setLogisticsPlanType_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setMonetaryDetails_added(com.ebay.soap.eBLBaseComponents.PaymentsInformationType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setPickupDetails_added(com.ebay.soap.eBLBaseComponents.PickupDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setPickupMethodSelected_added(com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setSellerEIASToken_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setSellerUserID_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.setShippingConvenienceCharge_added(com.ebay.soap.eBLBaseComponents.AmountType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.OrderType.shippingConvenienceCharge"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType.getPaymentHoldReason_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType.paymentHoldReason"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentHoldDetailType.setPaymentHoldReason_added(com.ebay.soap.eBLBaseComponents.PaymentHoldReasonCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentHoldReasonCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentInformationCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentInformationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentInstructionCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentTransactionCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentTransactionStatusCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentTransactionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentsInformationCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PaymentsInformationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupDropOffEnabledDefinitionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupInStoreDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupMethodCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupOptionsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PickupStatusCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PictureDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PictureDetailsType.extendedPictureDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PictureDetailsType.getExtendedPictureDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PictureDetailsType.setExtendedPictureDetails_added(com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.PictureURLsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ProductDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RecommendationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RefundInformationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RefundSourceTypeCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RefundTransactionInfoType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistFixedPriceItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.RelistItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReturnPolicyType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReturnPolicyType.extendedHolidayReturns"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReturnPolicyType.isExtendedHolidayReturns_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReturnPolicyType.setExtendedHolidayReturns_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReturnStatusCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseFixedPriceItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ReviseItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellerDiscountsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellerDiscountsType.getOriginalShippingService_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellerDiscountsType.originalShippingService"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellerDiscountsType.setOriginalShippingService_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellingStatusType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellingStatusType.getQuantitySoldByPickupInStore_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellingStatusType.quantitySoldByPickupInStore"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SellingStatusType.setQuantitySoldByPickupInStore_added(java.lang.Integer)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType.adjustmentAmount"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType.getAdjustmentAmount_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SendInvoiceRequestType.setAdjustmentAmount_added(com.ebay.soap.eBLBaseComponents.AmountType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.dispatchCutoffTimePreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.getDispatchCutoffTimePreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.globalShippingProgramListingPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.isGlobalShippingProgramListingPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.isOutOfStockControlPreference_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.isOverrideGSPserviceWithIntlService_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.outOfStockControlPreference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.overrideGSPserviceWithIntlService"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.setDispatchCutoffTimePreference_added(com.ebay.soap.eBLBaseComponents.DispatchCutoffTimePreferencesType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.setGlobalShippingProgramListingPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.setOutOfStockControlPreference_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SetUserPreferencesRequestType.setOverrideGSPserviceWithIntlService_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingEstimatedDeliveryInfoType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideListType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceCostOverrideType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType._getShippingPackageInfo_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.getLogisticPlanType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.getShippingPackageInfoLength_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.getShippingPackageInfo_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.getShippingPackageInfo_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.getShippingServiceCutOffTime_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.logisticPlanType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.setLogisticPlanType_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.setShippingPackageInfo_added(com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.setShippingPackageInfo_added(int, com.ebay.soap.eBLBaseComponents.ShippingPackageInfoType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.setShippingServiceCutOffTime_added(java.util.Calendar)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.shippingPackageInfo"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceOptionsType.shippingServiceCutOffTime"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingServiceType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.ShippingTrackingEventCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.additionalCompatibilityEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.eanEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.getEANEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.getISBNEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.getUPCEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.isAdditionalCompatibilityEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.isPickupDropOffEnabled_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.isbnEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.pickupDropOffEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.setAdditionalCompatibilityEnabled_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.setEANEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.setISBNEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.setPickupDropOffEnabled_added(java.lang.Boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.setUPCEnabled_added(com.ebay.soap.eBLBaseComponents.ProductIdentiferEnabledCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.SiteDefaultsType.upcEnabled"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.getStoreCategory2Name_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.getStoreCategoryName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.setStoreCategory2Name_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.setStoreCategoryName_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.storeCategory2Name"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.StorefrontType.storeCategoryName"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxDetailsType.getTaxCode_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxDetailsType.setTaxCode_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxDetailsType.taxCode"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxIdentifierAttributeCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxIdentifierAttributeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxIdentifierCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TaxIdentifierType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionReferenceCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionReferenceType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.getInquiryStatus_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.getPaymentInstrument_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.getReturnStatus_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.inquiryStatus"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.paymentInstrument"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.returnStatus"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.setInquiryStatus_added(com.ebay.soap.eBLBaseComponents.InquiryStatusCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.setPaymentInstrument_added(com.ebay.soap.eBLBaseComponents.BuyerPaymentInstrumentCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionStatusType.setReturnStatus_added(com.ebay.soap.eBLBaseComponents.ReturnStatusCodeType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.buyerPackageEnclosures"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.extendedOrderID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getBuyerPackageEnclosures_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getExtendedOrderID_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getInventoryReservationID_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getLogisticsPlanType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getMonetaryDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getPickupDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getPickupMethodSelected_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.getShippingConvenienceCharge_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.inventoryReservationID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.logisticsPlanType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.monetaryDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.pickupDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.pickupMethodSelected"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setBuyerPackageEnclosures_added(com.ebay.soap.eBLBaseComponents.BuyerPackageEnclosuresType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setExtendedOrderID_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setInventoryReservationID_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setLogisticsPlanType_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setMonetaryDetails_added(com.ebay.soap.eBLBaseComponents.PaymentsInformationType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setPickupDetails_added(com.ebay.soap.eBLBaseComponents.PickupDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setPickupMethodSelected_added(com.ebay.soap.eBLBaseComponents.PickupMethodSelectedType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.setShippingConvenienceCharge_added(com.ebay.soap.eBLBaseComponents.AmountType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.TransactionType.shippingConvenienceCharge"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UPCEnabledDefinitionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserDefinedListType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserDefinedListType.favoriteSearcheCount"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserDefinedListType.getFavoriteSearcheCount_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserDefinedListType.setFavoriteSearcheCount_added(java.lang.Integer)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserIdentityCodeType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserIdentityType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.getShippingAddress_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.getUserFirstName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.getUserLastName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.setShippingAddress_added(com.ebay.soap.eBLBaseComponents.AddressType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.setUserFirstName_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.setUserLastName_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.shippingAddress"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.userFirstName"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.UserType.userLastName"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationProductListingDetailsType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType.extendedPictureDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType.getExtendedPictureDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationSpecificPictureSetType.setExtendedPictureDetails_added(com.ebay.soap.eBLBaseComponents.ExtendedPictureDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationType.getVariationProductListingDetails_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationType.setVariationProductListingDetails_added(com.ebay.soap.eBLBaseComponents.VariationProductListingDetailsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VariationType.variationProductListingDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddFixedPriceItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyAddItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType.getListingRecommendations_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType.listingRecommendations"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="com.ebay.soap.eBLBaseComponents.VerifyRelistItemResponseType.setListingRecommendations_added(com.ebay.soap.eBLBaseComponents.ListingRecommendationsType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>

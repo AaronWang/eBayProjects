@@ -1,0 +1,4 @@
+	if( this.itemID == null && this.sellerInventoryID == null)
+	  throw new SdkException("Please set ItemID or sellerInventoryID (for Half items) to be ended.");
+	if( this.itemID != null && this.sellerInventoryID != null)
+	  throw new SdkException("Please set either an ItemID or a sellerInventoryID (for Half items) to be ended.");

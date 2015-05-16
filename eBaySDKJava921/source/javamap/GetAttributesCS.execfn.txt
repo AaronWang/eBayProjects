@@ -1,0 +1,53 @@
+  /**
+   * Executing the GetAttributesCS SOAP API call.
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return java.lang.String Same as the return value of getAttributeData().
+   */
+  public String getAttributesCS() throws ApiException,
+      SdkException, Exception
+  {
+    GetAttributesCSRequestType request = new GetAttributesCSRequestType();
+
+    if( this.attributeSetIDs != null )
+      request.setAttributeSetID(attributeSetIDs);
+
+    if( this.attributeSystemVersion != null )
+      request.setAttributeSystemVersion(attributeSystemVersion);
+
+    if (this.includeCategoryMappingDetails != null)
+      request.setIncludeCategoryMappingDetails(includeCategoryMappingDetails);
+
+    GetAttributesCSResponseType resp = (GetAttributesCSResponseType)execute(request);
+
+    returnedattributeSystemVersion = resp.getAttributeSystemVersion();
+
+    String csXml = null;
+    if( resp.getAttributeData() != null ) {
+      csXml = XmlDeclaration + "\n" +
+          //"<Version>" + this.returnedattributeSystemVersion + "</Version>\n" +
+          resp.getAttributeData();
+    }
+
+    /*
+    java.io.File fl = new java.io.File("c:/SDK/csXml.xml");
+    java.io.FileWriter fw = new java.io.FileWriter(fl);
+    fw.write(csXml);
+    fw.close();
+    */
+
+    // Patch the response xml.
+    if( csXml != null && this.styleXsl!= null) {
+      String styleXslToUse;
+      if (this.styleXsl == null || this.styleXsl.length() == 0 )
+        styleXslToUse = getDefaultStyleXsl();
+      else
+        styleXslToUse = this.styleXsl;
+
+      csXml = fixAttributesXml(csXml, styleXslToUse);
+    }
+
+    return csXml;
+  }
+

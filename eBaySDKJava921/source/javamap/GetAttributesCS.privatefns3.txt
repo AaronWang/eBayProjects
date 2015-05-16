@@ -1,0 +1,30 @@
+  /**
+   * Use style XSL to transform attributes CS Xml.
+   * @param attrXmlDoc String
+   * @param styleXsl String
+   * @throws ParserConfigurationException
+   * @throws SAXException
+   * @throws IOException
+   * @throws TransformerConfigurationException
+   * @throws TransformerException
+   * @return String
+   */
+  public static String fixAttributesXml(String attrXmlDoc, String styleXsl)
+      throws ParserConfigurationException, SAXException, IOException,
+      TransformerConfigurationException, TransformerException
+  {
+    String fixed = null;
+    try
+    {
+      Document srcDoc = XmlUtil.createDom(attrXmlDoc);
+      Document srcXslDoc = XmlUtil.createDom(styleXsl);
+
+      fixed = XmlUtil.xslTransform(srcDoc, srcXslDoc);
+    }
+    catch(Exception ex)
+    {
+      String t = "";
+    }
+
+    return fixed;
+  }

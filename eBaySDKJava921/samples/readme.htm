@@ -1,0 +1,71 @@
+
+<h2 align="center"><b>Samples in the eBay SDK for Java</b></h2>
+
+<ul>
+  <li>Each sample has a readme.htm that contains build, usage or design information
+about the sample.&nbsp;</li>
+  <li>Each sample has an ANT project file (build.xml) that is used to build the
+  	sample source code. You can execute &quot;ant compile&quot; (in each sample folder) to build each sample. Make sure that first you
+    update your SDK (see the readme.htm file in the eBay SDK for Java install directory). Additionally, confirm that you have set the environment variable JAVA_HOME correctly because it is needed by ANT.
+    It is recommended to set and run setenv.bat in the build folder of SDK to set environment variables first.
+    </li>
+
+  <li>A sample can be launched using the ANT project file build.xml. Typically you can run &quot;ant&quot;
+    or &quot;ant run&quot;to launch a console or swing application. </li>
+
+</ul>
+
+<h3><b>HelloWorld (Console)</b></h3>
+&nbsp;&nbsp;&nbsp;The most basic sample to let you get started with eBay SDK/API.
+
+<h3><b><a href="itemSpecificsDemo/readme.htm">ItemSpecificsDemo</a>
+(JSP sample that uses custom item specifics)</b></h3>
+&nbsp;&nbsp;&nbsp; ItemSpecificsDemo is a Web application (JSP) which
+ mimics the Sell Your Item flow on eBay web site to create
+a new item by utilizing eBay technologies including item specifics,  catalog
+(pre-filled product information), product search page and product finder.
+
+<h3><b><a href="consoleAddItem/readme.htm">consoleAddItem</a>
+(Console)</b></h3>
+&nbsp;&nbsp;&nbsp; A simple console application that creates an item and list it
+to eBay. It
+prompts user to enter account and the new item information then uses AddItemCall to list
+the new item to eBay.
+
+<h3><b><a href="consoleAddFixedPriceItem/readme.htm">consoleAddFixedPriceItem</a>
+(Console)</b></h3>
+&nbsp;&nbsp;&nbsp; A simple console application that creates an item and list it
+to eBay. It
+prompts user to enter account and the new item information then uses AddFixedPriceItemCall to list
+the new item to eBay.
+
+<h3><a href="consoleAddItemDirect/readme.htm">consoleAddItemDirect</a>
+(Console)</h3>
+&nbsp;&nbsp;&nbsp; This is a sample console application that shows how to create a new item and list it to eBay (using AddItemCall) without using the AddItemCall wrapper class.&nbsp;<h3><a href="consoleViewItem/readme.htm">consoleViewItem</a> (Console)</h3>
+&nbsp;&nbsp;&nbsp; A simple console application that displays item information
+by given Item ID. It prompts user to enter account information and the Item ID
+then uses GetItemCall to retrieve item details from eBay.
+
+<h3><b><a href="apiCallsDemo/readme.htm">apiCallsDemo</a>
+(SWING)</b></h3>
+&nbsp;&nbsp;&nbsp; A SWING sample that demonstrates the following:
+<ul>
+  <li>Prepare ApiContext for each API call.</li>
+  <li>How to enable Call-Retry.&nbsp;</li>
+  <li>How to enable Xml logging.</li>
+  <li>Usage of each API wrapper class that are supported in SDK, e.g.,
+    AddItemCall, GetItemCall, GetSellerList, etc.</li>
+</ul>
+
+<h3><b><a href="simpleXmlPost/readme.htm">simpleXmlPost</a> (SWING)</b></h3>
+&nbsp;&nbsp;&nbsp; It demonstrates how to use ApiSchemaBasedXmlPoster class to send eBay
+API XML to make traditional (non-SOAP) XML API call.
+
+<h3><b><a href="signinRedirect/readme.htm">signinRedirect</a>
+(JSP sample)</b></h3>
+&nbsp;&nbsp;&nbsp; A JSP sample for generating a token for an individual eBay user.
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>

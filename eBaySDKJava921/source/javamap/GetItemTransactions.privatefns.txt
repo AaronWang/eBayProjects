@@ -1,0 +1,93 @@
+
+
+  /**
+   * Get all item transactions in specified date range.
+   * It handles pagination internally and ignores the Pagination property.
+   * GetItemTransactionsCall.ItemID and
+   * GetItemTransactionsCall.ModifiedTimeFilter will be ignored.
+   * @param modifiedTimeFilter TimeFilter
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getEntireItemTransactions()
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    if( this.itemID == null )
+      throw new SdkException("ItemID is not set.");
+    if( this.modifiedTimeFilter == null )
+      throw new SdkException("ModifiedTimeFilter is not set.");
+    return getEntireItemTransactions();
+  }
+
+  /**
+   * Get all item transactions in specified date range.
+   * It handles pagination internally and ignores the Pagination property.
+   * @param modifiedTimeFilter TimeFilter
+   * @throws ApiException
+   * @throws SdkException
+   * @throws Exception
+   * @return TransactionType[]
+   */
+  public TransactionType[] getEntireItemTransactions(
+      ItemIDType itemID, TimeFilter modifiedTimeFilter)
+      throws com.ebay.sdk.ApiException, com.ebay.sdk.SdkException, java.lang.Exception
+  {
+    GetItemTransactionsRequestType req = new GetItemTransactionsRequestType();
+
+    req.setItemID(itemID);
+    req.setModTimeFrom(modifiedTimeFilter.getTimeFrom());
+    req.setModTimeTo(modifiedTimeFilter.getTimeTo());
+	if (null != includeContainingOrder)
+		req.setIncludeContainingOrder(includeContainingOrder);
+	if (null != includeFinalValueFee)
+		req.setIncludeFinalValueFee(includeFinalValueFee);
+
+    int pageNum = 1;
+    PaginationType pgn = new PaginationType();
+    pgn.setEntriesPerPage(new Integer(50));
+    pgn.setPageNumber(new Integer(pageNum++));
+
+    req.setPagination(pgn);
+
+    ArrayList transList = new ArrayList();
+
+    while(true)
+    {
+      GetItemTransactionsResponseType resp = (GetItemTransactionsResponseType)this.execute(req);
+
+      TransactionArrayType tarray = resp.getTransactionArray();
+      TransactionType[] tm = (tarray == null) ? null : tarray.getTransaction();
+      if( tm != null )
+      {
+        for (int i = 0; i < tm.length; i++)
+          transList.add(tm[i]);
+      }
+
+	  if( resp.getPayPalPreferred() != null )
+		this.payPalPreferred = resp.getPayPalPreferred().booleanValue();
+		
+      if( resp.getReturnedTransactionCountActual() != null )
+        this.returnedTransactionCountActual = resp.getReturnedTransactionCountActual().intValue();
+
+      if( !resp.getHasMoreTransactions().booleanValue() )
+        break;
+
+      pgn.setPageNumber(new Integer(pageNum++));
+    }
+
+    // Build results.
+    this.returnedTransactions = new TransactionType[transList.size()];
+    for(int i = 0; i < this.returnedTransactions.length; i ++)
+    {
+      this.returnedTransactions[i] = (TransactionType)transList.get(i);
+    }
+    return this.returnedTransactions;
+  }
+  /**
+   * Backward compatible function - do not use
+   */
+  public void setIncludeFinalValueFe(Boolean includeFinalValueFee) {
+	this.includeFinalValueFee = includeFinalValueFee;
+  }

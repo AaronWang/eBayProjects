@@ -1,0 +1,1 @@
+    pictureService = eBayPictureServiceFactory.getPictureService(apiContext);
