@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetOrdersRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+	<RequesterCredentials>
+		<eBayAuthToken>AgAAAA**AQAAAA**aAAAAA**R2iSVA**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AEkIaoCJKKpw6dj6x9nY+seQ**44YCAA**AAMAAA**/poeaUSRvxW5qyALxSYL+SePpUp8yNcWMfdCGU0BqOtbi2BVfGBT5Yzo0RIa6rzeykZI5hmT3WCgMKL4wsOg/N9qTxo9kooaGgCGO4vS/P5zdD3OdmcL2KrORgeRl0lv6Bl+OQyIUkltMiAAXP8t+jPBrvhyNRSOay+pEcXylEuPPHo4r37dGvuI54lxsgp4wqPnlyjEzYcXWvx6m94NoZSbo8bNOf0l8aWj20grn6AD3fBWJms0CwiAIiTESS53GWhe+dDkExhIy6BL+/ltwmX+5+PFAgPYiUcF6v0NE6pRSgNO4Ip1PZoPHctp8nJ8TJAv+ytYMwqrJrJ0PnaPbyku2/JPZgFh3V2ImKknrhz0uLRF9etu9+qFNthGSMLFnYAHPYxH0nJOex9A3dqoQVjgeIp4IbdiD6p1S34WsFzqneyVy/D8e3APEsdjVLbkO/2xzwC4UHqO87jKov9TFsiZ2a9B5fYP4rDJm5PEls3lfhYCs+p9Wu7sdvLXQeVYH7vkkqm1S/KZI3Wva9YH9KRgVgnBt4krwQLSlos4WQ+n2HSHMqGLFuMiWxIktU6+v66kKkzO03RD/uB6PQ34Y5Hjo1GsE1l7Al6V0LD5miQaiNoHb5tMOEd2V5SZthqS5xvpaEyZ1GgzkNcMaEQUesCYu0XLkM9Jf8JZ8m4QXd5myFU8lC3PAd54Z3VS1TS3zRDv/JhEdwAC2r8OrxVvMPeZFFilgOjwf/c4O5Daj/1R7br6gSbLrlEJ6DnK4kZl
+		</eBayAuthToken>
+	</RequesterCredentials>
+	<OrderIDArray>
+		<OrderID></OrderID>
+	</OrderIDArray>
+	<CreateTimeFrom> 20/11/2014 </CreateTimeFrom>
+	<CreateTimeTo> 20/12/2014 </CreateTimeTo>
+	<OrderRole>Seller</OrderRole>
+	<OrderStatus>Active|All|Completed|Shipped|Inactive|CancelPending
+	</OrderStatus>
+	<ListingType>FixedPriceItem</ListingType>
+	<Pagination>
+		<EntriesPerPage> int </EntriesPerPage>
+		<PageNumber> int </PageNumber>
+	</Pagination>
+	<ModTimeFrom> dateTime </ModTimeFrom>
+	<ModTimeTo> dateTime </ModTimeTo>
+	<NumberOfDays> int </NumberOfDays>
+	<IncludeFinalValueFee> boolean </IncludeFinalValueFee>
+	<SortingOrder>Ascending|Descending|CustomCode</SortingOrder>
+	<DetailLevel>ReturnAll</DetailLevel>
+	<ErrorLanguage> string </ErrorLanguage>
+	<MessageID> string </MessageID>
+	<Version>901</Version>
+	<OutputSelector> string </OutputSelector>
+	<WarningLevel>Low|High</WarningLevel>
+</GetOrdersRequest>
+​*********************************************************
+<?xml version="1.0" encoding="UTF-8"?>
+<GetOrdersResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+	<Timestamp>2014-12-19T01:55:56.252Z</Timestamp>
+	<Ack>Success</Ack>
+	<Version>899</Version>
+	<Build>E899_CORE_APIXO_17301731_R1</Build>
+	<PaginationResult>
+		<TotalNumberOfPages>1</TotalNumberOfPages>
+		<TotalNumberOfEntries>1</TotalNumberOfEntries>
+	</PaginationResult>
+	<HasMoreOrders>false</HasMoreOrders>
+	<OrderArray>
+		<Order>
+			<OrderID>181460820077-1290443301008</OrderID>
+			<OrderStatus>Active</OrderStatus>
+			<AdjustmentAmount currencyID="AUD">0.0</AdjustmentAmount>
+			<AmountPaid currencyID="AUD">0.0</AmountPaid>
+			<AmountSaved currencyID="AUD">0.0</AmountSaved>
+			<CheckoutStatus>
+				<eBayPaymentStatus>NoPaymentFailure</eBayPaymentStatus>
+				<LastModifiedTime>2014-12-17T04:01:37.000Z</LastModifiedTime>
+				<PaymentMethod>None</PaymentMethod>
+				<Status>Incomplete</Status>
+				<IntegratedMerchantCreditCardEnabled>false
+				</IntegratedMerchantCreditCardEnabled>
+			</CheckoutStatus>
+			<ShippingDetails>
+				<SalesTax>
+					<SalesTaxPercent>0.0</SalesTaxPercent>
+					<SalesTaxState>
+					</SalesTaxState>
+					<ShippingIncludedInTax>false</ShippingIncludedInTax>
+					<SalesTaxAmount currencyID="AUD">0.0</SalesTaxAmount>
+				</SalesTax>
+				<ShippingServiceOptions>
+					<ShippingService>AU_StandardDelivery</ShippingService>
+					<ShippingServiceCost currencyID="AUD">0.0
+					</ShippingServiceCost>
+					<ShippingServicePriority>1</ShippingServicePriority>
+					<ExpeditedService>false</ExpeditedService>
+					<ShippingTimeMin>1</ShippingTimeMin>
+					<ShippingTimeMax>6</ShippingTimeMax>
+				</ShippingServiceOptions>
+				<ShippingServiceOptions>
+					<ShippingService>AU_Express</ShippingService>
+					<ShippingServiceCost currencyID="AUD">11.0
+					</ShippingServiceCost>
+					<ShippingServicePriority>2</ShippingServicePriority>
+					<ExpeditedService>true</ExpeditedService>
+					<ShippingTimeMin>1</ShippingTimeMin>
+					<ShippingTimeMax>3</ShippingTimeMax>
+				</ShippingServiceOptions>
+				<SellingManagerSalesRecordNumber>20113
+				</SellingManagerSalesRecordNumber>
+				<GetItFast>false</GetItFast>
+			</ShippingDetails>
+			<CreatedTime>2014-12-16T23:17:09.000Z</CreatedTime>
+			<PaymentMethods>PayPal</PaymentMethods>
+			<SellerEmail>ieietong@hotmail.com</SellerEmail>
+			<ShippingAddress>
+				<Name>
+				</Name>
+				<Street1>
+				</Street1>
+				<Street2>
+				</Street2>
+				<CityName>
+				</CityName>
+				<StateOrProvince>
+				</StateOrProvince>
+				<CountryName>
+				</CountryName>
+				<Phone>
+				</Phone>
+				<PostalCode>
+				</PostalCode>
+				<ExternalAddressID>
+				</ExternalAddressID>
+			</ShippingAddress>
+			<ShippingServiceSelected>
+				<ShippingService>AU_StandardDelivery</ShippingService>
+				<ShippingServiceCost currencyID="AUD">0.0
+				</ShippingServiceCost>
+			</ShippingServiceSelected>
+			<Subtotal currencyID="AUD">7.45</Subtotal>
+			<Total currencyID="AUD">7.45</Total>
+			<TransactionArray>
+				<Transaction>
+					<Buyer>
+						<Email>abiodun.popoola23@gmail.com</Email>
+						<UserFirstName>Abiodun</UserFirstName>
+						<UserLastName>Popoola</UserLastName>
+					</Buyer>
+					<ShippingDetails>
+						<SellingManagerSalesRecordNumber>20113
+						</SellingManagerSalesRecordNumber>
+					</ShippingDetails>
+					<CreatedDate>2014-12-16T23:17:09.000Z</CreatedDate>
+					<Item>
+						<ItemID>181460820077</ItemID>
+						<Site>Australia</Site>
+						<Title>NEW Wallet PU Leather Case For Samsung Galaxy Note 3 Neo
+							N750 N7505+Screen Guard</Title>
+						<SKU>Note 3 Mini side open+SP</SKU>
+						<ConditionID>1000</ConditionID>
+						<ConditionDisplayName>Brand New</ConditionDisplayName>
+					</Item>
+					<QuantityPurchased>1</QuantityPurchased>
+					<Status>
+						<PaymentHoldStatus>None</PaymentHoldStatus>
+						<InquiryStatus>NotApplicable</InquiryStatus>
+						<ReturnStatus>NotApplicable</ReturnStatus>
+					</Status>
+					<TransactionID>1290443301008</TransactionID>
+					<TransactionPrice currencyID="AUD">7.45
+					</TransactionPrice>
+					<TransactionSiteID>Australia</TransactionSiteID>
+					<Platform>eBay</Platform>
+					<Taxes>
+						<TotalTaxAmount currencyID="AUD">0.0</TotalTaxAmount>
+						<TaxDetails>
+							<Imposition>SalesTax</Imposition>
+							<TaxDescription>SalesTax</TaxDescription>
+							<TaxAmount currencyID="AUD">0.0</TaxAmount>
+							<TaxOnSubtotalAmount currencyID="AUD">0.0
+							</TaxOnSubtotalAmount>
+							<TaxOnShippingAmount currencyID="AUD">0.0
+							</TaxOnShippingAmount>
+							<TaxOnHandlingAmount currencyID="AUD">0.0
+							</TaxOnHandlingAmount>
+						</TaxDetails>
+						<TaxDetails>
+							<Imposition>WasteRecyclingFee</Imposition>
+							<TaxDescription>ElectronicWasteRecyclingFee</TaxDescription>
+							<TaxAmount currencyID="AUD">0.0</TaxAmount>
+						</TaxDetails>
+					</Taxes>
+					<OrderLineItemID>181460820077-1290443301008</OrderLineItemID>
+				</Transaction>
+			</TransactionArray>
+			<BuyerUserID>sureboi7</BuyerUserID>
+			<IntegratedMerchantCreditCardEnabled>false
+			</IntegratedMerchantCreditCardEnabled>
+			<EIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AFmIClDZGDpQydj6x9nY+seQ==
+			</EIASToken>
+			<PaymentHoldStatus>None</PaymentHoldStatus>
+			<IsMultiLegShipping>false</IsMultiLegShipping>
+			<SellerUserID>aubestoffer</SellerUserID>
+			<SellerEIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AEkIaoCJKKpw6dj6x9nY+seQ==
+			</SellerEIASToken>
+			<CancelStatus>CancelPending</CancelStatus>
+		</Order>
+	</OrderArray>
+	<OrdersPerPage>100</OrdersPerPage>
+	<PageNumber>1</PageNumber>
+	<ReturnedOrderCountActual>1</ReturnedOrderCountActual>
+</GetOrdersResponse>
+​
