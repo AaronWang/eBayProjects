@@ -1,6 +1,7 @@
 package ImageTest;
 
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -68,9 +69,19 @@ public class ImageTest {
 		Graphics g = combined.getGraphics();
 		g.drawImage(image, 0, 0, null);
 		g.drawImage(overlay, 0, 0, null);
-
 		// Save as new image
 		ImageIO.write(combined, "JPG", new File("combined.jpg"));
+				
+		int newImageWidth = w / 2;
+		int newImageHeight = h / 2;
+		BufferedImage resizedImage = new BufferedImage(newImageWidth *2, newImageHeight*2, BufferedImage.TYPE_INT_RGB);
+		Graphics2D g1 = resizedImage.createGraphics();
+		g1.drawImage(image, 0, 0, newImageWidth , newImageHeight , null);
+		g1.drawImage(image, 0, 0, newImageWidth*2 , newImageHeight*2 , null);
+		g1.dispose();
+		
+		// Save as new image
+		ImageIO.write(resizedImage, "JPG", new File("scale.jpg"));
 
 	}
 }
