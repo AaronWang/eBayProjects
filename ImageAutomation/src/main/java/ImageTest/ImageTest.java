@@ -71,13 +71,13 @@ public class ImageTest {
 		g.drawImage(overlay, 0, 0, null);
 		// Save as new image
 		ImageIO.write(combined, "JPG", new File("combined.jpg"));
-				
+	
 		int newImageWidth = w / 2;
 		int newImageHeight = h / 2;
-		BufferedImage resizedImage = new BufferedImage(newImageWidth *2, newImageHeight*2, BufferedImage.TYPE_INT_RGB);
+		BufferedImage resizedImage = new BufferedImage(newImageWidth, newImageHeight, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g1 = resizedImage.createGraphics();
 		g1.drawImage(image, 0, 0, newImageWidth , newImageHeight , null);
-		g1.drawImage(image, 0, 0, newImageWidth*2 , newImageHeight*2 , null);
+//		g1.drawImage(image, 0, 0, newImageWidth*2 , newImageHeight*2 , null);
 		g1.dispose();
 		
 		// Save as new image

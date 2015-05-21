@@ -5,7 +5,7 @@
 	<classpathentry excluding=".svn/|com/.svn/|com/ebay/.svn/|com/ebay/sdk/.svn/|com/ebay/sdk/attributes/.svn/|com/ebay/sdk/attributes/model/.svn/" kind="src" path="source/attributesLib/src"/>
 	<classpathentry excluding=".svn/|com/.svn/|com/ebay/.svn/|com/ebay/sdk/.svn/|com/ebay/sdk/handler/.svn/|com/ebay/sdk/logging/.svn/|com/ebay/sdk/util/.svn/|com/ebay/sdk/xmlapi/.svn/|com/ebay/soap/.svn/" kind="src" path="source/core/src"/>
 	<classpathentry excluding=".svn/|com/.svn/|com/ebay/.svn/|com/ebay/sdk/.svn/|com/ebay/sdk/helper/.svn/|com/ebay/sdk/helper/policy/.svn/|com/ebay/sdk/helper/ui/.svn/" kind="src" path="source/helper/src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="lib/externalLib/activation.jar"/>
 	<classpathentry kind="lib" path="lib/externalLib/FastInfoset.jar"/>
 	<classpathentry kind="lib" path="lib/externalLib/http.jar"/>
