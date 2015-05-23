@@ -1,4 +1,4 @@
-package ImageTest;
+package imageTest;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -82,6 +82,5 @@ public class ImageTest {
 		
 		// Save as new image
 		ImageIO.write(resizedImage, "JPG", new File("scale.jpg"));
-
 	}
 }
