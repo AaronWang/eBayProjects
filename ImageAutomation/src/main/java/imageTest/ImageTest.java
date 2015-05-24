@@ -24,23 +24,27 @@ public class ImageTest {
 		File f = new File("IMG.jpg");
 
 		BufferedImage bi = ImageIO.read(f);
-
-		// for(String s:ImageIO.getReaderFormatNames())
+		System.out.println("---------------------------------------------");
+		// for (String s : ImageIO.getReaderFormatNames())
 		// System.out.println(s);
 
 		Iterator readers = ImageIO.getImageReadersByFormatName("jpg");
 		ImageReader reader = (ImageReader) readers.next();
 
 		File newF = new File("IMG.jpg");
-		// FileInputStream source = new FileInputStream(newF);
-
 		System.out.println(newF.getAbsolutePath());
-		ImageInputStream iis = ImageIO.createImageInputStream(newF);
 
-		reader.setInput(iis, false);
-		reader.getNumImages(true);
+		if (newF.isDirectory())
+			System.out.println("f is a directory.");
+		else
+			System.out.println("f isn't a directory.");
+
+		ImageInputStream iis = ImageIO.createImageInputStream(newF);
+ 
+		reader.setInput(iis, true);
 		System.out.println(reader.getWidth(0));
-		// System.out.println(reader.getWidth(1));
+
+		System.out.println("---------------------------------------------");
 		ImageReadParam param = reader.getDefaultReadParam();
 
 		Iterator writers = ImageIO.getImageWritersByFormatName("png");
@@ -71,15 +75,16 @@ public class ImageTest {
 		g.drawImage(overlay, 0, 0, null);
 		// Save as new image
 		ImageIO.write(combined, "JPG", new File("combined.jpg"));
-	
+
 		int newImageWidth = w / 2;
 		int newImageHeight = h / 2;
-		BufferedImage resizedImage = new BufferedImage(newImageWidth, newImageHeight, BufferedImage.TYPE_INT_RGB);
+		BufferedImage resizedImage = new BufferedImage(newImageWidth,
+				newImageHeight, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g1 = resizedImage.createGraphics();
-		g1.drawImage(image, 0, 0, newImageWidth , newImageHeight , null);
-//		g1.drawImage(image, 0, 0, newImageWidth*2 , newImageHeight*2 , null);
+		g1.drawImage(image, 0, 0, newImageWidth, newImageHeight, null);
+		// g1.drawImage(image, 0, 0, newImageWidth*2 , newImageHeight*2 , null);
 		g1.dispose();
-		
+
 		// Save as new image
 		ImageIO.write(resizedImage, "JPG", new File("scale.jpg"));
 	}
