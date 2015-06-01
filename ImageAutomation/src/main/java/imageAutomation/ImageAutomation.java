@@ -16,56 +16,75 @@ public class ImageAutomation {
 	File f;
 	ArrayList<File> fileList;
 
-	File result;
+	File output;
 
 	public ImageAutomation() {
 		// TODO Auto-generated constructor stub
 		fileList = new ArrayList<File>();
-		f = new File(".");
-		result = new File(".\\result");
-		if (result.exists() == false)
-			result.mkdir();
+		f = new File("input");
+		output = new File(".\\output");
+		if (output.exists() == false)
+			output.mkdir();
 		System.out.println(f.getAbsolutePath());
+
 		// if (f.isDirectory())
 		// System.out.println("f is a directory.");
 		// else
 		// System.out.println("f isn't a directory.");
-		Initialize();
-		for (File each : fileList)
-			System.out.println(each.getAbsolutePath());
+
+		// Initialize();
+		GetJpegFileList(f);
+		// for (File each : fileList)
+		// System.out.println(each.getAbsolutePath());
 	}
 
 	public static void main(String[] args) {
 		// System.out.println("test");
 		ImageAutomation tool = new ImageAutomation();
-		tool.AddWarterMark();
+		File waterMarkAaronCollection2015 = new File(
+				".\\overlayer\\watermark.png");
+		File waterMarkOnlyleaf520 = new File(".\\overlayer\\watermark.png");
+		tool.AddWarterMark("AaronCollection2015",waterMarkAaronCollection2015);
+		tool.AddWarterMark("Onlyleaf520",waterMarkOnlyleaf520);
 	}
 
 	private void Initialize() {
-		FilenameFilter filter;
 		File[] files = f.listFiles(new FilenameFilter() {
-
 			@Override
 			public boolean accept(File file, String name) {
-				// TODO Auto-generated method stub
 				// System.out.println(name);
 				if (name.contains(".jpg") || name.contains(".JPG")
 						|| name.contains(".JPEG") || name.contains(".jpeg")) {
-					System.out.println(name);
 					return true;
 				}
 				return false;
 			}
 		});
-		Arrays.asList(files);
 		fileList.addAll(Arrays.asList(files));
 	}
 
-	public void AddWarterMark() {
+	private void GetJpegFileList(File folder) {
+		File[] files = folder.listFiles(new FilenameFilter() {
+			@Override
+			public boolean accept(File file, String name) {
+				// System.out.println(name);
+				if (name.contains(".jpg") || name.contains(".JPG")
+						|| name.contains(".JPEG") || name.contains(".jpeg")) {
+					return true;
+				}
+				if (file.isDirectory())
+					GetJpegFileList(new File(file.getAbsolutePath() + "\\"
+							+ name));
+				return false;
+			}
+		});
+		fileList.addAll(Arrays.asList(files));
+	}
+
+	public void AddWarterMark(String accountName, File watermarkPath) {
 		BufferedImage waterMark;
 		try {
-			waterMark = ImageIO.read(new File(".\\overlayer\\watermark.png"));
-
+			waterMark = ImageIO.read(watermarkPath);
 			for (File one : fileList) {
 				BufferedImage image = ImageIO.read(one);
 				int w = image.getWidth();
@@ -89,11 +108,18 @@ public class ImageAutomation {
 				g.drawImage(resizedWaterMark, image.getWidth() / 6,
 						image.getHeight() / 3, null);
 				// Save as new image
-				ImageIO.write(
-						combined,
-						"jpg",
-						new File(result.getAbsolutePath() + "\\"
-								+ one.getName()));
+				// ImageIO.write(
+				// combined,
+				// "jpg",
+				// new File(output.getAbsolutePath() + "\\"
+				// + one.getName()));
+				File outputFolder = new File(one.getParent().replaceFirst(
+						"input", "output\\" + accountName));
+				if (outputFolder.exists() == false)
+					outputFolder.mkdirs();
+
+				ImageIO.write(combined, "jpg", new File(one.getAbsolutePath()
+						.replaceFirst("input", "output" + accountName)));
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

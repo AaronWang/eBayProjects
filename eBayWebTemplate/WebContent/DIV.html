@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>无标题文档</title>
+<style type="text/css">
+#top, #bottom {
+	clear: both;
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+	background-color: #0099FF;
+}
+
+#main {
+	_width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 0;
+	padding-left: 200px;
+	color: #000000;
+}
+
+#leftpart, #midpart {
+	height: auto;
+	margin-bottom: -32767px;
+	padding-bottom: 32767px;
+}
+
+#midpart {
+	float: right;
+	width: 100%;
+	background-color: #00CC99;
+}
+
+#leftpart {
+	float: left;
+	width: 200px;
+	margin-left: -200px;
+	padding-top: 30px;
+	background-color: #999900;
+}
+</style>
+</head>
+
+<body>
+	<div id="top">top</div>
+	<div id="main">
+		<div id="midpart">
+			<p>主要内容部分，宽高自适应。</p>
+		</div>
+		<div id="leftpart">
+			<p>左栏宽200像素，高度自适应。</p>
+		</div>
+	</div>
+	<div id="bottom">bottom</div>
+
+
+	<style>
+.parent {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.child-right {
+	background: green;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+</style>
+	<div class="parent">
+		<div class="child-left floatLeft"></div>
+
+		<div class="child-right floatLeft"></div>
+	</div>
+
+</body>
+</html>

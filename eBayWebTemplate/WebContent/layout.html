@@ -1,0 +1,79 @@
+<!DOCTYPE  html >
+<head>
+<meta http-equiv="Content-Type" content="text/html;  charset=gb2312" />
+<title>上中下三行三列结构的Div布局</title>
+<style>
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0
+}
+
+div {
+	height: 200px;
+}
+
+.title {
+	margin: 0 auto;
+	width: 776px;
+	background-color: #abcdef;
+}
+
+.middle {
+	margin: 0 auto;
+	width: 776px;
+}
+
+.left {
+	float: left;
+	clear: right;
+	width: 20%;
+	background-color: #eeefff;
+}
+
+.center {
+	float: left;
+	clear: right;
+	width: 50%;
+	background-color: #CCC000;
+}
+
+.right {
+	float: left;
+	clear: right;
+	width: 30%;
+	background-color: #fff000;
+}
+
+.both {
+	clear: both;
+	width: 100%;
+	background-color: #666999;
+}
+
+.footer {
+	margin: 0 auto;
+	width: 776px;
+	clear: both;
+	background-color: #000fff;
+}
+</style>
+</head>
+<body>
+	<div class="title">顶部</div>
+	<div class="middle">
+		<div class="left">左侧</div>
+		<div class="center">中部</div>
+		<div class="right">右侧</div>
+		<div class="both">全行</div>
+		<div class="left">左侧</div>
+		<div class="center">中部</div>
+		<div class="right">右侧</div>
+		<div class="both">全行</div>
+		<div class="left">左侧</div>
+		<div class="center">中侧</div>
+		<div class="right">右侧</div>
+	</div>
+	<div class="footer">底部</div>
+</body>
+</html>
