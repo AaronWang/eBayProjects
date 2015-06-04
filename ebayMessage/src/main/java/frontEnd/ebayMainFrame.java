@@ -60,8 +60,8 @@ public class ebayMainFrame extends JFrame {
 		btnAuthentication.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GetToken gettoken = new GetToken();
-				gettoken.getSessionID();
-				gettoken.openBrowser();
+				if (gettoken.getSessionID())
+					gettoken.openBrowser();
 
 				int reply = JOptionPane.showConfirmDialog(null,
 						"authentication done ~", "Ebay Authentication",
@@ -109,9 +109,8 @@ public class ebayMainFrame extends JFrame {
 						s = cell1.getRichStringCellValue().getString();
 						enditems.addItemID(s);
 						// System.out.println(s);
-						if(enditems.size()>=9)
-						{
-//							enditems.endingItem();
+						if (enditems.size() >= 9) {
+							// enditems.endingItem();
 							enditems.clear();
 						}
 						break;

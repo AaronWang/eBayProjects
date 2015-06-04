@@ -25,17 +25,17 @@ public class GetToken {
 	}
 
 	public boolean getSessionID() {
-		GetSessionIDCall sessionCall = new GetSessionIDCall(new 
-				EbayContext().apiContext);
+		GetSessionIDCall sessionCall = new GetSessionIDCall(
+				EbayContext.getApiContext());
 		sessionCall.setRuName("Xin_Wang-XinWang0c-6a0c--wyipcandl");
-		JOptionPane.showMessageDialog(null,sessionCall.getRuName());
-		
+		JOptionPane.showMessageDialog(null, sessionCall.getRuName());
+
 		try {
 			sessionID = sessionCall.getSessionID();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null,"get session id failed");
+			JOptionPane.showMessageDialog(null, "get session id failed");
 			return false;
 		}
 		if (sessionID != null)
@@ -58,7 +58,7 @@ public class GetToken {
 	}
 
 	public boolean getToken() {
-		FetchTokenCall getToken = new FetchTokenCall(EbayContext.apiContext);
+		FetchTokenCall getToken = new FetchTokenCall(EbayContext.getApiContext());
 		getToken.setSessionID(sessionID);
 		try {
 			token = getToken.fetchToken();
@@ -66,12 +66,12 @@ public class GetToken {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			tokenSeccess = false;
-			JOptionPane.showMessageDialog(null,"failed");
+			JOptionPane.showMessageDialog(null, "failed");
 			return false;
 		}
 		System.out.println(token);
 		tokenSeccess = true;
-		EbayContext.apiContext.getApiCredential().seteBayToken(token);
+		EbayContext.getApiContext().getApiCredential().seteBayToken(token);
 		Properties keys = new Properties();
 		try {
 			keys.load(new FileInputStream("keys.properties"));

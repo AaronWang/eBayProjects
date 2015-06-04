@@ -11,13 +11,13 @@ import com.ebay.sdk.ApiContext;
 import com.ebay.sdk.ApiCredential;
 
 public class EbayContext {
-	public static ApiContext apiContext;
+	private static ApiContext apiContext;
 
 	public EbayContext() {
 		getApiContext();
 	}
 
-	public ApiContext getApiContext() {
+	public static ApiContext getApiContext() {
 		if (apiContext != null)
 			return apiContext;
 		apiContext = new ApiContext();

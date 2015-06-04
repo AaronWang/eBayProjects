@@ -19,7 +19,7 @@ public class GetOrders {
 	private ArrayList<OrderType> orderList = new ArrayList<OrderType>();
 
 	public void getorders() {
-		GetOrdersCall goc = new GetOrdersCall(EbayContext.apiContext);
+		GetOrdersCall goc = new GetOrdersCall(EbayContext.getApiContext());
 
 		Calendar calendarFrom = Calendar.getInstance();
 		Calendar calendarTo = Calendar.getInstance();
@@ -54,7 +54,7 @@ public class GetOrders {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		AddDisputeCall adddispute = new AddDisputeCall(EbayContext.apiContext);
+		AddDisputeCall adddispute = new AddDisputeCall(EbayContext.getApiContext());
 		adddispute
 				.setDisputeExplanation(DisputeExplanationCodeType.BUYER_NOT_PAID);
 		adddispute.setDisputeReason(DisputeReasonCodeType.BUYER_HAS_NOT_PAID);

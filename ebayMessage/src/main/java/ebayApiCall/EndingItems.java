@@ -31,7 +31,7 @@ public class EndingItems {
 	}
 
 	public void endingItem() {
-		EndItemsCall enditemscall = new EndItemsCall(EbayContext.apiContext);
+		EndItemsCall enditemscall = new EndItemsCall(EbayContext.getApiContext());
 		EndItemRequestContainerType[] enditemContainer = enditemscall
 				.getEndItemRequestContainer();
 
