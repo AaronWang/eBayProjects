@@ -46,8 +46,6 @@ public class EndItemsCall extends com.ebay.sdk.ApiCall
    */
   public EndItemsCall(ApiContext apiContext) {
     super(apiContext);
-    
-
   }
 
   /**
@@ -101,6 +99,5 @@ public class EndItemsCall extends com.ebay.sdk.ApiCall
   {
     return this.returnedEndItemResponseContainer;
   }
-
 }
 

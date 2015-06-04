@@ -1,0 +1,918 @@
+[INFO ] 2015-06-04 16:25:15,160
+loading wsdl : jar:file:/C:/Users/staff/git/eBayProjects/eBaySDKJava921/lib/ebaysdkcore.jar!/eBaySvc.wsdl
+
+[INFO ] 2015-06-04 16:25:15,558
+wsdl loaded and service initialized.
+
+[INFO ] 2015-06-04 16:25:17,607
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:17,677
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:17,677
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:19,052
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:19,052
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:20,093
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:20,093
+Retry GetSessionID #1 ...
+
+[INFO ] 2015-06-04 16:25:20,093
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:20,098
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:20,098
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:20,349
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:20,349
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:21,358
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:21,358
+Retry GetSessionID #2 ...
+
+[INFO ] 2015-06-04 16:25:21,358
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:21,363
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:21,363
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:21,606
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:21,606
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:22,615
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:22,615
+Retry GetSessionID #3 ...
+
+[INFO ] 2015-06-04 16:25:22,615
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:22,620
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:22,620
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:22,875
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:22,876
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:22,885
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:53,104
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:53,110
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:53,110
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:53,781
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:53,781
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:54,793
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:54,793
+Retry GetSessionID #1 ...
+
+[INFO ] 2015-06-04 16:25:54,793
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:54,797
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:54,797
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:55,050
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:55,050
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:56,058
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:56,058
+Retry GetSessionID #2 ...
+
+[INFO ] 2015-06-04 16:25:56,058
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:56,063
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:56,063
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:56,312
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:56,312
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:57,320
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:25:57,320
+Retry GetSessionID #3 ...
+
+[INFO ] 2015-06-04 16:25:57,320
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:25:57,324
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:25:57,324
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:25:57,600
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:25:57,600
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:25:57,608
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:26:10,063
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:26:10,067
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:26:10,067
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:26:10,750
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:26:10,750
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:26:11,758
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:26:11,758
+Retry GetSessionID #1 ...
+
+[INFO ] 2015-06-04 16:26:11,758
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:26:11,762
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:26:11,762
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:26:12,019
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:26:12,020
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:26:13,027
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:26:13,027
+Retry GetSessionID #2 ...
+
+[INFO ] 2015-06-04 16:26:13,027
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:26:13,031
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:26:13,031
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:26:13,281
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:26:13,281
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:26:14,287
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:26:14,287
+Retry GetSessionID #3 ...
+
+[INFO ] 2015-06-04 16:26:14,287
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:26:14,291
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:26:14,291
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:26:14,548
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:26:14,549
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:26:14,556
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:27:00,768
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:27:00,774
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:27:00,774
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:27:01,459
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:27:01,459
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:27:02,467
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:27:02,467
+Retry GetSessionID #1 ...
+
+[INFO ] 2015-06-04 16:27:02,467
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:27:02,471
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:27:02,471
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:27:02,719
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:27:02,719
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:27:03,726
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:27:03,726
+Retry GetSessionID #2 ...
+
+[INFO ] 2015-06-04 16:27:03,726
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:27:03,730
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:27:03,730
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:27:03,991
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:27:03,991
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:27:05,000
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:27:05,000
+Retry GetSessionID #3 ...
+
+[INFO ] 2015-06-04 16:27:05,000
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWang0c-6a0c-4ea0-8def-d094f42a343
+
+[INFO ] 2015-06-04 16:27:05,004
+Request Message: Length=743
+
+[INFO ] 2015-06-04 16:27:05,004
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWang0c-6a0c-4ea0-8def-d094f42a343</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:27:05,252
+Response Message: Length=731
+
+[INFO ] 2015-06-04 16:27:05,252
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode xmlns:ns1="http://xml.apache.org/axis/">ns1:Client</faultcode>
+   <faultstring>Application name invalid.</faultstring>
+   <faultactor>http://www.ebay.com/ws/websvc/eBayAPI</faultactor>
+   <detail>
+    <FaultDetail>
+     <ErrorCode>127</ErrorCode>
+     <Severity>Error</Severity>
+     <DetailedMessage>API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.</DetailedMessage>
+    </FaultDetail>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
+[ERROR] 2015-06-04 16:27:05,260
+com.ebay.sdk.SdkSoapException: API application "XinWang0c-6a0c-4ea0-8def-d094f42a343" invalid.
+
+[INFO ] 2015-06-04 16:29:17,016
+Sending SOAP request to: https://api.sandbox.ebay.com/wsapi?siteid=0&callname=GetSessionID&client=java&appid=XinWangc7-c607-4d58-ac55-fcbeba2d766
+
+[INFO ] 2015-06-04 16:29:17,021
+Request Message: Length=741
+
+[INFO ] 2015-06-04 16:29:17,021
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+ <S:Header>
+  <ebl:RequesterCredentials xmlns:ebl="urn:ebay:apis:eBLBaseComponents" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:mustUnderstand="0">
+   <ebl:Credentials>
+    <ebl:AppId>XinWangc7-c607-4d58-ac55-fcbeba2d766</ebl:AppId>
+    <ebl:DevId>7dbf468d-db19-4dbc-8e5e-8630a4543b61</ebl:DevId>
+    <ebl:AuthCert>06e0ea66-5109-4ed6-9d1f-d539cf94dabc</ebl:AuthCert>
+   </ebl:Credentials>
+  </ebl:RequesterCredentials>
+ </S:Header>
+ <S:Body>
+  <GetSessionIDRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Version>921</Version>
+   <RuName>Xin_Wang-XinWangc7-c607--yltovbp</RuName>
+  </GetSessionIDRequest>
+ </S:Body>
+</S:Envelope>
+
+
+[INFO ] 2015-06-04 16:29:18,100
+Response Message: Length=561
+
+[INFO ] 2015-06-04 16:29:18,100
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header/>
+ <soapenv:Body>
+  <GetSessionIDResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Timestamp>2015-06-04T06:29:15.954Z</Timestamp>
+   <Ack>Success</Ack>
+   <Version>921</Version>
+   <Build>E921_CORE_API_17506731_R1</Build>
+   <SessionID>9hMDAA**bd426a2314d0a471da230423ffffff30</SessionID>
+  </GetSessionIDResponse>
+ </soapenv:Body>
+</soapenv:Envelope>
+
+
