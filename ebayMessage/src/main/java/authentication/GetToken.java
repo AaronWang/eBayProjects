@@ -38,6 +38,7 @@ public class GetToken {
 			JOptionPane.showMessageDialog(null, "get session id failed");
 			return false;
 		}
+		JOptionPane.showMessageDialog(null, sessionID);
 		if (sessionID != null)
 			System.out.println("Got session ID :" + sessionID);
 		return true;
@@ -58,7 +59,8 @@ public class GetToken {
 	}
 
 	public boolean getToken() {
-		FetchTokenCall getToken = new FetchTokenCall(EbayContext.getApiContext());
+		FetchTokenCall getToken = new FetchTokenCall(
+				EbayContext.getApiContext());
 		getToken.setSessionID(sessionID);
 		try {
 			token = getToken.fetchToken();
