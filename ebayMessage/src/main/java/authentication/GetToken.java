@@ -10,8 +10,12 @@ import java.util.Properties;
 
 import javax.swing.JOptionPane;
 
+import com.ebay.sdk.ApiException;
+import com.ebay.sdk.SdkException;
 import com.ebay.sdk.call.FetchTokenCall;
+import com.ebay.sdk.call.GetAccountCall;
 import com.ebay.sdk.call.GetSessionIDCall;
+import com.ebay.sdk.call.GetUserCall;
 
 import ebayContext.EbayContext;
 
@@ -58,7 +62,8 @@ public class GetToken {
 	}
 
 	public boolean getToken() {
-		FetchTokenCall getToken = new FetchTokenCall(EbayContext.getApiContext());
+		FetchTokenCall getToken = new FetchTokenCall(
+				EbayContext.getApiContext());
 		getToken.setSessionID(sessionID);
 		try {
 			token = getToken.fetchToken();
@@ -66,28 +71,23 @@ public class GetToken {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			tokenSeccess = false;
-			JOptionPane.showMessageDialog(null, "failed");
+			JOptionPane.showMessageDialog(null, "get token failed");
 			return false;
 		}
 		System.out.println(token);
+		JOptionPane.showMessageDialog(null, "get token success");
 		tokenSeccess = true;
 		EbayContext.getApiContext().getApiCredential().seteBayToken(token);
-		Properties keys = new Properties();
+
+		GetUserCall getuser = new GetUserCall(EbayContext.getApiContext());
+
 		try {
-			keys.load(new FileInputStream("keys.properties"));
-		} catch (IOException e) {
-			System.out.println(e);
-		}
-		keys.setProperty(sessionID, token);
-		try {
-			keys.store(new FileOutputStream("keys.properties"), "");
-		} catch (FileNotFoundException e) {
+			getuser.getUser();
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
+		EbayContext.accounts.saveAccount(getuser.getReturnedUser().getUserID(), token);
 		return true;
 	}
 }
