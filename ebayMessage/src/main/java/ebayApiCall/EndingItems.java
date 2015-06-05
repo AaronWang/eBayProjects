@@ -23,9 +23,11 @@ public class EndingItems {
 		newItem.setEndingReason(EndReasonCodeType.NOT_AVAILABLE);
 		endingItemList.add(newItem);
 	}
+	
 	public int size(){
 		return endingItemList.size();
 	}
+	
 	public void clear(){
 		endingItemList.clear();
 	}

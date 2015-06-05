@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ComboBoxEditor;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,6 +23,16 @@ import org.apache.poi.ss.usermodel.Workbook;
 import authentication.GetToken;
 import ebayApiCall.EndingItems;
 import ebayApiCall.GetOrders;
+
+import javax.swing.JComboBox;
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JToolBar;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class ebayMainFrame extends JFrame {
 
@@ -51,6 +62,33 @@ public class ebayMainFrame extends JFrame {
 	public ebayMainFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 708, 451);
+
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+
+		JMenu mnTestMenu = new JMenu("Account");
+		menuBar.add(mnTestMenu);
+
+		JMenuItem mntmNewMenuItem = new JMenuItem("New menu item");
+		mnTestMenu.add(mntmNewMenuItem);
+
+		JMenuItem mntmTestMenuItem_1 = new JMenuItem("test menu item");
+		mnTestMenu.add(mntmTestMenuItem_1);
+
+		JMenu mnNewMenu = new JMenu("New menu");
+		menuBar.add(mnNewMenu);
+
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("New menu item");
+		mnNewMenu.add(mntmNewMenuItem_1);
+
+		JMenu mnNewMenu_1 = new JMenu("Tools");
+		menuBar.add(mnNewMenu_1);
+
+		JMenu mnNewMenu_2 = new JMenu("Help");
+		menuBar.add(mnNewMenu_2);
+
+		JMenuItem mntmAbout = new JMenuItem("About");
+		mnNewMenu_2.add(mntmAbout);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -77,7 +115,7 @@ public class ebayMainFrame extends JFrame {
 		JButton btnGetOrders = new JButton("Get Orders");
 		btnGetOrders.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				GetOrders go = new GetOrders();
+				// GetOrders go = new GetOrders();
 				// go.getorders();
 			}
 		});
@@ -108,9 +146,9 @@ public class ebayMainFrame extends JFrame {
 					case Cell.CELL_TYPE_STRING:
 						s = cell1.getRichStringCellValue().getString();
 						enditems.addItemID(s);
-						// System.out.println(s);
+						System.out.println(s);
 						if (enditems.size() >= 9) {
-							// enditems.endingItem();
+							enditems.endingItem();
 							enditems.clear();
 						}
 						break;
@@ -129,16 +167,33 @@ public class ebayMainFrame extends JFrame {
 		textField.setColumns(10);
 
 		JLabel lblItemId = new JLabel("Item ID");
-		lblItemId.setBounds(88, 308, 59, 14);
+		lblItemId.setBounds(65, 308, 82, 14);
 		contentPane.add(lblItemId);
 
 		JLabel lblNewLabel = new JLabel("xls file name");
-		lblNewLabel.setBounds(88, 350, 59, 14);
+		lblNewLabel.setBounds(65, 350, 82, 14);
 		contentPane.add(lblNewLabel);
 
 		textField_1 = new JTextField();
 		textField_1.setBounds(154, 347, 225, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
+
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(42, 87, 189, 20);
+
+		contentPane.add(comboBox);
+
+		JLabel lblExistAccounts = new JLabel("Exist Accounts");
+		lblExistAccounts.setBounds(42, 62, 134, 14);
+		contentPane.add(lblExistAccounts);
+
+		JButton btnLogin = new JButton("Login");
+		btnLogin.setBounds(42, 121, 89, 23);
+		contentPane.add(btnLogin);
+
+		JButton btnRemove = new JButton("Remove");
+		btnRemove.setBounds(142, 121, 89, 23);
+		contentPane.add(btnRemove);
 	}
 }
