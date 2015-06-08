@@ -18,7 +18,6 @@ public class LoadAccount {
 		} catch (IOException e) {
 			System.out.println(e);
 		}
-
 		String account = keys.getProperty("accounts");
 		accounts.addAll(Arrays.asList(account.split(",")));
 	}
@@ -46,7 +45,7 @@ public class LoadAccount {
 		}
 
 		keys.setProperty(userID, token);
-		if (!accounts.contains(userID))
+		if (accounts.contains(userID) == false)
 			keys.setProperty("accounts", keys.get("accounts") + "," + userID);
 		try {
 			keys.store(new FileOutputStream("keys.properties"), "");

@@ -44,8 +44,8 @@ public class ImageAutomation {
 		File waterMarkAaronCollection2015 = new File(
 				".\\overlayer\\watermark.png");
 		File waterMarkOnlyleaf520 = new File(".\\overlayer\\watermark.png");
-		tool.AddWarterMark("AaronCollection2015",waterMarkAaronCollection2015);
-		tool.AddWarterMark("Onlyleaf520",waterMarkOnlyleaf520);
+		tool.AddWarterMark("AaronCollection2015", waterMarkAaronCollection2015);
+		tool.AddWarterMark("Onlyleaf520", waterMarkOnlyleaf520);
 	}
 
 	private void Initialize() {
@@ -82,6 +82,8 @@ public class ImageAutomation {
 	}
 
 	public void AddWarterMark(String accountName, File watermarkPath) {
+		if (accountName.equals(""))
+			return;
 		BufferedImage waterMark;
 		try {
 			waterMark = ImageIO.read(watermarkPath);
@@ -114,12 +116,12 @@ public class ImageAutomation {
 				// new File(output.getAbsolutePath() + "\\"
 				// + one.getName()));
 				File outputFolder = new File(one.getParent().replaceFirst(
-						"input", "output\\" + accountName));
+						"input", "output/" + accountName));
 				if (outputFolder.exists() == false)
 					outputFolder.mkdirs();
 
 				ImageIO.write(combined, "jpg", new File(one.getAbsolutePath()
-						.replaceFirst("input", "output" + accountName)));
+						.replaceFirst("input", "output/" + accountName)));
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
