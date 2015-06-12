@@ -1,0 +1,3019 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery Theme - Jssor Slider, Carousel, Slideshow
+	with Javascript Source Code</title>
+</head>
+<body
+	style="padding: 0; margin: 0; font-family: Arial, Verdana; background-color: #fff;">
+	<style>
+/*Jssor*/
+.jssora05l, .jssora05r {
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background: url(../img/a17.png) no-repeat;
+	overflow: hidden
+}
+
+.jssora05l {
+	background-position: -10px -40px
+}
+
+.jssora05r {
+	background-position: -70px -40px
+}
+
+.jssora05l:hover {
+	background-position: -130px -40px
+}
+
+.jssora05r:hover {
+	background-position: -190px -40px
+}
+
+.jssora05l.jssora05ldn {
+	background-position: -250px -40px
+}
+
+.jssora05r.jssora05rdn {
+	background-position: -310px -40px
+}
+
+.jssort01 {
+	position: absolute;
+	width: 800px;
+	height: 100px
+}
+
+.jssort01 .p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 72px;
+	height: 72px
+}
+
+.jssort01 .t {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none
+}
+
+.jssort01 .w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+
+.jssort01 .c {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 68px;
+	height: 68px;
+	border: #000 2px solid;
+	box-sizing: content-box;
+	background: url(../img/t01.png) -800px -800px no-repeat;
+	_background: none
+}
+
+.jssort01 .pav .c {
+	top: 2px;
+	_top: 0;
+	left: 2px;
+	_left: 0;
+	width: 68px;
+	height: 68px;
+	border: #000 0 solid;
+	_border: #fff 2px solid;
+	background-position: 50% 50%
+}
+
+.jssort01 .p:hover .c {
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	border: #fff 1px solid;
+	background-position: 50% 50%
+}
+
+.jssort01 .p.pdn .c {
+	background-position: 50% 50%;
+	width: 68px;
+	height: 68px;
+	border: #000 2px solid
+}
+
+* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c
+	{
+	width: 72px;
+	height: 72px
+}
+</style>
+
+	<script>
+		/*Jssor*/
+		(function(g, f, b, i, c, h, j) {/*! Jssor */
+			new (function() {
+			});
+			var d = {
+				vc : function(a) {
+					return -b.cos(a * b.PI) / 2 + .5
+				},
+				l : function(a) {
+					return a
+				},
+				se : function(a) {
+					return -a * (a - 2)
+				},
+				m : function(a) {
+					return a * a * a
+				},
+				Ic : function(a) {
+					return (a -= 1) * a * a + 1
+				}
+			};
+			var a = new function() {
+				var e = this, xb = /\S+/g, T = 1, fb = 2, kb = 3, jb = 4, ob = 5, L, s = 0, l = 0, p = 0, bb = 0, A = 0, B = navigator, tb = B.appName, k = B.userAgent, z;
+				function Eb() {
+					if (!L) {
+						L = {
+							Zd : "ontouchstart" in g || "createTouch" in f
+						};
+						var a;
+						if (B.pointerEnabled || (a = B.msPointerEnabled))
+							L.hd = a ? "msTouchAction" : "touchAction"
+					}
+					return L
+				}
+				function v(i) {
+					if (!s) {
+						s = -1;
+						if (tb == "Microsoft Internet Explorer"
+								&& !!g.attachEvent && !!g.ActiveXObject) {
+							var e = k.indexOf("MSIE");
+							s = T;
+							p = n(k.substring(e + 5, k.indexOf(";", e)));/*@cc_on bb=@_jscript_version@*/
+							;
+							l = f.documentMode || p
+						} else if (tb == "Netscape" && !!g.addEventListener) {
+							var d = k.indexOf("Firefox"), b = k
+									.indexOf("Safari"), h = k.indexOf("Chrome"), c = k
+									.indexOf("AppleWebKit");
+							if (d >= 0) {
+								s = fb;
+								l = n(k.substring(d + 8))
+							} else if (b >= 0) {
+								var j = k.substring(0, b).lastIndexOf("/");
+								s = h >= 0 ? jb : kb;
+								l = n(k.substring(j + 1, b))
+							} else {
+								var a = /Trident\/.*rv:([0-9]{1,}[\.0-9]{0,})/i
+										.exec(k);
+								if (a) {
+									s = T;
+									l = p = n(a[1])
+								}
+							}
+							if (c >= 0)
+								A = n(k.substring(c + 12))
+						} else {
+							var a = /(opera)(?:.*version|)[ \/]([\w.]+)/i
+									.exec(k);
+							if (a) {
+								s = ob;
+								l = n(a[2])
+							}
+						}
+					}
+					return i == s
+				}
+				function q() {
+					return v(T)
+				}
+				function O() {
+					return q() && (l < 6 || f.compatMode == "BackCompat")
+				}
+				function ib() {
+					return v(kb)
+				}
+				function hb() {
+					return v(jb)
+				}
+				function nb() {
+					return v(ob)
+				}
+				function cb() {
+					return ib() && A > 534 && A < 535
+				}
+				function M() {
+					return q() && l < 9
+				}
+				function t(a) {
+					if (!z) {
+						m([ "transform", "WebkitTransform", "msTransform",
+								"MozTransform", "OTransform" ], function(b) {
+							if (a.style[b] != j) {
+								z = b;
+								return c
+							}
+						});
+						z = z || "transform"
+					}
+					return z
+				}
+				function sb(a) {
+					return {}.toString.call(a)
+				}
+				var K;
+				function Cb() {
+					if (!K) {
+						K = {};
+						m([ "Boolean", "Number", "String", "Function", "Array",
+								"Date", "RegExp", "Object" ], function(a) {
+							K["[object " + a + "]"] = a.toLowerCase()
+						})
+					}
+					return K
+				}
+				function m(a, d) {
+					if (sb(a) == "[object Array]") {
+						for (var b = 0; b < a.length; b++)
+							if (d(a[b], b, a))
+								return c
+					} else
+						for ( var e in a)
+							if (d(a[e], e, a))
+								return c
+				}
+				function D(a) {
+					return a == i ? String(a) : Cb()[sb(a)] || "object"
+				}
+				function qb(a) {
+					for ( var b in a)
+						return c
+				}
+				function G(a) {
+					try {
+						return D(a) == "object"
+								&& !a.nodeType
+								&& a != a.window
+								&& (!a.constructor || {}.hasOwnProperty.call(
+										a.constructor.prototype,
+										"isPrototypeOf"))
+					} catch (b) {
+					}
+				}
+				function y(a, b) {
+					return {
+						x : a,
+						y : b
+					}
+				}
+				function vb(b, a) {
+					setTimeout(b, a || 0)
+				}
+				function I(b, d, c) {
+					var a = !b || b == "inherit" ? "" : b;
+					m(d, function(c) {
+						var b = c.exec(a);
+						if (b) {
+							var d = a.substr(0, b.index), e = a.substr(
+									b.lastIndex + 1, a.length
+											- (b.lastIndex + 1));
+							a = d + e
+						}
+					});
+					a = c + (a.indexOf(" ") != 0 ? " " : "") + a;
+					return a
+				}
+				function eb(b, a) {
+					if (l < 9)
+						b.style.filter = a
+				}
+				function zb(b, a, c) {
+					if (bb < 9) {
+						var f = b.style.filter, h = new RegExp(
+								/[\s]*progid:DXImageTransform\.Microsoft\.Matrix\([^\)]*\)/g), g = a ? "progid:DXImageTransform.Microsoft.Matrix(M11="
+								+ a[0][0]
+								+ ", M12="
+								+ a[0][1]
+								+ ", M21="
+								+ a[1][0]
+								+ ", M22="
+								+ a[1][1]
+								+ ", SizingMethod='auto expand')"
+								: "", d = I(f, [ h ], g);
+						eb(b, d);
+						e.cd(b, c.y);
+						e.ed(b, c.x)
+					}
+				}
+				e.ce = Eb;
+				e.dd = q;
+				e.Wd = ib;
+				e.Vd = hb;
+				e.sd = nb;
+				e.jb = M;
+				e.qd = function() {
+					return l
+				};
+				e.uc = function() {
+					v();
+					return A
+				};
+				e.z = vb;
+				function W(a) {
+					a.constructor === W.caller && a.nd
+							&& a.nd.apply(a, W.caller.arguments)
+				}
+				e.nd = W;
+				e.Ab = function(a) {
+					if (e.je(a))
+						a = f.getElementById(a);
+					return a
+				};
+				function r(a) {
+					return a || g.event
+				}
+				e.od = r;
+				e.Xb = function(a) {
+					a = r(a);
+					return a.target || a.srcElement || f
+				};
+				e.ad = function(a) {
+					a = r(a);
+					return {
+						x : a.pageX || a.clientX || 0,
+						y : a.pageY || a.clientY || 0
+					}
+				};
+				function E(c, d, a) {
+					if (a != j)
+						c.style[d] = a;
+					else {
+						var b = c.currentStyle || c.style;
+						a = b[d];
+						if (a == "" && g.getComputedStyle) {
+							b = c.ownerDocument.defaultView.getComputedStyle(c,
+									i);
+							b && (a = b.getPropertyValue(d) || b[d])
+						}
+						return a
+					}
+				}
+				function Y(b, c, a, d) {
+					if (a != j) {
+						d && (a += "px");
+						E(b, c, a)
+					} else
+						return n(E(b, c))
+				}
+				function o(d, a) {
+					var b = a & 2, c = a ? Y : E;
+					return function(e, a) {
+						return c(e, d, a, b)
+					}
+				}
+				function Ab(b) {
+					if (q() && p < 9) {
+						var a = /opacity=([^)]*)/.exec(b.style.filter || "");
+						return a ? n(a[1]) / 100 : 1
+					} else
+						return n(b.style.opacity || "1")
+				}
+				function Bb(c, a, f) {
+					if (q() && p < 9) {
+						var h = c.style.filter || "", i = new RegExp(
+								/[\s]*alpha\([^\)]*\)/g), e = b.round(100 * a), d = "";
+						if (e < 100 || f)
+							d = "alpha(opacity=" + e + ") ";
+						var g = I(h, [ i ], d);
+						eb(c, g)
+					} else
+						c.style.opacity = a == 1 ? "" : b.round(a * 100) / 100
+				}
+				function ab(f, a) {
+					var d = a.B || 0, c = a.sb == j ? 1 : a.sb;
+					if (M()) {
+						var l = e.ke(d / 180 * b.PI, c, c);
+						zb(f, !d && c == 1 ? i : l, e.fe(l, a.hb, a.fb))
+					} else {
+						var h = t(f);
+						if (h) {
+							var k = "rotate(" + d % 360 + "deg) scale(" + c
+									+ ")";
+							if (hb() && A > 535 && "ontouchstart" in g)
+								k += " perspective(2000px)";
+							f.style[h] = k
+						}
+					}
+				}
+				e.ee = function(b, a) {
+					if (cb())
+						vb(e.gb(i, ab, b, a));
+					else
+						ab(b, a)
+				};
+				e.he = function(b, c) {
+					var a = t(b);
+					if (a)
+						b.style[a + "Origin"] = c
+				};
+				e.ge = function(a, c) {
+					if (q() && p < 9 || p < 10 && O())
+						a.style.zoom = c == 1 ? "" : c;
+					else {
+						var b = t(a);
+						if (b) {
+							var f = "scale(" + c + ")", e = a.style[b], g = new RegExp(
+									/[\s]*scale\(.*?\)/g), d = I(e, [ g ], f);
+							a.style[b] = d
+						}
+					}
+				};
+				e.De = function(a) {
+					if (!a.style[t(a)] || a.style[t(a)] == "none")
+						a.style[t(a)] = "perspective(2000px)"
+				};
+				var mb = 0, gb = 0;
+				e.Ve = function(b, a) {
+					return M() ? function() {
+						var g = c, d = O() ? b.document.body
+								: b.document.documentElement;
+						if (d) {
+							var f = d.offsetWidth - mb, e = d.offsetHeight - gb;
+							if (f || e) {
+								mb += f;
+								gb += e
+							} else
+								g = h
+						}
+						g && a()
+					}
+							: a
+				};
+				e.cc = function(b, a) {
+					return function(c) {
+						c = r(c);
+						var f = c.type, d = c.relatedTarget
+								|| (f == "mouseout" ? c.toElement
+										: c.fromElement);
+						(!d || d !== a && !e.bf(a, d)) && b(c)
+					}
+				};
+				e.i = function(a, c, d, b) {
+					a = e.Ab(a);
+					if (a.addEventListener) {
+						c == "mousewheel"
+								&& a.addEventListener("DOMMouseScroll", d, b);
+						a.addEventListener(c, d, b)
+					} else if (a.attachEvent) {
+						a.attachEvent("on" + c, d);
+						b && a.setCapture && a.setCapture()
+					}
+				};
+				e.O = function(a, c, d, b) {
+					a = e.Ab(a);
+					if (a.removeEventListener) {
+						c == "mousewheel"
+								&& a
+										.removeEventListener("DOMMouseScroll",
+												d, b);
+						a.removeEventListener(c, d, b)
+					} else if (a.detachEvent) {
+						a.detachEvent("on" + c, d);
+						b && a.releaseCapture && a.releaseCapture()
+					}
+				};
+				e.Mb = function(a) {
+					a = r(a);
+					a.preventDefault && a.preventDefault();
+					a.cancel = c;
+					a.returnValue = h
+				};
+				e.Xe = function(a) {
+					a = r(a);
+					a.stopPropagation && a.stopPropagation();
+					a.cancelBubble = c
+				};
+				e.gb = function(d, c) {
+					var a = [].slice.call(arguments, 2), b = function() {
+						var b = a.concat([].slice.call(arguments, 0));
+						return c.apply(d, b)
+					};
+					return b
+				};
+				e.zb = function(d, c) {
+					for (var b = [], a = d.firstChild; a; a = a.nextSibling)
+						(c || a.nodeType == 1) && b.push(a);
+					return b
+				};
+				function rb(a, c, e, b) {
+					b = b || "u";
+					for (a = a ? a.firstChild : i; a; a = a.nextSibling)
+						if (a.nodeType == 1) {
+							if (S(a, b) == c)
+								return a;
+							if (!e) {
+								var d = rb(a, c, e, b);
+								if (d)
+									return d
+							}
+						}
+				}
+				e.F = rb;
+				function Q(a, d, f, b) {
+					b = b || "u";
+					var c = [];
+					for (a = a ? a.firstChild : i; a; a = a.nextSibling)
+						if (a.nodeType == 1) {
+							S(a, b) == d && c.push(a);
+							if (!f) {
+								var e = Q(a, d, f, b);
+								if (e.length)
+									c = c.concat(e)
+							}
+						}
+					return c
+				}
+				function lb(a, c, d) {
+					for (a = a ? a.firstChild : i; a; a = a.nextSibling)
+						if (a.nodeType == 1) {
+							if (a.tagName == c)
+								return a;
+							if (!d) {
+								var b = lb(a, c, d);
+								if (b)
+									return b
+							}
+						}
+				}
+				e.af = lb;
+				function db(a, c, e) {
+					var b = [];
+					for (a = a ? a.firstChild : i; a; a = a.nextSibling)
+						if (a.nodeType == 1) {
+							(!c || a.tagName == c) && b.push(a);
+							if (!e) {
+								var d = db(a, c, e);
+								if (d.length)
+									b = b.concat(d)
+							}
+						}
+					return b
+				}
+				e.Ze = db;
+				e.We = function(b, a) {
+					return b.getElementsByTagName(a)
+				};
+				function C() {
+					var e = arguments, d, c, b, a, g = 1 & e[0], f = 1 + g;
+					d = e[f - 1] || {};
+					for (; f < e.length; f++)
+						if (c = e[f])
+							for (b in c) {
+								a = c[b];
+								if (a !== j) {
+									a = c[b];
+									d[b] = g && G(d[b]) ? C(g, {}, a) : a
+								}
+							}
+					return d
+				}
+				e.C = C;
+				function X(f, g) {
+					var d = {}, c, a, b;
+					for (c in f) {
+						a = f[c];
+						b = g[c];
+						if (a !== b) {
+							var e;
+							if (G(a) && G(b)) {
+								a = X(b);
+								e = !qb(a)
+							}
+							!e && (d[c] = a)
+						}
+					}
+					return d
+				}
+				e.Bc = function(a) {
+					return D(a) == "function"
+				};
+				e.je = function(a) {
+					return D(a) == "string"
+				};
+				e.Ec = function(a) {
+					return !isNaN(n(a)) && isFinite(a)
+				};
+				e.k = m;
+				function P(a) {
+					return f.createElement(a)
+				}
+				e.cb = function() {
+					return P("DIV")
+				};
+				e.bc = function() {
+				};
+				function U(b, c, a) {
+					if (a == j)
+						return b.getAttribute(c);
+					b.setAttribute(c, a)
+				}
+				function S(a, b) {
+					return U(a, b) || U(a, "data-" + b)
+				}
+				e.S = U;
+				e.J = S;
+				function w(b, a) {
+					if (a == j)
+						return b.className;
+					b.className = a
+				}
+				e.Gc = w;
+				function ub(b) {
+					var a = {};
+					m(b, function(b) {
+						a[b] = b
+					});
+					return a
+				}
+				function wb(b, a) {
+					return b.match(a || xb)
+				}
+				function N(b, a) {
+					return ub(wb(b || "", a))
+				}
+				e.Je = wb;
+				function Z(b, c) {
+					var a = "";
+					m(c, function(c) {
+						a && (a += b);
+						a += c
+					});
+					return a
+				}
+				function H(a, c, b) {
+					w(a, Z(" ", C(X(N(w(a)), N(c)), N(b))))
+				}
+				e.Oc = function(a) {
+					return a.parentNode
+				};
+				e.P = function(a) {
+					e.W(a, "none")
+				};
+				e.E = function(a, b) {
+					e.W(a, b ? "none" : "")
+				};
+				e.Rc = function(b, a) {
+					b.removeAttribute(a)
+				};
+				e.Pe = function() {
+					return q() && l < 10
+				};
+				e.Se = function(d, c) {
+					if (c)
+						d.style.clip = "rect(" + b.round(c.e) + "px "
+								+ b.round(c.r) + "px " + b.round(c.p) + "px "
+								+ b.round(c.c) + "px)";
+					else {
+						var g = d.style.cssText, f = [
+								new RegExp(/[\s]*clip: rect\(.*?\)[;]?/i),
+								new RegExp(/[\s]*cliptop: .*?[;]?/i),
+								new RegExp(/[\s]*clipright: .*?[;]?/i),
+								new RegExp(/[\s]*clipbottom: .*?[;]?/i),
+								new RegExp(/[\s]*clipleft: .*?[;]?/i) ], e = I(
+								g, f, "");
+						a.Ib(d, e)
+					}
+				};
+				e.Y = function() {
+					return +new Date
+				};
+				e.K = function(b, a) {
+					b.appendChild(a)
+				};
+				e.Kb = function(b, a, c) {
+					(c || a.parentNode).insertBefore(b, a)
+				};
+				e.Lb = function(a, b) {
+					(b || a.parentNode).removeChild(a)
+				};
+				e.Re = function(a, b) {
+					m(a, function(a) {
+						e.Lb(a, b)
+					})
+				};
+				e.Xc = function(a) {
+					e.Re(e.zb(a, c), a)
+				};
+				var n = parseFloat;
+				e.Me = n;
+				e.bf = function(b, a) {
+					var c = f.body;
+					while (a && b !== a && c !== a)
+						try {
+							a = a.parentNode
+						} catch (d) {
+							return h
+						}
+					return b === a
+				};
+				function V(d, c, b) {
+					var a = d.cloneNode(!c);
+					!b && e.Rc(a, "id");
+					return a
+				}
+				e.ab = V;
+				e.ub = function(f, g) {
+					var a = new Image;
+					function b(f, c) {
+						e.O(a, "load", b);
+						e.O(a, "abort", d);
+						e.O(a, "error", d);
+						g && g(a, c)
+					}
+					function d(a) {
+						b(a, c)
+					}
+					if (nb() && l < 11.6 || !f)
+						b(!f);
+					else {
+						e.i(a, "load", b);
+						e.i(a, "abort", d);
+						e.i(a, "error", d);
+						a.src = f
+					}
+				};
+				e.Le = function(d, a, f) {
+					var c = d.length + 1;
+					function b(b) {
+						c--;
+						if (a && b && b.src == a.src)
+							a = b;
+						!c && f && f(a)
+					}
+					m(d, function(a) {
+						e.ub(a.src, b)
+					});
+					b()
+				};
+				e.Oe = function(b, g, i, h) {
+					if (h)
+						b = V(b);
+					var c = Q(b, g);
+					if (!c.length)
+						c = a.We(b, g);
+					for (var f = c.length - 1; f > -1; f--) {
+						var d = c[f], e = V(i);
+						w(e, w(d));
+						a.Ib(e, d.style.cssText);
+						a.Kb(e, d);
+						a.Lb(d)
+					}
+					return b
+				};
+				function Db(c) {
+					var q = this, o = "", r = [ "av", "pv", "ds", "dn" ], d = [], p, k = 0, h = 0, g = 0;
+					function i() {
+						H(c, p, d[g || k || h & 2 || h])
+					}
+					function b() {
+						k = 0;
+						i();
+						e.O(f, "mouseup", b);
+						e.O(f, "touchend", b);
+						e.O(f, "touchcancel", b)
+					}
+					function n(a) {
+						if (g)
+							e.Mb(a);
+						else {
+							k = 4;
+							i();
+							e.i(f, "mouseup", b);
+							e.i(f, "touchend", b);
+							e.i(f, "touchcancel", b)
+						}
+					}
+					q.Ne = function(a) {
+						if (a != j) {
+							h = a & 2 || a & 1;
+							i()
+						} else
+							return h
+					};
+					q.Hc = function(a) {
+						if (a == j)
+							return !g;
+						g = a ? 0 : 3;
+						i()
+					};
+					c = e.Ab(c);
+					var l = a.Je(w(c));
+					if (l)
+						o = l.shift();
+					m(r, function(a) {
+						d.push(o + a)
+					});
+					p = Z(" ", d);
+					d.unshift("");
+					e.i(c, "mousedown", n);
+					e.i(c, "touchstart", n)
+				}
+				e.Ub = function(a) {
+					return new Db(a)
+				};
+				e.ob = E;
+				e.eb = o("overflow");
+				e.L = o("top", 2);
+				e.N = o("left", 2);
+				e.t = o("width", 2);
+				e.A = o("height", 2);
+				e.ed = o("marginLeft", 2);
+				e.cd = o("marginTop", 2);
+				e.G = o("position");
+				e.W = o("display");
+				e.I = o("zIndex", 1);
+				e.xb = function(b, a, c) {
+					if (a != j)
+						Bb(b, a, c);
+					else
+						return Ab(b)
+				};
+				e.Ib = function(a, b) {
+					if (b != j)
+						a.style.cssText = b;
+					else
+						return a.style.cssText
+				};
+				var R = {
+					a : e.xb,
+					e : e.L,
+					c : e.N,
+					kb : e.t,
+					lb : e.A,
+					wb : e.G,
+					nf : e.W,
+					V : e.I
+				}, u;
+				function J() {
+					if (!u)
+						u = C({
+							of : e.cd,
+							pf : e.ed,
+							f : e.Se,
+							Wb : e.ee
+						}, R);
+					return u
+				}
+				function pb() {
+					J();
+					u.Wb = u.Wb;
+					return u
+				}
+				e.Kd = J;
+				e.R = function(c, b) {
+					var a = J();
+					m(b, function(d, b) {
+						a[b] && a[b](c, d)
+					})
+				};
+				e.Sd = function(b, a) {
+					pb();
+					e.R(b, a)
+				};
+				var F = new function() {
+					var a = this;
+					function b(d, g) {
+						for (var j = d[0].length, i = d.length, h = g[0].length, f = [], c = 0; c < i; c++)
+							for (var k = f[c] = [], b = 0; b < h; b++) {
+								for (var e = 0, a = 0; a < j; a++)
+									e += d[c][a] * g[a][b];
+								k[b] = e
+							}
+						return f
+					}
+					a.Ob = function(d, c) {
+						var a = b(d, [ [ c.x ], [ c.y ] ]);
+						return y(a[0][0], a[1][0])
+					}
+				};
+				e.ke = function(d, a, c) {
+					var e = b.cos(d), f = b.sin(d);
+					return [ [ e * a, -f * c ], [ f * a, e * c ] ]
+				};
+				e.fe = function(d, c, a) {
+					var e = F.Ob(d, y(-c / 2, -a / 2)), f = F.Ob(d, y(c / 2,
+							-a / 2)), g = F.Ob(d, y(c / 2, a / 2)), h = F.Ob(d,
+							y(-c / 2, a / 2));
+					return y(b.min(e.x, f.x, g.x, h.x) + c / 2, b.min(e.y, f.y,
+							g.y, h.y)
+							+ a / 2)
+				};
+				e.gd = function(l, g, t, r, u, w, j) {
+					var c = g;
+					if (l) {
+						c = {};
+						for ( var f in g) {
+							var x = w[f] || 1, s = u[f] || [ 0, 1 ], e = (t - s[0])
+									/ s[1];
+							e = b.min(b.max(e, 0), 1);
+							e = e * x;
+							var p = b.floor(e);
+							if (e != p)
+								e -= p;
+							var v = r[f] || r.Yb || d.vc, q = v(e), h, y = l[f];
+							g[f];
+							var m = g[f];
+							if (a.Ec(m))
+								h = y + m * q;
+							else {
+								h = a.C({
+									rb : {}
+								}, l[f]);
+								a.k(m.rb, function(c, b) {
+									var a = c * q;
+									h.rb[b] = a;
+									h[b] += a
+								})
+							}
+							c[f] = h
+						}
+						if (g.o || g.B)
+							c.Wb = {
+								B : c.B || 0,
+								sb : c.o,
+								hb : j.hb,
+								fb : j.fb
+							}
+					}
+					if (g.f && j.nb) {
+						var k = c.f.rb, o = (k.e || 0) + (k.p || 0), n = (k.c || 0)
+								+ (k.r || 0);
+						c.c = (c.c || 0) + n;
+						c.e = (c.e || 0) + o;
+						c.f.c -= n;
+						c.f.r -= n;
+						c.f.e -= o;
+						c.f.p -= o
+					}
+					if (c.f && a.Pe() && !c.f.e && !c.f.c && c.f.r == j.hb
+							&& c.f.p == j.fb)
+						c.f = i;
+					return c
+				}
+			};
+			function l() {
+				var b = this, d = [];
+				function i(a, b) {
+					d.push({
+						ac : a,
+						dc : b
+					})
+				}
+				function h(b, c) {
+					a.k(d, function(a, e) {
+						a.ac == b && a.dc === c && d.splice(e, 1)
+					})
+				}
+				b.pb = b.addEventListener = i;
+				b.removeEventListener = h;
+				b.n = function(b) {
+					var c = [].slice.call(arguments, 1);
+					a.k(d, function(a) {
+						a.ac == b && a.dc.apply(g, c)
+					})
+				}
+			}
+			function k(o, z, k, R, P, K) {
+				o = o || 0;
+				var e = this, s, p, q, x, B = 0, I, J, H, D, A = 0, l = 0, n = 0, E, m = o, f, j, r, y = [], C;
+				function M(a) {
+					f += a;
+					j += a;
+					m += a;
+					l += a;
+					n += a;
+					A = a
+				}
+				function Q(a, b) {
+					var c = a - f + o * b;
+					M(c);
+					return j
+				}
+				function w(o, i) {
+					var d = o;
+					if (r && (d >= j || d <= f))
+						d = ((d - f) % r + r) % r + f;
+					if (!E || x || i || l != d) {
+						var g = b.min(d, j);
+						g = b.max(g, f);
+						if (!E || x || i || g != n) {
+							if (K) {
+								var h = (g - m) / (z || 1);
+								if (k.tc)
+									h = 1 - h;
+								var p = a.gd(P, K, h, I, H, J, k);
+								a.k(p, function(b, a) {
+									C[a] && C[a](R, b)
+								})
+							}
+							e.wc(n - m, g - m);
+							n = g;
+							a.k(y, function(b, c) {
+								var a = o < l ? y[y.length - c - 1] : b;
+								a.H(n - A, i)
+							});
+							var s = l, q = n;
+							l = d;
+							E = c;
+							e.Fb(s, q)
+						}
+					}
+				}
+				function F(a, c, d) {
+					c && a.id(j, 1);
+					if (!d) {
+						f = b.min(f, a.Nd() + A);
+						j = b.max(j, a.qb() + A)
+					}
+					y.push(a)
+				}
+				var t = g.requestAnimationFrame
+						|| g.webkitRequestAnimationFrame
+						|| g.mozRequestAnimationFrame
+						|| g.msRequestAnimationFrame;
+				if (a.Wd() && a.qd() < 7)
+					t = i;
+				t = t || function(b) {
+					a.z(b, k.bb)
+				};
+				function L() {
+					if (s) {
+						var d = a.Y(), e = b.min(d - B, k.Tc), c = l + e * q;
+						B = d;
+						if (c * q >= p * q)
+							c = p;
+						w(c);
+						if (!x && c * q >= p * q)
+							N(D);
+						else
+							t(L)
+					}
+				}
+				function v(d, g, h) {
+					if (!s) {
+						s = c;
+						x = h;
+						D = g;
+						d = b.max(d, f);
+						d = b.min(d, j);
+						p = d;
+						q = p < l ? -1 : 1;
+						e.Zc();
+						B = a.Y();
+						t(L)
+					}
+				}
+				function N(a) {
+					if (s) {
+						x = s = D = h;
+						e.jd();
+						a && a()
+					}
+				}
+				e.rd = function(a, b, c) {
+					v(a ? l + a : j, b, c)
+				};
+				e.ud = v;
+				e.ib = N;
+				e.Ld = function(a) {
+					v(a)
+				};
+				e.Z = function() {
+					return l
+				};
+				e.kd = function() {
+					return p
+				};
+				e.Bb = function() {
+					return n
+				};
+				e.H = w;
+				e.nb = function(a) {
+					w(l + a)
+				};
+				e.Cc = function() {
+					return s
+				};
+				e.Id = function(a) {
+					r = a
+				};
+				e.id = Q;
+				e.gc = M;
+				e.qc = function(a) {
+					F(a, 0)
+				};
+				e.rc = function(a) {
+					F(a, 1)
+				};
+				e.Nd = function() {
+					return f
+				};
+				e.qb = function() {
+					return j
+				};
+				e.Fb = e.Zc = e.jd = e.wc = a.bc;
+				e.kc = a.Y();
+				k = a.C({
+					bb : 16,
+					Tc : 50
+				}, k);
+				r = k.Mc;
+				C = a.C({}, a.Kd(), k.ic);
+				f = m = o;
+				j = o + z;
+				J = k.yb || {};
+				H = k.q || {};
+				I = a.C({
+					Yb : a.Bc(k.g) && k.g || d.vc
+				}, k.g)
+			}
+			var n = new function() {
+				var h = this;
+				function g(b, a, c) {
+					c.push(a);
+					b[a] = b[a] || [];
+					b[a].push(c)
+				}
+				h.zd = function(d) {
+					for (var e = [], a, c = 0; c < d.v; c++)
+						for (a = 0; a < d.u; a++)
+							g(e, b.ceil(1e5 * b.random()) % 13, [ c, a ]);
+					return e
+				}
+			}, q = function(o, s, q, t, y) {
+				var f = this, u, g, e, x = 0, w = t.df, r, j = 8;
+				function m(g, f) {
+					var e = {
+						bb : f,
+						j : 1,
+						z : 0,
+						u : 1,
+						v : 1,
+						a : 0,
+						o : 0,
+						f : 0,
+						nb : h,
+						s : h,
+						tc : h,
+						Ad : n.zd,
+						D : {
+							U : 0,
+							X : 0
+						},
+						g : d.vc,
+						yb : {},
+						Pb : [],
+						q : {}
+					};
+					a.C(e, g);
+					if (a.Bc(e.g))
+						e.g = {
+							Yb : e.g
+						};
+					e.Cd = b.ceil(e.j / e.bb);
+					e.Dd = function(b, a) {
+						b /= e.u;
+						a /= e.v;
+						var f = b + "x" + a;
+						if (!e.Pb[f]) {
+							e.Pb[f] = {
+								kb : b,
+								lb : a
+							};
+							for (var c = 0; c < e.u; c++)
+								for (var d = 0; d < e.v; d++)
+									e.Pb[f][d + "," + c] = {
+										e : d * a,
+										r : c * b + b,
+										p : d * a + a,
+										c : c * b
+									}
+						}
+						return e.Pb[f]
+					};
+					if (e.Ac) {
+						e.Ac = m(e.Ac, f);
+						e.s = c
+					}
+					return e
+				}
+				function p(A, i, d, v, n, l) {
+					var y = this, t, u = {}, j = {}, m = [], f, e, r, p = d.D.U || 0, q = d.D.X || 0, g = d
+							.Dd(n, l), o = B(d), C = o.length - 1, s = d.j
+							+ d.z * C, w = v + s, k = d.s, x;
+					w += 50;
+					function B(a) {
+						var b = a.Ad(a);
+						return a.tc ? b.reverse() : b
+					}
+					y.Jc = w;
+					y.Gb = function(c) {
+						c -= v;
+						var e = c < s;
+						if (e || x) {
+							x = e;
+							if (!k)
+								c = s - c;
+							var f = b.ceil(c / d.bb);
+							a.k(j, function(c, e) {
+								var d = b.max(f, c.Qd);
+								d = b.min(d, c.length - 1);
+								if (c.Qc != d) {
+									if (!c.Qc && !k)
+										a.E(m[e]);
+									else
+										d == c.Hd && k && a.P(m[e]);
+									c.Qc = d;
+									a.Sd(m[e], c[d])
+								}
+							})
+						}
+					};
+					i = a.ab(i);
+					if (a.jb()) {
+						var D = !i["no-image"], z = a.Ze(i);
+						a.k(z, function(b) {
+							(D || b["jssor-slider"]) && a.xb(b, a.xb(b), c)
+						})
+					}
+					a
+							.k(
+									o,
+									function(i, m) {
+										a
+												.k(
+														i,
+														function(G) {
+															var K = G[0], J = G[1], v = K
+																	+ "," + J, o = h, s = h, x = h;
+															if (p && J % 2) {
+																if (p & 3)
+																	o = !o;
+																if (p & 12)
+																	s = !s;
+																if (p & 16)
+																	x = !x
+															}
+															if (q && K % 2) {
+																if (q & 3)
+																	o = !o;
+																if (q & 12)
+																	s = !s;
+																if (q & 16)
+																	x = !x
+															}
+															d.e = d.e || d.f
+																	& 4;
+															d.p = d.p || d.f
+																	& 8;
+															d.c = d.c || d.f
+																	& 1;
+															d.r = d.r || d.f
+																	& 2;
+															var C = s ? d.p
+																	: d.e, z = s ? d.e
+																	: d.p, B = o ? d.r
+																	: d.c, A = o ? d.c
+																	: d.r;
+															d.f = C || z || B
+																	|| A;
+															r = {};
+															e = {
+																e : 0,
+																c : 0,
+																a : 1,
+																kb : n,
+																lb : l
+															};
+															f = a.C({}, e);
+															t = a.C({}, g[v]);
+															if (d.a)
+																e.a = 2 - d.a;
+															if (d.V) {
+																e.V = d.V;
+																f.V = 0
+															}
+															var I = d.u * d.v > 1
+																	|| d.f;
+															if (d.o || d.B) {
+																var H = c;
+																if (a.jb())
+																	if (d.u
+																			* d.v > 1)
+																		H = h;
+																	else
+																		I = h;
+																if (H) {
+																	e.o = d.o ? d.o - 1
+																			: 1;
+																	f.o = 1;
+																	if (a.jb()
+																			|| a
+																					.sd())
+																		e.o = b
+																				.min(
+																						e.o,
+																						2);
+																	var N = d.B;
+																	e.B = N
+																			* 360
+																			* (x ? -1
+																					: 1);
+																	f.B = 0
+																}
+															}
+															if (I) {
+																if (d.f) {
+																	var w = d.mf || 1, i = t.rb = {};
+																	if (C && z) {
+																		i.e = g.lb
+																				/ 2
+																				* w;
+																		i.p = -i.e
+																	} else if (C)
+																		i.p = -g.lb
+																				* w;
+																	else if (z)
+																		i.e = g.lb
+																				* w;
+																	if (B && A) {
+																		i.c = g.kb
+																				/ 2
+																				* w;
+																		i.r = -i.c
+																	} else if (B)
+																		i.r = -g.kb
+																				* w;
+																	else if (A)
+																		i.c = g.kb
+																				* w
+																}
+																r.f = t;
+																f.f = g[v]
+															}
+															var L = o ? 1 : -1, M = s ? 1
+																	: -1;
+															if (d.x)
+																e.c += n * d.x
+																		* L;
+															if (d.y)
+																e.e += l * d.y
+																		* M;
+															a
+																	.k(
+																			e,
+																			function(
+																					b,
+																					c) {
+																				if (a
+																						.Ec(b))
+																					if (b != f[c])
+																						r[c] = b
+																								- f[c]
+																			});
+															u[v] = k ? f : e;
+															var D = d.Cd, y = b
+																	.round(m
+																			* d.z
+																			/ d.bb);
+															j[v] = new Array(y);
+															j[v].Qd = y;
+															j[v].Hd = y + D - 1;
+															for (var F = 0; F <= D; F++) {
+																var E = a
+																		.gd(
+																				f,
+																				r,
+																				F
+																						/ D,
+																				d.g,
+																				d.q,
+																				d.yb,
+																				{
+																					nb : d.nb,
+																					hb : n,
+																					fb : l
+																				});
+																E.V = E.V || 1;
+																j[v].push(E)
+															}
+														})
+									});
+					o.reverse();
+					a.k(o, function(b) {
+						a.k(b, function(c) {
+							var f = c[0], e = c[1], d = f + "," + e, b = i;
+							if (e || f)
+								b = a.ab(i);
+							a.R(b, u[d]);
+							a.eb(b, "hidden");
+							a.G(b, "absolute");
+							A.Jd(b);
+							m[d] = b;
+							a.E(b, !k)
+						})
+					})
+				}
+				function v() {
+					var a = this, b = 0;
+					k.call(a, 0, u);
+					a.Fb = function(c, a) {
+						if (a - b > j) {
+							b = a;
+							e && e.Gb(a);
+							g && g.Gb(a)
+						}
+					};
+					a.sc = r
+				}
+				f.Od = function() {
+					var a = 0, c = t.pd, d = c.length;
+					if (w)
+						a = x++ % d;
+					else
+						a = b.floor(b.random() * d);
+					c[a] && (c[a].mb = a);
+					return c[a]
+				};
+				f.Ed = function(w, x, i, k, a) {
+					r = a;
+					a = m(a, j);
+					var h = k.td, d = i.td;
+					h["no-image"] = !k.Hb;
+					d["no-image"] = !i.Hb;
+					var l = h, n = d, v = a, c = a.Ac || m({}, j);
+					if (!a.s) {
+						l = d;
+						n = h
+					}
+					var t = c.gc || 0;
+					g = new p(o, n, c, b.max(t - c.bb, 0), s, q);
+					e = new p(o, l, v, b.max(c.bb - t, 0), s, q);
+					g.Gb(0);
+					e.Gb(0);
+					u = b.max(g.Jc, e.Jc);
+					f.mb = w
+				};
+				f.tb = function() {
+					o.tb();
+					g = i;
+					e = i
+				};
+				f.wd = function() {
+					var a = i;
+					if (e)
+						a = new v;
+					return a
+				};
+				if (a.jb() || a.sd() || y && a.uc() < 537)
+					j = 16;
+				l.call(f);
+				k.call(f, -1e7, 1e7)
+			}, e = function(q, ec) {
+				var n = this;
+				function Dc() {
+					var a = this;
+					k.call(a, -1e8, 2e8);
+					a.yd = function() {
+						var c = a.Bb(), d = b.floor(c), f = t(d), e = c
+								- b.floor(c);
+						return {
+							mb : f,
+							Ud : d,
+							wb : e
+						}
+					};
+					a.Fb = function(d, a) {
+						var f = b.floor(a);
+						if (f != a && a > d)
+							f++;
+						Tb(f, c);
+						n.n(e.Rd, t(a), t(d), a, d)
+					}
+				}
+				function Cc() {
+					var b = this;
+					k.call(b, 0, 0, {
+						Mc : r
+					});
+					a.k(C, function(a) {
+						D & 1 && a.Id(r);
+						b.rc(a);
+						a.gc(hb / ac)
+					})
+				}
+				function Bc() {
+					var a = this, b = Sb.db;
+					k.call(a, -1, 2, {
+						g : d.l,
+						ic : {
+							wb : Yb
+						},
+						Mc : r
+					}, b, {
+						wb : 1
+					}, {
+						wb : -2
+					});
+					a.Rb = b
+				}
+				function pc(m, l) {
+					var a = this, d, f, g, j, b;
+					k.call(a, -1e8, 2e8, {
+						Tc : 100
+					});
+					a.Zc = function() {
+						P = c;
+						T = i;
+						n.n(e.Md, t(y.Z()), y.Z())
+					};
+					a.jd = function() {
+						P = h;
+						j = h;
+						var a = y.yd();
+						n.n(e.xd, t(y.Z()), y.Z());
+						!a.wb && Fc(a.Ud, s)
+					};
+					a.Fb = function(h, e) {
+						var a;
+						if (j)
+							a = b;
+						else {
+							a = f;
+							if (g) {
+								var c = e / g;
+								a = o.Fd(c) * (f - d) + d
+							}
+						}
+						y.H(a)
+					};
+					a.Sb = function(b, e, c, h) {
+						d = b;
+						f = e;
+						g = c;
+						y.H(b);
+						a.H(0);
+						a.ud(c, h)
+					};
+					a.Td = function(d) {
+						j = c;
+						b = d;
+						a.rd(d, i, c)
+					};
+					a.Bd = function(a) {
+						b = a
+					};
+					y = new Dc;
+					y.qc(m);
+					y.qc(l)
+				}
+				function qc() {
+					var c = this, b = Wb();
+					a.I(b, 0);
+					a.ob(b, "pointerEvents", "none");
+					c.db = b;
+					c.Jd = function(c) {
+						a.K(b, c);
+						a.E(b)
+					};
+					c.tb = function() {
+						a.P(b);
+						a.Xc(b)
+					}
+				}
+				function zc(p, f) {
+					var d = this, q, x, N, y, j, B = [], H, v, W, K, S, G, g, w, m;
+					k.call(d, -u, u + 1, {});
+					function F(a) {
+						x && x.Cb();
+						q && q.Cb();
+						V(p, a);
+						G = c;
+						q = new L.M(p, L, 1);
+						x = new L.M(p, L);
+						x.H(0);
+						q.H(0)
+					}
+					function Y() {
+						q.kc < L.kc && F()
+					}
+					function O(p, r, m) {
+						if (!K) {
+							K = c;
+							if (j && m) {
+								var g = m.width, b = m.height, l = g, k = b;
+								if (g && b && o.vb) {
+									if (o.vb & 3
+											&& (!(o.vb & 4) || g > J || b > I)) {
+										var i = h, q = J / I * b / g;
+										if (o.vb & 1)
+											i = q > 1;
+										else if (o.vb & 2)
+											i = q < 1;
+										l = i ? g * I / b : J;
+										k = i ? I : b * J / g
+									}
+									a.t(j, l);
+									a.A(j, k);
+									a.L(j, (I - k) / 2);
+									a.N(j, (J - l) / 2)
+								}
+								a.G(j, "absolute");
+								n.n(e.Qe, f)
+							}
+						}
+						a.P(r);
+						p && p(d)
+					}
+					function X(b, c, e, g) {
+						if (g == T && s == f && Q)
+							if (!Ec) {
+								var a = t(b);
+								A.Ed(a, f, c, d, e);
+								c.Fe();
+								Z.id(a, 1);
+								Z.H(a);
+								z.Sb(b, b, 0)
+							}
+					}
+					function cb(b) {
+						if (b == T && s == f) {
+							if (!g) {
+								var a = i;
+								if (A)
+									if (A.mb == f)
+										a = A.wd();
+									else
+										A.tb();
+								Y();
+								g = new xc(p, f, a, d.Ge(), d.Ee());
+								g.Pc(m)
+							}
+							!g.Cc() && g.Zb()
+						}
+					}
+					function U(e, c, h) {
+						if (e == f) {
+							if (e != c)
+								C[c] && C[c].Ke();
+							else
+								!h && g && g.He();
+							m && m.Hc();
+							var j = T = a.Y();
+							d.ub(a.gb(i, cb, j))
+						} else {
+							var l = b.abs(f - e), k = u + o.Ie - 1;
+							(!S || l <= k) && d.ub()
+						}
+					}
+					function fb() {
+						if (s == f && g) {
+							g.ib();
+							m && m.Te();
+							m && m.ef();
+							g.Fc()
+						}
+					}
+					function gb() {
+						s == f && g && g.ib()
+					}
+					function bb(a) {
+						!M && n.n(e.re, f, a)
+					}
+					function P() {
+						m = w.pInstance;
+						g && g.Pc(m)
+					}
+					d.ub = function(d, b) {
+						b = b || y;
+						if (B.length && !K) {
+							a.E(b);
+							if (!W) {
+								W = c;
+								n.n(e.cf, f);
+								a.k(B, function(b) {
+									if (!a.S(b, "src")) {
+										b.src = a.J(b, "src2");
+										a.W(b, b["display-origin"])
+									}
+								})
+							}
+							a.Le(B, j, a.gb(i, O, d, b))
+						} else
+							O(d, b)
+					};
+					d.gf = function() {
+						var g = f;
+						if (o.ld < 0)
+							g -= r;
+						var c = g + o.ld * vc;
+						if (D & 2)
+							c = t(c);
+						if (!(D & 1))
+							c = b.max(0, b.min(c, r - u));
+						if (c != f) {
+							if (A) {
+								var d = A.Od(r);
+								if (d) {
+									var h = T = a.Y(), e = C[t(c)];
+									return e.ub(a.gb(i, X, c, e, d, h), y)
+								}
+							}
+							ab(c)
+						}
+					};
+					d.Vb = function() {
+						U(f, f, c)
+					};
+					d.Ke = function() {
+						m && m.Te();
+						m && m.ef();
+						d.vd();
+						g && g.hf();
+						g = i;
+						F()
+					};
+					d.Fe = function() {
+						a.P(p)
+					};
+					d.vd = function() {
+						a.E(p)
+					};
+					d.Ue = function() {
+						m && m.Hc()
+					};
+					function V(b, e, d) {
+						if (a.S(b, "jssor-slider"))
+							return;
+						d = d || 0;
+						if (!G) {
+							if (b.tagName == "IMG") {
+								B.push(b);
+								if (!a.S(b, "src")) {
+									S = c;
+									b["display-origin"] = a.W(b);
+									a.P(b)
+								}
+							}
+							a.jb() && a.I(b, (a.I(b) || 0) + 1);
+							if (o.Yc && a.uc())
+								(a.uc() < 534 || !eb && !a.Vd()) && a.De(b)
+						}
+						var f = a.zb(b);
+						a.k(f,
+								function(f) {
+									var i = f.tagName, k = a.J(f, "u");
+									if (k == "player" && !w) {
+										w = f;
+										if (w.pInstance)
+											P();
+										else
+											a.i(w, "dataavailable", P)
+									}
+									if (k == "caption") {
+										if (!a.dd() && !e) {
+											var g = a.ab(f, h, c);
+											a.Kb(g, f, b);
+											a.Lb(f, b);
+											f = g;
+											e = c
+										}
+									} else if (!G && !d && !j) {
+										if (i == "A") {
+											if (a.J(f, "u") == "image")
+												j = a.af(f, "IMG");
+											else
+												j = a.F(f, "image", c);
+											if (j) {
+												H = f;
+												a.R(H, R);
+												v = a.ab(H, c);
+												a.W(v, "block");
+												a.R(v, R);
+												a.xb(v, 0);
+												a.ob(v, "backgroundColor",
+														"#000")
+											}
+										} else if (i == "IMG"
+												&& a.J(f, "u") == "image")
+											j = f;
+										if (j) {
+											j.border = 0;
+											a.R(j, R)
+										}
+									}
+									V(f, e, d + 1)
+								})
+					}
+					d.wc = function(c, b) {
+						var a = u - b;
+						Yb(N, a)
+					};
+					d.Ge = function() {
+						return q
+					};
+					d.Ee = function() {
+						return x
+					};
+					d.mb = f;
+					l.call(d);
+					var E = a.F(p, "thumb", c);
+					if (E) {
+						d.Ye = a.ab(E);
+						a.Rc(E, "id");
+						a.P(E)
+					}
+					a.E(p);
+					y = a.ab(db);
+					a.I(y, 1e3);
+					a.i(p, "click", bb);
+					F(c);
+					d.Hb = j;
+					d.Uc = v;
+					d.td = p;
+					d.Rb = N = p;
+					a.K(N, y);
+					n.pb(203, U);
+					n.pb(28, gb);
+					n.pb(24, fb)
+				}
+				function xc(E, i, p, u, t) {
+					var b = this, l = 0, w = 0, m, g, d, f, j, q, v, r, o = C[i];
+					k.call(b, 0, 0);
+					function x() {
+						a.Xc(N);
+						cc && j && o.Uc && a.K(N, o.Uc);
+						a.E(N, !j && o.Hb)
+					}
+					function y() {
+						if (q) {
+							q = h;
+							n.n(e.ff, i, d, l, g, d, f);
+							b.H(g)
+						}
+						b.Zb()
+					}
+					function z(a) {
+						r = a;
+						b.ib();
+						b.Zb()
+					}
+					b.Zb = function() {
+						var a = b.Bb();
+						if (!B && !P && !r && s == i) {
+							if (!a) {
+								if (m && !j) {
+									j = c;
+									b.Fc(c);
+									n.n(e.le, i, l, w, m, f)
+								}
+								x()
+							}
+							var h, p = e.Vc;
+							if (a != f)
+								if (a == d)
+									h = f;
+								else if (a == g)
+									h = d;
+								else if (!a)
+									h = g;
+								else if (a > d) {
+									q = c;
+									h = d;
+									p = e.ie
+								} else
+									h = b.kd();
+							n.n(p, i, a, l, g, d, f);
+							var k = Q && (!G || H);
+							if (a == f)
+								(d != f && !(G & 12) || k) && o.gf();
+							else
+								(k || a != d) && b.ud(h, y)
+						}
+					};
+					b.He = function() {
+						d == f && d == b.Bb() && b.H(g)
+					};
+					b.hf = function() {
+						A && A.mb == i && A.tb();
+						var a = b.Bb();
+						a < f && n.n(e.Vc, i, -a - 1, l, g, d, f)
+					};
+					b.Fc = function(b) {
+						p && a.eb(jb, b && p.sc.Q ? "" : "hidden")
+					};
+					b.wc = function(b, a) {
+						if (j && a >= m) {
+							j = h;
+							x();
+							o.vd();
+							A.tb();
+							n.n(e.de, i, l, w, m, f)
+						}
+						n.n(e.Xd, i, a, l, g, d, f)
+					};
+					b.Pc = function(a) {
+						if (a && !v) {
+							v = a;
+							a.pb($JssorPlayer$.Pd, z)
+						}
+					};
+					p && b.rc(p);
+					m = b.qb();
+					b.qb();
+					b.rc(u);
+					g = u.qb();
+					d = g + (a.Me(a.J(E, "idle")) || oc);
+					t.gc(d);
+					b.qc(t);
+					f = b.qb()
+				}
+				function Yb(g, f) {
+					var e = w > 0 ? w : ib, c = Bb * f * (e & 1), d = Cb * f
+							* (e >> 1 & 1);
+					c = b.round(c);
+					d = b.round(d);
+					a.N(g, c);
+					a.L(g, d)
+				}
+				function Ob() {
+					qb = P;
+					Kb = z.kd();
+					E = y.Z()
+				}
+				function fc() {
+					Ob();
+					if (B || !H && G & 12) {
+						z.ib();
+						n.n(e.Yd)
+					}
+				}
+				function dc(e) {
+					if (!B && (H || !(G & 12)) && !z.Cc()) {
+						var c = y.Z(), a = b.ceil(E);
+						if (e && b.abs(F) >= o.bd) {
+							a = b.ceil(c);
+							a += gb
+						}
+						if (!(D & 1))
+							a = b.min(r - u, b.max(a, 0));
+						var d = b.abs(a - c);
+						d = 1 - b.pow(1 - d, 5);
+						if (!M && qb)
+							z.Ld(Kb);
+						else if (c == a) {
+							ub.Ue();
+							ub.Vb()
+						} else
+							z.Sb(c, a, d * Ub)
+					}
+				}
+				function Ib(b) {
+					!a.J(a.Xb(b), "nodrag") && a.Mb(b)
+				}
+				function tc(a) {
+					Xb(a, 1)
+				}
+				function Xb(b, d) {
+					b = a.od(b);
+					var k = a.Xb(b);
+					if (!K && !a.J(k, "nodrag") && uc()
+							&& (!d || b.touches.length == 1)) {
+						B = c;
+						Ab = h;
+						T = i;
+						a.i(f, d ? "touchmove" : "mousemove", Db);
+						a.Y();
+						M = 0;
+						fc();
+						if (!qb)
+							w = 0;
+						if (d) {
+							var j = b.touches[0];
+							vb = j.clientX;
+							wb = j.clientY
+						} else {
+							var g = a.ad(b);
+							vb = g.x;
+							wb = g.y
+						}
+						F = 0;
+						cb = 0;
+						gb = 0;
+						n.n(e.be, t(E), E, b)
+					}
+				}
+				function Db(e) {
+					if (B) {
+						e = a.od(e);
+						var f;
+						if (e.type != "mousemove") {
+							var l = e.touches[0];
+							f = {
+								x : l.clientX,
+								y : l.clientY
+							}
+						} else
+							f = a.ad(e);
+						if (f) {
+							var j = f.x - vb, k = f.y - wb;
+							if (b.floor(E) != E)
+								w = w || ib & K;
+							if ((j || k) && !w) {
+								if (K == 3)
+									if (b.abs(k) > b.abs(j))
+										w = 2;
+									else
+										w = 1;
+								else
+									w = K;
+								if (lb && w == 1 && b.abs(k) - b.abs(j) > 3)
+									Ab = c
+							}
+							if (w) {
+								var d = k, i = Cb;
+								if (w == 1) {
+									d = j;
+									i = Bb
+								}
+								if (!(D & 1)) {
+									if (d > 0) {
+										var g = i * s, h = d - g;
+										if (h > 0)
+											d = g + b.sqrt(h) * 5
+									}
+									if (d < 0) {
+										var g = i * (r - u - s), h = -d - g;
+										if (h > 0)
+											d = -g - b.sqrt(h) * 5
+									}
+								}
+								if (F - cb < -2)
+									gb = 0;
+								else if (F - cb > 2)
+									gb = -1;
+								cb = F;
+								F = d;
+								tb = E - F / i / (Y || 1);
+								if (F && w && !Ab) {
+									a.Mb(e);
+									if (!P)
+										z.Td(tb);
+									else
+										z.Bd(tb)
+								}
+							}
+						}
+					}
+				}
+				function ob() {
+					rc();
+					if (B) {
+						B = h;
+						a.Y();
+						a.O(f, "mousemove", Db);
+						a.O(f, "touchmove", Db);
+						M = F;
+						z.ib();
+						var b = y.Z();
+						n.n(e.ae, t(b), b, t(E), E);
+						G & 12 && Ob();
+						dc(c)
+					}
+				}
+				function jc(c) {
+					if (M) {
+						a.Xe(c);
+						var b = a.Xb(c);
+						while (b && v !== b) {
+							b.tagName == "A" && a.Mb(c);
+							try {
+								b = b.parentNode
+							} catch (d) {
+								break
+							}
+						}
+					}
+				}
+				function nc(a) {
+					C[s];
+					s = t(a);
+					ub = C[s];
+					Tb(a);
+					return s
+				}
+				function Fc(a, b) {
+					w = 0;
+					nc(a);
+					n.n(e.xe, t(a), b)
+				}
+				function Tb(b, c) {
+					yb = b;
+					a.k(O, function(a) {
+						a.ec(t(b), b, c)
+					})
+				}
+				function uc() {
+					var b = e.fd || 0, a = X;
+					if (lb)
+						a & 1 && (a &= 1);
+					e.fd |= a;
+					return K = a & ~b
+				}
+				function rc() {
+					if (K) {
+						e.fd &= ~X;
+						K = 0
+					}
+				}
+				function Wb() {
+					var b = a.cb();
+					a.R(b, R);
+					a.G(b, "absolute");
+					return b
+				}
+				function t(a) {
+					return (a % r + r) % r
+				}
+				function kc(a, c) {
+					if (c)
+						if (!D) {
+							a = b.min(b.max(a + yb, 0), r - u);
+							c = h
+						} else if (D & 2) {
+							a = t(a + yb);
+							c = h
+						}
+					ab(a, o.Nb, c)
+				}
+				function zb() {
+					a.k(O, function(a) {
+						a.pc(a.Tb.md <= H)
+					})
+				}
+				function hc() {
+					if (!H) {
+						H = 1;
+						zb();
+						if (!B) {
+							G & 12 && dc();
+							G & 3 && C[s].Vb()
+						}
+					}
+				}
+				function gc() {
+					if (H) {
+						H = 0;
+						zb();
+						B || !(G & 12) || fc()
+					}
+				}
+				function ic() {
+					R = {
+						kb : J,
+						lb : I,
+						e : 0,
+						c : 0
+					};
+					a.k(U, function(b) {
+						a.R(b, R);
+						a.G(b, "absolute");
+						a.eb(b, "hidden");
+						a.P(b)
+					});
+					a.R(db, R)
+				}
+				function nb(b, a) {
+					ab(b, a, c)
+				}
+				function ab(f, e, k) {
+					if (Qb && (!B || o.Wc)) {
+						P = c;
+						B = h;
+						z.ib();
+						if (e == j)
+							e = Ub;
+						var d = Eb.Bb(), a = f;
+						if (k) {
+							a = d + f;
+							if (f > 0)
+								a = b.ceil(a);
+							else
+								a = b.floor(a)
+						}
+						if (D & 2)
+							a = t(a);
+						if (!(D & 1))
+							a = b.max(0, b.min(a, r - u));
+						var i = (a - d) % r;
+						a = d + i;
+						var g = d == a ? 0 : e * b.abs(i);
+						g = b.min(g, e * u * 1.5);
+						z.Sb(d, a, g || 1)
+					}
+				}
+				n.ye = ab;
+				n.rd = function() {
+					if (!Q) {
+						Q = c;
+						C[s] && C[s].Vb()
+					}
+				};
+				n.we = function() {
+					return M
+				};
+				function W() {
+					return a.t(x || q)
+				}
+				function kb() {
+					return a.A(x || q)
+				}
+				n.hb = W;
+				n.fb = kb;
+				function Gb(c, d) {
+					if (c == j)
+						return a.t(q);
+					if (!x) {
+						var b = a.cb(f);
+						a.Gc(b, a.Gc(q));
+						a.Ib(b, a.Ib(q));
+						a.W(b, "block");
+						a.G(b, "relative");
+						a.L(b, 0);
+						a.N(b, 0);
+						a.eb(b, "visible");
+						x = a.cb(f);
+						a.G(x, "absolute");
+						a.L(x, 0);
+						a.N(x, 0);
+						a.t(x, a.t(q));
+						a.A(x, a.A(q));
+						a.he(x, "0 0");
+						a.K(x, b);
+						var h = a.zb(q);
+						a.K(q, x);
+						a.ob(q, "backgroundImage", "");
+						a.k(h, function(c) {
+							a.K(a.J(c, "noscale") ? q : b, c)
+						})
+					}
+					Y = c / (d ? a.A : a.t)(x);
+					a.ge(x, Y);
+					var g = d ? Y * W() : c, e = d ? c : Y * kb();
+					a.t(q, g);
+					a.A(q, e);
+					a.k(O, function(a) {
+						a.jc(g, e)
+					})
+				}
+				n.Be = Gb;
+				n.Dc = function(a) {
+					var d = b.ceil(t(hb / ac)), c = t(a - s + d);
+					if (c > u) {
+						if (a - s > r / 2)
+							a -= r;
+						else if (a - s <= -r / 2)
+							a += r
+					} else
+						a = s + c - d;
+					return a
+				};
+				l.call(n);
+				n.db = q = a.Ab(q);
+				var o = a.C({
+					vb : 0,
+					Ie : 1,
+					lc : 0,
+					nc : h,
+					Eb : 1,
+					Yc : c,
+					Wc : c,
+					ld : 1,
+					mc : 3e3,
+					oc : 1,
+					Nb : 500,
+					Fd : d.se,
+					bd : 20,
+					Nc : 0,
+					T : 1,
+					Sc : 0,
+					Ce : 1,
+					fc : 1,
+					hc : 1
+				}, ec);
+				if (o.ze != j)
+					o.mc = o.ze;
+				if (o.u != j)
+					o.T = o.u;
+				var ib = o.fc & 3, vc = (o.fc & 4) / -4 || 1, fb = o.ve, L = a
+						.C({
+							M : p
+						}, o.kf), rb = o.jf, V = o.Ae, bb = o.ue, S = !o.Ce, x, v = a
+						.F(q, "slides", S), db = a.F(q, "loading", S)
+						|| a.cb(f), Jb = a.F(q, "navigator", S), bc = a.F(q,
+						"arrowleft", S), Zb = a.F(q, "arrowright", S), Hb = a
+						.F(q, "thumbnavigator", S), mc = a.t(v), lc = a.A(v), R, U = [], wc = a
+						.zb(v);
+				a.k(wc, function(b) {
+					if (b.tagName == "DIV" && !a.J(b, "u"))
+						U.push(b);
+					else
+						a.jb() && a.I(b, (a.I(b) || 0) + 1)
+				});
+				var s = -1, yb, ub, r = U.length, J = o.oe || mc, I = o.pe
+						|| lc, Vb = o.Nc, Bb = J + Vb, Cb = I + Vb, ac = ib & 1 ? Bb
+						: Cb, u = b.min(o.T, r), jb, w, K, Ab, O = [], Pb, Rb, Nb, cc, Ec, Q, G = o.oc, oc = o.mc, Ub = o.Nb, sb, eb, hb, Qb = u < r, D = Qb ? o.Eb
+						: 0, X, M, H = 1, P, B, T, vb = 0, wb = 0, F, cb, gb, Eb, y, Z, z, Sb = new qc, Y;
+				Q = o.nc;
+				n.Tb = ec;
+				ic();
+				a.S(q, "jssor-slider", c);
+				a.I(v, a.I(v) || 0);
+				a.G(v, "absolute");
+				jb = a.ab(v, c);
+				a.Kb(jb, v);
+				if (fb) {
+					cc = fb.me;
+					sb = fb.M;
+					eb = u == 1 && r > 1 && sb && (!a.dd() || a.qd() >= 8)
+				}
+				hb = eb || u >= r || !(D & 1) ? 0 : o.Sc;
+				X = (u > 1 || hb ? ib : -1) & o.hc;
+				var xb = v, C = [], A, N, Fb = a.ce(), lb = Fb.Zd, E, qb, Kb, tb;
+				Fb.hd
+						&& a.ob(xb, Fb.hd, ([ i, "pan-y", "pan-x", "none" ])[X]
+								|| "");
+				Z = new Bc;
+				if (eb)
+					A = new sb(Sb, J, I, fb, lb);
+				a.K(jb, Z.Rb);
+				a.eb(v, "hidden");
+				N = Wb();
+				a.ob(N, "backgroundColor", "#000");
+				a.xb(N, 0);
+				a.Kb(N, xb.firstChild, xb);
+				for (var pb = 0; pb < U.length; pb++) {
+					var yc = U[pb], Ac = new zc(yc, pb);
+					C.push(Ac)
+				}
+				a.P(db);
+				Eb = new Cc;
+				z = new pc(Eb, Z);
+				if (X) {
+					a.i(v, "mousedown", Xb);
+					a.i(v, "touchstart", tc);
+					a.i(v, "dragstart", Ib);
+					a.i(v, "selectstart", Ib);
+					a.i(f, "mouseup", ob);
+					a.i(f, "touchend", ob);
+					a.i(f, "touchcancel", ob);
+					a.i(g, "blur", ob)
+				}
+				G &= lb ? 10 : 5;
+				if (Jb && rb) {
+					Pb = new rb.M(Jb, rb, W(), kb());
+					O.push(Pb)
+				}
+				if (V && bc && Zb) {
+					V.Eb = D;
+					V.T = u;
+					Rb = new V.M(bc, Zb, V, W(), kb());
+					O.push(Rb)
+				}
+				if (Hb && bb) {
+					bb.lc = o.lc;
+					Nb = new bb.M(Hb, bb);
+					O.push(Nb)
+				}
+				a.k(O, function(a) {
+					a.yc(r, C, db);
+					a.pb(m.xc, kc)
+				});
+				Gb(W());
+				a.i(v, "click", jc);
+				a.i(q, "mouseout", a.cc(hc, q));
+				a.i(q, "mouseover", a.cc(gc, q));
+				zb();
+				o.ne && a.i(f, "keydown", function(a) {
+					if (a.keyCode == 37)
+						nb(-1);
+					else
+						a.keyCode == 39 && nb(1)
+				});
+				var mb = o.lc;
+				if (!(D & 1))
+					mb = b.max(0, b.min(mb, r - u));
+				z.Sb(mb, mb, 0)
+			};
+			e.re = 21;
+			e.be = 22;
+			e.ae = 23;
+			e.Md = 24;
+			e.xd = 25;
+			e.cf = 26;
+			e.Qe = 27;
+			e.Yd = 28;
+			e.Rd = 202;
+			e.xe = 203;
+			e.le = 206;
+			e.de = 207;
+			e.Xd = 208;
+			e.Vc = 209;
+			e.ie = 210;
+			e.ff = 211;
+			var m = {
+				xc : 1
+			};
+			var r = function(b, f, j) {
+				var d = this;
+				l.call(d);
+				var u, t, e, g, k, q = a.t(b), o = a.A(b);
+				function n(a) {
+					d.n(m.xc, a, c)
+				}
+				function r(c) {
+					a.E(b, c || !j.Eb && e == 0);
+					a.E(f, c || !j.Eb && e >= t - j.T);
+					u = c
+				}
+				d.ec = function(b, a, c) {
+					if (c)
+						e = a;
+					else {
+						e = b;
+						r(u)
+					}
+				};
+				d.pc = r;
+				var s;
+				d.jc = function(i, d) {
+					if (!s || g.sb == h) {
+						var e = a.Oc(b).clientWidth, d = a.Oc(b).clientHeight;
+						if (g.Jb & 1) {
+							a.N(b, (e - q) / 2);
+							a.N(f, (e - q) / 2)
+						}
+						if (g.Jb & 2) {
+							a.L(b, (d - o) / 2);
+							a.L(f, (d - o) / 2)
+						}
+						s = c
+					}
+				};
+				var p;
+				d.yc = function(d) {
+					t = d;
+					e = 0;
+					if (!p) {
+						a.i(b, "click", a.gb(i, n, -k));
+						a.i(f, "click", a.gb(i, n, k));
+						a.Ub(b);
+						a.Ub(f);
+						p = c
+					}
+				};
+				d.Tb = g = a.C({
+					te : 1
+				}, j);
+				k = g.te;
+				if (g.sb == h) {
+					a.S(b, "noscale", c);
+					a.S(f, "noscale", c)
+				}
+			}, o = function(k, B) {
+				var i = this, y, p, d, v = [], z, x, f, q, r, u, t, o, s, g, n;
+				l.call(i);
+				k = a.Ab(k);
+				function A(l, e) {
+					var g = this, b, k, j;
+					function o() {
+						k.Ne(p == e)
+					}
+					function h() {
+						if (!s.we()) {
+							var a = f - e % f, b = s.Dc((e + a) / f - 1), c = b
+									* f + f - a;
+							i.n(m.xc, c)
+						}
+					}
+					g.mb = e;
+					g.Kc = o;
+					j = l.Ye || l.Hb || a.cb();
+					g.Rb = b = a.Oe(n, "thumbnailtemplate", j, c);
+					k = a.Ub(b);
+					d.Db & 1 && a.i(b, "click", h);
+					d.Db & 2 && a.i(b, "mouseover", a.cc(h, b))
+				}
+				i.ec = function(c, d, e) {
+					var a = p;
+					p = c;
+					a != -1 && v[a].Kc();
+					v[c].Kc();
+					!e && s.ye(s.Dc(b.floor(d / f)))
+				};
+				i.pc = function(b) {
+					a.E(k, b)
+				};
+				i.jc = a.bc;
+				var w;
+				i.yc = function(F, D) {
+					if (!w) {
+						y = F;
+						b.ceil(y / f);
+						p = -1;
+						o = b.min(o, D.length);
+						var i = d.Qb & 1, m = u + (u + q) * (f - 1) * (1 - i), l = t
+								+ (t + r) * (f - 1) * i, B = m + (m + q)
+								* (o - 1) * i, n = l + (l + r) * (o - 1)
+								* (1 - i);
+						a.G(g, "absolute");
+						a.eb(g, "hidden");
+						d.Jb & 1 && a.N(g, (z - B) / 2);
+						d.Jb & 2 && a.L(g, (x - n) / 2);
+						a.t(g, B);
+						a.A(g, n);
+						var j = [];
+						a.k(D,
+								function(l, e) {
+									var h = new A(l, e), d = h.Rb, c = b
+											.floor(e / f), k = e % f;
+									a.N(d, (u + q) * k * (1 - i));
+									a.L(d, (t + r) * k * i);
+									if (!j[c]) {
+										j[c] = a.cb();
+										a.K(g, j[c])
+									}
+									a.K(j[c], d);
+									v.push(h)
+								});
+						var E = a.C({
+							Yc : h,
+							nc : h,
+							Wc : h,
+							oe : m,
+							pe : l,
+							Nc : q * i + r * (1 - i),
+							bd : 12,
+							Nb : 200,
+							oc : 1,
+							fc : d.Qb,
+							hc : d.lf ? 0 : d.Qb
+						}, d);
+						s = new e(k, E);
+						w = c
+					}
+				};
+				i.Tb = d = a.C({
+					zc : 3,
+					Lc : 3,
+					T : 1,
+					Qb : 1,
+					Jb : 3,
+					Db : 1
+				}, B);
+				if (d.v != j)
+					d.qe = d.v;
+				z = a.t(k);
+				x = a.A(k);
+				g = a.F(k, "slides", c);
+				n = a.F(g, "prototype");
+				u = a.t(n);
+				t = a.A(n);
+				a.Lb(n, g);
+				f = d.qe || 1;
+				q = d.zc;
+				r = d.Lc;
+				o = d.T;
+				d.sb == h && a.S(k, "noscale", c)
+			};
+			function p() {
+				k.call(this, 0, 0);
+				this.Cb = a.bc
+			}
+			jssor_slider1_starter = function(j) {
+				var i = [ {
+					j : 1200,
+					x : .3,
+					q : {
+						c : [ .3, .7 ]
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : -.3,
+					s : c,
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : -.3,
+					q : {
+						c : [ .3, .7 ]
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : .3,
+					s : c,
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					y : .3,
+					q : {
+						e : [ .3, .7 ]
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					y : -.3,
+					s : c,
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					y : -.3,
+					q : {
+						e : [ .3, .7 ]
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					y : .3,
+					s : c,
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : .3,
+					u : 2,
+					q : {
+						c : [ .3, .7 ]
+					},
+					D : {
+						U : 3
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					x : .3,
+					u : 2,
+					s : c,
+					D : {
+						U : 3
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					y : .3,
+					v : 2,
+					q : {
+						e : [ .3, .7 ]
+					},
+					D : {
+						X : 12
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					y : .3,
+					v : 2,
+					s : c,
+					D : {
+						X : 12
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					y : .3,
+					u : 2,
+					q : {
+						e : [ .3, .7 ]
+					},
+					D : {
+						U : 12
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					y : -.3,
+					u : 2,
+					s : c,
+					D : {
+						U : 12
+					},
+					g : {
+						e : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : .3,
+					v : 2,
+					q : {
+						c : [ .3, .7 ]
+					},
+					D : {
+						X : 3
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					x : -.3,
+					v : 2,
+					s : c,
+					D : {
+						X : 3
+					},
+					g : {
+						c : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					x : .3,
+					y : .3,
+					u : 2,
+					v : 2,
+					q : {
+						c : [ .3, .7 ],
+						e : [ .3, .7 ]
+					},
+					D : {
+						U : 3,
+						X : 12
+					},
+					g : {
+						c : d.m,
+						e : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					x : .3,
+					y : .3,
+					u : 2,
+					v : 2,
+					q : {
+						c : [ .3, .7 ],
+						e : [ .3, .7 ]
+					},
+					s : c,
+					D : {
+						U : 3,
+						X : 12
+					},
+					g : {
+						c : d.m,
+						e : d.m,
+						a : d.l
+					},
+					a : 2,
+					Q : c
+				}, {
+					j : 1200,
+					z : 20,
+					f : 3,
+					g : {
+						f : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					z : 20,
+					f : 3,
+					s : c,
+					g : {
+						f : d.Ic,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					z : 20,
+					f : 12,
+					g : {
+						f : d.m,
+						a : d.l
+					},
+					a : 2
+				}, {
+					j : 1200,
+					z : 20,
+					f : 12,
+					s : c,
+					g : {
+						f : d.Ic,
+						a : d.l
+					},
+					a : 2
+				} ], k = {
+					nc : c,
+					mc : 1500,
+					oc : 1,
+					hc : 3,
+					ne : c,
+					Nb : 800,
+					ve : {
+						M : q,
+						pd : i,
+						df : 1,
+						me : c
+					},
+					Ae : {
+						M : r,
+						md : 1
+					},
+					ue : {
+						M : o,
+						md : 2,
+						Db : 1,
+						zc : 8,
+						T : 10,
+						Sc : 360
+					}
+				}, h = new e(j, k);
+				function f() {
+					var c = h.db.parentNode.clientWidth;
+					if (c)
+						h.Be(b.max(b.min(c, 800), 300));
+					else
+						a.z(f, 30)
+				}
+				f();
+				a.i(g, "load", f);
+				a.i(g, "resize", a.Ve(g, f));
+				a.i(g, "orientationchange", f)
+			}
+		})(window, document, Math, null, true, false)
+	</script>
+	<div id="slider1_container"
+		style="position: relative; top: 0px; left: 0px; width: 800px; height: 895px; background: #191919; overflow: hidden;">
+		<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+			<div
+				style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+			</div>
+			<div
+				style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+			</div>
+		</div>
+		<div u="slides"
+			style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 800px; overflow: hidden;">
+			<div>
+				<img u="image" src="../img/alila/01.jpg"> <img u="thumb"
+					src="../img/alila/thumb-01.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/02.jpg"> <img u="thumb"
+					src="../img/alila/thumb-02.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/03.jpg"> <img u="thumb"
+					src="../img/alila/thumb-03.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/04.jpg"> <img u="thumb"
+					src="../img/alila/thumb-04.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/05.jpg"> <img u="thumb"
+					src="../img/alila/thumb-05.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/06.jpg"> <img u="thumb"
+					src="../img/alila/thumb-06.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/07.jpg"> <img u="thumb"
+					src="../img/alila/thumb-07.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/08.jpg"> <img u="thumb"
+					src="../img/alila/thumb-08.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/09.jpg"> <img u="thumb"
+					src="../img/alila/thumb-09.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/10.jpg"> <img u="thumb"
+					src="../img/alila/thumb-10.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/11.jpg"> <img u="thumb"
+					src="../img/alila/thumb-11.jpg">
+			</div>
+			<div>
+				<img u="image" src="../img/alila/12.jpg"> <img u="thumb"
+					src="../img/alila/thumb-12.jpg">
+			</div>
+		</div>
+		<span u="arrowleft" class="jssora05l" style="top: 358px; left: 8px;">
+		</span> <span u="arrowright" class="jssora05r" style="top: 358px; right: 8px">
+		</span>
+		<div u="thumbnavigator" class="jssort01"
+			style="left: 0px; bottom: 0px;">
+			<div u="slides" style="cursor: default;">
+				<div u="prototype" class="p">
+					<div class="w">
+						<div u="thumbnailtemplate" class="t"></div>
+					</div>
+					<div class="c"></div>
+				</div>
+			</div>
+		</div>
+		<a style="display: none" href="http://www.jssor.com">Image Slider</a>
+		<script>
+			jssor_slider1_starter('slider1_container');
+		</script>
+	</div>
+</body>
+</html>
