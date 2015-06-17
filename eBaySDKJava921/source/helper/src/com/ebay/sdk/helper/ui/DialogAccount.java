@@ -131,6 +131,9 @@ public class DialogAccount extends JDialog {
 	  return _apiContext;
   }
 
+  /**
+   * @wbp.parser.constructor
+   */
   public DialogAccount(Frame frame, ApiContext apiContext, String title, boolean modal, boolean enableApiCredentials) {
 	    super(frame, title, modal);
 	    this.enableApiCredentials = enableApiCredentials;
@@ -261,7 +264,7 @@ public class DialogAccount extends JDialog {
     jPanel10.add(jLabel8,  BorderLayout.EAST);
     jPanel10.add(jScrollPane1,  BorderLayout.CENTER);
     jPanel16.add(jPanel13,  BorderLayout.SOUTH);
-    jScrollPane1.getViewport().add(txtTokenData, null);
+    jScrollPane1.setViewportView(txtTokenData);
     jPanelTokenCredential.add(jPanel11, BorderLayout.NORTH);
     jPanel11.add(jLabel6, null);
     jPanel11.add(btnFetchToken, null);

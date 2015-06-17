@@ -33,6 +33,12 @@ import javax.swing.JToolBar;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JLayeredPane;
+import javax.swing.JList;
+import javax.swing.JTree;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import java.awt.Color;
 
 public class ebayMainFrame extends JFrame {
 
@@ -61,7 +67,7 @@ public class ebayMainFrame extends JFrame {
 	 */
 	public ebayMainFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 708, 451);
+		setBounds(100, 100, 869, 498);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -69,11 +75,20 @@ public class ebayMainFrame extends JFrame {
 		JMenu mnTestMenu = new JMenu("Account");
 		menuBar.add(mnTestMenu);
 
-		JMenuItem mntmNewMenuItem = new JMenuItem("New menu item");
+		JMenuItem mntmNewMenuItem = new JMenuItem("Login");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				DialogLogin login = new DialogLogin();
+				login.setVisible(true);
+			}
+		});
 		mnTestMenu.add(mntmNewMenuItem);
 
-		JMenuItem mntmTestMenuItem_1 = new JMenuItem("test menu item");
+		JMenuItem mntmTestMenuItem_1 = new JMenuItem("Remove");
 		mnTestMenu.add(mntmTestMenuItem_1);
+
+		JMenuItem mntmExit = new JMenuItem("Exit");
+		mnTestMenu.add(mntmExit);
 
 		JMenu mnNewMenu = new JMenu("New menu");
 		menuBar.add(mnNewMenu);
@@ -83,6 +98,9 @@ public class ebayMainFrame extends JFrame {
 
 		JMenu mnNewMenu_1 = new JMenu("Tools");
 		menuBar.add(mnNewMenu_1);
+		
+		JMenuItem mntmListing = new JMenuItem("listing");
+		mnNewMenu_1.add(mntmListing);
 
 		JMenu mnNewMenu_2 = new JMenu("Help");
 		menuBar.add(mnNewMenu_2);
@@ -180,7 +198,7 @@ public class ebayMainFrame extends JFrame {
 		textField_1.setColumns(10);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(42, 87, 189, 20);
+		comboBox.setBounds(42, 87, 190, 20);
 
 		contentPane.add(comboBox);
 
@@ -195,5 +213,6 @@ public class ebayMainFrame extends JFrame {
 		JButton btnRemove = new JButton("Remove");
 		btnRemove.setBounds(142, 121, 89, 23);
 		contentPane.add(btnRemove);
+		
 	}
 }

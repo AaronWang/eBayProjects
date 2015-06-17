@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
-
 	<!-- soap server, for production, use: https://api.ebay.com/wsapi -->
 	<ServerUrl>https://api.sandbox.ebay.com/wsapi</ServerUrl>
 	<!-- eps server, for production, use: https://api.ebay.com/ws/api.dll -->
@@ -9,26 +8,35 @@
 	</SignInUrl>
 
 	<!--LogFilePath>SanityTest.log</LogFilePath -->
-
 	<ApiCredential>
 		<Developer>7dbf468d-db19-4dbc-8e5e-8630a4543b61</Developer>
 		<Application>XinWang0c-6a0c-4ea0-8def-d094f42a343</Application>
 		<Certificate>98b00dc7-8d0b-48ea-bca6-a4b461b0c69a</Certificate>
 	</ApiCredential>
 
-	<eBayCredential>
-		<!-- Token is used for both API server and EPS server -->
-		<Token></Token>
-	</eBayCredential>
-	<RuName></RuName>
+	<RuName>Xin_Wang-XinWang0c-6a0c--wyipcandl</RuName>
 
+	<eBayCredential>
+		<Account>
+			<name>aaa</name>
+			<token>bbb</token>
+		</Account>
+		<Account>
+			<name>ccc</name>
+			<token>ddd</token>
+		</Account>
+		
+		<Account>
+			<name>ssssss</name>
+			<token>gggsssggggggggggaaaa</token>
+		</Account>
+	</eBayCredential>
 	<!-- set this if you access eBay API server behind a proxy -->
 	<Proxy>
-		<Host></Host>
-		<Port></Port>
+		<Host/>
+		<Port/>
 		<!-- set username/password if necessary -->
-		<Username></Username>
-		<Password></Password>
+		<Username/>
+		<Password/>
 	</Proxy>
-
 </Configuration>
