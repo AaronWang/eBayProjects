@@ -18,18 +18,23 @@
 /**
  * Project  : WebQQCore
  * Package  : iqq.im.core
- * File     : QQLifeCycle.java
+ * File     : QQEventDispatcher.java
  * Author   : solosky < solosky772@qq.com >
- * Created  : 2013-2-23
+ * Created  : 2012-8-2
  * License  : Apache License 2.0 
  */
-package core;
+package actor;
 
-import exception.EbayException;
+import core.LifeCycle;
 
-public interface LifeCycle {
+/**
+ *
+ * QQ内部操作分发器接�?
+ *
+ * @author solosky
+ */
+public interface EbayActorDispatcher extends LifeCycle {
 
-	public void init(SystemContext systemContext) throws EbayException;
 
-	public void destroy() throws EbayException;
+	public void pushActor(EbayActor actor);
 }

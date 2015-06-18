@@ -1,4 +1,4 @@
- /*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
- /**
+/**
  * Project  : WebQQCore
  * Package  : iqq.im.module
  * File     : AbstractModule.java
@@ -25,53 +25,68 @@
  */
 package moduals;
 
-import iqq.im.QQException;
-import iqq.im.action.HttpAction;
-import iqq.im.actor.HttpActor;
-import iqq.im.core.QQContext;
-import iqq.im.core.QQModule;
-import iqq.im.event.QQActionFuture;
-import iqq.im.event.future.HttpActionFuture;
+import core.Module;
+import core.SystemContext;
+import exception.EbayException;
 
 /**
- * <p>AbstractModule class.</p>
+ * <p>
+ * AbstractModule class.
+ * </p>
  *
  * @author solosky
  */
-public class AbstractModule implements QQModule {
-	private QQContext context;
+public class AbstractModule implements Module {
+	SystemContext systemContext;
 
-	/** {@inheritDoc} */
 	@Override
-	public void init(QQContext context) throws QQException{
-		this.context = context;
+	public void init(SystemContext systemContext) throws EbayException {
+		// TODO Auto-generated method stub
+		this.systemContext = systemContext;
+	}
+
+	@Override
+	public void destroy() throws EbayException {
+		// TODO Auto-generated method stub
+
 	}
 
 	/** {@inheritDoc} */
-	@Override
-	public void destroy() throws QQException{
-	}
-	
-	
+	// @Override
+	// public void init(QQContext context) throws QQException{
+	// this.context = context;
+	// }
+
+	/** {@inheritDoc} */
+	// @Override
+	// public void destroy() throws QQException{
+	// }
+
 	/**
-	 * <p>Getter for the field <code>context</code>.</p>
+	 * <p>
+	 * Getter for the field <code>context</code>.
+	 * </p>
 	 *
 	 * @return a {@link iqq.im.core.QQContext} object.
 	 */
-	protected QQContext getContext(){
-		return this.context;
-	}
-	
+	// protected QQContext getContext(){
+	// return this.context;
+	// }
+	//
 	/**
-	 * <p>pushHttpAction.</p>
+	 * <p>
+	 * pushHttpAction.
+	 * </p>
 	 *
-	 * @param action a {@link iqq.im.action.HttpAction} object.
+	 * @param action
+	 *            a {@link iqq.im.action.HttpAction} object.
 	 * @return a {@link iqq.im.event.QQActionFuture} object.
 	 */
-	protected QQActionFuture pushHttpAction(HttpAction action){
-		QQActionFuture future = new HttpActionFuture(action);	 	//替换掉原始的QQActionListener
-		getContext().pushActor(new HttpActor(HttpActor.Type.BUILD_REQUEST, getContext(), action));
-		return future;
-	}
-	
+	// protected QQActionFuture pushHttpAction(HttpAction action){
+	// QQActionFuture future = new HttpActionFuture(action);
+	// //替换掉原始的QQActionListener
+	// getContext().pushActor(new HttpActor(HttpActor.Type.BUILD_REQUEST,
+	// getContext(), action));
+	// return future;
+	// }
 }

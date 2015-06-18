@@ -8,8 +8,6 @@ import com.ebay.sdk.call.EndItemsCall;
 import com.ebay.soap.eBLBaseComponents.EndItemRequestContainerType;
 import com.ebay.soap.eBLBaseComponents.EndReasonCodeType;
 
-import ebayContext.EbayContext;
-
 public class EndingItems {
 	ArrayList<EndItemRequestContainerType> endingItemList;
 

@@ -33,7 +33,7 @@ package exception;
  */
 public class EbayException extends Exception {
 	private static final long serialVersionUID = 1L;
-	private QQErrorCode errorCode;
+	private EbayErrorCode errorCode;
 
 	/**
 	 * <p>
@@ -43,7 +43,7 @@ public class EbayException extends Exception {
 	 * @param errorCode
 	 *            a {@link iqq.im.QQException.QQErrorCode} object.
 	 */
-	public EbayException(QQErrorCode errorCode) {
+	public EbayException(EbayErrorCode errorCode) {
 		super(errorCode.toString());
 		this.errorCode = errorCode;
 	}
@@ -58,7 +58,7 @@ public class EbayException extends Exception {
 	 * @param msg
 	 *            a {@link java.lang.String} object.
 	 */
-	public EbayException(QQErrorCode errorCode, String msg) {
+	public EbayException(EbayErrorCode errorCode, String msg) {
 		super(msg);
 		this.errorCode = errorCode;
 	}
@@ -83,7 +83,7 @@ public class EbayException extends Exception {
 	 * @param e
 	 *            a {@link java.lang.Throwable} object.
 	 */
-	public EbayException(QQErrorCode errorCode, Throwable e) {
+	public EbayException(EbayErrorCode errorCode, Throwable e) {
 		super(errorCode.toString(), e);
 		this.errorCode = errorCode;
 	}
@@ -95,11 +95,11 @@ public class EbayException extends Exception {
 	 *
 	 * @return a {@link iqq.im.QQException.QQErrorCode} object.
 	 */
-	public QQErrorCode getError() {
+	public EbayErrorCode getError() {
 		return errorCode;
 	}
 
-	public enum QQErrorCode {
+	public enum EbayErrorCode {
 		/** 登录凭证实效 */
 		INVALID_LOGIN_AUTH,
 		/** 参数无效 */

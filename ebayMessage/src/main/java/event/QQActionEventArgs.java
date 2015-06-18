@@ -1,4 +1,4 @@
-/*
+ /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -15,21 +15,37 @@
  * limitations under the License.
  */
 
-/**
- * Project  : WebQQCore
- * Package  : iqq.im.core
- * File     : QQLifeCycle.java
+ /**
+ * Project  : WebQQCoreAsync
+ * Package  : iqq.im.event
+ * File     : ActionEventArgs.java
  * Author   : solosky < solosky772@qq.com >
- * Created  : 2013-2-23
+ * Created  : 2012-9-5
  * License  : Apache License 2.0 
  */
-package core;
+package iqq.im.event;
 
-import exception.EbayException;
-
-public interface LifeCycle {
-
-	public void init(SystemContext systemContext) throws EbayException;
-
-	public void destroy() throws EbayException;
+/**
+ * <p>Abstract QQActionEventArgs class.</p>
+ *
+ * @author solosky
+ */
+public abstract class QQActionEventArgs {
+	
+	public static class ProgressArgs{
+		/**当前进度*/
+		public long current;
+		/**总的进度*/
+		public long total;
+		public String toString() {
+			return "ProgressArgs [current=" + current + ", total=" + total + "]";
+		}
+	}
+	
+	public static class CheckVerifyArgs {
+		public int result;
+		public String code;
+		public long uin;
+	}
+	
 }

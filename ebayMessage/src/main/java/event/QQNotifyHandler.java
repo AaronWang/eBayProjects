@@ -1,4 +1,4 @@
-/*
+ /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -15,21 +15,31 @@
  * limitations under the License.
  */
 
-/**
+ /**
  * Project  : WebQQCore
- * Package  : iqq.im.core
- * File     : QQLifeCycle.java
+ * Package  : iqq.im.event
+ * File     : QQNotifyHandler.java
  * Author   : solosky < solosky772@qq.com >
- * Created  : 2013-2-23
+ * Created  : 2013-3-16
  * License  : Apache License 2.0 
  */
-package core;
+package iqq.im.event;
 
-import exception.EbayException;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-public interface LifeCycle {
-
-	public void init(SystemContext systemContext) throws EbayException;
-
-	public void destroy() throws EbayException;
+/**
+ *
+ * 一个注解可以简化NotifyEvent的监听，分发和处理
+ * 只需在处理事件的方法上加入@QQNotifyHandler即可
+ * 如
+ *
+ * @author solosky
+ */
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface QQNotifyHandler {
+	QQNotifyEvent.Type value();
 }

@@ -17,19 +17,28 @@
 
 /**
  * Project  : WebQQCore
- * Package  : iqq.im.core
- * File     : QQLifeCycle.java
+ * Package  : iqq.im
+ * File     : QQEventListener.java
  * Author   : solosky < solosky772@qq.com >
- * Created  : 2013-2-23
+ * Created  : 2012-7-31
  * License  : Apache License 2.0 
  */
-package core;
+package event;
 
-import exception.EbayException;
-
-public interface LifeCycle {
-
-	public void init(SystemContext systemContext) throws EbayException;
-
-	public void destroy() throws EbayException;
+/**
+ *
+ * QQ通知事件监听�?
+ *
+ * @author solosky
+ */
+public interface EbayNotifyListener {
+	/**
+	 * <p>
+	 * onNotifyEvent.
+	 * </p>
+	 *
+	 * @param event
+	 *            a {@link iqq.im.event.QQNotifyEvent} object.
+	 */
+	public void onNotifyEvent(EbayNotifyEvent event);
 }

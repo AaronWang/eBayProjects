@@ -18,18 +18,25 @@
 /**
  * Project  : WebQQCore
  * Package  : iqq.im.core
- * File     : QQLifeCycle.java
+ * File     : QQAction.java
  * Author   : solosky < solosky772@qq.com >
- * Created  : 2013-2-23
+ * Created  : 2012-9-1
  * License  : Apache License 2.0 
  */
-package core;
+package actor;
 
-import exception.EbayException;
-
-public interface LifeCycle {
-
-	public void init(SystemContext systemContext) throws EbayException;
-
-	public void destroy() throws EbayException;
+/**
+ * <p>
+ * QQActor interface.
+ * </p>
+ *
+ * @author solosky
+ */
+public interface EbayActor {
+	/**
+	 * <p>
+	 * execute.
+	 * </p>
+	 */
+	public void execute();
 }

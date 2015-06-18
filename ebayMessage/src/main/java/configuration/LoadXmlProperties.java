@@ -36,8 +36,8 @@ public class LoadXmlProperties implements LoadProperty {
 			SAXReader reader = new SAXReader();
 			doc = reader.read(inputFile);
 
-			System.out.println("Root element :"
-					+ doc.getRootElement().getName());
+//			System.out.println("Root element :"
+//					+ doc.getRootElement().getName());
 
 			Element classElement = doc.getRootElement();
 
@@ -46,7 +46,7 @@ public class LoadXmlProperties implements LoadProperty {
 
 			accounts.clear();
 			for (Node node : nodes) {
-				System.out.println("\nCurrent Element :" + node.getName());
+//				System.out.println("\nCurrent Element :" + node.getName());
 				Account tmp = new Account();
 				tmp.setName(node.selectSingleNode("name").getText());
 				tmp.setToken(node.selectSingleNode("token").getText());

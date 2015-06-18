@@ -12,8 +12,6 @@ import com.ebay.soap.eBLBaseComponents.OrderType;
 import com.ebay.soap.eBLBaseComponents.PaginationType;
 import com.ebay.soap.eBLBaseComponents.TradingRoleCodeType;
 
-import ebayContext.EbayContext;
-
 public class GetOrders {
 
 	private ArrayList<OrderType> orderList = new ArrayList<OrderType>();
