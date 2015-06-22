@@ -29,7 +29,7 @@ import exception.EbayException;
 
 public interface LifeCycle {
 
-	public void init(SystemContext systemContext) throws EbayException;
+	public void init(SystemContext systemContext);
 
 	public void destroy() throws EbayException;
 }

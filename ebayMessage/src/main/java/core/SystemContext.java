@@ -25,7 +25,6 @@
  */
 package core;
 
-import event.EbayNotifyEvent;
 import actor.EbayActor;
 
 /**
@@ -35,6 +34,7 @@ import actor.EbayActor;
  * @author solosky
  */
 public interface SystemContext {
+	
 	/**
 	 * <p>
 	 * pushActor.
@@ -43,6 +43,7 @@ public interface SystemContext {
 	 * @param actor
 	 *            a {@link iqq.im.actor.QQActor} object.
 	 */
+	
 	public void pushActor(EbayActor actor);
 
 	/**
@@ -53,7 +54,8 @@ public interface SystemContext {
 	 * @param event
 	 *            a {@link iqq.im.event.QQNotifyEvent} object.
 	 */
-	public void fireNotify(EbayNotifyEvent event);
+	
+//	public void fireNotify(EbayNotifyEvent event);
 
 	/**
 	 * <p>

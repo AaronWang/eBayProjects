@@ -1,4 +1,4 @@
-package frontEnd;
+package UI;
 
 import ioSection.ReadWriteImplement;
 
@@ -15,19 +15,27 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import moduals.EbayContextModule;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
+import bean.callInputBean.GetSessionIDBean;
+import core.Module;
+import actor.ActorAssembler;
 import authentication.GetToken;
 import ebayApiCall.EndingItems;
 import ebayApiCall.GetOrders;
+import ebayApiCall.GetSessionIDCallAction;
+import ebayClient.EbayClient;
 
 import javax.swing.JComboBox;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JToolBar;
 import javax.swing.JMenuBar;
@@ -38,6 +46,7 @@ import javax.swing.JList;
 import javax.swing.JTree;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+
 import java.awt.Color;
 
 public class ebayMainFrame extends JFrame {
@@ -49,6 +58,7 @@ public class ebayMainFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -98,7 +108,7 @@ public class ebayMainFrame extends JFrame {
 
 		JMenu mnNewMenu_1 = new JMenu("Tools");
 		menuBar.add(mnNewMenu_1);
-		
+
 		JMenuItem mntmListing = new JMenuItem("listing");
 		mnNewMenu_1.add(mntmListing);
 
@@ -115,15 +125,22 @@ public class ebayMainFrame extends JFrame {
 		JButton btnAuthentication = new JButton("Authentication");
 		btnAuthentication.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				GetToken gettoken = new GetToken();
-				if (gettoken.getSessionID())
-					gettoken.openBrowser();
+
+				((ActorAssembler) EbayClient.getInstance().getModule(
+						Module.Type.ACTORASSEMBLER)).createGetSessionIDActor(
+						new GetSessionIDBean(), "");
+				// EbayClient.getInstance();
+				System.out.println("Get session Call");
+
+				// GetToken gettoken = new GetToken();
+				// if (gettoken.getSessionID())
+				// gettoken.openBrowser();
 
 				int reply = JOptionPane.showConfirmDialog(null,
 						"authentication done ~", "Ebay Authentication",
 						JOptionPane.YES_OPTION);
-				if (reply == JOptionPane.YES_OPTION)
-					gettoken.getToken();
+				// if (reply == JOptionPane.YES_OPTION)
+				// gettoken.getToken();
 				// JOptionPane.showMessageDialog(null, "sucess!");
 			}
 		});
@@ -213,6 +230,6 @@ public class ebayMainFrame extends JFrame {
 		JButton btnRemove = new JButton("Remove");
 		btnRemove.setBounds(142, 121, 89, 23);
 		contentPane.add(btnRemove);
-		
+
 	}
 }

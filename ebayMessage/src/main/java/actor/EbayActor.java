@@ -25,6 +25,9 @@
  */
 package actor;
 
+import core.CallAction;
+import ebayApiCall.AbstractCallAction;
+
 /**
  * <p>
  * QQActor interface.
@@ -38,5 +41,10 @@ public interface EbayActor {
 	 * execute.
 	 * </p>
 	 */
+	
 	public void execute();
+
+	public void setAction(CallAction action);
+
+	public void despatch();
 }

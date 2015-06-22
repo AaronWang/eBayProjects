@@ -1,4 +1,4 @@
- /*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
- /**
+/**
  * Project  : WebQQCore
  * Package  : iqq.im.core
  * File     : QQEventDispatcher.java
@@ -25,10 +25,9 @@
  */
 package actor;
 
-import iqq.im.QQException;
-import iqq.im.core.QQContext;
-
 import javax.swing.SwingUtilities;
+
+import core.SystemContext;
 
 /**
  *
@@ -37,15 +36,18 @@ import javax.swing.SwingUtilities;
  *
  * @author solosky
  */
-public class SwingActorDispatcher implements QQActorDispatcher {
-	/* (non-Javadoc)
+public class SwingActorDispatcher implements EbayActorDispatcher {
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see iqq.im.actor.QQActorDispatcher#pushActor(iqq.im.actor.QQActor)
 	 */
+
 	/** {@inheritDoc} */
 	@Override
-	public void pushActor(final QQActor actor){
-		SwingUtilities.invokeLater(new Runnable(){
-			public void run(){
+	public void pushActor(final EbayActor actor) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
 				actor.execute();
 			}
 		});
@@ -53,13 +55,13 @@ public class SwingActorDispatcher implements QQActorDispatcher {
 
 	/** {@inheritDoc} */
 	@Override
-	public void init(QQContext context) throws QQException {
-		//do nothing
+	public void init(SystemContext context) {
+		// do nothing
 	}
 
 	/** {@inheritDoc} */
 	@Override
-	public void destroy() throws QQException {
-		//do nothing
+	public void destroy() {
+		// do nothing
 	}
 }

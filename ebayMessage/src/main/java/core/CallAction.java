@@ -1,14 +1,13 @@
 package core;
 
-import com.ebay.sdk.ApiCall;
+import bean.callInputBean.AbstractInputBean;
 
-import exception.EbayException;
+import com.ebay.sdk.ApiContext;
 
 public interface CallAction {
-	public void init();
 
-	public void excecute() throws Exception;
+	public void excecute();
 
 	public void callBack();
-	
+
 }

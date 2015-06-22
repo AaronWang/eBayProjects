@@ -4,7 +4,7 @@ public class RunMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		EbayClient ebayClient = new EbayClient();
+		EbayClient ebayClient = EbayClient.getInstance();
 
 	}
 

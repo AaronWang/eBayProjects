@@ -1,4 +1,4 @@
-package frontEnd;
+package UI;
 
 import javax.swing.JPanel;
 

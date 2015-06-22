@@ -27,49 +27,40 @@ package actor;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.Logger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import core.CallAction;
+import core.SystemContext;
 import exception.EbayException;
 
 /**
  *
- * 单线程的QQ内部分发器，可以同时使用多个QQ实例�?
- *
- * @author solosky
+ * @author Aaron
  */
+
 public class ThreadActorDispatcher implements EbayActorDispatcher, Runnable {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(ThreadActorDispatcher.class);
 	private BlockingQueue<EbayActor> actorQueue;
 	private Thread dispatchThread;
 
-	/**
-	 * 默认构�?�函数，不会自动启动action循环
-	 */
 	public ThreadActorDispatcher() {
-		this.actorQueue = new LinkedBlockingQueue<QQActor>();
+		this.actorQueue = new LinkedBlockingQueue<EbayActor>();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see iqq.im.actor.QQActorDispatcher#pushActor(iqq.im.actor.QQActor)
-	 */
-	/** {@inheritDoc} */
 	@Override
-	public void pushActor(QQActor actor) {
+	public void pushActor(EbayActor actor) {
 		this.actorQueue.add(actor);
 	}
 
-	/**
-	 * 执行�?个QQActor，返回是否继续下�?个actor
-	 */
-	private boolean dispatchAction(QQActor actor) {
-		try {
-			actor.execute();
-		} catch (Throwable e) {
-			LOG.warn("QQActor dispatchAction Error!", e);
-		}
+	private boolean dispatchAction(EbayActor actor) {
+		// try {
+		actor.execute();
+		// } catch (Throwable e) {
+		// LOG.warn("QQActor dispatchAction Error!", e);
+		// }
 		return !(actor instanceof ExitActor);
 	}
 
@@ -88,50 +79,41 @@ public class ThreadActorDispatcher implements EbayActorDispatcher, Runnable {
 
 	/** {@inheritDoc} */
 	@Override
-	public void init(QQContext context) throws QQException {
+	public void init(SystemContext context) {
 		actorQueue.clear();
 		dispatchThread = new Thread(this);
-		dispatchThread.setName("QQActorDispatcher");
+		dispatchThread.setName("ThreadActorDispatcher");
 		dispatchThread.start();
 	}
 
-	/** {@inheritDoc} */
 	@Override
-	public void destroy() throws QQException {
+	public void destroy() throws EbayException {
 		pushActor(new ExitActor());
 		try {
 			if (Thread.currentThread() != dispatchThread) {
 				dispatchThread.join();
 			}
 		} catch (InterruptedException e) {
-			throw new QQException(QQException.QQErrorCode.UNKNOWN_ERROR, e);
+			throw new EbayException(EbayException.EbayErrorCode.UNKNOWN_ERROR,
+					e);
 		}
 	}
 
-	/**
-	 * 
-	 * �?个伪Actor只是为了让ActorLoop停下�?
-	 *
-	 * @author solosky
-	 *
-	 */
-	public class ExitActor implements QQActor {
+	public class ExitActor implements EbayActor {
 		@Override
 		public void execute() {
 			// do nothing
 		}
+
+		@Override
+		public void setAction(CallAction action) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void despatch() {
+			// TODO Auto-generated method stub
+		}
 	}
-
-	@Override
-	public void init() throws EbayException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void pushActor(EbayActor actor) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

@@ -12,6 +12,7 @@ import com.ebay.sdk.call.GeteBayOfficialTimeCall;
 
 import configuration.LoadTextProperties;
 import configuration.LoadXmlProperties;
+import core.SystemContext;
 
 public class EbayContextModule extends AbstractModule {
 
@@ -43,9 +44,22 @@ public class EbayContextModule extends AbstractModule {
 		for (Account tmp : accountList.getAccounts()) {
 			getApiContext();
 			originalApiContext.getApiCredential().seteBayToken(tmp.getToken());
-//			System.out.println("name  : " + tmp.getName());
-//			System.out.println("token : " + tmp.getToken());
+			// System.out.println("name  : " + tmp.getName());
+			// System.out.println("token : " + tmp.getToken());
 			apiContextMap.put(tmp.getName(), originalApiContext);
+
+		}
+	}
+
+	@Override
+	public void init(SystemContext systemContext) {
+		super.init(systemContext);
+		try {
+			
+//			initSDK(getApiContext());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
@@ -59,7 +73,10 @@ public class EbayContextModule extends AbstractModule {
 	}
 
 	public ApiContext getApiContext(String accountID) {
-		return apiContextMap.get(accountID);
+		if (accountID == "" || accountID == null)
+			return getApiContext();
+		else
+			return apiContextMap.get(accountID);
 	}
 
 	public ApiContext getApiContext() {

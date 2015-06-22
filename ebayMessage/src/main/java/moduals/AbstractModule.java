@@ -40,7 +40,7 @@ public class AbstractModule implements Module {
 	SystemContext systemContext;
 
 	@Override
-	public void init(SystemContext systemContext) throws EbayException {
+	public void init(SystemContext systemContext) {
 		// TODO Auto-generated method stub
 		this.systemContext = systemContext;
 	}
