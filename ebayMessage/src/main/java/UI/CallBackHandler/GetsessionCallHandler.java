@@ -1,15 +1,13 @@
 package UI.CallBackHandler;
 
-import event.future.CallBackHandler;
-import bean.callInputBean.AbstractInputBean;
+import bean.Bean;
+import handler.future.CallBackHandler;
 
 public class GetsessionCallHandler extends CallBackHandler {
 
 	@Override
-	public void handle(AbstractInputBean bean) {
+	public void handle(Bean bean) {
 		// TODO Auto-generated method stub
-	
+
 	}
 }
-
-

@@ -1,17 +1,33 @@
 package ebayApiCall;
 
-import bean.callInputBean.AbstractInputBean;
-import bean.callInputBean.GetSessionIDBean;
+import handler.future.DefaultGetSessionIDCallHandler;
+import bean.Bean;
+import bean.callBean.EbayCallBean;
+import bean.callBean.GetSessionIDBean;
 
 import com.ebay.sdk.ApiContext;
-import com.ebay.sdk.ApiException;
-import com.ebay.sdk.SdkException;
 import com.ebay.sdk.call.GetSessionIDCall;
 
-public class GetSessionIDCallAction extends AbstractCallAction {
+public class GetSessionIDCallAction extends EbayCallAction {
 
 	@Override
-	void excecuteAction() {
+	public void initialize(Bean b) {
+		// TODO Auto-generated method stub
+		apicall = new GetSessionIDCall();
+		bean = b;
+		apicall.setApiContext(((EbayCallBean) b).getApiContext());
+
+		((GetSessionIDBean) b).setRuName("Xin_Wang-XinWang0c-6a0c--wyipcandl");
+
+		((GetSessionIDCall) apicall).setRuName(((GetSessionIDBean) b)
+				.getRuName());
+		getCallBackListener().addEbayCallBackHandler(
+				new DefaultGetSessionIDCallHandler());
+
+	}
+
+	@Override
+	public void executeAction() {
 		// TODO Auto-generated method stub
 		GetSessionIDCall getsessionIDCall = (GetSessionIDCall) apicall;
 		try {
@@ -23,22 +39,8 @@ public class GetSessionIDCallAction extends AbstractCallAction {
 
 		((GetSessionIDBean) bean).setReturnedSessionID(getsessionIDCall
 				.getReturnedSessionID());
-		System.out.println("GetSessionIDCallAction finished : "
-				+ getsessionIDCall.getReturnedSessionID());
-	}
 
-	@Override
-	public void initialize(AbstractInputBean b, ApiContext ctx) {
-		// TODO Auto-generated method stub
-		apicall = new GetSessionIDCall();
-		// bean = new GetSessionIDBean();
-		bean = b;
-		apicall.setApiContext(ctx);
-
-		((GetSessionIDBean) b).setRuName("Xin_Wang-XinWang0c-6a0c--wyipcandl");
-
-		((GetSessionIDCall) apicall).setRuName(((GetSessionIDBean) b)
-				.getRuName());
-
+//		System.out.println("GetSessionIDCallAction finished : "
+//				+ getsessionIDCall.getReturnedSessionID());
 	}
 }

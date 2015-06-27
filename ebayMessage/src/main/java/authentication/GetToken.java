@@ -10,7 +10,7 @@ import java.util.Properties;
 
 import javax.swing.JOptionPane;
 
-import moduals.EbayContext;
+import modules.EbayContext;
 
 import com.ebay.sdk.ApiException;
 import com.ebay.sdk.SdkException;

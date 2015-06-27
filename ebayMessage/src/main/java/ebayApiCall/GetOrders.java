@@ -12,7 +12,7 @@ import com.ebay.soap.eBLBaseComponents.OrderType;
 import com.ebay.soap.eBLBaseComponents.PaginationType;
 import com.ebay.soap.eBLBaseComponents.TradingRoleCodeType;
 
-public class GetOrders {
+public class GetOrders extends EbayCallAction {
 
 	private ArrayList<OrderType> orderList = new ArrayList<OrderType>();
 
@@ -52,7 +52,8 @@ public class GetOrders {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		AddDisputeCall adddispute = new AddDisputeCall(EbayContext.getApiContext());
+		AddDisputeCall adddispute = new AddDisputeCall(
+				EbayContext.getApiContext());
 		adddispute
 				.setDisputeExplanation(DisputeExplanationCodeType.BUYER_NOT_PAID);
 		adddispute.setDisputeReason(DisputeReasonCodeType.BUYER_HAS_NOT_PAID);
@@ -63,10 +64,12 @@ public class GetOrders {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				System.out.println(orderList.get(i).getBuyerUserID()+"    "+" failed!~");
+				System.out.println(orderList.get(i).getBuyerUserID() + "    "
+						+ " failed!~");
 				continue;
 			}
-			System.out.println(orderList.get(i).getBuyerUserID()+"    "+" success!~");
+			System.out.println(orderList.get(i).getBuyerUserID() + "    "
+					+ " success!~");
 		}
 		// adddispute.setOrderLineItemID("required");
 

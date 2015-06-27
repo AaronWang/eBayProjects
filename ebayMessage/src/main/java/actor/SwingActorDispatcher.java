@@ -29,14 +29,8 @@ import javax.swing.SwingUtilities;
 
 import core.SystemContext;
 
-/**
- *
- * 使用Swing的线程模型Actor分发器，可以结合SWing来使用，
- * 好处就是�?有的回调函数都是在GUI线程里面运行的，可以直接在回调函数里面写GUI的代�?
- *
- * @author solosky
- */
-public class SwingActorDispatcher implements EbayActorDispatcher {
+
+public class SwingActorDispatcher implements ActorDispatcher {
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -45,7 +39,7 @@ public class SwingActorDispatcher implements EbayActorDispatcher {
 
 	/** {@inheritDoc} */
 	@Override
-	public void pushActor(final EbayActor actor) {
+	public void pushActor(final Actor actor) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				actor.execute();

@@ -28,6 +28,6 @@ package core;
 
 public interface Module extends LifeCycle {
 	public enum Type {
-		EBAYCONTEXT, ACTORASSEMBLER, LOGIN,
+		EBAYCONTEXT, ACTORASSEMBLER, STORAGEBOX,
 	}
 }

@@ -1,55 +1,80 @@
 package actor;
 
-import moduals.EbayContextModule;
+import handler.future.CallBackHandler;
+import modules.EbayContextModule;
+import MultiAction.LoginActions;
+import SequenceAction.SequenceActions;
+import bean.Bean;
+import bean.callBean.EbayCallBean;
 
 import com.ebay.sdk.ApiContext;
 
-import core.CallAction;
+import core.Action;
 import core.Module;
 import core.SystemContext;
-import bean.callInputBean.AddDisputeBean;
-import bean.callInputBean.FetchTokenBean;
-import bean.callInputBean.GetSessionIDBean;
+import ebayApiCall.EbayCallAction;
+import ebayApiCall.FetchTokenCallAction;
 import ebayApiCall.GetSessionIDCallAction;
+import ebayApiCall.GetUserCallAction;
 import ebayClient.EbayClient;
-import exception.EbayException;
 
 public class ActorAssembler implements Module {
-	// public static ActorAssembler instance = new ActorAssembler();
-	//
-	// public static ActorAssembler getInstance() {
-	// if (instance == null)
-	// instance = new ActorAssembler();
-	// return instance;
-	// }
 
 	private ApiContext getApiContext(String userID) {
 		return ((EbayContextModule) EbayClient.getInstance().getModule(
 				Module.Type.EBAYCONTEXT)).getApiContext(userID);
 	}
 
-	public EbayActor createGetSessionIDActor(GetSessionIDBean bean,
-			String userID) {
-		GetSessionIDCallAction newAction = new GetSessionIDCallAction();
-		newAction.initialize(bean, getApiContext(userID));
-		EbayCallActor actor = new EbayCallActor();
+	public Actor createSequenceActionActor(SequenceActions actionName,
+			Bean bean, CallBackHandler handler) {
+
+		SequenceActionActor actor = new SequenceActionActor();
+
+		Action newAction = null;
+
+		switch (actionName) {
+		case LOGIN:
+			newAction = new LoginActions();
+			break;
+		default:
+			// newAction = new GetSessionIDCallAction();
+			break;
+		}
+
+		newAction.initialize(bean);
+		// newAction.getCallBackListener().addEbayCallBackHandler(handler);
 		actor.setAction(newAction);
-		actor.despatch();
 		return actor;
 	}
 
-	public EbayActor createFetchTokenActor(FetchTokenBean bean, String userID) {
-		GetSessionIDCallAction newAction = new GetSessionIDCallAction();
-		newAction.initialize(bean, getApiContext(userID));
-		EbayCallActor actor = new EbayCallActor();
-		actor.setAction(newAction);
-		return actor;
-	}
+	public Actor createSingleEbayCallActionActor(
+			EbayCallAction.ActionNames actionName, Bean bean,
+			CallBackHandler handler) {
+		SingleActionActor actor = new SingleActionActor();
+		EbayCallAction newAction = null;
 
-	public EbayActor createAddDisputActor(AddDisputeBean bean, String userID) {
-		GetSessionIDCallAction newAction = new GetSessionIDCallAction();
-		newAction.initialize(bean, getApiContext(userID));
-		EbayCallActor actor = new EbayCallActor();
+		switch (actionName) {
+		case GETSESSIONID:
+			newAction = new GetSessionIDCallAction();
+			break;
+		case FETCHTOKEN:
+			newAction = new FetchTokenCallAction();
+			break;
+		case GETUSER:
+			newAction = new GetUserCallAction();
+		default:
+			// newAction = new GetSessionIDCallAction();
+			break;
+		}
+
+		// ((EbayCallBean) bean).setUserID("");
+		if (((EbayCallBean) bean).getApiContext() == null)
+			((EbayCallBean) bean)
+					.setApiContext(getApiContext(((EbayCallBean) bean)
+							.getUserID()));
+		
+		newAction.initialize(bean);
+		newAction.getCallBackListener().addEbayCallBackHandler(handler);
 		actor.setAction(newAction);
 		return actor;
 	}
@@ -61,7 +86,7 @@ public class ActorAssembler implements Module {
 	}
 
 	@Override
-	public void destroy() throws EbayException {
+	public void destroy() {
 		// TODO Auto-generated method stub
 
 	}

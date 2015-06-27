@@ -25,88 +25,21 @@
  */
 package core;
 
-import actor.EbayActor;
+import actor.Actor;
 
-/**
- *
- * QQ环境上下文，�?有的模块都是用QQContext来获取对�?
- *
- * @author solosky
- */
 public interface SystemContext {
-	
-	/**
-	 * <p>
-	 * pushActor.
-	 * </p>
-	 *
-	 * @param actor
-	 *            a {@link iqq.im.actor.QQActor} object.
-	 */
-	
-	public void pushActor(EbayActor actor);
 
-	/**
-	 * <p>
-	 * fireNotify.
-	 * </p>
-	 *
-	 * @param event
-	 *            a {@link iqq.im.event.QQNotifyEvent} object.
-	 */
-	
-//	public void fireNotify(EbayNotifyEvent event);
+	public void pushActor(Actor actor);
 
-	/**
-	 * <p>
-	 * getModule.
-	 * </p>
-	 *
-	 * @param type
-	 *            a {@link iqq.im.core.QQModule.Type} object.
-	 * @param <T>
-	 *            a T object.
-	 * @return a T object.
-	 */
+	// public void fireNotify(EbayNotifyEvent event);
+
 	public <T extends Module> T getModule(Module.Type type);
 
-	/**
-	 * <p>
-	 * getSerivce.
-	 * </p>
-	 *
-	 * @param type
-	 *            a {@link iqq.im.core.QQService.Type} object.
-	 * @param <T>
-	 *            a T object.
-	 * @return a T object.
-	 */
 	public <T extends Service> T getSerivce(Service.Type type);
 
-	/**
-	 * <p>
-	 * getAccount.
-	 * </p>
-	 *
-	 * @return a {@link iqq.im.bean.QQAccount} object.
-	 */
-//	public QQAccount getAccount();
+	// public QQAccount getAccount();
 
-	/**
-	 * <p>
-	 * getSession.
-	 * </p>
-	 *
-	 * @return a {@link iqq.im.core.QQSession} object.
-	 */
-//	public QQSession getSession();
+	// public QQSession getSession();
 
-	/**
-	 * <p>
-	 * getStore.
-	 * </p>
-	 *
-	 * @return a {@link iqq.im.core.QQStore} object.
-	 */
-//	public QQStore getStore();
+	// public QQStore getStore();
 }

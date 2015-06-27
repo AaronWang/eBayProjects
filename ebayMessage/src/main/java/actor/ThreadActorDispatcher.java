@@ -31,7 +31,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import core.CallAction;
 import core.SystemContext;
 import exception.EbayException;
 
@@ -40,22 +39,23 @@ import exception.EbayException;
  * @author Aaron
  */
 
-public class ThreadActorDispatcher implements EbayActorDispatcher, Runnable {
+public class ThreadActorDispatcher implements ActorDispatcher, Runnable {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(ThreadActorDispatcher.class);
-	private BlockingQueue<EbayActor> actorQueue;
+	private BlockingQueue<Actor> actorQueue;
+
 	private Thread dispatchThread;
 
 	public ThreadActorDispatcher() {
-		this.actorQueue = new LinkedBlockingQueue<EbayActor>();
+		this.actorQueue = new LinkedBlockingQueue<Actor>();
 	}
 
 	@Override
-	public void pushActor(EbayActor actor) {
+	public void pushActor(Actor actor) {
 		this.actorQueue.add(actor);
 	}
 
-	private boolean dispatchAction(EbayActor actor) {
+	private boolean dispatchAction(Actor actor) {
 		// try {
 		actor.execute();
 		// } catch (Throwable e) {
@@ -87,33 +87,24 @@ public class ThreadActorDispatcher implements EbayActorDispatcher, Runnable {
 	}
 
 	@Override
-	public void destroy() throws EbayException {
+	public void destroy() {
 		pushActor(new ExitActor());
-		try {
-			if (Thread.currentThread() != dispatchThread) {
+		if (Thread.currentThread() != dispatchThread) {
+			try {
 				dispatchThread.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (InterruptedException e) {
-			throw new EbayException(EbayException.EbayErrorCode.UNKNOWN_ERROR,
-					e);
 		}
 	}
 
-	public class ExitActor implements EbayActor {
+	public class ExitActor extends Actor {
+
 		@Override
 		public void execute() {
-			// do nothing
-		}
-
-		@Override
-		public void setAction(CallAction action) {
 			// TODO Auto-generated method stub
 
-		}
-
-		@Override
-		public void despatch() {
-			// TODO Auto-generated method stub
 		}
 	}
 }

@@ -1,6 +1,6 @@
 package bean;
 
-public class Account {
+public class Account extends Bean{
 	private String name;
 	private String token;
 

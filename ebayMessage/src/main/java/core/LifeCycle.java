@@ -31,5 +31,5 @@ public interface LifeCycle {
 
 	public void init(SystemContext systemContext);
 
-	public void destroy() throws EbayException;
+	public void destroy();
 }

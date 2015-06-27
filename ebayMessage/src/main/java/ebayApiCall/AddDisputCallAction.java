@@ -1,31 +1,42 @@
 package ebayApiCall;
 
-import bean.callInputBean.AbstractInputBean;
-import bean.callInputBean.AddDisputeBean;
+import bean.Bean;
+import bean.callBean.AddDisputeBean;
 
-import com.ebay.sdk.ApiCall;
 import com.ebay.sdk.ApiContext;
 import com.ebay.sdk.call.AddDisputeCall;
 
-public class AddDisputCallAction extends AbstractCallAction {
+public class AddDisputCallAction extends EbayCallAction {
 
-
-	public void setInput() {
-
+	@Override
+	public void initialize(Bean b) {
+		// TODO Auto-generated method stub
+		apicall = new AddDisputeCall();
+		bean = (AddDisputeBean) b;
+		apicall.setApiContext(((AddDisputeBean) b).getApiContext());
+		((AddDisputeCall) apicall).setDisputeExplanation(((AddDisputeBean) b)
+				.getDisputeExplanation());
+		((AddDisputeCall) apicall).setDisputeReason(((AddDisputeBean) b)
+				.getDisputeReason());
+		((AddDisputeCall) apicall).setItemID(((AddDisputeBean) b).getItemID());
+		((AddDisputeCall) apicall).setTransactionID(((AddDisputeBean) b)
+				.getTransactionID());
+		((AddDisputeCall) apicall).setOrderLineItemID(((AddDisputeBean) b)
+				.getOrderLineItemID());
 	}
 
 	@Override
-	public void excecute() throws Exception {
+	public void executeAction() {
 		// TODO Auto-generated method stub
 
 		AddDisputeCall addDisputeCall = (AddDisputeCall) apicall;
-		addDisputeCall.addDispute();
+		try {
+			addDisputeCall.addDispute();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
-	@Override
-	public void initialize(AbstractInputBean b, ApiContext ctx) {
-		// TODO Auto-generated method stub
-		apicall = new AddDisputeCall();
-		bean = new AddDisputeBean();
-	}
 }
