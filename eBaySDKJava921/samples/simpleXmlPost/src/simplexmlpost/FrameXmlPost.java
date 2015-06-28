@@ -151,10 +151,10 @@ public class FrameXmlPost extends JFrame {
     jMenu2.add(jMenuItemAbout);
     jPanel1.add(jScrollPane1, BorderLayout.CENTER);
     jPanel1.add(jLabel1, BorderLayout.NORTH);
-    jScrollPane1.getViewport().add(txtRequestXml, null);
+    jScrollPane1.setViewportView(txtRequestXml);
     jPanel2.add(jScrollPane2, BorderLayout.CENTER);
     jPanel2.add(jLabel2, BorderLayout.NORTH);
-    jScrollPane2.getViewport().add(txtResponseXml, null);
+    jScrollPane2.setViewportView(txtResponseXml);
   }
 
   public ApiContext getApiContext() {
@@ -196,11 +196,10 @@ public class FrameXmlPost extends JFrame {
 
     try
     {
-
     	String serverUrl = this.apiContext.getApiServerUrl();
     	if (serverUrl == null || serverUrl.length() == 0) {
           showInfoMessage("Please fill in the API server address first.");
-          return;		
+          return;
     	}
     	
       ApiSchemaBasedXmlPoster axp = new ApiSchemaBasedXmlPoster();
