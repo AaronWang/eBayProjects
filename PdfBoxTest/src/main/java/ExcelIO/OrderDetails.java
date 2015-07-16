@@ -7,6 +7,8 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.util.CellReference;
 
+import bean.BuyerAddress;
+
 public class OrderDetails {
 
 	Workbook wb;
@@ -15,13 +17,15 @@ public class OrderDetails {
 	public static void main(String[] args) {
 		OrderDetails od = new OrderDetails("SalesHistoryPrinting.xlsx");
 		// i = 8
-		od.getOrderDetails(2, ColumnName.SalesRecordNumber.getNumber());
-		od.getOrderDetails(2, ColumnName.BuyerAddress1.getNumber());
-		od.getOrderDetails(2, ColumnName.BuyerAddress2.getNumber());
-		od.getOrderDetails(2, ColumnName.BuyerCity.getNumber());
-		od.getOrderDetails(2, ColumnName.BuyerState.getNumber());
-		od.getOrderDetails(2, ColumnName.BuyerPostcode.getNumber());
-		od.getOrderDetails(2, ColumnName.Quantity.getNumber());
+		BuyerAddress address = new BuyerAddress();
+		address.buyername = od.getOrderDetails(3, ColumnName.BuyerFullname.getNumber());
+		address.salesRecordNumber = od.getOrderDetails(3, ColumnName.SalesRecordNumber.getNumber());
+		address.address1 = od.getOrderDetails(3, ColumnName.BuyerAddress1.getNumber());
+		address.address2 = od.getOrderDetails(3, ColumnName.BuyerAddress2.getNumber());
+		address.city = od.getOrderDetails(3, ColumnName.BuyerCity.getNumber());
+		address.state = od.getOrderDetails(3, ColumnName.BuyerState.getNumber());
+		address.postcode = od.getOrderDetails(3, ColumnName.BuyerPostcode.getNumber());
+		address.quantity = od.getOrderDetails(3, ColumnName.Quantity.getNumber());
 	}
 
 	public OrderDetails() {
@@ -45,23 +49,24 @@ public class OrderDetails {
 		}
 		Cell cell = row.getCell(cellColumnNumber);
 
-//		CellReference cellRef = new CellReference(orderNumber, cellColumnNumber);
-//		System.out.print(cellRef.formatAsString());
-//		System.out.print(" - ");
+		// CellReference cellRef = new CellReference(orderNumber,
+		// cellColumnNumber);
+		// System.out.print(cellRef.formatAsString());
+		// System.out.print(" - ");
 		if (cell == null) {
-//			System.out.println();
+			// System.out.println();
 			return "";
 		}
 
 		switch (cell.getCellType()) {
 		case Cell.CELL_TYPE_STRING:
-//			System.out.println(cell.getRichStringCellValue().getString());
+			// System.out.println(cell.getRichStringCellValue().getString());
 			return cell.getRichStringCellValue().getString();
 		case Cell.CELL_TYPE_NUMERIC:
 			if (DateUtil.isCellDateFormatted(cell)) {
 				System.out.println(cell.getDateCellValue());
 			} else {
-//				System.out.println((int) cell.getNumericCellValue());
+				// System.out.println((int) cell.getNumericCellValue());
 				return Integer.toString((int) cell.getNumericCellValue());
 			}
 			break;
@@ -72,7 +77,7 @@ public class OrderDetails {
 		// System.out.println(cell.getCellFormula());
 		// break;
 		default:
-//			System.out.println();
+			// System.out.println();
 		}
 		return "";
 	}

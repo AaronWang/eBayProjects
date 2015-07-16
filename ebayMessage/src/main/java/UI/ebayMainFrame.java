@@ -20,26 +20,16 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-
-import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import UI.Listing.SingleListing;
 import UI.Listing.SingleListingVariation;
 
-import java.awt.Component;
-
-import javax.swing.JSeparator;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.JTextField;
-import javax.swing.JRadioButton;
-
 public class ebayMainFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel		contentPane;
 	private JPanel		rightPanel;
 

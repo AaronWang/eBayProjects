@@ -1,6 +1,7 @@
 package printingOrders;
 
 import java.io.IOException;
+import java.util.Calendar;
 
 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -9,8 +10,8 @@ import org.apache.pdfbox.pdmodel.edit.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
+import bean.BuyerAddress;
 import ExcelIO.AddressList;
-import ExcelIO.BuyerAddress;
 
 public class GeneratePDF {
 
@@ -27,13 +28,26 @@ public class GeneratePDF {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		GeneratePDF pdf = new GeneratePDF();
-		pdf.openExcel("SalesHistoryPrinting.xlsx");
+//		pdf.currentTime();
+
+		pdf.openExcel("SalesHistory.xlsx");
 		try {
 			pdf.pdfStyleA();
 		} catch (IOException | COSVisitorException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public String currentTime() {
+		String time = "";
+		Calendar cal = Calendar.getInstance();
+
+		time += cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.HOUR_OF_DAY) + "-"
+				+ cal.get(Calendar.MINUTE) + "-" + cal.get(Calendar.SECOND);
+		System.out.println(time);
+
+		return time;
 	}
 
 	public void openExcel(String fileName) {
@@ -55,15 +69,17 @@ public class GeneratePDF {
 				document.addPage(page);
 				contentStream = new PDPageContentStream(document, page);
 			}
-			printAddressA(50, 800 - position * 100, address);
+			
+			printAddressA(80, 800 - position * 100, address);
 			if (position == 7) {
 				contentStream.close();
 			}
 			count++;
 		}
-		
+
 		contentStream.close();
-		document.save("pdfStyleA.pdf");
+
+		document.save(currentTime() + ".pdf");
 		document.close();
 	}
 
@@ -75,8 +91,7 @@ public class GeneratePDF {
 		document = new PDDocument();
 	}
 
-	public void printAddressA(int x, int y, BuyerAddress address)
-			throws IOException {
+	public void printAddressA(int x, int y, BuyerAddress address) throws IOException {
 
 		contentStream.beginText();
 		contentStream.setFont(font, 12);
@@ -96,6 +111,14 @@ public class GeneratePDF {
 		contentStream.moveTextPositionByAmount(0, -15);
 		contentStream.drawString(address.postcode);
 		contentStream.endText();
+		
+		contentStream.beginText();
+		contentStream.setFont(font, 12);
+		contentStream.moveTextPositionByAmount(x+250, y);
+		contentStream.drawString(address.customLabel);
+		contentStream.endText();
+		
+		
 	}
 
 	public void printAddressB(int x, int y, BuyerAddress address) {

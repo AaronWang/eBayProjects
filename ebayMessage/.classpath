@@ -28,8 +28,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/ExcelOperation"/>
 	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EbayBusinessPolicySample"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -15,10 +15,10 @@ public class test {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) throws COSVisitorException,
-			IOException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		System.out.println("aaaaaaa");
 		// Create a new empty document
 		PDDocument document = new PDDocument();
 
@@ -28,30 +28,39 @@ public class test {
 		document.addPage(page);
 
 		PDFont font = PDType1Font.TIMES_ROMAN;
-		PDPageContentStream contentStream = new PDPageContentStream(document,
-				page);
-		
-		// Define a text content stream using the selected font, moving the
-		// cursor and drawing the text "Hello World"
-		contentStream.beginText();
-		contentStream.setFont(font, 12);
-//		contentStream.moveTextPositionByAmount(200, 700);
-		contentStream.setTextRotation(-90*Math.PI/180, 200,700);//弧度 角度 转化
-		contentStream.drawString("Hello World");
-	
-		contentStream.endText();
+		PDPageContentStream contentStream;
+		try {
+			contentStream = new PDPageContentStream(document, page);
+			// Define a text content stream using the selected font, moving the
+			// cursor and drawing the text "Hello World"
+			contentStream.beginText();
+			contentStream.setFont(font, 12);
+			
+			//x =0, y = 0, left bottom corner.
+			
+			// contentStream.moveTextPositionByAmount(200, 700);
+			contentStream.setTextRotation(-90 * Math.PI / 180, 200, 700);// 弧度
+																			// 角度
+																			// 转化
+			contentStream.drawString("Hello World!!!");
 
-		// Make sure that the content stream is closed:
-		contentStream.close();
-		// Save the newly created document
-		document.save("BlankPage.pdf");
+			contentStream.endText();
 
-		// finally make sure that the document is properly
-		// closed.
-		document.close();
+			// Make sure that the content stream is closed:
+			contentStream.close();
+			// Save the newly created document
+			document.save("BlankPage.pdf");
+			// finally make sure that the document is properly
+			// closed.
+			document.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (COSVisitorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
-
-
-
-

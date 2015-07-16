@@ -7,8 +7,8 @@ import bean.Account;
 public interface LoadProperty {
 	ArrayList<Account> accounts = new ArrayList<Account>();
 
-	public static final String propertiFile = "keys.properties";
-	public static final String propertiXmlFile = "Config.xml";
+	public static final String propertiFile = "../../keys.properties";
+	public static final String propertiXmlFile = "../../Config.xml";
 
 	public void loadAccounts();
 

@@ -1,0 +1,153 @@
+
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <S:Body>
+        <getSellerProfilesRequest xmlns="http://www.ebay.com/marketplace/selling/v1/services"/>
+    </S:Body>
+</S:Envelope>
+
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <S:Body>
+        <getSellerProfilesRequest xmlns="http://www.ebay.com/marketplace/selling/v1/services">
+            <includeDetails>true</includeDetails>
+        </getSellerProfilesRequest>
+    </S:Body>
+</S:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <getSellerProfilesResponse xmlns="http://www.ebay.com/marketplace/selling/v1/services">
+            <ack>Success</ack>
+            <paymentProfileList>
+                <PaymentProfile>
+                    <profileName>PayPal:Money transfer accepted in checkout,Mo</profileName>
+                    <profileId>76977920019</profileId>
+                    <profileType>PAYMENT</profileType>
+                    <profileVersion>110728264019</profileVersion>
+                    <profileDesc>PayPal, wrq3530@163.com, Money Transfer Accepted, Money transfer accepted in checkout</profileDesc>
+                    <siteId>15</siteId>
+                    <categoryGroups>
+                        <categoryGroup>
+                            <default>false</default>
+                            <name>ALL</name>
+                        </categoryGroup>
+                    </categoryGroups>
+                    <paymentInfo>
+                        <acceptedPaymentMethod>MoneyXferAccepted</acceptedPaymentMethod>
+                        <acceptedPaymentMethod>MoneyXferAcceptedInCheckout</acceptedPaymentMethod>
+                        <acceptedPaymentMethod>PayPal</acceptedPaymentMethod>
+                        <immediatePay>false</immediatePay>
+                        <paypalEmailAddress>wrq3530@163.com</paypalEmailAddress>
+                    </paymentInfo>
+                </PaymentProfile>
+                <PaymentProfile>
+                    <profileName>Default Payment Policy</profileName>
+                    <profileId>76358723019</profileId>
+                    <profileType>PAYMENT</profileType>
+                    <profileVersion>111859099019</profileVersion>
+                    <siteId>15</siteId>
+                    <categoryGroups>
+                        <categoryGroup>
+                            <default>true</default>
+                            <name>ALL</name>
+                        </categoryGroup>
+                    </categoryGroups>
+                    <paymentInfo>
+                        <acceptedPaymentMethod>PayPal</acceptedPaymentMethod>
+                        <immediatePay>true</immediatePay>
+                        <paymentInstructions>If you use net bank transfer. Please use your EBAY ID as reference. Please send me a confirm message after you make the payment. Thank you for your support!!
+                            NOTE: PAYMENT WOULD NOT BE CLEARED IF YOU LEAVE WRONG REFERENCE.</paymentInstructions>
+                        <paypalEmailAddress>wrq3530@163.com</paypalEmailAddress>
+                    </paymentInfo>
+                </PaymentProfile>
+            </paymentProfileList>
+            <returnPolicyProfileList>
+                <ReturnPolicyProfile>
+                    <profileName>Default Return Policy</profileName>
+                    <profileId>76358744019</profileId>
+                    <profileType>RETURN_POLICY</profileType>
+                    <profileVersion>109931907019</profileVersion>
+                    <siteId>15</siteId>
+                    <categoryGroups>
+                        <categoryGroup>
+                            <default>true</default>
+                            <name>ALL</name>
+                        </categoryGroup>
+                    </categoryGroups>
+                    <returnPolicyInfo>
+                        <refundOption>MoneyBack</refundOption>
+                        <shippingCostPaidByOption>Buyer</shippingCostPaidByOption>
+                        <returnsWithinOption>Days_30</returnsWithinOption>
+                        <returnsAcceptedOption>ReturnsAccepted</returnsAcceptedOption>
+                        <restockingFeeValue>NoRestockingFee</restockingFeeValue>
+                    </returnPolicyInfo>
+                </ReturnPolicyProfile>
+            </returnPolicyProfileList>
+            <shippingPolicyProfile>
+                <ShippingPolicyProfile>
+                    <profileName>Default Postage Policy</profileName>
+                    <profileId>76358809019</profileId>
+                    <profileType>SHIPPING</profileType>
+                    <profileVersion>109931972019</profileVersion>
+                    <siteId>15</siteId>
+                    <categoryGroups>
+                        <categoryGroup>
+                            <default>true</default>
+                            <name>ALL</name>
+                        </categoryGroup>
+                    </categoryGroups>
+                    <shippingPolicyInfo>
+                        <shippingPolicyName>Default Postage Policy</shippingPolicyName>
+                        <domesticShippingType>Flat</domesticShippingType>
+                        <intlShippingType>NotSpecified</intlShippingType>
+                        <dispatchTimeMax>1</dispatchTimeMax>
+                        <shippingOption>0</shippingOption>
+                        <shippingProfileDiscountInfo>
+                            <domesticFlatCalcDiscountProfileId>0</domesticFlatCalcDiscountProfileId>
+                            <intlFlatCalcDiscountProfileId>0</intlFlatCalcDiscountProfileId>
+                            <applyDomesticPromoShippingProfile>false</applyDomesticPromoShippingProfile>
+                            <applyIntlPromoShippingProfile>false</applyIntlPromoShippingProfile>
+                        </shippingProfileDiscountInfo>
+                        <domesticShippingPolicyInfoService>
+                            <shippingService>AU_StandardDelivery</shippingService>
+                            <sortOrderId>1</sortOrderId>
+                            <freeShipping>true</freeShipping>
+                            <fastShipping>false</fastShipping>
+                            <shippingServiceAdditionalCost currencyId="AUD">0.0</shippingServiceAdditionalCost>
+                            <shippingServiceCost currencyId="AUD">0.0</shippingServiceCost>
+                            <buyerResponsibleForShipping>false</buyerResponsibleForShipping>
+                            <buyerResponsibleForPickup>false</buyerResponsibleForPickup>
+                        </domesticShippingPolicyInfoService>
+                        <domesticShippingPolicyInfoService>
+                            <shippingService>AU_StandardDeliveryRegisted</shippingService>
+                            <sortOrderId>2</sortOrderId>
+                            <freeShipping>false</freeShipping>
+                            <fastShipping>false</fastShipping>
+                            <shippingServiceAdditionalCost currencyId="AUD">2.0</shippingServiceAdditionalCost>
+                            <shippingServiceCost currencyId="AUD">11.0</shippingServiceCost>
+                            <buyerResponsibleForShipping>false</buyerResponsibleForShipping>
+                            <buyerResponsibleForPickup>false</buyerResponsibleForPickup>
+                        </domesticShippingPolicyInfoService>
+                        <insurance>
+                            <domesticInsuranceFee currencyId="AUD">0.0</domesticInsuranceFee>
+                            <domesticInsuranceOption>NotOffered</domesticInsuranceOption>
+                            <intlInsuranceOption>None</intlInsuranceOption>
+                            <intlInsuranceFee currencyId="AUD">0.0</intlInsuranceFee>
+                        </insurance>
+                        <intlRateTable>None</intlRateTable>
+                        <domesticRateTable>None</domesticRateTable>
+                        <shippingPolicyCurrency>AUD</shippingPolicyCurrency>
+                        <shippingPolicyIdentity>
+                            <shippingPolicyId>103794787013</shippingPolicyId>
+                            <shippingPolicyVersionId>155974411013</shippingPolicyVersionId>
+                        </shippingPolicyIdentity>
+                        <GlobalShipping>false</GlobalShipping>
+                        <EligibleForPickupDropOff>false</EligibleForPickupDropOff>
+                    </shippingPolicyInfo>
+                </ShippingPolicyProfile>
+            </shippingPolicyProfile>
+        </getSellerProfilesResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

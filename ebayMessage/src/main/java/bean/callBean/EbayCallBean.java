@@ -8,7 +8,6 @@ public class EbayCallBean extends Bean {
 	String myUserID;
 	ApiContext apiContext;
 
-
 	public String getMyUserID() {
 		return myUserID;
 	}

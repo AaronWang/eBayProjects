@@ -17,7 +17,7 @@ public class AddItemCallAction extends EbayCallAction {
 		// TODO Auto-generated method stub
 		apicall = new AddItemCall();
 		bean = b;
-		
+
 		apicall.setApiContext(((EbayCallBean) b).getApiContext());
 		((AddItemCall) apicall).setItem(((AddItemBean) b).getItem());
 	}
@@ -35,21 +35,14 @@ public class AddItemCallAction extends EbayCallAction {
 		}
 
 		((AddItemBean) bean).setReturnedItemID(addItemCall.getReturnedItemID());
-		((AddItemBean) bean).setReturnedStartTime(addItemCall
-				.getReturnedStartTime());
-		((AddItemBean) bean).setReturnedEndTime(addItemCall
-				.getReturnedEndTime());
+		((AddItemBean) bean).setReturnedStartTime(addItemCall.getReturnedStartTime());
+		((AddItemBean) bean).setReturnedEndTime(addItemCall.getReturnedEndTime());
 		((AddItemBean) bean).setReturnedFees(addItemCall.getReturnedFees());
-		((AddItemBean) bean).setReturnedCategoryID(addItemCall
-				.getReturnedCategoryID());
-		((AddItemBean) bean).setReturnedCategory2ID(addItemCall
-				.getReturnedCategory2ID());
-		((AddItemBean) bean).setReturnedDiscountReason(addItemCall
-				.getReturnedDiscountReason());
-		((AddItemBean) bean).setReturnedProductSuggestions(addItemCall
-				.getReturnedProductSuggestions());
-		((AddItemBean) bean).setReturnedListingRecommendations(addItemCall
-				.getReturnedListingRecommendations());
+		((AddItemBean) bean).setReturnedCategoryID(addItemCall.getReturnedCategoryID());
+		((AddItemBean) bean).setReturnedCategory2ID(addItemCall.getReturnedCategory2ID());
+		((AddItemBean) bean).setReturnedDiscountReason(addItemCall.getReturnedDiscountReason());
+		((AddItemBean) bean).setReturnedProductSuggestions(addItemCall.getReturnedProductSuggestions());
+		((AddItemBean) bean).setReturnedListingRecommendations(addItemCall.getReturnedListingRecommendations());
 	}
 
 }

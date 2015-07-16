@@ -23,11 +23,9 @@ public class EndItemsCallAction extends EbayCallAction {
 		// TODO Auto-generated method stub
 		apicall = new EndItemsCall();
 		bean = (EndItemsBean) b;
-		((EndItemsCall) apicall).setApiContext(((EbayCallBean) b)
-				.getApiContext());
+		apicall.setApiContext(((EbayCallBean) b).getApiContext());
 
-		((EndItemsCall) apicall).setEndItemRequestContainer(((EndItemsBean) b)
-				.getEndItemRequestContainer());
+		((EndItemsCall) apicall).setEndItemRequestContainer(((EndItemsBean) b).getEndItemRequestContainer());
 
 	}
 
@@ -41,8 +39,7 @@ public class EndItemsCallAction extends EbayCallAction {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		((EndItemsBean) bean).setReturnedEndItemResponseContainer(endItemsCall
-				.getReturnedEndItemResponseContainer());
-		
+		((EndItemsBean) bean).setReturnedEndItemResponseContainer(endItemsCall.getReturnedEndItemResponseContainer());
+
 	}
 }

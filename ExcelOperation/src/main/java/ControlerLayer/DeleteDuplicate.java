@@ -37,8 +37,7 @@ public class DeleteDuplicate {
 				continue;
 			int count;
 			if (oldSheet.getRow(i).getCell(13).getCellType() == Cell.CELL_TYPE_NUMERIC)
-				count = (int) oldSheet.getRow(i).getCell(13)
-						.getNumericCellValue();
+				count = (int) oldSheet.getRow(i).getCell(13).getNumericCellValue();
 			else
 				continue;
 			for (int j = i + 1; j < oldRowNumber; j++) {
@@ -51,8 +50,7 @@ public class DeleteDuplicate {
 				String b = cell.getStringCellValue();
 				if (b.equals(""))
 					continue;
-				int count1 = (int) oldSheet.getRow(j).getCell(13)
-						.getNumericCellValue();
+				int count1 = (int) oldSheet.getRow(j).getCell(13).getNumericCellValue();
 				a = a.replace(",", "");
 				a = a.replace(" ", "");
 				a = a.replace(".", "");
@@ -87,8 +85,7 @@ public class DeleteDuplicate {
 			if (cell != null) {
 				String a = cell.getStringCellValue();
 				if (!a.equals("aaaaa")) {
-					CommonTools
-							.copyRow(newSheet, rowNumber, oldSheet.getRow(i));
+					CommonTools.copyRow(newSheet, rowNumber, oldSheet.getRow(i));
 					rowNumber++;
 				}
 			}

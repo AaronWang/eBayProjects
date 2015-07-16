@@ -14,19 +14,20 @@ import core.Module;
 import core.SystemContext;
 import ebayApiCall.EbayCallAction;
 import ebayApiCall.FetchTokenCallAction;
+import ebayApiCall.GetItemCallAction;
+import ebayApiCall.GetMyeBaySellingCallAction;
 import ebayApiCall.GetSessionIDCallAction;
+import ebayApiCall.GetStoreCallAction;
 import ebayApiCall.GetUserCallAction;
 import ebayClient.EbayClient;
 
 public class ActorAssembler implements Module {
 
 	private ApiContext getApiContext(String userID) {
-		return ((EbayContextModule) EbayClient.getInstance().getModule(
-				Module.Type.EBAYCONTEXT)).getApiContext(userID);
+		return ((EbayContextModule) EbayClient.getInstance().getModule(Module.Type.EBAYCONTEXT)).getApiContext(userID);
 	}
 
-	public Actor createSequenceActionActor(SequenceActions actionName,
-			Bean bean, CallBackHandler handler) {
+	public Actor createSequenceActionActor(SequenceActions actionName, Bean bean, CallBackHandler handler) {
 
 		SequenceActionActor actor = new SequenceActionActor();
 
@@ -47,9 +48,7 @@ public class ActorAssembler implements Module {
 		return actor;
 	}
 
-	public Actor createSingleEbayCallActionActor(
-			EbayCallAction.ActionNames actionName, Bean bean,
-			CallBackHandler handler) {
+	public Actor createSingleEbayCallActionActor(EbayCallAction.ActionNames actionName, Bean bean, CallBackHandler handler) {
 		SingleActionActor actor = new SingleActionActor();
 		EbayCallAction newAction = null;
 
@@ -62,6 +61,16 @@ public class ActorAssembler implements Module {
 			break;
 		case GETUSER:
 			newAction = new GetUserCallAction();
+			break;
+		case GETMYEBAYSELLING:
+			newAction = new GetMyeBaySellingCallAction();
+			break;
+		case GETITEM:
+			newAction = new GetItemCallAction();
+			break;
+		case GETSTORE:
+			newAction = new GetStoreCallAction();
+			break;
 		default:
 			// newAction = new GetSessionIDCallAction();
 			break;
@@ -69,13 +78,12 @@ public class ActorAssembler implements Module {
 
 		// ((EbayCallBean) bean).setUserID("");
 		if (((EbayCallBean) bean).getApiContext() == null)
-			((EbayCallBean) bean)
-					.setApiContext(getApiContext(((EbayCallBean) bean)
-							.getUserID()));
-		
+			((EbayCallBean) bean).setApiContext(getApiContext(((EbayCallBean) bean).getMyUserID()));
+
 		newAction.initialize(bean);
 		newAction.getCallBackListener().addEbayCallBackHandler(handler);
 		actor.setAction(newAction);
+
 		return actor;
 	}
 

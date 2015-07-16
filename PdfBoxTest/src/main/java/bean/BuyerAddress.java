@@ -1,4 +1,4 @@
-package ExcelIO;
+package bean;
 
 public class BuyerAddress {
 

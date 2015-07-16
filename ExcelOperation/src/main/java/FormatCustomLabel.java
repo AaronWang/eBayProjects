@@ -20,7 +20,6 @@ public class FormatCustomLabel {
 		ArrayList<String> stringList = new ArrayList<String>();
 		while (sc.hasNext()) {
 			stringList.add(sc.next());
-
 		}
 		for (String each : stringList) {
 			System.out.println(each);
@@ -42,6 +41,7 @@ public class FormatCustomLabel {
 				return false;
 			}
 		});
+
 		fileList.addAll(Arrays.asList(files));
 		for (File each : fileList) {
 			System.out.println(each.getAbsolutePath());

@@ -46,7 +46,8 @@ public class CommonTools {
 			// Set the cell data type
 			newCell.setCellType(oldCell.getCellType());
 
-			if(CommonTools.check)break;
+			if (CommonTools.check)
+				break;
 			// Set the cell data value
 			switch (oldCell.getCellType()) {
 			case Cell.CELL_TYPE_BLANK:
@@ -108,8 +109,7 @@ public class CommonTools {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		long returnTime = timeInfo.getMessage().getTransmitTimeStamp()
-				.getTime();
+		long returnTime = timeInfo.getMessage().getTransmitTimeStamp().getTime();
 		Date time = new Date(returnTime);
 		@SuppressWarnings("deprecation")
 		int y = time.getYear();

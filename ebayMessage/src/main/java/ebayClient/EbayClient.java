@@ -1,11 +1,8 @@
 package ebayClient;
 
 import handler.future.CallBackHandler;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import configuration.LoadXmlProperties;
 import modules.EbayContextModule;
 import modules.StorageBox;
 import actor.Actor;
@@ -55,7 +52,6 @@ public class EbayClient implements SystemContext {
 			Module module = modules.get(type);
 			module.init(this);
 		}
-
 		actorDispatcher.init(this);
 	}
 
@@ -79,72 +75,62 @@ public class EbayClient implements SystemContext {
 	}
 
 	public void StartAuthentication() {
-		pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER))
-				.createSingleEbayCallActionActor(
-						EbayCallAction.ActionNames.GETSESSIONID,
-						new GetSessionIDBean(), new CallBackHandler() {
+		pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER)).createSingleEbayCallActionActor(EbayCallAction.ActionNames.GETSESSIONID, new GetSessionIDBean(),
+				new CallBackHandler() {
 
-							@Override
-							public void handle(Bean bean) {
-								// TODO Auto-generated method stub
-								((StorageBox) ((EbayClient) systemContext)
-										.getModule(Module.Type.STORAGEBOX))
-										.setBean("login", bean);
-							}
-						}));
+					@Override
+					public void handle(Bean bean) {
+						// TODO Auto-generated method stub
+						((StorageBox) ((EbayClient) systemContext).getModule(Module.Type.STORAGEBOX)).setBean("login", bean);
+					}
+				}));
 	}
 
 	public void FinishAuthentication() {
 		FetchTokenBean bean = new FetchTokenBean();
-		GetSessionIDBean out = (GetSessionIDBean) ((StorageBox) getModule(Module.Type.STORAGEBOX))
-				.getBean("login");
+		GetSessionIDBean out = (GetSessionIDBean) ((StorageBox) getModule(Module.Type.STORAGEBOX)).getBean("login");
 		bean.setApiContext(out.getApiContext());
 		bean.setSessionID(out.getReturnedSessionID());
 
-		pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER))
-				.createSingleEbayCallActionActor(
-						EbayCallAction.ActionNames.FETCHTOKEN, bean,
-						new CallBackHandler() {
+		pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER)).createSingleEbayCallActionActor(EbayCallAction.ActionNames.FETCHTOKEN, bean, new CallBackHandler() {
 
-							@Override
-							public void handle(Bean bean) {
-								// TODO Auto-generated method stub
+			@Override
+			public void handle(Bean bean) {
+				// TODO Auto-generated method stub
 
-								GetUserBean b = new GetUserBean();
-								FetchTokenBean out = (FetchTokenBean) bean;
+				GetUserBean b = new GetUserBean();
+				FetchTokenBean out = (FetchTokenBean) bean;
 
-								b.setApiContext(out.getApiContext());
+				b.setApiContext(out.getApiContext());
 
-								pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER))
-										.createSingleEbayCallActionActor(
-												EbayCallAction.ActionNames.GETUSER,
-												b, new CallBackHandler() {
+				pushActor(((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER)).createSingleEbayCallActionActor(EbayCallAction.ActionNames.GETUSER, b, new CallBackHandler() {
 
-													@Override
-													public void handle(Bean bean) {
-														// TODO Auto-generated
-														GetUserBean out = (GetUserBean) bean;
-														((EbayContextModule) getModule(Module.Type.EBAYCONTEXT))
-																.saveAccount(
-																		out.getReturnedUser()
-																				.getUserID(),
-																		out.getApiContext()
-																				.getApiCredential()
-																				.geteBayToken());
-														// LoadXmlProperties
-														// loadXmlProperties =
-														// new
-														// LoadXmlProperties();
-														// loadXmlProperties
-														// .saveAccount(
-														// out.getReturnedUser()
-														// .getUserID(),
-														// out.getApiContext()
-														// .getApiCredential()
-														// .geteBayToken());
-													}
-												}));
-							}
-						}));
+					@Override
+					public void handle(Bean bean) {
+						// TODO Auto-generated
+						GetUserBean out = (GetUserBean) bean;
+						((EbayContextModule) getModule(Module.Type.EBAYCONTEXT)).saveAccount(out.getReturnedUser().getUserID(), out.getApiContext().getApiCredential()
+								.geteBayToken());
+						// LoadXmlProperties
+						// loadXmlProperties =
+						// new
+						// LoadXmlProperties();
+						// loadXmlProperties
+						// .saveAccount(
+						// out.getReturnedUser()
+						// .getUserID(),
+						// out.getApiContext()
+						// .getApiCredential()
+						// .geteBayToken());
+					}
+				}));
+			}
+		}));
+	}
+
+	public void GetMyeBaySelling() {
+		
+
+		
 	}
 }
