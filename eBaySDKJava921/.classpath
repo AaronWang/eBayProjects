@@ -31,5 +31,7 @@
 	<classpathentry kind="lib" path="lib/externalLib/stax-ex.jar"/>
 	<classpathentry kind="lib" path="lib/externalLib/streambuffer.jar"/>
 	<classpathentry kind="lib" path="lib/externalLib/xalan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aaron/git/eBayProjects/eBaySDKJava921/lib/jpa/eclipselink-2.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aaron/git/eBayProjects/eBaySDKJava921/lib/jpa/javax.persistence-2.1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

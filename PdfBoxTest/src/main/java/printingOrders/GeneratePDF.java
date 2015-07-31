@@ -28,7 +28,7 @@ public class GeneratePDF {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		GeneratePDF pdf = new GeneratePDF();
-//		pdf.currentTime();
+		// pdf.currentTime();
 
 		pdf.openExcel("SalesHistory.xlsx");
 		try {
@@ -69,8 +69,8 @@ public class GeneratePDF {
 				document.addPage(page);
 				contentStream = new PDPageContentStream(document, page);
 			}
-			
-			printAddressA(80, 800 - position * 100, address);
+
+			printAddressA(60, 800 - position * 100, address);
 			if (position == 7) {
 				contentStream.close();
 			}
@@ -97,28 +97,38 @@ public class GeneratePDF {
 		contentStream.setFont(font, 12);
 		contentStream.moveTextPositionByAmount(x, y);
 		contentStream.drawString("To:  " + address.buyername);
-		contentStream.moveTextPositionByAmount(0, -15);
+		contentStream.moveTextPositionByAmount(0, -13);
 		contentStream.drawString(address.address1);
 
 		if (!address.address2.equals("")) {
-			contentStream.moveTextPositionByAmount(0, -15);
+			contentStream.moveTextPositionByAmount(0, -13);
 			contentStream.drawString(address.address2);
 		}
-		contentStream.moveTextPositionByAmount(0, -15);
+		contentStream.moveTextPositionByAmount(0, -13);
 		contentStream.drawString(address.city);
-		contentStream.moveTextPositionByAmount(0, -15);
+		contentStream.moveTextPositionByAmount(0, -13);
 		contentStream.drawString(address.state);
-		contentStream.moveTextPositionByAmount(0, -15);
+		contentStream.moveTextPositionByAmount(0, -13);
 		contentStream.drawString(address.postcode);
+
+		contentStream.setFont(font, 6);
+		contentStream.moveTextPositionByAmount(70, 5);
+		contentStream.drawString(address.salesRecordNumber);
 		contentStream.endText();
-		
+
 		contentStream.beginText();
+		if (!address.quantity.equals("1")) {
+			contentStream.setFont(PDType1Font.TIMES_BOLD_ITALIC, 14);
+			contentStream.moveTextPositionByAmount(x + 250, y);
+			contentStream.drawString(address.quantity);
+		} else
+			contentStream.moveTextPositionByAmount(x + 250, y + 15);
 		contentStream.setFont(font, 12);
-		contentStream.moveTextPositionByAmount(x+250, y);
+		// contentStream.moveTextPositionByAmount(x + 250, y);
+		contentStream.moveTextPositionByAmount(0, -15);
 		contentStream.drawString(address.customLabel);
 		contentStream.endText();
-		
-		
+
 	}
 
 	public void printAddressB(int x, int y, BuyerAddress address) {

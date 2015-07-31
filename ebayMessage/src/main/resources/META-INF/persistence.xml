@@ -5,9 +5,6 @@
 	<persistence-unit name="com.onlyleaf_mavenproject2_jar_1.0-SNAPSHOTPU"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<class>com.onlyleaf.mavenproject2.Customer</class>
-		<class>com.onlyleaf.mavenproject2.DiscountCode</class>
-		<class>com.onlyleaf.mavenproject2.MicroMarket</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample" />
 			<property name="javax.persistence.jdbc.user" value="app" />

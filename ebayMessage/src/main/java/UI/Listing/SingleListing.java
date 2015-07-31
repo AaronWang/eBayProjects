@@ -3,8 +3,13 @@ package UI.Listing;
 import handler.future.CallBackHandler;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -20,7 +25,6 @@ import javax.swing.border.TitledBorder;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.handler.MessageContext;
 
-import ttt.HeaderHandlerResolver;
 import modules.StorageBox;
 import IO.ItemType.ItemReadWrite;
 import actor.Actor;
@@ -28,7 +32,6 @@ import actor.ActorAssembler;
 import bean.Bean;
 import bean.callBean.GetItemBean;
 import bean.callBean.GetMyeBaySellingBean;
-import bean.callBean.GetSessionIDBean;
 import bean.callBean.GetStoreBean;
 
 import com.ebay.soap.eBLBaseComponents.AmountType;
@@ -51,12 +54,6 @@ import com.ebay.soap.eBLBaseComponents.VariationsType;
 import core.Module;
 import ebayApiCall.EbayCallAction;
 import ebayClient.EbayClient;
-
-import java.awt.Font;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class SingleListing extends JPanel {
 
