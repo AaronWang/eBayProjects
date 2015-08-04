@@ -2,6 +2,7 @@ package printingOrders;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collections;
 
 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -21,6 +22,8 @@ public class GeneratePDF {
 	PDFont font = PDType1Font.TIMES_ROMAN;
 	PDPageContentStream contentStream;
 
+	String currentTime;
+
 	public GeneratePDF() {
 		// TODO Auto-generated constructor stub
 	}
@@ -28,9 +31,13 @@ public class GeneratePDF {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		GeneratePDF pdf = new GeneratePDF();
+
 		// pdf.currentTime();
 
 		pdf.openExcel("SalesHistory.xlsx");
+		pdf.addressList.sortOrders();
+		pdf.currentTime();
+
 		try {
 			pdf.pdfStyleA();
 		} catch (IOException | COSVisitorException e) {
@@ -42,11 +49,43 @@ public class GeneratePDF {
 	public String currentTime() {
 		String time = "";
 		Calendar cal = Calendar.getInstance();
+		String month;
+		String date;
+		String hour;
+		String minute;
+		String second;
+		int month1, date1, hour1, minute1, second1;
+		month1 = cal.get(Calendar.MONTH) + 1;
+		date1 = cal.get(Calendar.DAY_OF_MONTH);
+		hour1 = cal.get(Calendar.HOUR_OF_DAY);
+		minute1 = cal.get(Calendar.MINUTE);
+		second1 = cal.get(Calendar.SECOND);
 
-		time += cal.get(Calendar.YEAR) + "-" + (cal.get(Calendar.MONTH) + 1) + "-" + cal.get(Calendar.DAY_OF_MONTH) + "-" + cal.get(Calendar.HOUR_OF_DAY) + "-"
-				+ cal.get(Calendar.MINUTE) + "-" + cal.get(Calendar.SECOND);
+		if (month1 < 10)
+			month = "0" + month1;
+		else
+			month = "" + month1;
+
+		if (date1 < 10)
+			date = "0" + date1;
+		else
+			date = "" + date1;
+		if (hour1 < 10)
+			hour = "0" + hour1;
+		else
+			hour = "" + hour1;
+		if (minute1 < 10)
+			minute = "0" + minute1;
+		else
+			minute = "" + minute1;
+		if (second1 < 10)
+			second = "0" + second1;
+		else
+			second = "" + second1;
+
+		time += cal.get(Calendar.YEAR) + "-" + month + "-" + date + "-" + hour + "-" + minute + "-" + second;
 		System.out.println(time);
-
+		currentTime = time;
 		return time;
 	}
 
@@ -79,7 +118,7 @@ public class GeneratePDF {
 
 		contentStream.close();
 
-		document.save(currentTime() + ".pdf");
+		document.save(currentTime + ".pdf");
 		document.close();
 	}
 

@@ -1,6 +1,7 @@
 package ExcelIO;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import org.apache.poi.ss.formula.functions.Column;
 
@@ -41,8 +42,20 @@ public class AddressList {
 		} while (!od.getOrderDetails(count, ColumnName.SalesRecordNumber.getNumber()).equals(""));
 	}
 
+	public void sortOrders() {
+		Collections.sort(addresslist, BuyerAddress.CustomLabelComparator);
+	}
+
+	public void displayOrders() {
+		for (BuyerAddress address : addresslist) {
+			System.out.println(address.salesRecordNumber + "-" + address.customLabel);
+		}
+	}
+
 	public static void main(String[] args) {
-		AddressList addressList = new AddressList("SalesHistoryPrinting.xlsx");
+		AddressList addressList = new AddressList("SalesHistory.xlsx");
+		addressList.sortOrders();
+		addressList.displayOrders();
 		System.out.println();
 	}
 }

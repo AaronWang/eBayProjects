@@ -228,14 +228,13 @@ import org.w3c.dom.Element;
 		"ceilingPrice", "isIntermediatedShippingEligible", "unitInfo", "relistParentID", "conditionDefinition", "hideFromSearch", "reasonHideFromSearch", "includeRecommendations",
 		"pickupInStoreDetails", "eBayNowEligible", "eBayNowAvailable", "ignoreQuantity", "availableForPickupDropOff", "eligibleForPickupDropOff", "liveAuction", "any" })
 @Entity
-
 // -----------------------------------------------------------------------------
 public class ItemType implements Serializable {
 	@Id
 	// add primary key----------------------------------------------------------
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	// add primary key----------------------------------------------------------
-	private Long id;// add primary key------------------------------------------
+	public Long id;// add primary key------------------------------------------
 
 	private final static long serialVersionUID = 12343L;
 	@XmlElement(name = "ApplicationData")
@@ -546,7 +545,8 @@ public class ItemType implements Serializable {
 	@XmlElement(name = "LiveAuction")
 	protected Boolean liveAuction;
 	@XmlAnyElement(lax = true)
-	@Transient// -----------------------ignore this variable(property)
+	@Transient
+	// -----------------------ignore this variable(property)
 	protected List<Object> any;
 
 	/**
