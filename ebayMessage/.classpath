@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/JavaSDK"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -28,8 +27,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/JavaSDK/lib/externalLib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/EbayBusinessPolicySample"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ebayJPA"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ImageAutomation"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PdfBoxTest"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaSDK"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

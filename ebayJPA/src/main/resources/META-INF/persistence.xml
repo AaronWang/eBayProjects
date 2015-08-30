@@ -17,16 +17,21 @@
 		<class>com.ebay.soap.eBLBaseComponents.ItemType</class>
 		<class>org.persistence.ImageEntity</class>
 		<class>org.persistence.test</class>
+		<class>com.ebay.soap.eBLBaseComponents.StoreCustomCategoryType</class>
+		<class>com.ebay.soap.eBLBaseComponents.NameValueListType</class>
+		<class>com.ebay.soap.eBLBaseComponents.VariationsType</class>
 		<class>org.persistence.inventory</class>
 		<class>org.persistence.NameValuePair</class>
 		<shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode>
 		<properties>
+			<!-- <property name="javax.persistence.schema-generation.database.action" 
+				value="create-or-extend-tables" /> -->
 			<property name="javax.persistence.schema-generation.database.action"
-				value="create-or-extend-tables" />
-			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
-			<property name="javax.persistence.jdbc.user" value="app"/>
-			<property name="javax.persistence.jdbc.password" value="app"/>
+				value="create" />
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample" />
+			<property name="javax.persistence.jdbc.user" value="app" />
+			<property name="javax.persistence.jdbc.password" value="app" />
 		</properties>
 	</persistence-unit>
 </persistence>

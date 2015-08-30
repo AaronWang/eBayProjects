@@ -53,8 +53,6 @@ public class CellDetails {
 		ReadWriteImplement read = new ReadWriteImplement();
 		wb = read.Read(excelFileName);
 		sheet = wb.getSheetAt(sheetNumber);
-		
-
 	}
 
 	public String getCellDetails(int cellRowNumber, int cellColumnNumber) {
@@ -110,7 +108,7 @@ public class CellDetails {
 		// System.out.print(" - ");
 		if (cell == null) {
 			// System.out.println();
-			row.createCell(cellColumnNumber);
+			cell = row.createCell(cellColumnNumber);
 			// return "";
 		}
 		cell.setCellValue(value);

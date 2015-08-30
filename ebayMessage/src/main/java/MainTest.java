@@ -8,11 +8,15 @@ import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
+import com.ebay.soap.eBLBaseComponents.ItemType;
+
 public class MainTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Connection conn;
+		ItemType itemType = new ItemType();
+		
 	}
 
 }

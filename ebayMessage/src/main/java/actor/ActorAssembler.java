@@ -1,21 +1,25 @@
 package actor;
 
+import com.ebay.sdk.ApiContext;
+
 import handler.future.CallBackHandler;
 import modules.EbayContextModule;
 import MultiAction.LoginActions;
 import SequenceAction.SequenceActions;
 import bean.Bean;
 import bean.callBean.EbayCallBean;
-
-import com.ebay.sdk.ApiContext;
-
 import core.Action;
 import core.Module;
 import core.SystemContext;
+import ebayApiCall.CompleteSaleCallAction;
 import ebayApiCall.EbayCallAction;
 import ebayApiCall.FetchTokenCallAction;
+import ebayApiCall.GetCategoriesCallAction;
 import ebayApiCall.GetItemCallAction;
 import ebayApiCall.GetMyeBaySellingCallAction;
+import ebayApiCall.GetOrdersCallAction;
+import ebayApiCall.GetSellingManagerSaleRecordCallAction;
+import ebayApiCall.GetSellingManagerSoldListingsCallAction;
 import ebayApiCall.GetSessionIDCallAction;
 import ebayApiCall.GetStoreCallAction;
 import ebayApiCall.GetUserCallAction;
@@ -70,6 +74,21 @@ public class ActorAssembler implements Module {
 			break;
 		case GETSTORE:
 			newAction = new GetStoreCallAction();
+			break;
+		case GETORDERS:
+			newAction = new GetOrdersCallAction();
+			break;
+		case COMPLETESALE:
+			newAction = new CompleteSaleCallAction();
+			break;
+		case GetSellingManagerSaleRecord:
+			newAction = new GetSellingManagerSaleRecordCallAction();
+			break;
+		case GetSellingManagerSoldListings:
+			newAction = new GetSellingManagerSoldListingsCallAction();
+			break;
+		case GetCategories:
+			newAction = new GetCategoriesCallAction();
 			break;
 		default:
 			// newAction = new GetSessionIDCallAction();

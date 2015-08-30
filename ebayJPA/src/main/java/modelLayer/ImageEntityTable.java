@@ -1,10 +1,12 @@
 package modelLayer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.persistence.ImageEntity;
 
 public class ImageEntityTable extends table {
+	ArrayList<ImageEntity> table = new ArrayList<ImageEntity>();
 
 	@Override
 	public ImageEntity insert(Object entity) {
@@ -37,11 +39,5 @@ public class ImageEntityTable extends table {
 	public List<ImageEntity> getAll() {
 		// TODO Auto-generated method stub
 		return DatabaseContext.findAll(ImageEntity.class);
-	}
-
-	@Override
-	public ImageEntity getByID(Object entity) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

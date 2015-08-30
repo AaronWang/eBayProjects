@@ -63,18 +63,13 @@ public class DialogLogin extends JDialog {
 
 				// System.out.println("Get session Call");
 
-				int reply = JOptionPane
-						.showConfirmDialog(
-								null,
-								"an Webpage will be opened soon,please press \"Yes\" button after authentication.",
-								"Ebay Authentication", JOptionPane.YES_OPTION);
+				int reply = JOptionPane.showConfirmDialog(null, "an Webpage will be opened soon,please press \"Yes\" button after authentication.", "Ebay Authentication",
+						JOptionPane.YES_OPTION);
 				if (reply == JOptionPane.YES_OPTION) {
 					EbayClient.getInstance().FinishAuthentication();
-					JOptionPane.showMessageDialog(null,
-							"Authentication finished");
+					JOptionPane.showMessageDialog(null, "Authentication finished");
 				} else {
-					JOptionPane
-							.showMessageDialog(null, "Authentication Failed");
+					JOptionPane.showMessageDialog(null, "Authentication Failed");
 				}
 			}
 		});
@@ -85,8 +80,7 @@ public class DialogLogin extends JDialog {
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// System.out.println(list.getSelectedValue());
-				EbayContextModule ebayContext = EbayClient.getInstance()
-						.getModule(Module.Type.EBAYCONTEXT);
+				EbayContextModule ebayContext = EbayClient.getInstance().getModule(Module.Type.EBAYCONTEXT);
 				ebayContext.removeAccount(list.getSelectedValue());
 				updateList();
 			}
@@ -109,8 +103,7 @@ public class DialogLogin extends JDialog {
 	}
 
 	public void updateList() {
-		EbayContextModule ebayContext = EbayClient.getInstance().getModule(
-				Module.Type.EBAYCONTEXT);
+		EbayContextModule ebayContext = EbayClient.getInstance().getModule(Module.Type.EBAYCONTEXT);
 		ArrayList<String> accountName = ebayContext.getAccountList();
 		String[] listData = accountName.toArray(new String[accountName.size()]);
 		list.setListData(listData);

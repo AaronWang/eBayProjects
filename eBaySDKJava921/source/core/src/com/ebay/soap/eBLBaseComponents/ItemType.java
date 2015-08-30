@@ -5,10 +5,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -17,6 +21,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -230,11 +235,20 @@ import org.w3c.dom.Element;
 @Entity
 // -----------------------------------------------------------------------------
 public class ItemType implements Serializable {
+
+	// add primary key----------------------------------------------------------
 	@Id
-	// add primary key----------------------------------------------------------
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	// add primary key----------------------------------------------------------
+	@XmlTransient
 	public Long id;// add primary key------------------------------------------
+	// JPA --------------------------------------------------------
+	@XmlTransient
+	@Lob
+	// JPA --------------------------------------------------------
+	public String descriptionPreparation;
+	@XmlTransient
+	// JPA --------------------------------------------------------
+	public String album;
 
 	private final static long serialVersionUID = 12343L;
 	@XmlElement(name = "ApplicationData")
@@ -268,7 +282,10 @@ public class ItemType implements Serializable {
 	@XmlElement(name = "Currency")
 	protected CurrencyCodeType currency;
 	@XmlElement(name = "Description")
+	@Lob
+	// JPA --------------------------------------------------------
 	protected String description;
+
 	@XmlElement(name = "DescriptionReviseMode")
 	protected DescriptionReviseModeCodeType descriptionReviseMode;
 	@XmlElement(name = "Distance")
@@ -327,7 +344,7 @@ public class ItemType implements Serializable {
 	@XmlJavaTypeAdapter(Adapter1.class)
 	@XmlSchemaType(name = "dateTime")
 	@Temporal(TemporalType.TIMESTAMP)
-	// add new line --------------------------
+	// add new line --------------------------------
 	protected Calendar scheduleTime;
 	@XmlElement(name = "SecondaryCategory")
 	protected CategoryType secondaryCategory;
@@ -353,7 +370,10 @@ public class ItemType implements Serializable {
 	// protected Duration timeLeft;
 	protected String timeLeft;// ----------------Duration type change to String
 								// type
+
 	@XmlElement(name = "Title")
+	@Column(length = 80)
+	// JPA --------------------------------------------------------
 	protected String title;
 	@XmlElement(name = "UUID")
 	protected String uuid;
@@ -389,6 +409,8 @@ public class ItemType implements Serializable {
 	@XmlElement(name = "QuantityAvailable")
 	protected Integer quantityAvailable;
 	@XmlElement(name = "SKU")
+	@Column(length = 50)
+	// JPA --------------------------------------------------------
 	protected String sku;
 	@XmlElement(name = "CategoryBasedAttributesPrefill", defaultValue = "false")
 	protected Boolean categoryBasedAttributesPrefill;
@@ -469,6 +491,8 @@ public class ItemType implements Serializable {
 	@XmlElement(name = "IntegratedMerchantCreditCardEnabled")
 	protected Boolean integratedMerchantCreditCardEnabled;
 	@XmlElement(name = "Variations")
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	// jpa--------------------------
 	protected VariationsType variations;
 	@XmlElement(name = "ItemCompatibilityList")
 	protected ItemCompatibilityListType itemCompatibilityList;
@@ -546,6 +570,7 @@ public class ItemType implements Serializable {
 	protected Boolean liveAuction;
 	@XmlAnyElement(lax = true)
 	@Transient
+	// entity transient
 	// -----------------------ignore this variable(property)
 	protected List<Object> any;
 

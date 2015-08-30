@@ -128,9 +128,8 @@ public class EbayClient implements SystemContext {
 		}));
 	}
 
-	public void GetMyeBaySelling() {
-		
-
-		
+	public void StartEbayAPICall(EbayCallAction.ActionNames actionName, Bean bean, CallBackHandler handler) {
+		Actor actor = ((ActorAssembler) getModule(Module.Type.ACTORASSEMBLER)).createSingleEbayCallActionActor(actionName, bean, handler);
+		pushActor(actor);
 	}
 }

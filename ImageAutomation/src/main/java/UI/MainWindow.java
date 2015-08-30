@@ -70,7 +70,11 @@ public class MainWindow extends JFrame {
 				pa.saveProperty();
 			}
 		});
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+//		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);// hide but still can be set to be visible.
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);//terminate this Object.
+		
 		setBounds(100, 100, 612, 551);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -93,26 +97,27 @@ public class MainWindow extends JFrame {
 				tool.AddWarterMark(textField_8.getText(), file4);
 			}
 		});
+
 		btnNewButton.setBounds(108, 402, 89, 23);
 		contentPane.add(btnNewButton);
 
 		textField_1 = new JTextField();
-		textField_1.setBounds(108, 63, 156, 20);
+		textField_1.setBounds(108, 63, 179, 30);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 
 		textField_2 = new JTextField();
-		textField_2.setBounds(108, 128, 156, 20);
+		textField_2.setBounds(108, 128, 179, 30);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 
 		textField_3 = new JTextField();
-		textField_3.setBounds(108, 193, 156, 20);
+		textField_3.setBounds(108, 193, 179, 30);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 
 		textField_4 = new JTextField();
-		textField_4.setBounds(108, 257, 156, 20);
+		textField_4.setBounds(108, 257, 179, 30);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 
@@ -126,22 +131,22 @@ public class MainWindow extends JFrame {
 
 		textField_5 = new JTextField();
 		textField_5.setColumns(10);
-		textField_5.setBounds(358, 63, 156, 20);
+		textField_5.setBounds(358, 63, 179, 30);
 		contentPane.add(textField_5);
 
 		textField_6 = new JTextField();
 		textField_6.setColumns(10);
-		textField_6.setBounds(358, 128, 156, 20);
+		textField_6.setBounds(358, 128, 179, 30);
 		contentPane.add(textField_6);
 
 		textField_7 = new JTextField();
 		textField_7.setColumns(10);
-		textField_7.setBounds(358, 193, 156, 20);
+		textField_7.setBounds(358, 193, 179, 30);
 		contentPane.add(textField_7);
 
 		textField_8 = new JTextField();
 		textField_8.setColumns(10);
-		textField_8.setBounds(358, 257, 156, 20);
+		textField_8.setBounds(358, 257, 179, 30);
 		contentPane.add(textField_8);
 
 		pa = new PropertyAgent();

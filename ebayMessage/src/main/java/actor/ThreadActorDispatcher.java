@@ -28,8 +28,8 @@ package actor;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import core.SystemContext;
 import exception.EbayException;
@@ -40,8 +40,8 @@ import exception.EbayException;
  */
 
 public class ThreadActorDispatcher implements ActorDispatcher, Runnable {
-	private static final Logger LOG = LoggerFactory
-			.getLogger(ThreadActorDispatcher.class);
+	// private static final Logger LOG = LoggerFactory
+	// .getLogger(ThreadActorDispatcher.class);
 	private BlockingQueue<Actor> actorQueue;
 
 	private Thread dispatchThread;
@@ -68,12 +68,12 @@ public class ThreadActorDispatcher implements ActorDispatcher, Runnable {
 	@Override
 	public void run() {
 		try {
-			LOG.debug("QQActorDispatcher enter action loop...");
+			// LOG.debug("QQActorDispatcher enter action loop...");
 			while (dispatchAction(this.actorQueue.take())) {
 			}
-			LOG.debug("QQActorDispatcher leave action loop...");
+			// LOG.debug("QQActorDispatcher leave action loop...");
 		} catch (InterruptedException e) {
-			LOG.debug("QQActorDispatcher interrupted.");
+			// LOG.debug("QQActorDispatcher interrupted.");
 		}
 	}
 

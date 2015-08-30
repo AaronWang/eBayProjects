@@ -25,6 +25,8 @@ public class GetMyeBaySellingCallAction extends EbayCallAction {
 		((GetMyeBaySellingCall) apicall).setDeletedFromUnsoldList(((GetMyeBaySellingBean) b).getDeletedFromUnsoldList());
 		((GetMyeBaySellingCall) apicall).setSellingSummary(((GetMyeBaySellingBean) b).getSellingSummary());
 		((GetMyeBaySellingCall) apicall).setHideVariations(((GetMyeBaySellingBean) b).isHideVariations());
+
+//		((GetMyeBaySellingCall) apicall).addDetailLevel(((GetMyeBaySellingBean) b).getDetailLevel());
 	}
 
 	@Override

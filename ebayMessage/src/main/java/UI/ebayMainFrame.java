@@ -21,8 +21,12 @@ import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 
+import UI.Listing.AddListingWithVariation;
 import UI.Listing.SingleListing;
 import UI.Listing.SingleListingVariation;
+import UI.Tools.DataDownLoader;
+import UI.Tools.OrderPrinting;
+import UI.Tools.PhotoProcess;
 
 public class ebayMainFrame extends JFrame {
 
@@ -30,8 +34,8 @@ public class ebayMainFrame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel		contentPane;
-	private JPanel		rightPanel;
+	private JPanel contentPane;
+	private JPanel rightPanel;
 
 	/**
 	 * Launch the application.
@@ -42,7 +46,6 @@ public class ebayMainFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-
 					for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 						// System.out.println(info.getName());
 						if ("Nimbus".equals(info.getName())) {
@@ -50,7 +53,6 @@ public class ebayMainFrame extends JFrame {
 							break;
 						}
 					}
-
 					ebayMainFrame frame = new ebayMainFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -65,7 +67,7 @@ public class ebayMainFrame extends JFrame {
 	 */
 	public ebayMainFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1400, 900);
+		setBounds(100, 100, 1372, 912);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -94,11 +96,38 @@ public class ebayMainFrame extends JFrame {
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("New menu item");
 		mnNewMenu.add(mntmNewMenuItem_1);
 
-		JMenu mnNewMenu_1 = new JMenu("Tools");
-		menuBar.add(mnNewMenu_1);
+		JMenu toolsMenu = new JMenu("Tools");
+		menuBar.add(toolsMenu);
+
+		JMenuItem mntmAddwatermark = new JMenuItem("Photos");
+		mntmAddwatermark.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				PhotoProcess imageAutomation = new PhotoProcess();
+				imageAutomation.main(null);
+			}
+		});
+		toolsMenu.add(mntmAddwatermark);
+
+		JMenuItem mntmDownload = new JMenuItem("Download");
+		mntmDownload.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DataDownLoader datadownload = new DataDownLoader();
+				datadownload.main(null);
+			}
+		});
+		toolsMenu.add(mntmDownload);
+
+		JMenuItem mntmPrintorders = new JMenuItem("PrintOrders");
+		mntmPrintorders.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// OrderPrinting op = new OrderPrinting();
+				OrderPrinting.main(null);
+			}
+		});
+		toolsMenu.add(mntmPrintorders);
 
 		JMenuItem mntmListing = new JMenuItem("listing");
-		mnNewMenu_1.add(mntmListing);
+		toolsMenu.add(mntmListing);
 
 		JMenu mnNewMenu_2 = new JMenu("Help");
 		menuBar.add(mnNewMenu_2);
@@ -138,13 +167,15 @@ public class ebayMainFrame extends JFrame {
 		rightPanel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(
-				gl_contentPane.createSequentialGroup().addComponent(leftPanel, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE).addPreferredGap(
-						ComponentPlacement.UNRELATED).addComponent(rightPanel, GroupLayout.DEFAULT_SIZE, 898, Short.MAX_VALUE)));
-		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(
-				Alignment.TRAILING,
-				gl_contentPane.createSequentialGroup().addGroup(
-						gl_contentPane.createParallelGroup(Alignment.TRAILING).addComponent(rightPanel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
-								.addComponent(leftPanel, GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)).addGap(0)));
+				gl_contentPane.createSequentialGroup().addComponent(leftPanel, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(ComponentPlacement.UNRELATED).addComponent(rightPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING).addGroup(
+				gl_contentPane
+						.createSequentialGroup()
+						.addGroup(
+								gl_contentPane.createParallelGroup(Alignment.TRAILING)
+										.addComponent(rightPanel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 839, Short.MAX_VALUE)
+										.addComponent(leftPanel, GroupLayout.DEFAULT_SIZE, 1132, Short.MAX_VALUE)).addGap(0)));
 		rightPanel.setLayout(new CardLayout(0, 0));
 
 		JTabbedPane tabbedPaneListing = new JTabbedPane(JTabbedPane.TOP);
@@ -156,8 +187,8 @@ public class ebayMainFrame extends JFrame {
 		SingleListingVariation jPanelSingleListingVariation = new SingleListingVariation();
 		tabbedPaneListing.addTab("Single Listing With Variation", null, jPanelSingleListingVariation, null);
 
-		JPanel panel_3 = new JPanel();
-		tabbedPaneListing.addTab("Bulk Listing", null, panel_3, null);
+		AddListingWithVariation jPanelBulkListing = new AddListingWithVariation();
+		tabbedPaneListing.addTab("Bulk Listing", null, jPanelBulkListing, null);
 
 		JPanel panel = new JPanel();
 		tabbedPaneListing.addTab("All Listings", null, panel, null);
@@ -186,10 +217,10 @@ public class ebayMainFrame extends JFrame {
 
 		JPanel panel_7 = new JPanel();
 		tabbedPaneResolution.addTab("666", null, panel_7, null);
-		
+
 		JTabbedPane tabbedPaneAccount = new JTabbedPane(JTabbedPane.TOP);
 		rightPanel.add(tabbedPaneAccount, "name_123492670757745");
-		
+
 		JPanel panel_1 = new JPanel();
 		tabbedPaneAccount.addTab("Site Preference", null, panel_1, null);
 
@@ -203,13 +234,20 @@ public class ebayMainFrame extends JFrame {
 		JButton btnNewButton_4 = new JButton("Account");
 		GroupLayout gl_leftPanel = new GroupLayout(leftPanel);
 		gl_leftPanel.setHorizontalGroup(gl_leftPanel.createParallelGroup(Alignment.LEADING).addGroup(
-				gl_leftPanel.createSequentialGroup().addGap(1).addGroup(
-						gl_leftPanel.createParallelGroup(Alignment.LEADING).addComponent(btnFeedbackButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(btnResolutionButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(btnNewButton_4,
-										GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addGroup(
-										gl_leftPanel.createParallelGroup(Alignment.TRAILING).addComponent(btnListingButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE,
-												GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(btnMessageButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE,
-												GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))).addGap(5)));
+				gl_leftPanel
+						.createSequentialGroup()
+						.addGap(1)
+						.addGroup(
+								gl_leftPanel
+										.createParallelGroup(Alignment.LEADING)
+										.addComponent(btnFeedbackButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(btnResolutionButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(btnNewButton_4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addGroup(
+												gl_leftPanel.createParallelGroup(Alignment.TRAILING)
+														.addComponent(btnListingButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+														.addComponent(btnMessageButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+						.addGap(5)));
 		gl_leftPanel.setVerticalGroup(gl_leftPanel.createParallelGroup(Alignment.LEADING).addGroup(
 				gl_leftPanel.createSequentialGroup().addGap(5).addComponent(btnListingButton).addGap(5).addComponent(btnMessageButton).addGap(5).addComponent(btnFeedbackButton)
 						.addGap(5).addComponent(btnResolutionButton).addGap(5).addComponent(btnNewButton_4)));

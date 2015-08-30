@@ -31,5 +31,6 @@
 	<classpathentry kind="lib" path="/JavaSDK/lib/ebaycalls.jar"/>
 	<classpathentry kind="lib" path="/JavaSDK/lib/ebaysdkcore.jar"/>
 	<classpathentry kind="lib" path="/JavaSDK/lib/helper.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaSDK"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

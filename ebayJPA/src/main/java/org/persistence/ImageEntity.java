@@ -15,8 +15,10 @@ public class ImageEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private String folder;
 	private String path;
 	private String name;
+	private String photoID;
 	private String album;
 	private String URL;
 
@@ -46,6 +48,22 @@ public class ImageEntity implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getFolder() {
+		return folder;
+	}
+
+	public void setFolder(String folder) {
+		this.folder = folder;
+	}
+
+	public String getPhotoID() {
+		return photoID;
+	}
+
+	public void setPhotoID(String photoID) {
+		this.photoID = photoID;
 	}
 
 	public String getAlbum() {

@@ -38,12 +38,11 @@ public abstract class EbayCallAction implements Action {
 	}
 
 	public enum ActionNames {
-		ADDDISPUT, ADDFIXEDPRICEITEM, ADDITEM, ENDITEMS, GETSESSIONID, GETORDERS, FETCHTOKEN, GETMYEBAYSELLING, GETUSER, GETITEM, GETSTORE,
+		ADDDISPUT, ADDFIXEDPRICEITEM, ADDITEM, ENDITEMS, GETSESSIONID, GETORDERS, FETCHTOKEN, GETMYEBAYSELLING, GETUSER, GETITEM, GETSTORE, COMPLETESALE, GetSellingManagerSaleRecord, GetSellingManagerSoldListings, GetCategories,
 	}
 
 	@Override
 	public Bean getResult() {
 		return bean;
 	}
-
 }

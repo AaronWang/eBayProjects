@@ -6,10 +6,10 @@ import com.ebay.soap.eBLBaseComponents.StoreType;
 
 public class GetStoreBean extends EbayCallBean {
 	// input
-	boolean categoryStructureOnly =false;
-	Long rootCategoryID;
-	int levelLimit;
-	String userID;
+	boolean categoryStructureOnly = false;
+	Long rootCategoryID = null;
+	Integer levelLimit = null;
+	String userID = null;
 
 	// output
 	StoreType returnedStoreType;
@@ -30,11 +30,11 @@ public class GetStoreBean extends EbayCallBean {
 		this.rootCategoryID = rootCategoryID;
 	}
 
-	public int getLevelLimit() {
+	public Integer getLevelLimit() {
 		return levelLimit;
 	}
 
-	public void setLevelLimit(int levelLimit) {
+	public void setLevelLimit(Integer levelLimit) {
 		this.levelLimit = levelLimit;
 	}
 

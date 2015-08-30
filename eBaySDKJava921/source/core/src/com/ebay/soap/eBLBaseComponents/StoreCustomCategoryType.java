@@ -1,25 +1,35 @@
-
 package com.ebay.soap.eBLBaseComponents;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
-import org.w3c.dom.Element;
 
+import org.w3c.dom.Element;
 
 /**
  * 
- * 				Configuration of a store custom category.
- * 			
+ * Configuration of a store custom category.
  * 
- * <p>Java class for StoreCustomCategoryType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * Java class for StoreCustomCategoryType complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="StoreCustomCategoryType">
@@ -40,239 +50,228 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StoreCustomCategoryType", propOrder = {
-    "categoryID",
-    "name",
-    "order",
-    "childCategory",
-    "any"
-})
-public class StoreCustomCategoryType
-    implements Serializable
-{
+@XmlType(name = "StoreCustomCategoryType", propOrder = { "categoryID", "name", "order", "childCategory", "any" })
+@Entity
+// -----------------------------------------------------------------------------
+public class StoreCustomCategoryType implements Serializable {
 
-    private final static long serialVersionUID = 12343L;
-    @XmlElement(name = "CategoryID")
-    protected long categoryID;
-    @XmlElement(name = "Name")
-    protected String name;
-    @XmlElement(name = "Order")
-    protected Integer order;
-    @XmlElement(name = "ChildCategory")
-    protected List<StoreCustomCategoryType> childCategory;
-    @XmlAnyElement(lax = true)
-    protected List<Object> any;
+	// add primary key----------------------------------------------------------
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@XmlTransient
+	public Long id;// add primary key------------------------------------------
 
-    /**
-     * Gets the value of the categoryID property.
-     * 
-     */
-    public long getCategoryID() {
-        return categoryID;
-    }
+	@Transient
+	// entity transient
+	// -----------------------ignore this variable(property)
+	private final static long serialVersionUID = 12343L;
+	@XmlElement(name = "CategoryID")
+	protected long categoryID;
+	@XmlElement(name = "Name")
+	protected String name;
+	@XmlElement(name = "Order")
+	// @Column(columnDefinition = "INTEGER")
+	@Transient
+	protected Integer order;
+	@XmlElement(name = "ChildCategory")
+	@Transient
+	// entity transient
+	// -----------------------ignore this variable(property)
+	protected List<StoreCustomCategoryType> childCategory;
+	@XmlAnyElement(lax = true)
+	@Transient
+	// entity transient
+	// -----------------------ignore this variable(property)
+	protected List<Object> any;
 
-    /**
-     * Sets the value of the categoryID property.
-     * 
-     */
-    public void setCategoryID(long value) {
-        this.categoryID = value;
-    }
+	/**
+	 * Gets the value of the categoryID property.
+	 * 
+	 */
+	public long getCategoryID() {
+		return categoryID;
+	}
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
+	/**
+	 * Sets the value of the categoryID property.
+	 * 
+	 */
+	public void setCategoryID(long value) {
+		this.categoryID = value;
+	}
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * Gets the value of the order property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getOrder() {
-        return order;
-    }
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setName(String value) {
+		this.name = value;
+	}
 
-    /**
-     * Sets the value of the order property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setOrder(Integer value) {
-        this.order = value;
-    }
+	/**
+	 * Gets the value of the order property.
+	 * 
+	 * @return possible object is {@link Integer }
+	 * 
+	 */
+	public Integer getOrder() {
+		return order;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     array of
-     *     {@link StoreCustomCategoryType }
-     *     
-     */
-    public StoreCustomCategoryType[] getChildCategory() {
-        if (this.childCategory == null) {
-            return new StoreCustomCategoryType[ 0 ] ;
-        }
-        return ((StoreCustomCategoryType[]) this.childCategory.toArray(new StoreCustomCategoryType[this.childCategory.size()] ));
-    }
+	/**
+	 * Sets the value of the order property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Integer }
+	 * 
+	 */
+	public void setOrder(Integer value) {
+		this.order = value;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     one of
-     *     {@link StoreCustomCategoryType }
-     *     
-     */
-    public StoreCustomCategoryType getChildCategory(int idx) {
-        if (this.childCategory == null) {
-            throw new IndexOutOfBoundsException();
-        }
-        return this.childCategory.get(idx);
-    }
+	/**
+	 * 
+	 * 
+	 * @return array of {@link StoreCustomCategoryType }
+	 * 
+	 */
+	public StoreCustomCategoryType[] getChildCategory() {
+		if (this.childCategory == null) {
+			return new StoreCustomCategoryType[0];
+		}
+		return ((StoreCustomCategoryType[]) this.childCategory.toArray(new StoreCustomCategoryType[this.childCategory.size()]));
+	}
 
-    public int getChildCategoryLength() {
-        if (this.childCategory == null) {
-            return  0;
-        }
-        return this.childCategory.size();
-    }
+	/**
+	 * 
+	 * 
+	 * @return one of {@link StoreCustomCategoryType }
+	 * 
+	 */
+	public StoreCustomCategoryType getChildCategory(int idx) {
+		if (this.childCategory == null) {
+			throw new IndexOutOfBoundsException();
+		}
+		return this.childCategory.get(idx);
+	}
 
-    /**
-     * 
-     * 
-     * @param values
-     *     allowed objects are
-     *     {@link StoreCustomCategoryType }
-     *     
-     */
-    public void setChildCategory(StoreCustomCategoryType[] values) {
-        this._getChildCategory().clear();
-        int len = values.length;
-        for (int i = 0; (i<len); i ++) {
-            this.childCategory.add(values[i]);
-        }
-    }
+	public int getChildCategoryLength() {
+		if (this.childCategory == null) {
+			return 0;
+		}
+		return this.childCategory.size();
+	}
 
-    protected List<StoreCustomCategoryType> _getChildCategory() {
-        if (childCategory == null) {
-            childCategory = new ArrayList<StoreCustomCategoryType>();
-        }
-        return childCategory;
-    }
+	/**
+	 * 
+	 * 
+	 * @param values
+	 *            allowed objects are {@link StoreCustomCategoryType }
+	 * 
+	 */
+	public void setChildCategory(StoreCustomCategoryType[] values) {
+		this._getChildCategory().clear();
+		int len = values.length;
+		for (int i = 0; (i < len); i++) {
+			this.childCategory.add(values[i]);
+		}
+	}
 
-    /**
-     * 
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StoreCustomCategoryType }
-     *     
-     */
-    public StoreCustomCategoryType setChildCategory(int idx, StoreCustomCategoryType value) {
-        return this.childCategory.set(idx, value);
-    }
+	protected List<StoreCustomCategoryType> _getChildCategory() {
+		if (childCategory == null) {
+			childCategory = new ArrayList<StoreCustomCategoryType>();
+		}
+		return childCategory;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     array of
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object[] getAny() {
-        if (this.any == null) {
-            return new Object[ 0 ] ;
-        }
-        return ((Object[]) this.any.toArray(new Object[this.any.size()] ));
-    }
+	/**
+	 * 
+	 * 
+	 * @param value
+	 *            allowed object is {@link StoreCustomCategoryType }
+	 * 
+	 */
+	public StoreCustomCategoryType setChildCategory(int idx, StoreCustomCategoryType value) {
+		return this.childCategory.set(idx, value);
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     one of
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object getAny(int idx) {
-        if (this.any == null) {
-            throw new IndexOutOfBoundsException();
-        }
-        return this.any.get(idx);
-    }
+	/**
+	 * 
+	 * 
+	 * @return array of {@link Element } {@link Object }
+	 * 
+	 */
+	public Object[] getAny() {
+		if (this.any == null) {
+			return new Object[0];
+		}
+		return ((Object[]) this.any.toArray(new Object[this.any.size()]));
+	}
 
-    public int getAnyLength() {
-        if (this.any == null) {
-            return  0;
-        }
-        return this.any.size();
-    }
+	/**
+	 * 
+	 * 
+	 * @return one of {@link Element } {@link Object }
+	 * 
+	 */
+	public Object getAny(int idx) {
+		if (this.any == null) {
+			throw new IndexOutOfBoundsException();
+		}
+		return this.any.get(idx);
+	}
 
-    /**
-     * 
-     * 
-     * @param values
-     *     allowed objects are
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public void setAny(Object[] values) {
-        this._getAny().clear();
-        int len = values.length;
-        for (int i = 0; (i<len); i ++) {
-            this.any.add(values[i]);
-        }
-    }
+	public int getAnyLength() {
+		if (this.any == null) {
+			return 0;
+		}
+		return this.any.size();
+	}
 
-    protected List<Object> _getAny() {
-        if (any == null) {
-            any = new ArrayList<Object>();
-        }
-        return any;
-    }
+	/**
+	 * 
+	 * 
+	 * @param values
+	 *            allowed objects are {@link Element } {@link Object }
+	 * 
+	 */
+	public void setAny(Object[] values) {
+		this._getAny().clear();
+		int len = values.length;
+		for (int i = 0; (i < len); i++) {
+			this.any.add(values[i]);
+		}
+	}
 
-    /**
-     * 
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object setAny(int idx, Object value) {
-        return this.any.set(idx, value);
-    }
+	protected List<Object> _getAny() {
+		if (any == null) {
+			any = new ArrayList<Object>();
+		}
+		return any;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param value
+	 *            allowed object is {@link Element } {@link Object }
+	 * 
+	 */
+	public Object setAny(int idx, Object value) {
+		return this.any.set(idx, value);
+	}
 
 }

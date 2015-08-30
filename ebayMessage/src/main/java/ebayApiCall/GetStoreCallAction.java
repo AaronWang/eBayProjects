@@ -16,11 +16,9 @@ public class GetStoreCallAction extends EbayCallAction {
 		bean = b;
 		apicall.setApiContext(((EbayCallBean) b).getApiContext());
 
-
 		((GetStoreCall) apicall).setCategoryStructureOnly(((GetStoreBean) b).isCategoryStructureOnly());
-
-//		((GetStoreCall) apicall).setRootCategoryID(((GetStoreBean) b).getRootCategoryID());
-//		((GetStoreCall) apicall).setLevelLimit(((GetStoreBean) b).getLevelLimit());
+		((GetStoreCall) apicall).setRootCategoryID(((GetStoreBean) b).getRootCategoryID());
+		((GetStoreCall) apicall).setLevelLimit(((GetStoreBean) b).getLevelLimit());
 		((GetStoreCall) apicall).setUserID(((GetStoreBean) b).getUserID());
 	}
 

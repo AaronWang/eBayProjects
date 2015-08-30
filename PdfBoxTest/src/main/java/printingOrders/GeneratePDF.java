@@ -17,7 +17,7 @@ import ExcelIO.AddressList;
 public class GeneratePDF {
 
 	PDDocument document;
-	AddressList addressList;
+	public AddressList addressList;
 	PDPage page;
 	PDFont font = PDType1Font.TIMES_ROMAN;
 	PDPageContentStream contentStream;
@@ -34,16 +34,24 @@ public class GeneratePDF {
 
 		// pdf.currentTime();
 
+		// pdf.openExcel("SalesHistory.xlsx");
 		pdf.openExcel("SalesHistory.xlsx");
 		pdf.addressList.sortOrders();
 		pdf.currentTime();
 
-		try {
-			pdf.pdfStyleA();
-		} catch (IOException | COSVisitorException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		pdf.pdfStyleB();
+	}
+
+	public void setCurrentTime(String s) {
+		currentTime = s;
+	}
+
+	public String getCurrentTime() {
+		return currentTime;
+	}
+
+	public void setAddressList(AddressList list) {
+		addressList = list;
 	}
 
 	public String currentTime() {
@@ -93,7 +101,7 @@ public class GeneratePDF {
 		addressList = new AddressList(fileName);
 	}
 
-	public void pdfStyleA() throws IOException, COSVisitorException {
+	public void pdfStyleA() {
 		document = new PDDocument();
 
 		int count = 0; // number on each page;
@@ -106,24 +114,87 @@ public class GeneratePDF {
 				// if(contentStream!= null)contentStream.close();
 
 				document.addPage(page);
-				contentStream = new PDPageContentStream(document, page);
+				try {
+					contentStream = new PDPageContentStream(document, page);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 
-			printAddressA(60, 800 - position * 100, address);
+			try {
+				printAddressA(30, 800 - position * 100, address);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			if (position == 7) {
-				contentStream.close();
+				try {
+					contentStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			count++;
 		}
 
-		contentStream.close();
-
-		document.save(currentTime + ".pdf");
-		document.close();
+		try {
+			contentStream.close();
+			document.save(currentTime + ".pdf");
+			document.close();
+		} catch (IOException | COSVisitorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void pdfStyleB() {
 		document = new PDDocument();
+
+		int count = 0; // number on each page;
+		int position = 0;
+		for (BuyerAddress address : addressList.addresslist) {
+			position = count % 9;
+			if (position == 0) {
+				page = new PDPage(PDPage.PAGE_SIZE_A4);
+				// Make sure that the content stream is closed:
+				// if(contentStream!= null)contentStream.close();
+
+				document.addPage(page);
+				try {
+					contentStream = new PDPageContentStream(document, page);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+			try {
+				printAddressA(155, 815 - position * 93, address);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (position == 8) {
+				try {
+					contentStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			count++;
+		}
+
+		try {
+			contentStream.close();
+			document.save(currentTime + ".pdf");
+			document.close();
+		} catch (IOException | COSVisitorException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void pdfStyleC() {
@@ -139,7 +210,7 @@ public class GeneratePDF {
 		contentStream.moveTextPositionByAmount(0, -13);
 		contentStream.drawString(address.address1);
 
-		if (!address.address2.equals("")) {
+		if (address.address2 != null && !address.address2.equals("")) {
 			contentStream.moveTextPositionByAmount(0, -13);
 			contentStream.drawString(address.address2);
 		}
@@ -155,17 +226,28 @@ public class GeneratePDF {
 		contentStream.drawString(address.salesRecordNumber);
 		contentStream.endText();
 
+		// drawing quantity
 		contentStream.beginText();
 		if (!address.quantity.equals("1")) {
 			contentStream.setFont(PDType1Font.TIMES_BOLD_ITALIC, 14);
-			contentStream.moveTextPositionByAmount(x + 250, y);
+			contentStream.moveTextPositionByAmount(x + 235, y - 13);
 			contentStream.drawString(address.quantity);
+			// contentStream.moveTextPositionByAmount(0, -11);
 		} else
-			contentStream.moveTextPositionByAmount(x + 250, y + 15);
+			contentStream.moveTextPositionByAmount(x + 235, y - 13);
+		contentStream.moveTextPositionByAmount(-50, -11);
 		contentStream.setFont(font, 12);
+
+		// drawing custom label
 		// contentStream.moveTextPositionByAmount(x + 250, y);
-		contentStream.moveTextPositionByAmount(0, -15);
-		contentStream.drawString(address.customLabel);
+		if (address.customLabel.contains("+")) {
+			String[] customerlables = address.customLabel.split("\\+");
+			for (int i = 0; i < customerlables.length; i++) {
+				contentStream.drawString(customerlables[i]);
+				contentStream.moveTextPositionByAmount(0, -12);
+			}
+		} else
+			contentStream.drawString(address.customLabel);
 		contentStream.endText();
 
 	}

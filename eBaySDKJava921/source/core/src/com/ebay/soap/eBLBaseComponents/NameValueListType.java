@@ -1,25 +1,36 @@
-
 package com.ebay.soap.eBLBaseComponents;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
-import org.w3c.dom.Element;
 
+import org.w3c.dom.Element;
 
 /**
  * 
- * 				A name and corresponding value (a name/value pair).
- * 			
+ * A name and corresponding value (a name/value pair).
  * 
- * <p>Java class for NameValueListType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * Java class for NameValueListType complex type.
+ * 
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="NameValueListType">
@@ -39,220 +50,206 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "NameValueListType", propOrder = {
-    "name",
-    "value",
-    "source",
-    "any"
-})
-public class NameValueListType
-    implements Serializable
-{
+@XmlType(name = "NameValueListType", propOrder = { "name", "value", "source", "any" })
+@Entity
+// -----------------------------------------------------------------------------
+public class NameValueListType implements Serializable {
 
-    private final static long serialVersionUID = 12343L;
-    @XmlElement(name = "Name")
-    protected String name;
-    @XmlElement(name = "Value")
-    protected List<String> value;
-    @XmlElement(name = "Source")
-    protected ItemSpecificSourceCodeType source;
-    @XmlAnyElement(lax = true)
-    protected List<Object> any;
+	// add primary key----------------------------------------------------------
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@XmlTransient
+	public Long id;// add primary key------------------------------------------
+	@XmlTransient
+	// JPA --------------------------------------------------------
+	public String sku;
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
+	private final static long serialVersionUID = 12343L;
+	@XmlElement(name = "Name")
+	protected String name;
+	@XmlElement(name = "Value")
+	@ElementCollection
+	// jpa----------------------
+	protected List<String> value;
+	@XmlElement(name = "Source")
+	protected ItemSpecificSourceCodeType source;
+	@XmlAnyElement(lax = true)
+	@Transient
+	// entity transient
+	protected List<Object> any;
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     array of
-     *     {@link String }
-     *     
-     */
-    public String[] getValue() {
-        if (this.value == null) {
-            return new String[ 0 ] ;
-        }
-        return ((String[]) this.value.toArray(new String[this.value.size()] ));
-    }
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setName(String value) {
+		this.name = value;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     one of
-     *     {@link String }
-     *     
-     */
-    public String getValue(int idx) {
-        if (this.value == null) {
-            throw new IndexOutOfBoundsException();
-        }
-        return this.value.get(idx);
-    }
+	/**
+	 * 
+	 * 
+	 * @return array of {@link String }
+	 * 
+	 */
+	public String[] getValue() {
+		if (this.value == null) {
+			return new String[0];
+		}
+		return ((String[]) this.value.toArray(new String[this.value.size()]));
+	}
 
-    public int getValueLength() {
-        if (this.value == null) {
-            return  0;
-        }
-        return this.value.size();
-    }
+	/**
+	 * 
+	 * 
+	 * @return one of {@link String }
+	 * 
+	 */
+	public String getValue(int idx) {
+		if (this.value == null) {
+			throw new IndexOutOfBoundsException();
+		}
+		return this.value.get(idx);
+	}
 
-    /**
-     * 
-     * 
-     * @param values
-     *     allowed objects are
-     *     {@link String }
-     *     
-     */
-    public void setValue(String[] values) {
-        this._getValue().clear();
-        int len = values.length;
-        for (int i = 0; (i<len); i ++) {
-            this.value.add(values[i]);
-        }
-    }
+	public int getValueLength() {
+		if (this.value == null) {
+			return 0;
+		}
+		return this.value.size();
+	}
 
-    protected List<String> _getValue() {
-        if (value == null) {
-            value = new ArrayList<String>();
-        }
-        return value;
-    }
+	/**
+	 * 
+	 * 
+	 * @param values
+	 *            allowed objects are {@link String }
+	 * 
+	 */
+	public void setValue(String[] values) {
+		this._getValue().clear();
+		int len = values.length;
+		for (int i = 0; (i < len); i++) {
+			this.value.add(values[i]);
+		}
+	}
 
-    /**
-     * 
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public String setValue(int idx, String value) {
-        return this.value.set(idx, value);
-    }
+	protected List<String> _getValue() {
+		if (value == null) {
+			value = new ArrayList<String>();
+		}
+		return value;
+	}
 
-    /**
-     * Gets the value of the source property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ItemSpecificSourceCodeType }
-     *     
-     */
-    public ItemSpecificSourceCodeType getSource() {
-        return source;
-    }
+	/**
+	 * 
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public String setValue(int idx, String value) {
+		return this.value.set(idx, value);
+	}
 
-    /**
-     * Sets the value of the source property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ItemSpecificSourceCodeType }
-     *     
-     */
-    public void setSource(ItemSpecificSourceCodeType value) {
-        this.source = value;
-    }
+	/**
+	 * Gets the value of the source property.
+	 * 
+	 * @return possible object is {@link ItemSpecificSourceCodeType }
+	 * 
+	 */
+	public ItemSpecificSourceCodeType getSource() {
+		return source;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     array of
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object[] getAny() {
-        if (this.any == null) {
-            return new Object[ 0 ] ;
-        }
-        return ((Object[]) this.any.toArray(new Object[this.any.size()] ));
-    }
+	/**
+	 * Sets the value of the source property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link ItemSpecificSourceCodeType }
+	 * 
+	 */
+	public void setSource(ItemSpecificSourceCodeType value) {
+		this.source = value;
+	}
 
-    /**
-     * 
-     * 
-     * @return
-     *     one of
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object getAny(int idx) {
-        if (this.any == null) {
-            throw new IndexOutOfBoundsException();
-        }
-        return this.any.get(idx);
-    }
+	/**
+	 * 
+	 * 
+	 * @return array of {@link Element } {@link Object }
+	 * 
+	 */
+	public Object[] getAny() {
+		if (this.any == null) {
+			return new Object[0];
+		}
+		return ((Object[]) this.any.toArray(new Object[this.any.size()]));
+	}
 
-    public int getAnyLength() {
-        if (this.any == null) {
-            return  0;
-        }
-        return this.any.size();
-    }
+	/**
+	 * 
+	 * 
+	 * @return one of {@link Element } {@link Object }
+	 * 
+	 */
+	public Object getAny(int idx) {
+		if (this.any == null) {
+			throw new IndexOutOfBoundsException();
+		}
+		return this.any.get(idx);
+	}
 
-    /**
-     * 
-     * 
-     * @param values
-     *     allowed objects are
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public void setAny(Object[] values) {
-        this._getAny().clear();
-        int len = values.length;
-        for (int i = 0; (i<len); i ++) {
-            this.any.add(values[i]);
-        }
-    }
+	public int getAnyLength() {
+		if (this.any == null) {
+			return 0;
+		}
+		return this.any.size();
+	}
 
-    protected List<Object> _getAny() {
-        if (any == null) {
-            any = new ArrayList<Object>();
-        }
-        return any;
-    }
+	/**
+	 * 
+	 * 
+	 * @param values
+	 *            allowed objects are {@link Element } {@link Object }
+	 * 
+	 */
+	public void setAny(Object[] values) {
+		this._getAny().clear();
+		int len = values.length;
+		for (int i = 0; (i < len); i++) {
+			this.any.add(values[i]);
+		}
+	}
 
-    /**
-     * 
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Element }
-     *     {@link Object }
-     *     
-     */
-    public Object setAny(int idx, Object value) {
-        return this.any.set(idx, value);
-    }
+	protected List<Object> _getAny() {
+		if (any == null) {
+			any = new ArrayList<Object>();
+		}
+		return any;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param value
+	 *            allowed object is {@link Element } {@link Object }
+	 * 
+	 */
+	public Object setAny(int idx, Object value) {
+		return this.any.set(idx, value);
+	}
 
 }

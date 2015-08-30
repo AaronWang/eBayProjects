@@ -44,5 +44,4 @@ public class AddItemCallAction extends EbayCallAction {
 		((AddItemBean) bean).setReturnedProductSuggestions(addItemCall.getReturnedProductSuggestions());
 		((AddItemBean) bean).setReturnedListingRecommendations(addItemCall.getReturnedListingRecommendations());
 	}
-
 }

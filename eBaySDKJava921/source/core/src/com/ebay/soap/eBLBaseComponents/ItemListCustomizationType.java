@@ -56,7 +56,6 @@ import org.w3c.dom.Element;
 public class ItemListCustomizationType
     implements Serializable
 {
-
     private final static long serialVersionUID = 12343L;
     @XmlElement(name = "Include")
     protected Boolean include;

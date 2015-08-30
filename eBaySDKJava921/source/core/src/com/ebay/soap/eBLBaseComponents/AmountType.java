@@ -46,7 +46,7 @@ import javax.xml.bind.annotation.XmlValue;
 })
 public class AmountType
     implements Serializable
-{
+{ 
 
     private final static long serialVersionUID = 12343L;
     @XmlValue

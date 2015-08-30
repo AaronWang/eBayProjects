@@ -13,5 +13,5 @@ public abstract class table {
 
 	public abstract List getAll();
 
-	public abstract Object getByID(Object entity);
+	// public abstract Object getByID(Object entity);
 }

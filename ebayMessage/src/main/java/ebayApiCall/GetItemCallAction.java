@@ -25,6 +25,8 @@ public class GetItemCallAction extends EbayCallAction {
 		((GetItemCall) apicall).setVariationSpecifics(((GetItemBean) b).getVariationSpecifics());
 		((GetItemCall) apicall).setTransactionID(((GetItemBean) b).getTransactionID());
 		((GetItemCall) apicall).setIncludeItemCompatibilityList(((GetItemBean) b).isIncludeItemCompatibilityList());
+
+		((GetItemCall) apicall).setDetailLevel(((GetItemBean) b).getDetailLevel());
 	}
 
 	@Override
